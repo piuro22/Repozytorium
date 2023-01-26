@@ -1,6 +1,6 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 /[Ll]ibrary/
 /[Tt]emp/
@@ -10,57 +10,12 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
-# SYNOLOGY
-# Synology - Visual Studio cache directory
-Assets/CME_visualAssets/Audio
-Assets/CME_visualAssets/**/*.sesx
-Assets/CME_visualAssets/**/*.wav
-Assets/CME_visualAssets/**/*.mp3
-Assets/CME_visualAssets/**/*.mov
-Assets/CME_visualAssets/**/*.mp4
-Assets/CME_visualAssets/**/*.psd
-Assets/CME_visualAssets/**/*.psb
-Assets/CME_visualAssets/**/*.png
-Assets/CME_visualAssets/**/*.7z
-Assets/CME_visualAssets/**/*.mat
-Assets/CME_visualAssets/**/*.jpg
-Assets/CME_visualAssets/**/*.jpeg
-Assets/CME_visualAssets/**/*.ma
-Assets/CME_visualAssets/**/*.blend
-Assets/CME_visualAssets/**/*.mb
-Assets/CME_visualAssets/**/*.fbx
-Assets/CME_visualAssets/**/*.obj
-Assets/CME_visualAssets/**/*.sbs
-Assets/CME_visualAssets/**/*.txt
-Assets/CME_visualAssets/desktop.ini
-Assets/CME_visualAssets/desktop.ini.meta
-Assets/CME_visualAssets/.SynologyWorkingDirectory/
-
-# Synology - Wwise
-/CME_unity_WwiseProject
-/[Aa]ssets/StreamingAssets/
-/[Aa]ssets/StreamingAssets/**
-/[Aa]ssets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/English(US)/main2.bnk
-*.bnk
-Assets/StreamingAssets/desc.txt
-*.bnk
-Assets/StreamingAssets//Audio
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
-
-# Synology - Scenes WIP
-/[Aa]ssets/Stock/Scenes/Scenes WIP/
-/[Aa]ssets/Stock/Scenes/Scenes WIP**/
-
-# Synology - Visual Resources
-/[Aa]ssets/CME_visualResources/
-
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+# Recordings can get excessive in size
+/[Rr]ecordings/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -104,58 +59,14 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
-
-## ---------------- ##
-##   WWise stuff    ##
-## ---------------- ##
-
-# project stuff
-WWiseProject/.cache/
-WWiseProject/*.prof
-WwiseProject/*_WwiseProject.*.validationcache
-WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
-
-# build stuff (unsure?)
-
-# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
-
-# WWise Picker (editor)
-# from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
-# >> Do not keep AkWwiseProjectData.asset under version control! 
-# >> This is a temporary cache file for the Wwise project data, 
-# >> so as to avoid having the Wwise Picker continuously parse the Work Unit files.
-Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
-
-# notes:
-# 1) if any other files go in Assets/Wwise/Editor/ProjectData/ besides AkWwiseProjectData.asset*,
-#    then don't ignore Assets/Wwise/Editor/ProjectData.meta. If AkWwiseProjectData.asset is the only item in there,
-#    then, it's OK to ignore this file.
-# 
-# Assets/Wwise/Editor/ProjectData.meta
-/[Aa]ssets/WwiseSettings.xml
-
-## --------------- ##
-## End WWise Stuff ##
-## --------------- ##
-
-
-
+*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
 # Temporary auto-generated Android Assets
-
-Assets/PlayMaker/Editor/Install/Playmaker.1.9.2.unitypackage.meta
-Assets/PlayMaker/Editor/Install/Playmaker.1.9.3.unitypackage.meta
-Assets/PlayMaker/Editor/Install/Playmaker.1.9.4.unitypackage.meta
-Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset
-ProjectSettings/EditorBuildSettings.asset
-Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset
-Assets/ThirdParty Assets/QFX/Imagy VFX/URP HDRP Upgrade/URP_Upgrade_2019.3.15.unitypackage.meta
-Assets/ThirdParty Assets/QFX/Imagy VFX/URP HDRP Upgrade/HDRP_Upgrade_2019.3.15.unitypackage.meta
-!/ProjectSettings/TagManager.asset
-
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
