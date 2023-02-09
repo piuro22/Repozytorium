@@ -13,9 +13,10 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
     public TMP_Text chapterTitleText;// tytul poziomu
     private Vector3 startScale; //skala poczatkowa
     private Sequence animationSequnce;
-   [HideInInspector] public Transform chapterProgressPanel;//panel pokazujacy postep gracza
+    //[HideInInspector] public Transform chapterProgressPanel;//panel pokazujacy postep gracza
 
-    public GameObject GameToOpen;//referencja do gry
+    public GameType gameType;//referencja do gry
+    public LabrinthProperties labrinthProperties;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
 
     public void OnPointerClick(PointerEventData eventData)// gdy klikniemy
     {
-        GameToOpen.SetActive(true); //wlaczamy gre
+        GameManager.Instance.OpenGame(gameType, labrinthProperties);
     }
 
     public void OnPointerEnter(PointerEventData eventData) //Gdy najedziemy myszka
@@ -36,8 +37,8 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
 
         animationSequnce = DOTween.Sequence(); //deklarujemy nowa sekwencje
         animationSequnce.Append(transform.DOScale(onEnterScale, onEnterScaleAnimationTime)); //powiekszamy przycisk po najechaniu myszka
-        chapterProgressPanel.transform.position = transform.position + progressPanelOffset;
-        chapterProgressPanel.gameObject.SetActive(true);
+                                                                                             //  chapterProgressPanel.transform.position = transform.position + progressPanelOffset;
+                                                                                             // chapterProgressPanel.gameObject.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData) // gdy wyjdziemy kursorem poza przycisk
@@ -49,6 +50,6 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
         }
         animationSequnce = DOTween.Sequence(); //deklarujemy nowa sekwencje
         animationSequnce.Append(transform.DOScale(startScale, onEnterScaleAnimationTime));//przywracamy poprzednia skale  przycisku
-        chapterProgressPanel.gameObject.SetActive(false);
+                                                                                          //   chapterProgressPanel.gameObject.SetActive(false);
     }
 }

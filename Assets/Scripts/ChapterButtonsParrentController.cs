@@ -13,7 +13,7 @@ public class ChapterButtonsParrentController : MonoBehaviour
         foreach (ButtonOpenChapter chapterButton in chapterButtons)//petla przechodzaca po kazdym przycisku (skrypcie buttonOpenChapter)
         {
             chapterButton.chapterTitleText.text = (chapterButton.transform.GetSiblingIndex() +1).ToString();//nadanie numerka widoczne w grze
-            chapterButton.chapterProgressPanel = chapterProgressPanel;//nadanie referencji do panelu pokazujacego postep gracza pojedynczym przyciskom
+       //     chapterButton.chapterProgressPanel = chapterProgressPanel;//nadanie referencji do panelu pokazujacego postep gracza pojedynczym przyciskom
         }
     }
 }
