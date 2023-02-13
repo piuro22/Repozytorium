@@ -824,7 +824,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &396565406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5270,6 +5270,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050741405}
     m_Modifications:
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8066591379758516163, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
