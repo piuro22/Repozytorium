@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
 public class MemoryGameController : MonoBehaviour
 {
     public static MemoryGameController Instance { get; private set; }
@@ -39,6 +42,7 @@ public class MemoryGameController : MonoBehaviour
 
     private void Initialize()
     {
+
         audioSource = GetComponent<AudioSource>();
         foreach (Transform child in cardsParrent3x2)
         {
@@ -69,13 +73,18 @@ public class MemoryGameController : MonoBehaviour
             memoryGameCardControllers6x4.Add(child.GetComponent<MemoryGameCardController>());
         }
         cardsParrent6x4.gameObject.SetActive(false);
+
+        SetupMemoryGame();
     }
 
 
 
-    [Button]
+
     private void SetupMemoryGame()
     {
+        if (GameManager.Instance.gameProporties is MemoryGameProperties)
+            memoryGameProperties = GameManager.Instance.gameProporties as MemoryGameProperties;
+
         switch (memoryGameProperties.memorySize)
         {
             case MemorySize.S2x3:
@@ -199,7 +208,7 @@ public class MemoryGameController : MonoBehaviour
             return true;
         if (inCorrectRevealSequence.IsPlaying())
             return false;
-        else 
+        else
             return true;
 
     }

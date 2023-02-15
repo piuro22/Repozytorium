@@ -19,7 +19,7 @@ MonoBehaviour:
   OnRevealInCorrectSound: {fileID: 0}
   OnGameFinishedSound: {fileID: 0}
   OnFirstCardRevealSound: {fileID: 0}
-  memorySize: 1
+  memorySize: 4
   memoryCardDatas3x2:
   - sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
     audioclip: {fileID: 0}

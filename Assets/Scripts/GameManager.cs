@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public List<Games> games = new List<Games>();
-
+    public UnityEngine.Object gameProporties;
 
     private void Awake()
     {
@@ -22,18 +23,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OpenGame(GameType gameType, LabrinthProperties labrinthProperties)
+    public void OpenGame(GameType gameType, UnityEngine.Object _gameProperties)
     {
-        foreach(Games game in games)
+        gameProporties = _gameProperties;
+        foreach (Games game in games)
         {
             if(game.gameType == gameType)
             {
-                game.gamePanel.SetActive(true);
-                if (labrinthProperties != null)
-                {
-                    game.gamePanel.GetComponent<LabrinthController>().labrinthProperties = labrinthProperties;
-                    game.gamePanel.GetComponent<LabrinthController>().Initialize();
-                }
+                SceneManager.LoadScene(game.sceneName, LoadSceneMode.Single);
             }
         }
     }
@@ -44,6 +41,5 @@ public class GameManager : MonoBehaviour
 public class Games
 {
     public GameType gameType;
-    public GameObject gamePanel;
-   
+    public string sceneName;
 }

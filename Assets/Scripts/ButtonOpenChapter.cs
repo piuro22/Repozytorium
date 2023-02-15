@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using TMPro;
-
+using Sirenix.OdinInspector;
 public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Vector3 onEnterScale;//skala powiekszenia
@@ -16,7 +16,8 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
     //[HideInInspector] public Transform chapterProgressPanel;//panel pokazujacy postep gracza
 
     public GameType gameType;//referencja do gry
-    public LabrinthProperties labrinthProperties;
+    public Object gameProperties;
+
 
     private void Start()
     {
@@ -25,7 +26,8 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
 
     public void OnPointerClick(PointerEventData eventData)// gdy klikniemy
     {
-        GameManager.Instance.OpenGame(gameType, labrinthProperties);
+        GameManager.Instance.OpenGame(gameType, gameProperties);
+
     }
 
     public void OnPointerEnter(PointerEventData eventData) //Gdy najedziemy myszka
