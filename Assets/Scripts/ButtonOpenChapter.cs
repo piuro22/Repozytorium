@@ -5,19 +5,29 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using TMPro;
 using Sirenix.OdinInspector;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [BoxGroup("Button Properties")]
     [SerializeField] private Vector3 onEnterScale;//skala powiekszenia
+    [BoxGroup("Button Properties")]
     [SerializeField] private float onEnterScaleAnimationTime;//czas powiekszenia po najechaniu myszka
-    [SerializeField] private Vector3 progressPanelOffset;//przesuniecie panelu pokazujacego postep gracza
+    [BoxGroup("Button Properties")]
     public TMP_Text chapterTitleText;// tytul poziomu
     private Vector3 startScale; //skala poczatkowa
     private Sequence animationSequnce;
     //[HideInInspector] public Transform chapterProgressPanel;//panel pokazujacy postep gracza
 
+    [BoxGroup("Game Properties")]
     public GameType gameType;//referencja do gry
+    [BoxGroup("Game Properties")]
     public Object gameProperties;
 
+    [BoxGroup("Game Properties")]
+    [OnValueChanged("ChangeTitleText")]
+    public string chapterTitle;
 
     private void Start()
     {
@@ -54,4 +64,11 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
         animationSequnce.Append(transform.DOScale(startScale, onEnterScaleAnimationTime));//przywracamy poprzednia skale  przycisku
                                                                                           //   chapterProgressPanel.gameObject.SetActive(false);
     }
+#if UNITY_EDITOR
+    private void ChangeTitleText()
+    {
+        EditorUtility.SetDirty(chapterTitleText);
+        chapterTitleText.text = chapterTitle;
+    }
+#endif
 }
