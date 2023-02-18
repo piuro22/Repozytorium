@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db6e1b656736ee348bfa7b2b7503bc54, type: 3}
-  m_Name: MemoryProperties Level1
+  m_Name: MemoryProperties Level3
   m_EditorClassIdentifier: 
   cardMaskTexture: {fileID: 0}
   backGroundTexture: {fileID: 21300000, guid: fb82eb6c3b8fc7b46b0c0e7ef148b3ec, type: 3}
@@ -19,7 +19,7 @@ MonoBehaviour:
   OnRevealInCorrectSound: {fileID: 0}
   OnGameFinishedSound: {fileID: 0}
   OnFirstCardRevealSound: {fileID: 0}
-  memorySize: 1
+  memorySize: 0
   memoryCardDatas3x2:
   - sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
     audioclip: {fileID: 0}
@@ -28,17 +28,17 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: dae33700bd23f76409a80bf78fdb8a42, type: 3}
     audioclip: {fileID: 0}
   memoryCardDatas4x3:
-  - sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: a04ecc9d5e12d5d449077414eb86635e, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
+  - sprite: {fileID: 0}
     audioclip: {fileID: 0}
   memoryCardDatas4x4:
   - sprite: {fileID: 0}

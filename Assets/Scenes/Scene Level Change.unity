@@ -5159,7 +5159,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1933016810, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Alpha
-      value: 0.43
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: chapterTitle
+      value: Memory 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: m_text
+      value: Memory 2
       objectReference: {fileID: 0}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_sharedMaterial
