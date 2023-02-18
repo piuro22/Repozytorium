@@ -28,17 +28,17 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: dae33700bd23f76409a80bf78fdb8a42, type: 3}
     audioclip: {fileID: 0}
   memoryCardDatas4x3:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: a04ecc9d5e12d5d449077414eb86635e, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
     audioclip: {fileID: 0}
   memoryCardDatas4x4:
   - sprite: {fileID: 0}

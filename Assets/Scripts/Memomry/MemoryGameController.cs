@@ -17,7 +17,7 @@ public class MemoryGameController : MonoBehaviour
     [SerializeField] private Transform cardsParrent4x4;
     [SerializeField] private Transform cardsParrent5x4;
     [SerializeField] private Transform cardsParrent6x4;
-
+    [SerializeField] private GameFinishScreen gameFinishScreen;
     private MemoryGameCardController _firstRevealCard;
     private MemoryGameCardController _secondRevealCard;
     private float _collectedPoints;
@@ -112,6 +112,9 @@ public class MemoryGameController : MonoBehaviour
     {
         int i = 0;
         parrent.gameObject.SetActive(true);
+
+        cardControllers.Sort((a, b) => 1 - 2 * Random.Range(0, 2));
+
         foreach (MemoryCardData memoryCardData in memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize))
         {
             cardControllers[i].Initialize(memoryGameProperties.cardMaskTexture, memoryCardData.sprite, memoryCardData.audioclip);
@@ -119,20 +122,11 @@ public class MemoryGameController : MonoBehaviour
             cardControllers[i].Initialize(memoryGameProperties.cardMaskTexture, memoryCardData.sprite, memoryCardData.audioclip);
             i++;
         }
-
-        List<int> indexes = new List<int>();
-        List<Transform> items = new List<Transform>();
-        for (int x = 0; x < parrent.childCount; ++x)
-        {
-            indexes.Add(x);
-            items.Add(parrent.GetChild(x));
-        }
-
-        foreach (var item in items)
-        {
-            item.SetSiblingIndex(indexes[Random.Range(0, indexes.Count)]);
-        }
+        requiedPointsToWinGame = memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize).Count;
     }
+
+
+
 
     public void RevealCard(MemoryGameCardController card)
     {
@@ -197,6 +191,7 @@ public class MemoryGameController : MonoBehaviour
     private void OnGameFinished()
     {
         audioSource.PlayOneShot(memoryGameProperties.OnGameFinishedSound);
+        gameFinishScreen.gameObject.SetActive(true);
     }
 
 
