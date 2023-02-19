@@ -4476,7 +4476,7 @@ GameObject:
   - component: {fileID: 1519228350}
   - component: {fileID: 1519228349}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Memory Backgoround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5177,12 +5177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575b27aeeb4ab8b4db0b27abfb798a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoryGameProperties: {fileID: 0}
+  memoryGameProperties: {fileID: 11400000, guid: 38baf05d4ac5c164fbce3d7a543e896f, type: 2}
   cardsParrent3x2: {fileID: 846560002}
   cardsParrent4x3: {fileID: 190838060}
   cardsParrent4x4: {fileID: 536295087}
   cardsParrent5x4: {fileID: 1727935747}
   cardsParrent6x4: {fileID: 51599009}
+  background: {fileID: 1519228349}
   gameFinishScreen: {fileID: 1619190218}
 --- !u!4 &1741781556
 Transform:

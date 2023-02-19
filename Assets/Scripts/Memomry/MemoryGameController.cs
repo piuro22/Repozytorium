@@ -17,6 +17,7 @@ public class MemoryGameController : MonoBehaviour
     [SerializeField] private Transform cardsParrent4x4;
     [SerializeField] private Transform cardsParrent5x4;
     [SerializeField] private Transform cardsParrent6x4;
+    [SerializeField] private SpriteRenderer background;
     [SerializeField] private GameFinishScreen gameFinishScreen;
     private MemoryGameCardController _firstRevealCard;
     private MemoryGameCardController _secondRevealCard;
@@ -123,6 +124,7 @@ public class MemoryGameController : MonoBehaviour
             i++;
         }
         requiedPointsToWinGame = memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize).Count;
+        background.sprite = memoryGameProperties.backGroundTexture;
     }
 
 
