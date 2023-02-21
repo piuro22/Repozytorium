@@ -4,9 +4,6 @@ using UnityEngine;
 
 public enum GameType
 {
-    labirynt,
-    puzzle,
     memory,
-    szablon2,
-    szablon3
+    clickForHighlight
 }
