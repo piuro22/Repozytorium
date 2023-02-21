@@ -21,7 +21,7 @@ MonoBehaviour:
     outlineColor: {r: 1, g: 0, b: 0, a: 1}
     soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
   - texture: {fileID: 2800000, guid: ff0ac5cf3e6eeee41b8b503ecff5aad9, type: 3}
-    position: {x: 1, y: 0}
+    position: {x: 1.8, y: -1.4}
     scale: {x: 0.188, y: 0.188}
     outlineOnTime: 0.3
     outlineWidth: 0.03
