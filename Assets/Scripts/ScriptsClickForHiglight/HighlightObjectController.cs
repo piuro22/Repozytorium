@@ -3,6 +3,9 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using System;
+using System.Collections;
+
 public class HighlightObjectController : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
@@ -13,7 +16,32 @@ public class HighlightObjectController : MonoBehaviour
     [HideInInspector] public int index;
     [HideInInspector] public HiglightObject higlightObjectProperites;
     private AudioSource audioSource;
-    private Sequence onClickSequence;
+    private Sequence highlightSequence;
+
+    public bool shouldPlayAudioOnClick;
+    [HideInInspector] public bool isLocked;
+    [HideInInspector] public bool shouldCheckClickedAction;
+    [HideInInspector] public HighlightObjectGameController highlightObjectGameController;
+    public bool WasClicked
+    {
+        get { return wasClicked; }
+        set
+        {
+            if (value == true)
+            {
+                if(shouldCheckClickedAction)
+                highlightObjectGameController.objectClickedAction.Invoke();
+            }
+            wasClicked = value;
+        }
+    }
+    public bool wasClicked;
+
+
+
+
+
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -51,16 +79,54 @@ public class HighlightObjectController : MonoBehaviour
                 }
         }
     }
+
+
     public void OnClick()
     {
-        if (onClickSequence != null) onClickSequence.Kill();
-        onClickSequence = DOTween.Sequence();
+        if (!isLocked)
+        {
+            WasClicked = true;
+            Play();
+        }
+    }
 
-        onClickSequence.Append( spriteRenderer.material.DOFloat(1,"_OutlineAlpha", higlightObjectProperites.outlineOnTime));
-        onClickSequence.Join( spriteRenderer.material.DOColor(higlightObjectProperites.outlineColor, "_OutlineColor", 0));
-        onClickSequence.Join(spriteRenderer.material.DOFloat(higlightObjectProperites.outlineWidth, "_OutlineWidth", 0));
-        onClickSequence.Append(spriteRenderer.material.DOFloat(0, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
-     audioSource.PlayOneShot(higlightObjectProperites.soundOnClick);
+    public void Play()
+    {
+        if (shouldPlayAudioOnClick)
+        {
+            PlayAudio();
+        }
+        HiglightObject();
+    }
+
+
+
+
+    public void PlayAudio()
+    {
+        audioSource.PlayOneShot(higlightObjectProperites.soundOnClick);
+        StartCoroutine(WaitForStopSound());
+    }
+    IEnumerator WaitForStopSound()
+    {
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+        DeselectObject();
+    }
+
+    public void HiglightObject()
+    {
+        Debug.Log("xxx");
+        if (highlightSequence != null) highlightSequence.Kill();
+        highlightSequence = DOTween.Sequence();
+        highlightSequence.Append(spriteRenderer.material.DOFloat(1, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(spriteRenderer.material.DOColor(higlightObjectProperites.outlineColor, "_OutlineColor", 0));
+        highlightSequence.Join(spriteRenderer.material.DOFloat(higlightObjectProperites.outlineWidth, "_OutlineWidth", 0));
+    }
+    public void DeselectObject()
+    {
+        if (highlightSequence != null) highlightSequence.Kill();
+        highlightSequence = DOTween.Sequence();
+        highlightSequence.Append(spriteRenderer.material.DOFloat(0, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
     }
 
 
