@@ -15,11 +15,16 @@ public class MemoryGameCardController : MonoBehaviour
     private Sequence rotateSequence;
     [SerializeField] private AnimationCurve curve1;
     [SerializeField] private AnimationCurve curve2;
+
+   
+
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         boxCollider = GetComponent<BoxCollider>();
     }
+
     void OnMouseDown()
     {
         OnCardClick();

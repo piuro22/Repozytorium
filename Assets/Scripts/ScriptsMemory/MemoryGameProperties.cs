@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "MemoryProperties", menuName = "ScriptableObjects/MemoryProperties", order = 1)]
 public class MemoryGameProperties : ScriptableObject
 {
+
     [InfoBox("Tekstura maski karty")]
     public Sprite cardFrontTexture;
     [InfoBox("Tekstura maski karty")]
@@ -13,17 +14,17 @@ public class MemoryGameProperties : ScriptableObject
 
 
 
-    [InfoBox("Tekstura tła gry")]
+    [InfoBox("Tekstura tła gry", InfoMessageType.None)]
     public Sprite backGroundTexture;
-    [InfoBox("Czas po którym odpowiedzi się zakryją")]
+    [InfoBox("Czas po którym odpowiedzi się zakryją", InfoMessageType.None)]
     public float waitTimeOnIncorrectReveal = 1.5f;
-    [InfoBox("Dźwięk po poprawnym dopasowaniu kart")]
+    [InfoBox("Dźwięk po poprawnym dopasowaniu kart", InfoMessageType.None)]
     public AudioClip OnRevealCorrectSound;
-    [InfoBox("Dźwięk po niepoprawnym dopasowaniu kart")]
+    [InfoBox("Dźwięk po niepoprawnym dopasowaniu kart", InfoMessageType.None)]
     public AudioClip OnRevealInCorrectSound;
-    [InfoBox("Dźwięk ukończenia gry")]
+    [InfoBox("Dźwięk ukończenia gry", InfoMessageType.None)]
     public AudioClip OnGameFinishedSound;
-    [InfoBox("Dźwięk podniesienia pierwszej karty")]
+    [InfoBox("Dźwięk podniesienia pierwszej karty", InfoMessageType.None)]
     public AudioClip OnFirstCardRevealSound;
 
     public MemorySize memorySize;
@@ -38,6 +39,10 @@ public class MemoryGameProperties : ScriptableObject
     public List<MemoryCardData> memoryCardDatas5x2;
     [ShowIf("memorySize", MemorySize.S4x4)]
     public List<MemoryCardData> memoryCardDatas4x4;
+
+
+    [InfoBox("Muzyka gry")]
+    public AudioClip gameMusic;
 
     [OnInspectorInit]
     private void CreateData()
