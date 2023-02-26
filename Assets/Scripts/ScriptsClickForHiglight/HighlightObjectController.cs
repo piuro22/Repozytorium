@@ -86,7 +86,7 @@ public class HighlightObjectController : MonoBehaviour
         if (!isLocked)
         {
             WasClicked = true;
-            Play();
+            HighlightObjectOnClick();
         }
     }
 
@@ -113,9 +113,18 @@ public class HighlightObjectController : MonoBehaviour
         DeselectObject();
     }
 
+    public void HighlightObjectOnClick()
+    {
+        if (highlightSequence != null) highlightSequence.Kill();
+        highlightSequence = DOTween.Sequence();
+        highlightSequence.Append(spriteRenderer.material.DOFloat(1, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(spriteRenderer.material.DOColor(higlightObjectProperites.outlineColor, "_OutlineColor", 0));
+        highlightSequence.Join(spriteRenderer.material.DOFloat(higlightObjectProperites.outlineWidth, "_OutlineWidth", 0));
+        highlightSequence.Append(spriteRenderer.material.DOFloat(0, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
+    }
+
     public void HiglightObject()
     {
-        Debug.Log("xxx");
         if (highlightSequence != null) highlightSequence.Kill();
         highlightSequence = DOTween.Sequence();
         highlightSequence.Append(spriteRenderer.material.DOFloat(1, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));

@@ -31,7 +31,7 @@ public class MemoryGameController : MonoBehaviour
     private List<MemoryGameCardController> memoryGameCardControllers5x2 = new List<MemoryGameCardController>();
     private List<MemoryGameCardController> memoryGameCardControllers4x4 = new List<MemoryGameCardController>();
     private AudioSource audioSource;
-
+    [SerializeField] private AudioSource musicController;
 
 
     private void Awake()
@@ -39,6 +39,13 @@ public class MemoryGameController : MonoBehaviour
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
         Initialize();
+    }
+
+    private void SetupMusic()
+    {
+        musicController.clip = memoryGameProperties.gameMusic;
+        musicController.loop = true;
+        musicController.Play();
     }
 
     private void Initialize()
@@ -76,6 +83,7 @@ public class MemoryGameController : MonoBehaviour
         cardsParrent4x4.gameObject.SetActive(false);
 
         SetupMemoryGame();
+
     }
 
 
@@ -85,7 +93,7 @@ public class MemoryGameController : MonoBehaviour
     {
         if (GameManager.Instance.gameProporties is MemoryGameProperties)
             memoryGameProperties = GameManager.Instance.gameProporties as MemoryGameProperties;
-
+        SetupMusic();
         switch (memoryGameProperties.memorySize)
         {
             case MemorySize.S3x2:

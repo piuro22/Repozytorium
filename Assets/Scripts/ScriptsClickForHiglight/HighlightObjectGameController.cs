@@ -14,12 +14,21 @@ public class HighlightObjectGameController : MonoBehaviour
     private bool objectWasClicked;
     private AudioSource audioSource;
     public GameObject GameEndScreen;
-
+    [SerializeField] private SpriteRenderer background;
+    [SerializeField] private AudioSource musicController;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         SetupGame();
         objectClickedAction += ObjectClicked;
+        background.sprite = highlightObjectGameScriptable.backGroundTexture;
+    }
+
+    private void SetupMusic()
+    {
+        musicController.clip = highlightObjectGameScriptable.gameMusic;
+        musicController.loop = true;
+        musicController.Play();
     }
     private void ObjectClicked()
     {
@@ -33,6 +42,7 @@ public class HighlightObjectGameController : MonoBehaviour
     [Button]
     private void SetupGame()
     {
+        SetupMusic();
 
         int index = 0;
         foreach (HiglightObject higlightObject in highlightObjectGameScriptable.higlightObjects)
@@ -127,6 +137,7 @@ public class HighlightObjectGameController : MonoBehaviour
             yield return new WaitForSeconds(gameSequence.SequenceTime);
             foreach (HighlightObjectController spawnedObject in spawnedObjects)
             {
+                spawnedObject.isLocked = true;
                 spawnedObject.DeselectObject();
                 spawnedObject.shouldCheckClickedAction = false;
                 spawnedObject.WasClicked = false;
