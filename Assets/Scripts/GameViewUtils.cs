@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
-
+#if UNITY_EDITOR
 public static class GameViewUtils
 {
     static object gameViewSizesInstance;
@@ -177,3 +177,4 @@ public static class GameViewUtils
         return (GameViewSizeGroupType)(int)getCurrentGroupTypeProp.GetValue(gameViewSizesInstance, null);
     }
 }
+#endif

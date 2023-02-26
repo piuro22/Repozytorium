@@ -10,7 +10,9 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
         GameViewUtils.SetSize(8);
+#endif
     }
 
     private void Start()
@@ -39,7 +41,9 @@ public class SceneController : MonoBehaviour
     }
     public void OnGameActivityClick()
     {
+#if UNITY_EDITOR
         GameViewUtils.SetSize(7);
+#endif
         OpenScene("Scene Level Change");
 
     }
