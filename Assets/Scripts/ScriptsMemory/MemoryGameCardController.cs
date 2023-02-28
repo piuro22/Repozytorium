@@ -15,8 +15,9 @@ public class MemoryGameCardController : MonoBehaviour
     private Sequence rotateSequence;
     [SerializeField] private AnimationCurve curve1;
     [SerializeField] private AnimationCurve curve2;
+    [HideInInspector] public float shakePower;
+    [HideInInspector] public float shakeDouration;
 
-   
 
 
     private void Start()
@@ -50,7 +51,7 @@ public class MemoryGameCardController : MonoBehaviour
 
         rotateSequence = DOTween.Sequence();
         rotateSequence.Append(transform.DOLocalRotate(new Vector3(0, 180, 0), revealSpeed).SetEase(curve2));
-
+        rotateSequence.Join(transform.DOShakePosition(MemoryGameController.Instance.memoryGameProperties.shakeDouration, MemoryGameController.Instance.memoryGameProperties.shakePower));
         MemoryGameController.Instance.RevealCard(this);
     }
 

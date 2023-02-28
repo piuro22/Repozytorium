@@ -244,6 +244,9 @@ public class MemoryGameController : MonoBehaviour
         }
     }
 
-
+    public void BackToChoseLevels()
+    {
+        SceneManager.LoadScene("Scene Level Change");
+    }
 
 }

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class HighlightObjectGameController : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class HighlightObjectGameController : MonoBehaviour
     [Button]
     private void SetupGame()
     {
+        if (GameManager.Instance.gameProporties is HighlightObjectGameScriptable)
+            highlightObjectGameScriptable = GameManager.Instance.gameProporties as HighlightObjectGameScriptable;
         SetupMusic();
 
         int index = 0;
@@ -145,5 +148,10 @@ public class HighlightObjectGameController : MonoBehaviour
         }
 
         GameEndScreen.SetActive(true);
+    }
+
+    public void BackToChoseLevels()
+    {
+        SceneManager.LoadScene("Scene Level Change");
     }
 }

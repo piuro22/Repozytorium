@@ -14,28 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFrontTexture: {fileID: 21300000, guid: 0c576288172d5fc4e8032b5a3bc287e3, type: 3}
   cardBackTexture: {fileID: 21300000, guid: 08dd6a7884153824cbb35ffeaed13b00, type: 3}
-  backGroundTexture: {fileID: 21300000, guid: 5c3ddba8bc05d1c40bb53f327e23558d, type: 3}
+  shakePower: 0.1
+  shakeDouration: 1
+  backGroundTexture: {fileID: 21300000, guid: 4547d568405ec2d42ab50afa181d047d, type: 3}
   waitTimeOnIncorrectReveal: 1.5
   OnRevealCorrectSound: {fileID: 0}
   OnRevealInCorrectSound: {fileID: 0}
   OnGameFinishedSound: {fileID: 0}
   OnFirstCardRevealSound: {fileID: 0}
-  memorySize: 0
+  memorySize: 1
   memoryCardDatas3x2:
-  - sprite: {fileID: 21300000, guid: b291dac26b6c66743a7ccd694a72db6b, type: 3}
-    audioclip: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
-  - sprite: {fileID: 21300000, guid: d6088f4b3be08574cb378e9f7f3c1109, type: 3}
-    audioclip: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
-  - sprite: {fileID: 21300000, guid: 2bc7be1296369b14f9769fc938663a94, type: 3}
-    audioclip: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+  - sprite: {fileID: 21300000, guid: f2dd284b722ce0c49ba64f7c82c7845c, type: 3}
+    audioclip: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 25fca65c4491bd74d86a80031286699d, type: 3}
+    audioclip: {fileID: 0}
+  - sprite: {fileID: 0}
+    audioclip: {fileID: 0}
   memoryCardDatas4x2:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 9cecc4ce121f91c448e261e9ee96154a, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 4a4a45f8565513940bc2e9228cb28a16, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 5223733516084dc458d73248e1a7d0ec, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: d0bf1a9686747584198a92a80d4ddeb8, type: 3}
     audioclip: {fileID: 0}
   memoryCardDatas4x3:
   - sprite: {fileID: 0}
@@ -78,3 +80,4 @@ MonoBehaviour:
     audioclip: {fileID: 0}
   - sprite: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
     audioclip: {fileID: 0}
+  gameMusic: {fileID: 8300000, guid: 7eb585fadb3f2044bb169bfa6317a51f, type: 3}

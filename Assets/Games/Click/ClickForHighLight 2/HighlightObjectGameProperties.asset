@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1bcfa7bccb7d94682be39ffeb28b43, type: 3}
+  m_Name: HighlightObjectGameProperties
+  m_EditorClassIdentifier: 
+  backGroundTexture: {fileID: 0}
+  gameMusic: {fileID: 0}
+  gameSequence: []
+  higlightObjects:
+  - id: 0
+    texture: {fileID: 2800000, guid: ff0ac5cf3e6eeee41b8b503ecff5aad9, type: 3}
+    position: {x: 0, y: 0}
+    scale: {x: 0.188, y: 0.188}
+    outlineOnTime: 0.3
+    outlineWidth: 0.03
+    outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
+    soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}

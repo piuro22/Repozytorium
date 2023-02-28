@@ -11,8 +11,10 @@ public class MemoryGameProperties : ScriptableObject
     public Sprite cardFrontTexture;
     [InfoBox("Tekstura maski karty")]
     public Sprite cardBackTexture;
-
-
+    [InfoBox("Siła wstrząsu")]
+    public float shakePower;
+    [InfoBox("Czas trwania wstrząsu")]
+    public float shakeDouration;
 
     [InfoBox("Tekstura tła gry", InfoMessageType.None)]
     public Sprite backGroundTexture;

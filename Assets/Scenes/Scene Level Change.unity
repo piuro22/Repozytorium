@@ -3833,7 +3833,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1933016810, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Alpha
-      value: 0.43
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: chapterTitle
+      value: Ice cream
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties
+      value: 
+      objectReference: {fileID: 11400000, guid: 38baf05d4ac5c164fbce3d7a543e896f, type: 2}
+    - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: m_text
+      value: Ice cream
       objectReference: {fileID: 0}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_sharedMaterial
@@ -3934,12 +3950,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 810c91d93aaeb814e96085a57da8528b, type: 2}
+      objectReference: {fileID: 11400000, guid: d1fa4f5bd4261be42a55d5db4facd434, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -5266,7 +5282,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties
       value: 
-      objectReference: {fileID: 11400000, guid: af1bf56234d4a1f4e8d57d1bc35f6769, type: 2}
+      objectReference: {fileID: 11400000, guid: 16f515c4ce57c7d41ac4a6702f6c5d28, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Click
@@ -5474,7 +5490,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: chapterTitle
@@ -5483,7 +5499,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 38baf05d4ac5c164fbce3d7a543e896f, type: 2}
+      objectReference: {fileID: 11400000, guid: af1bf56234d4a1f4e8d57d1bc35f6769, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Memory

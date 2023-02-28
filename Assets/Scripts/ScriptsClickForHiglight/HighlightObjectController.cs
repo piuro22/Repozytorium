@@ -9,7 +9,6 @@ using System.Collections;
 public class HighlightObjectController : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    public AdvancedPolygonCollider polygonCollider;
     public Texture2D _texture;
     private Sprite tempSprite;
     public Material material;
@@ -57,7 +56,7 @@ public class HighlightObjectController : MonoBehaviour
 
         spriteRenderer.material.EnableKeyword("OUTBASE_ON");
         spriteRenderer.material.SetFloat("_OutlineAlpha", 0);
-        polygonCollider.RecalculatePolygon();
+        gameObject.AddComponent<PolygonCollider2D>();
     }
 
     private void Update()
