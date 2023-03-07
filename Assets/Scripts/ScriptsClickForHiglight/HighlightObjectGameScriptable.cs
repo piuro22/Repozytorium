@@ -57,6 +57,7 @@ public class HiglightObject
     [InfoBox("Czas podświetlenia", InfoMessageType.None)]
     public float outlineOnTime;
     [InfoBox("Grubość podświetlenia", InfoMessageType.None)]
+    [PropertyRange(0,1)]
     public float outlineWidth;
     [InfoBox("Kolor podświetlenia", InfoMessageType.None)]
     public Color outlineColor;
