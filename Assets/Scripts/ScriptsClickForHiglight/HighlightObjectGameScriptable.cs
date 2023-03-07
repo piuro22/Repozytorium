@@ -6,13 +6,15 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "HighlightObjectGameProperties", menuName = "ScriptableObjects/HighlightObjectGameProperties", order = 1)]
 public class HighlightObjectGameScriptable : ScriptableObject
 {
-    [InfoBox("Tekstura tła gry",InfoMessageType.None)]
+    [LabelText("Tekstura tła gry")]
     public Sprite backGroundTexture;
 
-    [InfoBox("Muzyka gry")]
+    [LabelText("Muzyka gry")]
     public AudioClip gameMusic;
 
+    [LabelText("Sekwencje")]
     public List<HighlightGameSequence> gameSequence = new List<HighlightGameSequence>();
+    [LabelText("Obiekty do podświetlenia")]
     public List<HiglightObject> higlightObjects = new List<HiglightObject>();
 }
 [Serializable]
@@ -21,12 +23,12 @@ public class HighlightGameSequence
     public AudioClip audioClipOnSingleSequenceStart;
    
     public List<ObjectsToHighlight> objectsToHighlights = new List<ObjectsToHighlight>();
-    [InfoBox("Czas sekwencji", InfoMessageType.None)]
+    [LabelText("Czas sekwencji")]
     public float SequenceTime;
-    [InfoBox("Czy czekać na kliknięcie?", InfoMessageType.None)]
+    [LabelText("Czy czekać na kliknięcie?")]
     public bool waitForClick;
     [ShowIf("CheckWaitForClickState")]
-    [InfoBox("dźwięk przy kliknięciu", InfoMessageType.None)]
+    [LabelText("dźwięk przy kliknięciu")]
     public AudioClip audioClipOnClick;
 
 
@@ -39,6 +41,7 @@ public class HighlightGameSequence
 [Serializable]
 public class ObjectsToHighlight
 {
+    [LabelText("ID obiektu")]
     public int ObjectID;
 }
 
@@ -46,21 +49,21 @@ public class ObjectsToHighlight
 [Serializable]
 public class HiglightObject
 {
-    [InfoBox("Unikalne ID dla obrazka", InfoMessageType.None)]
+    [LabelText("Unikalne ID dla obrazka")]
     public int id;
-    [InfoBox("Tekstura obrazka", InfoMessageType.None)]
+    [LabelText("Tekstura obrazka")]
     public Texture2D texture;
-    [InfoBox("Pozycja obrazka", InfoMessageType.None)]
+    [LabelText("Pozycja obrazka")]
     public Vector2 position;
-    [InfoBox("Skala obrazka", InfoMessageType.None)]
+    [LabelText("Skala obrazka")]
     public Vector2 scale;
-    [InfoBox("Czas podświetlenia", InfoMessageType.None)]
+    [LabelText("Czas podświetlenia")]
     public float outlineOnTime;
-    [InfoBox("Grubość podświetlenia", InfoMessageType.None)]
+    [LabelText("Grubość podświetlenia")]
     [PropertyRange(0,1)]
     public float outlineWidth;
-    [InfoBox("Kolor podświetlenia", InfoMessageType.None)]
+    [LabelText("Kolor podświetlenia")]
     public Color outlineColor;
-    [InfoBox("Dźwięk kliknięcia w obrazek", InfoMessageType.None)]
+    [LabelText("Dźwięk kliknięcia w obrazek")]
     public AudioClip soundOnClick;
 }

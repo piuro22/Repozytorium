@@ -95,6 +95,7 @@ public class HighlightObjectGameController : MonoBehaviour
                         {
                             audioSource.PlayOneShot(gameSequence.audioClipOnSingleSequenceStart);
                         }
+                        Debug.Log(spawnedObject.name);
                         spawnedObject.HiglightObject();
 
                     }
