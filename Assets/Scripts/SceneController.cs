@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
 #if UNITY_EDITOR
         GameViewUtils.SetSize(8);
 #endif
