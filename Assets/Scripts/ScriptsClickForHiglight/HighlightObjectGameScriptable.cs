@@ -12,6 +12,10 @@ public class HighlightObjectGameScriptable : ScriptableObject
     [LabelText("Muzyka gry")]
     public AudioClip gameMusic;
 
+    [LabelText("Dźwięk polecenia do gry")]
+    public AudioClip gameCommandAudioClip;
+
+
     [LabelText("Sekwencje")]
     public List<HighlightGameSequence> gameSequence = new List<HighlightGameSequence>();
     [LabelText("Obiekty do podświetlenia")]

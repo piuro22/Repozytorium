@@ -12,27 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e5ed1193521b24abb688f2d6a72c3b, type: 3}
   m_Name: DragAndDropGameProperties
   m_EditorClassIdentifier: 
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
+  commandText: Dopasuj obiekty
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 0
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
-  useOtherTextureForContainer: 0
-  useOnlyPartOfPictures: 0
-  partOfPicturesAmount: 0
+  useOtherTextureForContainer: 1
   useSequence: 1
+  onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
+  dragAndDropGameSequences:
+  - objectID: 0
+    textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
+    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+  - objectID: 1
+    textMessage: "Przesu\u0144 niebieski balonik do czerwonego balonika"
+    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
+  onWrongContainerAudioClip: {fileID: 8300000, guid: 1801ac15cc25d184a927c397a45180db, type: 3}
   objects:
   - useRandomPositionForDragObjects: 0
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
+    id: 0
     texture: {fileID: 2800000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
     startPosition: {x: 0, y: 0}
     startPositionMinMaxX: {x: 1, y: 2}
@@ -40,38 +52,41 @@ MonoBehaviour:
     scale: {x: 0.3, y: 0.3}
     rotationAngle: 30
     rotationMinMaxAngle: {x: -70, y: 70}
-    alternativeTargetTexture: {fileID: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: ab8b081a6c3accc489a9419f77fd7b55, type: 3}
+    additionalOffset: {x: 0.2, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.2, y: 0.2}
     targetPosition: {x: 0, y: -1}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.4, y: 0.4}
+    targetScale: {x: 0.2, y: 0.2}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
-    dialogOnSequenceStart: {fileID: 0}
     onSuccesfullDragAudioClip: {fileID: 0}
     onDragAudioClip: {fileID: 0}
   - useRandomPositionForDragObjects: 0
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
-    texture: {fileID: 2800000, guid: f2dd284b722ce0c49ba64f7c82c7845c, type: 3}
+    id: 1
+    texture: {fileID: 2800000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
     startPosition: {x: 3, y: 0}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.3, y: 0.3}
     rotationAngle: -30
     rotationMinMaxAngle: {x: -70, y: 70}
-    alternativeTargetTexture: {fileID: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: eb46123af04298b43a6565e06ae8af33, type: 3}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0.4, y: 0.4}
     targetPosition: {x: 2, y: -1}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
     targetScale: {x: 0.4, y: 0.4}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
-    dialogOnSequenceStart: {fileID: 8300000, guid: 00702221ced313348935635f5090840d, type: 3}
     onSuccesfullDragAudioClip: {fileID: 0}
     onDragAudioClip: {fileID: 0}

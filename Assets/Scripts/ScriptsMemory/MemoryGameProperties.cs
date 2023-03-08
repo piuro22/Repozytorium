@@ -46,6 +46,9 @@ public class MemoryGameProperties : ScriptableObject
     [InfoBox("Muzyka gry")]
     public AudioClip gameMusic;
 
+    [LabelText("Dźwięk polecenia do gry")]
+    public AudioClip gameCommandAudioClip;
+
     [OnInspectorInit]
     private void CreateData()
     {

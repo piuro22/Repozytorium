@@ -9,6 +9,26 @@ using UnityEditor;
 public class DragAndDropGameProperties : ScriptableObject
 {
 
+
+
+
+    [BoxGroup("Ogólne")]
+    [LabelText("Muzyka gry")]
+    public AudioClip gameMusic;
+
+    [BoxGroup("Ogólne")]
+    [LabelText("Dźwięk polecenia do gry")]
+    public AudioClip gameCommandAudioClip;
+
+    [BoxGroup("Ogólne")]
+    [LabelText("Polecenie w formie tekstu")]
+    public string commandText;
+
+
+
+
+
+
     [BoxGroup("Właściwości pojedynczych obiektów")]
     [LabelText("Użyj losowej pozycji obiektu do podnoszenia")]
     public bool useRandomPositionForDragObjects;
@@ -26,7 +46,9 @@ public class DragAndDropGameProperties : ScriptableObject
     [LabelText("Użyj unikalnych dźwięków dla pojedynczych obiektów podczas podnoszenia")]
     public bool useCustomAudioClipForSingleObjectOnDrag;
 
-
+    [BoxGroup("Właściwości pojedynczych obiektów")]
+    [LabelText("Prędkość dopasowania do kontenera (w sekundach)")]
+    public float snapToContainterTime = 0.25f;
 
     [BoxGroup("Obiekt kontenera")]
     [LabelText("Użyj losowej pozycji kontenera")]
@@ -39,26 +61,77 @@ public class DragAndDropGameProperties : ScriptableObject
     [LabelText("Użyj innej tekstury dla kontenera")]
     public bool useOtherTextureForContainer;
 
-    [LabelText("Użyj tylko niektórych obiektów")]
-    public bool useOnlyPartOfPictures;
-    [ShowIf("CheckUseOnlyPartOfPictures")]
-    [LabelText("Ilość obiektów do użycia")]
-    public int partOfPicturesAmount;
+
+
+
+
+
+    //[LabelText("Użyj tylko niektórych obiektów")]
+    //public bool useOnlyPartOfPictures;
+    //[ShowIf("CheckUseOnlyPartOfPictures")]
+    //[LabelText("Ilość obiektów do użycia")]
+    //public int partOfPicturesAmount;
+
+
+
 
     [BoxGroup("Sekwencja")]
     [LabelText("Użyj sekwencji")]
     public bool useSequence;
 
+    [BoxGroup("Sekwencja")]
+    [ShowIf("CheckUseSequence")]
+    [LabelText("Dźwięk odtwarzany gdy złapiemy zły obrazek")]
+    public AudioClip onWrongObjectAudioClip;
+
+    [BoxGroup("Sekwencja")]
+    [LabelText("Sekwencja")]
+    [ListDrawerSettings(ListElementLabelName = "ListName")]
+    [ShowIf("CheckUseSequence")]
+    [InfoBox("Liczba sekwencji musi odpowiadać ilości pojedynczych obiektów!", InfoMessageType.Error, "CheckSequenceLenght")]
+    public List<DragAndDropGameSequence> dragAndDropGameSequences = new List<DragAndDropGameSequence>();
+
+
+
+    [BoxGroup("Gdy dobrze dopasujemy obrazek")]
+    [LabelText("Dźwięk odtwarzany gdy źle dopasujemy obrazki")]
+    public AudioClip onGoodContainerAudioClip;
+
+    
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
     [LabelText("Siła wstrząśnięcia gdy obrazek jest źle dopasowany")]
     public float onWrongContainerShakePower = 0.3f;
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
     [LabelText("Czas trwania wstrząśnięcia gdy obrazek jest źle dopasowany")]
     public float onWrongContainerShakeDuration = 0.5f;
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
+    [LabelText("Grubość podświetlenia obrazka")]
+    [Range(0,1)]
+    public float onWrongContainerOutlineWidth = 0.5f;
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
+    [LabelText("Czas przejścia podświetlenia")]
+    [Range(0, 2)]
+    public float onWrongContainerOutlineFadeTime = 0.5f;
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
+    [LabelText("Kolor podświetlenia")]
+    public Color onWrongContainerOutlineColor = Color.red;
+
+    [BoxGroup("Gdy źle dopasujemy obrazek")]
+    [LabelText("Dźwięk odtwarzany gdy źle dopasujemy obrazki")]
+    public AudioClip onWrongContainerAudioClip;
+
+
 
     [ListDrawerSettings(ShowIndexLabels = true)]
     [LabelText("Pojedyncze obiekty")]
     public List<DragAndDropObjectProperties> objects = new List<DragAndDropObjectProperties>();
 
- 
+
 
     [OnInspectorGUI]
     public void Variable()
@@ -76,12 +149,21 @@ public class DragAndDropGameProperties : ScriptableObject
         }
     }
 
-    private bool CheckUseOnlyPartOfPictures()
+    //private bool CheckUseOnlyPartOfPictures()
+    //{
+    //    return useOnlyPartOfPictures;
+    //}
+    private bool CheckUseSequence()
     {
-        return useOnlyPartOfPictures;
+        return useSequence;
     }
-
-   
+    private bool CheckSequenceLenght()
+    {
+        if (dragAndDropGameSequences.Count != objects.Count)
+            return true;
+        else
+            return false;
+    }
 }
 
 
@@ -99,6 +181,11 @@ public class DragAndDropObjectProperties
     [HideInInspector] public bool useCustomAudioClipForSingleObjectOnDrag;
     [HideInInspector] public bool useCustomAudioClipForSingleObjectOnSuccesfullDrag;
     [HideInInspector] public bool useSequence;
+
+    [BoxGroup("Obiekt do podnoszenia")]
+    [LabelText("Unikalne ID potrzebne tylko do sekwencji")]
+    public int id;
+
 
     [BoxGroup("Obiekt do podnoszenia")]
     [PreviewField(ObjectFieldAlignment.Left)]
@@ -145,11 +232,24 @@ public class DragAndDropObjectProperties
 
 
 
-    [BoxGroup("Obiekt kontenera")]
+    [BoxGroup("Obiekt kontenera/Alternatywny obrazek")]
     [ShowIf("CheckUseOtherTextureForContainerObjects")]
     [PreviewField(ObjectFieldAlignment.Left)]
     [LabelText("Alternatywny obrazek kontenera")]
     public Texture2D alternativeTargetTexture;
+
+    [BoxGroup("Obiekt kontenera/Alternatywny obrazek")]
+    [ShowIf("CheckUseOtherTextureForContainerObjects")]
+    [LabelText("Dodatkowe przesunięcie dla przesuwanego obiektu")]
+    public Vector2 additionalOffset;
+
+    [BoxGroup("Obiekt kontenera/Alternatywny obrazek")]
+    [ShowIf("CheckUseOtherTextureForContainerObjects")]
+    [LabelText("Skala obiektu do przesuwania po dopasowaniu")]
+    public Vector2 endScaleObjectIfAlternativeTexture;
+
+
+
 
 
     [BoxGroup("Obiekt kontenera")]
@@ -185,10 +285,7 @@ public class DragAndDropObjectProperties
     [LabelText("Losowa Rotacja obiektu kontenera")]
     public Vector2 targetRotationMinMaxAngle;
 
-    [BoxGroup("Sekwencja")]
-    [ShowIf("CheckUseSequence")]
-    [LabelText("@DialogTime()")]
-    public AudioClip dialogOnSequenceStart;
+ 
 
 
     [ShowIf("CheckUseCustomAudioClipForSingleObjectOnSuccesfullDrag")]
@@ -240,23 +337,34 @@ public class DragAndDropObjectProperties
         return useSequence;
     }
 
+
+
+
+}
+[Serializable]
+public class DragAndDropGameSequence
+{
+   
+    [LabelText("ID chwytanego obiektu")]
+    public int objectID;
+    [LabelText("Tekst wyświetlany podczas sekwencji")]
+    public string textMessage;
+
+    [LabelText("@DialogTime()")]
+    public AudioClip dialogOnSequenceStart;
+
+
+    private string ListName()
+    {
+        return "sekwencja nr: " + objectID;
+    }
+
     private string DialogTime()
     {
         if (dialogOnSequenceStart != null)
         {
-            return $"Dialog na czas sekwencji Czas:{dialogOnSequenceStart.length.ToString("0.00")}s";
+            return $"Dialog na Start sekwencji Czas:{dialogOnSequenceStart.length.ToString("0.00")}s";
         }
-        else { return "Dialog na czas sekwencji: Brak klipu"; }
-    }
-
-
-}
-[OnInspectorGUI]
-public class DragAndDropDrawGizmo : MonoBehaviour
-{
-   
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawCube(Vector3.zero, Vector3.one*50);
+        else { return "Dialog na Start sekwencji: Brak klipu"; }
     }
 }

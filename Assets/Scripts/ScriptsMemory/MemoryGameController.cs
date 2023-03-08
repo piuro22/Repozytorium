@@ -46,6 +46,8 @@ public class MemoryGameController : MonoBehaviour
         musicController.clip = memoryGameProperties.gameMusic;
         musicController.loop = true;
         musicController.Play();
+        musicController.PlayOneShot(memoryGameProperties.gameCommandAudioClip);
+
     }
 
     private void Initialize()

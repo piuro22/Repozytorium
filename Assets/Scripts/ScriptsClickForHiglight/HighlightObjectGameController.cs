@@ -30,6 +30,7 @@ public class HighlightObjectGameController : MonoBehaviour
         musicController.clip = highlightObjectGameScriptable.gameMusic;
         musicController.loop = true;
         musicController.Play();
+        musicController.PlayOneShot(highlightObjectGameScriptable.gameCommandAudioClip);
     }
     private void ObjectClicked()
     {

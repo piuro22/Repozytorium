@@ -267,6 +267,10 @@ MonoBehaviour:
   dragAndDropGameProperties: {fileID: 11400000, guid: 87703c1806551984789a71f497442d86, type: 2}
   dragAndDropObjectPrefab: {fileID: 6436918624437548336, guid: ef2f16313ee9c4f4ea335e2c600921a3, type: 3}
   dropContainerPrefab: {fileID: 6436918624437548336, guid: aa7061d3ef28f734a80e05c99d6811f7, type: 3}
+  audioSource: {fileID: 306067983}
+  dragAndDropObjectControllers: []
+  messageText: {fileID: 2055165059}
+  gameFinishScreen: {fileID: 1673306154}
 --- !u!1 &654729906
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,21 +374,26 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &654729910
-Transform:
+--- !u!224 &654729910
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654729906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.6, z: -4.718}
+  m_LocalPosition: {x: 0, y: 0, z: -4.718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: -0.6}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &726518684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,22 +488,6 @@ PrefabInstance:
     - target: {fileID: 445095516987947135, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
       propertyPath: m_Name
       value: Game Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 445095516987947135, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 445095517231121233, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 445095517231121233, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BackToChoseLevels
-      objectReference: {fileID: 0}
-    - target: {fileID: 445095517231121233, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HighlightObjectGameController, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
@@ -697,6 +690,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673306154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 445095517731401761, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+  m_PrefabInstance: {fileID: 726518684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef21a3bcd87736746929238348eb78f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1771980556
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,3 +897,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2055165059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2055165059, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+  m_PrefabInstance: {fileID: 726518684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

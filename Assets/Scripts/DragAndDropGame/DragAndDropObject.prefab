@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6436918624437548348}
   - component: {fileID: 6436918624437548349}
   - component: {fileID: 6436918624437548338}
+  - component: {fileID: 9144892697643852528}
+  - component: {fileID: 1113331051129534711}
   m_Layer: 6
   m_Name: DragAndDropObject
   m_TagString: Untagged
@@ -97,7 +99,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994078da6572b6449930378f4790f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragAndDropGameProperties: {fileID: 0}
+  dragAndDropObjectProperties:
+    useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 0
+    useCustomAudioClipForSingleObjectOnDrag: 0
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 0
+    id: 0
+    texture: {fileID: 0}
+    startPosition: {x: 0, y: 0}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 1, y: 1}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    alternativeTargetTexture: {fileID: 0}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    targetPosition: {x: 0, y: 0}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 1, y: 1}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  dragAndDropGameController: {fileID: 0}
+  outlinable: {fileID: 9144892697643852528}
   spriteRenderer: {fileID: 6436918624437548349}
   dropLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  id: 0
+  isLockedBySequence: 0
+  isCorrect: 0
+--- !u!114 &9144892697643852528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6436918624437548336}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complexMaskingMode: 0
+  drawingMode: 1
+  outlineLayer: 0
+  outlineTargets:
+  - IsVisible: 1
+    CutoutMask: 8
+    edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    renderer: {fileID: 6436918624437548349}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 0
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  renderStyle: 1
+  outlineParameters:
+    enabled: 1
+    color: {r: 1, g: 0.015686274, b: 0.025225492, a: 1}
+    dilateShift: 0
+    blurShift: 0
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  backParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  frontParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+--- !u!114 &1113331051129534711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6436918624437548336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

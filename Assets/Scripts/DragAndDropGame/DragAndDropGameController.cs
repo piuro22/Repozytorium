@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using TMPro;
 using UnityEngine;
 
 public class DragAndDropGameController : MonoBehaviour
@@ -8,12 +8,16 @@ public class DragAndDropGameController : MonoBehaviour
     public DragAndDropGameProperties dragAndDropGameProperties;
     public GameObject dragAndDropObjectPrefab;
     public GameObject dropContainerPrefab;
-
-
-
-
+    public AudioSource audioSource;
+    public List<DragAndDropObjectController> dragAndDropObjectControllers = new List<DragAndDropObjectController>();
+    private int currentSequenceStep;
+    public TMP_Text messageText;
+    [SerializeField] private GameFinishScreen gameFinishScreen;
     private void Start()
     {
+        audioSource.PlayOneShot(dragAndDropGameProperties.gameCommandAudioClip);
+        messageText.text = dragAndDropGameProperties.commandText;
+        gameFinishScreen.gameObject.SetActive(false);
         foreach (DragAndDropObjectProperties dragAndDrop in dragAndDropGameProperties.objects)
         {
             DragAndDropObjectController dragObject = Instantiate(dragAndDropObjectPrefab.GetComponent<DragAndDropObjectController>());
@@ -48,9 +52,10 @@ public class DragAndDropGameController : MonoBehaviour
             dragObject.name = dragAndDrop.texture.name;
             dragObject.dragAndDropGameProperties = dragAndDropGameProperties;
             dragObject.dragAndDropObjectProperties = dragAndDrop;
-
+            dragObject.dragAndDropGameController = this;
+            dragObject.id = dragAndDrop.id;
+            dragAndDropObjectControllers.Add(dragObject);
             DropContainerObjectController dropContainerObject = Instantiate(dropContainerPrefab.GetComponent<DropContainerObjectController>());
-
             if (dragAndDrop.useRandomPositionForContainerObjects)
             {
                 dropContainerObject.transform.position = new Vector3(
@@ -71,7 +76,7 @@ public class DragAndDropGameController : MonoBehaviour
                 dropContainerObject.transform.localEulerAngles = new Vector3(0, 0, dragAndDrop.targetRotationAngle);
             }
             dropContainerObject.transform.localScale = dragAndDrop.targetScale;
-           
+
             if (dragAndDrop.alternativeTargetTexture != null)
             {
                 Texture2D dropContainerTexture = duplicateTexture(dragAndDrop.alternativeTargetTexture);
@@ -86,8 +91,68 @@ public class DragAndDropGameController : MonoBehaviour
             dropContainerObject.dragAndDropObjectController = dragObject;
             dropContainerObject.gameObject.AddComponent<PolygonCollider2D>();
         }
+
+        if (dragAndDropGameProperties.useSequence)
+        {
+            foreach (DragAndDropObjectController dragAndDropObjectController in dragAndDropObjectControllers)
+            {
+                dragAndDropObjectController.isLockedBySequence = true;
+            }
+        }
+        else
+        {
+            foreach (DragAndDropObjectController dragAndDropObjectController in dragAndDropObjectControllers)
+            {
+                dragAndDropObjectController.isLockedBySequence = false;
+            }
+        }
+        StartCoroutine(WaitForCommandEnd());
     }
 
+    IEnumerator WaitForCommandEnd()
+    {
+        yield return new WaitForSeconds(dragAndDropGameProperties.gameCommandAudioClip.length);
+        CheckSequence();
+
+    }
+
+
+    public void CheckSequence()
+    {
+        if (dragAndDropGameProperties.useSequence)
+        {
+            foreach (DragAndDropObjectController dragAndDropObjectController in dragAndDropObjectControllers)
+            {
+                if (dragAndDropGameProperties.dragAndDropGameSequences.Count > currentSequenceStep)
+                {
+                    if (dragAndDropObjectController.id == dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].objectID)
+                    {
+                        dragAndDropObjectController.isLockedBySequence = false;
+                    }
+                    else
+                    {
+                        dragAndDropObjectController.isLockedBySequence = true;
+                        messageText.text = dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].textMessage;
+                        audioSource.PlayOneShot(dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].dialogOnSequenceStart);
+                    }
+                }
+            }
+            currentSequenceStep++;
+
+        }
+        int correctDrags = 0;
+        foreach (DragAndDropObjectController dragAndDropObjectController in dragAndDropObjectControllers)
+        {
+            if (dragAndDropObjectController.isCorrect)
+            {
+                correctDrags++;
+            }
+            if(correctDrags == dragAndDropObjectControllers.Count)
+            {
+                gameFinishScreen.gameObject.SetActive(true);
+            }
+        }
+    }
 
     Texture2D duplicateTexture(Texture2D source)
     {
