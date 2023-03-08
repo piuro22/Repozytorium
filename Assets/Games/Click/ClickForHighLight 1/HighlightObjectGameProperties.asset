@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1bcfa7bccb7d94682be39ffeb28b43, type: 3}
   m_Name: HighlightObjectGameProperties
   m_EditorClassIdentifier: 
-  backGroundTexture: {fileID: 21300000, guid: 5cf6cc561b5aeb346b515e522f61187d, type: 3}
+  backGroundTexture: {fileID: 21300000, guid: 6e9b6371fa60dce42a77f5b94f4b2a73, type: 3}
   gameMusic: {fileID: 0}
   gameSequence:
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
     objectsToHighlights:
     - ObjectID: 0
-    SequenceTime: 2
+    SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
     objectsToHighlights:
     - ObjectID: 1
-    SequenceTime: 2
+    SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 00702221ced313348935635f5090840d, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d2357b82ac0591e469660e7cb0851f2b, type: 3}
     objectsToHighlights:
     - ObjectID: 2
-    SequenceTime: 2
+    SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
     objectsToHighlights:
     - ObjectID: 3
-    SequenceTime: 2
+    SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
   higlightObjects:
