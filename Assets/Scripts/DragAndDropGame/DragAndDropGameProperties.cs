@@ -187,7 +187,7 @@ public class DragAndDropObjectProperties
 
     [BoxGroup("Sekwencja")]
     [ShowIf("CheckUseSequence")]
-    [LabelText("@dialogOnSequenceStart.lenght")]
+    [LabelText("@DialogTime()")]
     public AudioClip dialogOnSequenceStart;
 
 
@@ -244,9 +244,9 @@ public class DragAndDropObjectProperties
     {
         if (dialogOnSequenceStart != null)
         {
-            return dialogOnSequenceStart.length.ToString("0.00");
+            return $"Dialog na czas sekwencji Czas:{dialogOnSequenceStart.length.ToString("0.00")}s";
         }
-        else { return "Brak klipu"; }
+        else { return "Dialog na czas sekwencji: Brak klipu"; }
     }
 
 
