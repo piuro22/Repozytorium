@@ -133,6 +133,7 @@ public class MemoryGameController : MonoBehaviour
         }
         requiedPointsToWinGame = memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize).Count;
         background.sprite = memoryGameProperties.backGroundTexture;
+        
     }
 
 

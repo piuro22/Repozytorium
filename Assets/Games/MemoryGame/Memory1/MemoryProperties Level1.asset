@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFrontTexture: {fileID: 21300000, guid: 0c576288172d5fc4e8032b5a3bc287e3, type: 3}
   cardBackTexture: {fileID: 21300000, guid: 08dd6a7884153824cbb35ffeaed13b00, type: 3}
-  shakePower: 0.1
-  shakeDouration: 1
+  shakePower: 0.02
+  shakeDouration: 0.5
   backGroundTexture: {fileID: 21300000, guid: 4547d568405ec2d42ab50afa181d047d, type: 3}
   waitTimeOnIncorrectReveal: 1.5
   OnRevealCorrectSound: {fileID: 0}
