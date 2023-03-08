@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using MPUIKIT;
-
+[CreateAssetMenu(fileName = "HighlightObjectGameProperties", menuName = "ScriptableObjects/HighlightObjectGameProperties", order = 1)]
 public class MemoryGameCardController : MonoBehaviour
 {
     public SpriteRenderer cardBackImage;

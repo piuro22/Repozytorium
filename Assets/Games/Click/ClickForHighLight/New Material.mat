@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
+  m_Shader: {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
@@ -169,6 +169,7 @@ Material:
     - _ColorChangeTolerance: 0.25
     - _ColorChangeTolerance2: 0.25
     - _ColorChangeTolerance3: 0.25
+    - _ColorMask: 15
     - _ColorRampBlend: 1
     - _ColorRampLuminosity: 0
     - _ColorRampOutline: 0
@@ -178,6 +179,7 @@ Material:
     - _ColorSwapRedLuminosity: 0.5
     - _Contrast: 1
     - _Cull: 2
+    - _CullMode: 0
     - _CullingOption: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -289,6 +291,11 @@ Material:
     - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _Surface: 1
     - _TextureScrollXSpeed: 1
     - _TextureScrollYSpeed: 0
@@ -296,6 +303,7 @@ Material:
     - _TwistUvPosX: 0.5
     - _TwistUvPosY: 0.5
     - _TwistUvRadius: 0.75
+    - _UseUIAlphaClip: 0
     - _WaveAmount: 7
     - _WaveSpeed: 10
     - _WaveStrength: 7.5
@@ -308,6 +316,7 @@ Material:
     m_Colors:
     - _AlphaOutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorChangeNewCol: {r: 1, g: 1, b: 0, a: 1}
     - _ColorChangeNewCol2: {r: 1, g: 1, b: 0, a: 1}

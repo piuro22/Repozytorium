@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using System;
 using System.Collections;
+using EPOOutline;
 
 public class HighlightObjectController : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class HighlightObjectController : MonoBehaviour
     [HideInInspector] public HiglightObject higlightObjectProperites;
     private AudioSource audioSource;
     private Sequence highlightSequence;
-
+    private Outlinable outlinable;
     public bool shouldPlayAudioOnClick;
     [HideInInspector] public bool isLocked;
     [HideInInspector] public bool shouldCheckClickedAction;
@@ -43,19 +44,20 @@ public class HighlightObjectController : MonoBehaviour
 
     private void Start()
     {
+        outlinable = GetComponent<Outlinable>();
         audioSource = GetComponent<AudioSource>();
     }
     [Button]
     public void SetupSprite()
     {
+        outlinable = GetComponent<Outlinable>();
         Texture2D texture = duplicateTexture(_texture);
         tempSprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
         spriteRenderer.sprite = tempSprite;
         spriteRenderer.material = material;
 
-
-        spriteRenderer.material.EnableKeyword("OUTBASE_ON");
-        spriteRenderer.material.SetFloat("_OutlineAlpha", 0);
+        outlinable.OutlineParameters.DilateShift = 0;
+        outlinable.OutlineParameters.BlurShift = 0;
         gameObject.AddComponent<PolygonCollider2D>();
     }
 
@@ -116,25 +118,25 @@ public class HighlightObjectController : MonoBehaviour
     {
         if (highlightSequence != null) highlightSequence.Kill();
         highlightSequence = DOTween.Sequence();
-        highlightSequence.Append(spriteRenderer.material.DOFloat(1, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
-        highlightSequence.Join(spriteRenderer.material.DOColor(higlightObjectProperites.outlineColor, "_OutlineColor", 0));
-        highlightSequence.Join(spriteRenderer.material.DOFloat(higlightObjectProperites.outlineWidth, "_OutlineWidth", 0));
-        highlightSequence.Append(spriteRenderer.material.DOFloat(0, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
+        highlightSequence.Append( DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Append(DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, 0, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, 0, higlightObjectProperites.outlineOnTime));
     }
 
     public void HiglightObject()
     {
         if (highlightSequence != null) highlightSequence.Kill();
         highlightSequence = DOTween.Sequence();
-        highlightSequence.Append(spriteRenderer.material.DOFloat(1, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
-        highlightSequence.Join(spriteRenderer.material.DOColor(higlightObjectProperites.outlineColor, "_OutlineColor", 0));
-        highlightSequence.Join(spriteRenderer.material.DOFloat(higlightObjectProperites.outlineWidth, "_OutlineWidth", 0));
+        highlightSequence.Append(DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
     }
     public void DeselectObject()
     {
         if (highlightSequence != null) highlightSequence.Kill();
         highlightSequence = DOTween.Sequence();
-        highlightSequence.Append(spriteRenderer.material.DOFloat(0, "_OutlineAlpha", higlightObjectProperites.outlineOnTime));
+        highlightSequence.Append(DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, 0, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, 0, higlightObjectProperites.outlineOnTime));
     }
 
 
