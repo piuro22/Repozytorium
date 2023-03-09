@@ -86,6 +86,7 @@ public class HighlightObjectController : MonoBehaviour
     {
         if (!isLocked)
         {
+            isLocked = true;
             WasClicked = true;
             HighlightObjectOnClick();
         }
