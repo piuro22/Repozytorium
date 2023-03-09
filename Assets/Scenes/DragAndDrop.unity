@@ -268,9 +268,7 @@ MonoBehaviour:
   dragAndDropObjectPrefab: {fileID: 6436918624437548336, guid: ef2f16313ee9c4f4ea335e2c600921a3, type: 3}
   dropContainerPrefab: {fileID: 6436918624437548336, guid: aa7061d3ef28f734a80e05c99d6811f7, type: 3}
   audioSource: {fileID: 306067983}
-  dragAndDropObjectControllers:
-  - {fileID: 0}
-  - {fileID: 0}
+  dragAndDropObjectControllers: []
   messageText: {fileID: 2055165059}
   gameFinishScreen: {fileID: 1673306154}
 --- !u!1 &654729906
