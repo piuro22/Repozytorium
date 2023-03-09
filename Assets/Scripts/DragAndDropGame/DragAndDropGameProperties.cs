@@ -61,7 +61,9 @@ public class DragAndDropGameProperties : ScriptableObject
     [LabelText("Użyj innej tekstury dla kontenera")]
     public bool useOtherTextureForContainer;
 
-
+    [BoxGroup("Obiekt kontenera")]
+    [LabelText("Kolor kontenera")]
+    public Color containerColor;
 
 
 
@@ -248,7 +250,10 @@ public class DragAndDropObjectProperties
     [LabelText("Skala obiektu do przesuwania po dopasowaniu")]
     public Vector2 endScaleObjectIfAlternativeTexture;
 
-
+    [BoxGroup("Obiekt kontenera/Alternatywny obrazek")]
+    [ShowIf("CheckUseOtherTextureForContainerObjects")]
+    [LabelText("Rotacja obiektu do przesuwania po dopasowaniu")]
+    public float endRotationObjectIfAlternativeTexture;
 
 
 

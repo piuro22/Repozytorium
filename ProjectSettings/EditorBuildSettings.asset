@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClickForHighlight.unity
     guid: cbd0f53acd6adc34988f636a949eec29
+  - enabled: 1
+    path: Assets/Scenes/DragAndDrop.unity
+    guid: e9c49683e0ebd834d873f7515a6a7269
   m_configObjects: {}

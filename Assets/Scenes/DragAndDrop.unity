@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306067980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4866176, y: -0.41923806, z: 2.6864405}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -264,11 +264,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e75543b17dfc644b62c8440171c38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragAndDropGameProperties: {fileID: 11400000, guid: 87703c1806551984789a71f497442d86, type: 2}
+  dragAndDropGameProperties: {fileID: 11400000, guid: 2d825b3bd20d1e0499d15bc7817be13f, type: 2}
   dragAndDropObjectPrefab: {fileID: 6436918624437548336, guid: ef2f16313ee9c4f4ea335e2c600921a3, type: 3}
   dropContainerPrefab: {fileID: 6436918624437548336, guid: aa7061d3ef28f734a80e05c99d6811f7, type: 3}
   audioSource: {fileID: 306067983}
-  dragAndDropObjectControllers: []
+  dragAndDropObjectControllers:
+  - {fileID: 0}
+  - {fileID: 0}
   messageText: {fileID: 2055165059}
   gameFinishScreen: {fileID: 1673306154}
 --- !u!1 &654729906
@@ -283,6 +285,7 @@ GameObject:
   - component: {fileID: 654729909}
   - component: {fileID: 654729908}
   - component: {fileID: 654729907}
+  - component: {fileID: 654729911}
   m_Layer: 0
   m_Name: 3DSpace Camera
   m_TagString: MainCamera
@@ -370,7 +373,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
+  m_ForceIntoRT: 1
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -394,6 +397,31 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: -0.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &654729911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654729906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb42831ee5422f409e7f24f9e7488ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 1
+  renderingStrategy: 0
+  renderingMode: 0
+  outlineLayerMask: -1
+  primaryBufferSizeMode: 0
+  primaryRendererScale: 0.75
+  primarySizeReference: 800
+  blurShift: 1
+  dilateShift: 1
+  dilateIterations: 7
+  dilateQuality: 0
+  blurIterations: 1
+  blurType: 1
 --- !u!1001 &726518684
 PrefabInstance:
   m_ObjectHideFlags: 0

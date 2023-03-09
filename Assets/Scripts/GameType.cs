@@ -5,5 +5,6 @@ using UnityEngine;
 public enum GameType
 {
     memory,
-    clickForHighlight
+    clickForHighlight,
+    dragAndDrop
 }

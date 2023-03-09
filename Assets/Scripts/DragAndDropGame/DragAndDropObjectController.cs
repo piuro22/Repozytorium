@@ -66,15 +66,17 @@ public class DragAndDropObjectController : MonoBehaviour
         {
             transform.DOMove(container.transform.position + (Vector3)dragAndDropObjectProperties.additionalOffset, dragAndDropGameProperties.snapToContainterTime);
             transform.DOScale(dragAndDropObjectProperties.endScaleObjectIfAlternativeTexture, dragAndDropGameProperties.snapToContainterTime);
+            transform.DORotate(new Vector3(0,0, dragAndDropObjectProperties.endRotationObjectIfAlternativeTexture), dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
         }
         else
         {
             transform.DOScale(container.transform.localScale, dragAndDropGameProperties.snapToContainterTime);
             transform.DOMove(container.transform.position, dragAndDropGameProperties.snapToContainterTime);
+            transform.DORotate(container.transform.eulerAngles, dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
         }
 
       
-        transform.DORotate(container.transform.eulerAngles, dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
+       
         dragAndDropGameController.audioSource.PlayOneShot(dragAndDropGameProperties.onGoodContainerAudioClip);
         polygonCollider2D.enabled = false;
         isCorrect = true;

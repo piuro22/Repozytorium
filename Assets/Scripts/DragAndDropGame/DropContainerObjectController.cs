@@ -6,7 +6,7 @@ public class DropContainerObjectController : MonoBehaviour
 {
     public DragAndDropObjectController dragAndDropObjectController;
     private PolygonCollider2D polygonCollider2D;
-
+    public SpriteRenderer spriteRenderer;
     private void Start()
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();

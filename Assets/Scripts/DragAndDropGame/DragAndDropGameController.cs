@@ -1,10 +1,15 @@
+using DrawTextureExt;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class DragAndDropGameController : MonoBehaviour
 {
+    public static DragAndDropGameController Instance { get; private set; }
+
     public DragAndDropGameProperties dragAndDropGameProperties;
     public GameObject dragAndDropObjectPrefab;
     public GameObject dropContainerPrefab;
@@ -13,8 +18,24 @@ public class DragAndDropGameController : MonoBehaviour
     private int currentSequenceStep;
     public TMP_Text messageText;
     [SerializeField] private GameFinishScreen gameFinishScreen;
-    private void Start()
+
+
+    private void Awake()
     {
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
+        Initialize();
+    }
+
+    [Button]
+    private void Initialize()
+    {
+        if (Application.isPlaying)
+        {
+            if (GameManager.Instance.gameProporties is DragAndDropGameProperties)
+                dragAndDropGameProperties = GameManager.Instance.gameProporties as DragAndDropGameProperties;
+        }
+
         audioSource.PlayOneShot(dragAndDropGameProperties.gameCommandAudioClip);
         messageText.text = dragAndDropGameProperties.commandText;
         gameFinishScreen.gameObject.SetActive(false);
@@ -77,7 +98,7 @@ public class DragAndDropGameController : MonoBehaviour
             }
             dropContainerObject.transform.localScale = dragAndDrop.targetScale;
 
-            if (dragAndDrop.alternativeTargetTexture != null)
+            if (dragAndDropGameProperties.useOtherTextureForContainer)
             {
                 Texture2D dropContainerTexture = duplicateTexture(dragAndDrop.alternativeTargetTexture);
                 dropContainerObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dropContainerTexture, new Rect(0.0f, 0.0f, dropContainerTexture.width, dropContainerTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
@@ -85,8 +106,9 @@ public class DragAndDropGameController : MonoBehaviour
             }
             else
             {
-                dropContainerObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                dropContainerObject.GetComponent<SpriteRenderer>().color = Color.black;
+                dropContainerObject.spriteRenderer.sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
+                dropContainerObject.spriteRenderer.material.EnableKeyword("HITEFFECT_ON");
+                dropContainerObject.spriteRenderer.material.SetColor("_HitEffectColor", dragAndDropGameProperties.containerColor);
             }
             dropContainerObject.dragAndDropObjectController = dragObject;
             dropContainerObject.gameObject.AddComponent<PolygonCollider2D>();
@@ -172,5 +194,7 @@ public class DragAndDropGameController : MonoBehaviour
         RenderTexture.active = previous;
         RenderTexture.ReleaseTemporary(renderTex);
         return readableText;
+
+     
     }
 }
