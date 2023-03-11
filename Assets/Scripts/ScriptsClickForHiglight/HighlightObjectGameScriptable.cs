@@ -15,6 +15,11 @@ public class HighlightObjectGameScriptable : ScriptableObject
     [LabelText("Dźwięk polecenia do gry")]
     public AudioClip gameCommandAudioClip;
 
+    [LabelText("Dźwięk gdy źle klikniemy")]
+    public AudioClip wrongClickAudioClip;
+
+
+
 
     [LabelText("Sekwencje")]
     public List<HighlightGameSequence> gameSequence = new List<HighlightGameSequence>();

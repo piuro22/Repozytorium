@@ -62,6 +62,15 @@ public class DragAndDropGameProperties : ScriptableObject
     public bool useOtherTextureForContainer;
 
     [BoxGroup("Obiekt kontenera")]
+    [LabelText("Przezroczystość kontenera")]
+    [Range(0, 1)]
+    public float containerTransparency;
+
+    [BoxGroup("Obiekt kontenera")]
+    [LabelText("Nadpisz kolor kontenera")]
+    public bool overrideContainerColor;
+
+    [BoxGroup("Obiekt kontenera")]
     [LabelText("Kolor kontenera")]
     public Color containerColor;
 
@@ -96,10 +105,8 @@ public class DragAndDropGameProperties : ScriptableObject
 
 
     [BoxGroup("Gdy dobrze dopasujemy obrazek")]
-    [LabelText("Dźwięk odtwarzany gdy źle dopasujemy obrazki")]
+    [LabelText("Dźwięk odtwarzany gdy dobrze dopasujemy obrazki")]
     public AudioClip onGoodContainerAudioClip;
-
-    
 
     [BoxGroup("Gdy źle dopasujemy obrazek")]
     [LabelText("Siła wstrząśnięcia gdy obrazek jest źle dopasowany")]

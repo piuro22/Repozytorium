@@ -73,11 +73,24 @@ public class HighlightObjectController : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
 
             if (hit.collider != null)
-
+            {
                 if (hit.collider.transform == transform)
                 {
+                    if (isLocked)
+                        audioSource.PlayOneShot(highlightObjectGameController.highlightObjectGameScriptable.wrongClickAudioClip);
+
                     OnClick();
+                    return;
                 }
+                else
+                {
+                 
+                }
+
+        
+            }
+            
+
         }
     }
 
