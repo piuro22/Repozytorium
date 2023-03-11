@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGroundTexture: {fileID: 21300000, guid: 6e9b6371fa60dce42a77f5b94f4b2a73, type: 3}
   gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}
   gameSequence:
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
     objectsToHighlights:
@@ -45,7 +46,7 @@ MonoBehaviour:
     position: {x: 0.57, y: 0.15}
     scale: {x: 0.2, y: 0.2}
     outlineOnTime: 1.93
-    outlineWidth: 28.11
+    outlineWidth: 1
     outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
     soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
   - id: 1
@@ -53,7 +54,7 @@ MonoBehaviour:
     position: {x: 0.57, y: -1.29}
     scale: {x: 0.2, y: 0.2}
     outlineOnTime: 0
-    outlineWidth: 0
+    outlineWidth: 1
     outlineColor: {r: 0, g: 0, b: 0, a: 0}
     soundOnClick: {fileID: 0}
   - id: 2
@@ -61,7 +62,7 @@ MonoBehaviour:
     position: {x: 2.55, y: 0.15}
     scale: {x: 0.2, y: 0.2}
     outlineOnTime: 0
-    outlineWidth: 0
+    outlineWidth: 0.747
     outlineColor: {r: 0, g: 0, b: 0, a: 0}
     soundOnClick: {fileID: 0}
   - id: 3
@@ -69,6 +70,6 @@ MonoBehaviour:
     position: {x: 2.55, y: -1.29}
     scale: {x: 0.2, y: 0.2}
     outlineOnTime: 0
-    outlineWidth: 0
+    outlineWidth: 0.755
     outlineColor: {r: 0, g: 0, b: 0, a: 0}
     soundOnClick: {fileID: 0}

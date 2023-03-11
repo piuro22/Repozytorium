@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
-  commandText: Dopasuj obiekty
+  commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
@@ -29,10 +29,22 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
   - objectID: 1
     textMessage: "Przesu\u0144 niebieski balonik do czerwonego balonika"
-    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
+  - objectID: 2
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: d2357b82ac0591e469660e7cb0851f2b, type: 3}
+  - objectID: 4
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 638ba2f0790107f4790ecd2ce4ad232a, type: 3}
+  - objectID: 3
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
+  - objectID: 5
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: dc81a069a0f658c4da69c7d04cdad595, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
@@ -50,21 +62,21 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 0
-    texture: {fileID: 2800000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
-    startPosition: {x: -1, y: 1}
+    texture: {fileID: 2800000, guid: 69e936fb367f64a459b4c26b25cf00e2, type: 3}
+    startPosition: {x: 1, y: 1}
     startPositionMinMaxX: {x: 1, y: 2}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.2, y: 0.2}
-    rotationAngle: 30
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: 10
     rotationMinMaxAngle: {x: -70, y: 70}
-    alternativeTargetTexture: {fileID: 2800000, guid: ab8b081a6c3accc489a9419f77fd7b55, type: 3}
-    additionalOffset: {x: 0.4, y: 0.6}
-    endScaleObjectIfAlternativeTexture: {x: 0.2, y: 0.2}
-    endRotationObjectIfAlternativeTexture: -30
+    alternativeTargetTexture: {fileID: 2800000, guid: 5223733516084dc458d73248e1a7d0ec, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: -2
     targetPosition: {x: 0, y: -1}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.2, y: 0.2}
+    targetScale: {x: 0.25, y: 0.25}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     onSuccesfullDragAudioClip: {fileID: 0}
@@ -78,21 +90,133 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 1
-    texture: {fileID: 2800000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
-    startPosition: {x: 3, y: 1}
+    texture: {fileID: 2800000, guid: 5714b91e2e31beb4f9fff956a4784df8, type: 3}
+    startPosition: {x: 0, y: 1}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.2, y: 0.2}
-    rotationAngle: -30
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: -10
     rotationMinMaxAngle: {x: -70, y: 70}
-    alternativeTargetTexture: {fileID: 2800000, guid: eb46123af04298b43a6565e06ae8af33, type: 3}
-    additionalOffset: {x: 0, y: 0}
-    endScaleObjectIfAlternativeTexture: {x: 0.4, y: 0.4}
-    endRotationObjectIfAlternativeTexture: 0
+    alternativeTargetTexture: {fileID: 2800000, guid: d0bf1a9686747584198a92a80d4ddeb8, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: -2
     targetPosition: {x: 2, y: -1}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.4, y: 0.4}
+    targetScale: {x: 0.25, y: 0.25}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 0
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 2
+    texture: {fileID: 2800000, guid: 82fb3a896560332479c551b7615f12fa, type: 3}
+    startPosition: {x: 2, y: 1}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: 5
+    rotationMinMaxAngle: {x: 0, y: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 4a4a45f8565513940bc2e9228cb28a16, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: -2
+    targetPosition: {x: 1, y: -1}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.25, y: 0.25}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 0
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 3
+    texture: {fileID: 2800000, guid: 5171be2c7e0fd6945b20de27ccb86283, type: 3}
+    startPosition: {x: 4, y: 1}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: 3
+    rotationMinMaxAngle: {x: 0, y: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 9cecc4ce121f91c448e261e9ee96154a, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 3, y: -1}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.25, y: 0.25}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 0
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 4
+    texture: {fileID: 2800000, guid: a973b6d2f61260a47ad0481123c5c913, type: 3}
+    startPosition: {x: 3, y: 1}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 0077e365c8eea2c4ba79596b888b8e66, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 4, y: -1}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.25, y: 0.25}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 0
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 5
+    texture: {fileID: 2800000, guid: b3bd551c90aafad4c9c56a27bc512940, type: 3}
+    startPosition: {x: -1, y: 1}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.15, y: 0.15}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 3d6e3c62c3eb878488da1748ae85a179, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0.16, y: 0.16}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: -1, y: -1}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.25, y: 0.25}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     onSuccesfullDragAudioClip: {fileID: 0}
