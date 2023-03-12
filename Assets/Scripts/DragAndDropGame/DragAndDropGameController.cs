@@ -77,6 +77,7 @@ public class DragAndDropGameController : MonoBehaviour
             dragObject.id = dragAndDrop.id;
             dragAndDropObjectControllers.Add(dragObject);
             DropContainerObjectController dropContainerObject = Instantiate(dropContainerPrefab.GetComponent<DropContainerObjectController>());
+            dragObject.dropContainerObjectController = dropContainerObject;
             if (dragAndDrop.useRandomPositionForContainerObjects)
             {
                 dropContainerObject.transform.position = new Vector3(

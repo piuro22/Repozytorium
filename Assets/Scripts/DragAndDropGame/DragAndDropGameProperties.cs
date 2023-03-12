@@ -50,6 +50,11 @@ public class DragAndDropGameProperties : ScriptableObject
     [LabelText("Prędkość dopasowania do kontenera (w sekundach)")]
     public float snapToContainterTime = 0.25f;
 
+    [BoxGroup("Właściwości pojedynczych obiektów")]
+    [LabelText("Dopasuj od razu po kliknięciu")]
+    public bool snapOnClick;
+
+
     [BoxGroup("Obiekt kontenera")]
     [LabelText("Użyj losowej pozycji kontenera")]
     public bool useRandomPositionForContainerObjects;

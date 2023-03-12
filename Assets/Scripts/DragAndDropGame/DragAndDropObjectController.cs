@@ -9,6 +9,7 @@ public class DragAndDropObjectController : MonoBehaviour
     public DragAndDropGameProperties dragAndDropGameProperties;
     public DragAndDropObjectProperties dragAndDropObjectProperties;
     public DragAndDropGameController dragAndDropGameController;
+    public DropContainerObjectController dropContainerObjectController;
     public Outlinable outlinable;
     public SpriteRenderer spriteRenderer;
     private Vector3 offset;
@@ -35,21 +36,58 @@ public class DragAndDropObjectController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+
+
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-         
+
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
 
-                if (isLockedBySequence)
+                if (!dragAndDropGameProperties.snapOnClick)
                 {
-                    OnStartDragWrongObject();
-                    return;
-                }
+                    if (isLockedBySequence)
+                    {
+                        OnStartDragWrongObject();
+                        return;
+                    }
+                    else
+                    {
+                        OnDragStart();
+                        return;
+                    }
+                    
+                    
 
-                OnDragStart();
+                }
+                else
+                {
+                    if (isLockedBySequence)
+                    {
+                        OnStartDragWrongObject();
+                        return;
+                    }
+
+                    if (dragAndDropGameProperties.useOtherTextureForContainer == true)
+                    {
+                        transform.DOMove(dropContainerObjectController.transform.position + (Vector3)dragAndDropObjectProperties.additionalOffset, dragAndDropGameProperties.snapToContainterTime);
+                        transform.DOScale(dragAndDropObjectProperties.endScaleObjectIfAlternativeTexture, dragAndDropGameProperties.snapToContainterTime);
+                        transform.DORotate(new Vector3(0, 0, dragAndDropObjectProperties.endRotationObjectIfAlternativeTexture), dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
+                    }
+                    else
+                    {
+                        transform.DOScale(dropContainerObjectController.transform.localScale, dragAndDropGameProperties.snapToContainterTime);
+                        transform.DOMove(dropContainerObjectController.transform.position, dragAndDropGameProperties.snapToContainterTime);
+                        transform.DORotate(dropContainerObjectController.transform.eulerAngles, dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
+                    }
+                    dragAndDropGameController.audioSource.PlayOneShot(dragAndDropGameProperties.onGoodContainerAudioClip);
+                    polygonCollider2D.enabled = false;
+                    isCorrect = true;
+                }
             }
+        
+
         }
         Drag();
     }
@@ -62,11 +100,11 @@ public class DragAndDropObjectController : MonoBehaviour
     private void OnDragToCorrectContainer(DropContainerObjectController container)
     {
 
-        if(dragAndDropGameProperties.useOtherTextureForContainer == true)
+        if (dragAndDropGameProperties.useOtherTextureForContainer == true)
         {
             transform.DOMove(container.transform.position + (Vector3)dragAndDropObjectProperties.additionalOffset, dragAndDropGameProperties.snapToContainterTime);
             transform.DOScale(dragAndDropObjectProperties.endScaleObjectIfAlternativeTexture, dragAndDropGameProperties.snapToContainterTime);
-            transform.DORotate(new Vector3(0,0, dragAndDropObjectProperties.endRotationObjectIfAlternativeTexture), dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
+            transform.DORotate(new Vector3(0, 0, dragAndDropObjectProperties.endRotationObjectIfAlternativeTexture), dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
         }
         else
         {
@@ -75,8 +113,8 @@ public class DragAndDropObjectController : MonoBehaviour
             transform.DORotate(container.transform.eulerAngles, dragAndDropGameProperties.snapToContainterTime).OnComplete(() => dragAndDropGameController.CheckSequence());
         }
 
-      
-       
+
+
         dragAndDropGameController.audioSource.PlayOneShot(dragAndDropGameProperties.onGoodContainerAudioClip);
         polygonCollider2D.enabled = false;
         isCorrect = true;
@@ -158,7 +196,7 @@ public class DragAndDropObjectController : MonoBehaviour
         }
     }
 
-   
+
 
 
 }
