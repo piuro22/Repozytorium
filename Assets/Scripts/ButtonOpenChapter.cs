@@ -23,7 +23,7 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
     [BoxGroup("Game Properties")]
     public GameType gameType;//referencja do gry
     [BoxGroup("Game Properties")]
-    public Object gameProperties;
+    public List<Object> gameProperties;
 
     [BoxGroup("Game Properties")]
     [OnValueChanged("ChangeTitleText")]
@@ -36,7 +36,7 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
 
     public void OnPointerClick(PointerEventData eventData)// gdy klikniemy
     {
-        GameManager.Instance.OpenGame(gameType, gameProperties);
+        GameManager.Instance.OnGameFirstStart(gameType, gameProperties);
 
     }
 

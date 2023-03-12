@@ -9,7 +9,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public List<Games> games = new List<Games>();
-    public UnityEngine.Object gameProporties;
+  
+
+    public List<UnityEngine.Object> gamePropertiesList = new List<UnityEngine.Object>();
+    private GameType gameType;
+    public int currentGame;
+    public UnityEngine.Object currentGameProperties;
 
     private void Awake()
     {
@@ -22,11 +27,42 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        DontDestroyOnLoad(this.gameObject);
+    }
+    public void OpenNextGame()
+    {
+        StartCoroutine(OpenNextGameCoroutine());
     }
 
-    public void OpenGame(GameType gameType, UnityEngine.Object _gameProperties)
+    IEnumerator OpenNextGameCoroutine()
     {
-        gameProporties = _gameProperties;
+        yield return new WaitForSeconds(1);
+        currentGame++;
+        currentGameProperties = gamePropertiesList[currentGame];
+        OpenGame(gameType);
+    }
+
+    public bool CheckNextGameExist()
+    {
+        if (gamePropertiesList.Count-1 > currentGame)
+            return true;
+        else
+            return false;
+    }
+
+    public void OnGameFirstStart(GameType _gameType, List< UnityEngine.Object> _gameProperties)
+    {
+        currentGame = 0;
+        gameType = _gameType;
+        gamePropertiesList = _gameProperties;
+        currentGameProperties = gamePropertiesList[0];
+        OpenGame(gameType);
+    }
+
+
+    public void OpenGame(GameType _gameType)
+    {
+        gameType = _gameType;
         foreach (Games game in games)
         {
             if(game.gameType == gameType)

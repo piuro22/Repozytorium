@@ -7,26 +7,37 @@ using System.Collections.Generic;
 public class MemoryGameProperties : ScriptableObject
 {
 
-    [InfoBox("Tekstura maski karty")]
+    [LabelText("Tekstura maski karty")]
     public Sprite cardFrontTexture;
-    [InfoBox("Tekstura maski karty")]
+    [LabelText("Tekstura maski karty")]
     public Sprite cardBackTexture;
-    [InfoBox("Siła wstrząsu")]
+    [LabelText("Siła wstrząsu")]
     public float shakePower;
-    [InfoBox("Czas trwania wstrząsu")]
+    [LabelText("Czas trwania wstrząsu")]
     public float shakeDouration;
+    [LabelText("Użyj animacji rotacji")]
+    public bool useRotationAnimation;
+    [LabelText("Użyj animacji przenikania")]
+    public bool useFadeAnimation;
+    [LabelText("Użyj animacji maski")]
+    public bool useClippingAnimation;
+    [LabelText("Użyj animacji podskoku na starcie")]
+    public bool useJumpOnStartAnimation;
+    [LabelText("Użyj alternatywnej tekstury dla drugiej karty")]
+    public bool useAlternativeTexture;
 
-    [InfoBox("Tekstura tła gry", InfoMessageType.None)]
+
+    [LabelText("Tekstura tła gry")]
     public Sprite backGroundTexture;
-    [InfoBox("Czas po którym odpowiedzi się zakryją", InfoMessageType.None)]
+    [LabelText("Czas po którym odpowiedzi się zakryją")]
     public float waitTimeOnIncorrectReveal = 1.5f;
-    [InfoBox("Dźwięk po poprawnym dopasowaniu kart", InfoMessageType.None)]
+    [LabelText("Dźwięk po poprawnym dopasowaniu kart")]
     public AudioClip OnRevealCorrectSound;
-    [InfoBox("Dźwięk po niepoprawnym dopasowaniu kart", InfoMessageType.None)]
+    [LabelText("Dźwięk po niepoprawnym dopasowaniu kart")]
     public AudioClip OnRevealInCorrectSound;
-    [InfoBox("Dźwięk ukończenia gry", InfoMessageType.None)]
+    [LabelText("Dźwięk ukończenia gry")]
     public AudioClip OnGameFinishedSound;
-    [InfoBox("Dźwięk podniesienia pierwszej karty", InfoMessageType.None)]
+    [LabelText("Dźwięk podniesienia pierwszej karty")]
     public AudioClip OnFirstCardRevealSound;
 
     public MemorySize memorySize;
@@ -48,6 +59,8 @@ public class MemoryGameProperties : ScriptableObject
 
     [LabelText("Dźwięk polecenia do gry")]
     public AudioClip gameCommandAudioClip;
+
+
 
     [OnInspectorInit]
     private void CreateData()
@@ -123,19 +136,76 @@ public class MemoryGameProperties : ScriptableObject
         
     }
 
-
+    [OnInspectorGUI]
+    public void Variable()
+    {
+        foreach (MemoryCardData x in memoryCardDatas3x2)
+        {
+            x.useAlternativeTexture = useAlternativeTexture;
+        }
+        foreach (MemoryCardData x in memoryCardDatas4x2)
+        {
+            x.useAlternativeTexture = useAlternativeTexture;
+        }
+        foreach (MemoryCardData x in memoryCardDatas4x3)
+        {
+            x.useAlternativeTexture = useAlternativeTexture;
+        }
+        foreach (MemoryCardData x in memoryCardDatas5x2)
+        {
+            x.useAlternativeTexture = useAlternativeTexture;
+        }
+        foreach (MemoryCardData x in memoryCardDatas4x4)
+        {
+            x.useAlternativeTexture = useAlternativeTexture;
+        }
+    }
 
 
 }
 [Serializable]
 public class MemoryCardData
 {
+    [HideInInspector] public bool useAlternativeTexture;
+
+   
+    [BoxGroup("Card")]
     [TableColumnWidth(57, Resizable = false)]
-    [VerticalGroup("Card")]
     [PreviewField(Alignment = ObjectFieldAlignment.Left)]
     public Sprite sprite;
-    [VerticalGroup("Card")]
+
+    [BoxGroup("Card")]
     public AudioClip audioclip;
+
+    [BoxGroup("Card")]
+    [LabelText("Wiadomość po odkryciu karty")]
+    public string message;
+
+
+    [BoxGroup("Second Card")]
+    [TableColumnWidth(57, Resizable = false)]
+
+    [ShowIf("CheckAlternativeTexture")]
+    [BoxGroup("Second Card")]
+    [PreviewField(Alignment = ObjectFieldAlignment.Left)]
+    [LabelText("Alternatywna tekstura karty")]
+    public Sprite alternativeSecondSprite;
+
+    [ShowIf("CheckAlternativeTexture")]
+    [BoxGroup("Second Card")]
+    [LabelText("Alternatywny klip audio")]
+    public AudioClip alternativeAudioclip;
+
+    [ShowIf("CheckAlternativeTexture")]
+    [BoxGroup("Second Card")]
+    [LabelText("Wiadomość po odkryciu alternatywnej karty")]
+    public string alternativeMessage;
+
+
+    private bool CheckAlternativeTexture()
+    {
+        return useAlternativeTexture;
+    }
 }
 
 

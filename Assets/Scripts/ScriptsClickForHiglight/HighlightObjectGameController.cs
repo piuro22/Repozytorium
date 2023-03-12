@@ -17,7 +17,8 @@ public class HighlightObjectGameController : MonoBehaviour
     public GameObject GameEndScreen;
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private AudioSource musicController;
-    private void Start()
+    [SerializeField] private GameCanvasController gameCanvasController;
+  private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         SetupGame();
@@ -44,8 +45,8 @@ public class HighlightObjectGameController : MonoBehaviour
     [Button]
     private void SetupGame()
     {
-        if (GameManager.Instance.gameProporties is HighlightObjectGameScriptable)
-            highlightObjectGameScriptable = GameManager.Instance.gameProporties as HighlightObjectGameScriptable;
+        if (GameManager.Instance.currentGameProperties is HighlightObjectGameScriptable)
+            highlightObjectGameScriptable = GameManager.Instance.currentGameProperties as HighlightObjectGameScriptable;
         SetupMusic();
 
         int index = 0;
@@ -149,7 +150,18 @@ public class HighlightObjectGameController : MonoBehaviour
             }
         }
 
-        GameEndScreen.SetActive(true);
+
+
+    
+        if (GameManager.Instance.CheckNextGameExist())
+        {
+            gameCanvasController.MaskScreen(true);
+            GameManager.Instance.OpenNextGame();
+        }
+        else
+        {
+            GameEndScreen.SetActive(true);
+        }
     }
 
     public void BackToChoseLevels()

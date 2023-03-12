@@ -1762,6 +1762,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef21a3bcd87736746929238348eb78f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &700161096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 381271830026333300, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+  m_PrefabInstance: {fileID: 700161094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf1ff69d918c4a4f96da853791b9138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &700161097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2055165059, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+  m_PrefabInstance: {fileID: 700161094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &702413555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4056,6 +4078,8 @@ MonoBehaviour:
   background: {fileID: 1519228349}
   gameFinishScreen: {fileID: 700161095}
   musicController: {fileID: 1855533165}
+  gameCanvasController: {fileID: 700161096}
+  messageText: {fileID: 700161097}
 --- !u!4 &1741781556
 Transform:
   m_ObjectHideFlags: 0

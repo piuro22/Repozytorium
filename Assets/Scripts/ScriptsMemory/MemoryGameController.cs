@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class MemoryGameController : MonoBehaviour
 {
@@ -32,7 +33,8 @@ public class MemoryGameController : MonoBehaviour
     private List<MemoryGameCardController> memoryGameCardControllers4x4 = new List<MemoryGameCardController>();
     private AudioSource audioSource;
     [SerializeField] private AudioSource musicController;
-
+    [SerializeField] private GameCanvasController gameCanvasController;
+    public TMP_Text messageText;
 
     private void Awake()
     {
@@ -93,8 +95,8 @@ public class MemoryGameController : MonoBehaviour
 
     private void SetupMemoryGame()
     {
-        if (GameManager.Instance.gameProporties is MemoryGameProperties)
-            memoryGameProperties = GameManager.Instance.gameProporties as MemoryGameProperties;
+        if (GameManager.Instance.currentGameProperties is MemoryGameProperties)
+            memoryGameProperties = GameManager.Instance.currentGameProperties as MemoryGameProperties;
         SetupMusic();
         switch (memoryGameProperties.memorySize)
         {
@@ -128,14 +130,14 @@ public class MemoryGameController : MonoBehaviour
 
         foreach (MemoryCardData memoryCardData in memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize))
         {
-            cardControllers[i].Initialize(memoryGameProperties.cardBackTexture,memoryGameProperties.cardFrontTexture, memoryCardData.sprite, memoryCardData.audioclip);
+            cardControllers[i].Initialize(memoryGameProperties.cardBackTexture, memoryGameProperties.cardFrontTexture, memoryCardData);
             i++;
-            cardControllers[i].Initialize(memoryGameProperties.cardBackTexture, memoryGameProperties.cardFrontTexture, memoryCardData.sprite, memoryCardData.audioclip);
+            cardControllers[i].Initialize(memoryGameProperties.cardBackTexture, memoryGameProperties.cardFrontTexture, memoryCardData);
             i++;
         }
         requiedPointsToWinGame = memoryGameProperties.GetMemoryCardsData(memoryGameProperties.memorySize).Count;
         background.sprite = memoryGameProperties.backGroundTexture;
-        
+
     }
 
 
@@ -147,6 +149,7 @@ public class MemoryGameController : MonoBehaviour
         {
             _firstRevealCard = card;
             audioSource.PlayOneShot(memoryGameProperties.OnFirstCardRevealSound);
+           
         }
         else if (_secondRevealCard == null)
         {
@@ -178,6 +181,7 @@ public class MemoryGameController : MonoBehaviour
         else
         {
             audioSource.PlayOneShot(memoryGameProperties.OnRevealCorrectSound);
+            messageText.text = "";
         }
     }
 
@@ -197,14 +201,27 @@ public class MemoryGameController : MonoBehaviour
             _firstRevealCard = null;
             _secondRevealCard = null;
             Debug.Log("Hide");
-        }).OnComplete(() => inCorrectRevealSequence.Kill());
+        }).OnComplete(() =>
+        {
+            inCorrectRevealSequence.Kill();
+            messageText.text = "";
+
+            });
     }
 
 
     private void OnGameFinished()
     {
         audioSource.PlayOneShot(memoryGameProperties.OnGameFinishedSound);
-        gameFinishScreen.gameObject.SetActive(true);
+        if (GameManager.Instance.CheckNextGameExist())
+        {
+            gameCanvasController.MaskScreen(true);
+            GameManager.Instance.OpenNextGame();
+        }
+        else
+        {
+            gameFinishScreen.gameObject.SetActive(true);
+        }
     }
 
 
@@ -235,16 +252,25 @@ public class MemoryGameController : MonoBehaviour
 
     private bool CheckRevealedCards()
     {
-        if (_firstRevealCard.cardTopImage.sprite == _secondRevealCard.cardTopImage.sprite)
+        if (_firstRevealCard.targetImage == _secondRevealCard.targetImage)
         {
-            Debug.Log("Same picture");
             return true;
         }
-        else
+        if (_firstRevealCard.alternativeImage != null)
         {
-            Debug.Log("Defferent picture");
-            return false;
+            if (_firstRevealCard.alternativeImage == _secondRevealCard.targetImage)
+            {
+                return true;
+            }
         }
+        if (_secondRevealCard.alternativeImage != null)
+        {
+            if (_secondRevealCard.alternativeImage == _firstRevealCard.targetImage)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void BackToChoseLevels()

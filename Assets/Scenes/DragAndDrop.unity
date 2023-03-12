@@ -271,6 +271,7 @@ MonoBehaviour:
   dragAndDropObjectControllers: []
   messageText: {fileID: 2055165059}
   gameFinishScreen: {fileID: 1673306154}
+  gameCanvasController: {fileID: 726518685}
 --- !u!1 &654729906
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +530,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+--- !u!114 &726518685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 381271830026333300, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+  m_PrefabInstance: {fileID: 726518684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf1ff69d918c4a4f96da853791b9138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &768758392
 GameObject:
   m_ObjectHideFlags: 0

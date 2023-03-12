@@ -18,7 +18,7 @@ public class DragAndDropGameController : MonoBehaviour
     private int currentSequenceStep;
     public TMP_Text messageText;
     [SerializeField] private GameFinishScreen gameFinishScreen;
-
+    [SerializeField] private GameCanvasController gameCanvasController;
 
     private void Awake()
     {
@@ -32,8 +32,8 @@ public class DragAndDropGameController : MonoBehaviour
     {
         if (Application.isPlaying)
         {
-            if (GameManager.Instance.gameProporties is DragAndDropGameProperties)
-                dragAndDropGameProperties = GameManager.Instance.gameProporties as DragAndDropGameProperties;
+            if (GameManager.Instance.currentGameProperties is DragAndDropGameProperties)
+                dragAndDropGameProperties = GameManager.Instance.currentGameProperties as DragAndDropGameProperties;
         }
 
         audioSource.PlayOneShot(dragAndDropGameProperties.gameCommandAudioClip);
@@ -180,7 +180,16 @@ public class DragAndDropGameController : MonoBehaviour
             }
             if(correctDrags == dragAndDropObjectControllers.Count)
             {
-                gameFinishScreen.gameObject.SetActive(true);
+
+                if (GameManager.Instance.CheckNextGameExist())
+                {
+                    gameCanvasController.MaskScreen(true);
+                    GameManager.Instance.OpenNextGame();
+                }
+                else
+                {
+                    gameFinishScreen.gameObject.SetActive(true);
+                }
             }
         }
     }

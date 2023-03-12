@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFrontTexture: {fileID: 21300000, guid: 0c576288172d5fc4e8032b5a3bc287e3, type: 3}
   cardBackTexture: {fileID: 21300000, guid: 08dd6a7884153824cbb35ffeaed13b00, type: 3}
+  shakePower: 0
+  shakeDouration: 0
+  useRotationAnimation: 0
+  useFadeAnimation: 0
+  useClippingAnimation: 1
+  useJumpOnStartAnimation: 1
+  useAlternativeTexture: 1
   backGroundTexture: {fileID: 21300000, guid: d367de012d6464e4d93212f5c7847712, type: 3}
   waitTimeOnIncorrectReveal: 1.5
   OnRevealCorrectSound: {fileID: 0}
@@ -22,59 +29,191 @@ MonoBehaviour:
   OnFirstCardRevealSound: {fileID: 0}
   memorySize: 3
   memoryCardDatas3x2:
-  - sprite: {fileID: 21300000, guid: b291dac26b6c66743a7ccd694a72db6b, type: 3}
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: b291dac26b6c66743a7ccd694a72db6b, type: 3}
     audioclip: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
-  - sprite: {fileID: 21300000, guid: d6088f4b3be08574cb378e9f7f3c1109, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: d6088f4b3be08574cb378e9f7f3c1109, type: 3}
     audioclip: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
-  - sprite: {fileID: 21300000, guid: 2bc7be1296369b14f9769fc938663a94, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 2bc7be1296369b14f9769fc938663a94, type: 3}
     audioclip: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
   memoryCardDatas4x2:
-  - sprite: {fileID: 0}
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
   memoryCardDatas4x3:
-  - sprite: {fileID: 0}
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 0}
     audioclip: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
   memoryCardDatas5x2:
-  - sprite: {fileID: 21300000, guid: e5c4b115beebcc34393f544ecd7cfce0, type: 3}
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: e5c4b115beebcc34393f544ecd7cfce0, type: 3}
     audioclip: {fileID: 8300000, guid: 0bbe903cafc94b04199ec5ebf48f6622, type: 3}
-  - sprite: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
+    message: Fioletowy balon
+    alternativeSecondSprite: {fileID: 21300000, guid: e5d001b226bb89b4daf62d8abe7916e9, type: 3}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: "Czerwony l\xF3d"
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
     audioclip: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
-  - sprite: {fileID: 21300000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
+    message: "\u017B\xF3\u0142ty balon"
+    alternativeSecondSprite: {fileID: 21300000, guid: 1583e915d5c725442a6ad127e5c0b826, type: 3}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: "\u017B\xF3\u0142ty l\xF3d"
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
     audioclip: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
-  - sprite: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
+    message: Niebieski balon
+    alternativeSecondSprite: {fileID: 21300000, guid: 9cecc4ce121f91c448e261e9ee96154a, type: 3}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: "niebieski l\xF3d"
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
     audioclip: {fileID: 8300000, guid: 098dba8292e498946878a9eccc8cae3e, type: 3}
-  - sprite: {fileID: 21300000, guid: b819f2e7ff09db646a423abbc080e24f, type: 3}
+    message: "Pomara\u0144czowy balon"
+    alternativeSecondSprite: {fileID: 21300000, guid: 41a7b8eb51e8fd348b43164b666f3983, type: 3}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: "pomara\u0144czowy l\xF3d"
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: b819f2e7ff09db646a423abbc080e24f, type: 3}
     audioclip: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
+    message: Zielony balon
+    alternativeSecondSprite: {fileID: 21300000, guid: 5223733516084dc458d73248e1a7d0ec, type: 3}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: "Zielony l\xF3d"
   memoryCardDatas4x4:
-  - sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: dae33700bd23f76409a80bf78fdb8a42, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: dae33700bd23f76409a80bf78fdb8a42, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: a04ecc9d5e12d5d449077414eb86635e, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: a04ecc9d5e12d5d449077414eb86635e, type: 3}
     audioclip: {fileID: 0}
-  - sprite: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  - useAlternativeTexture: 1
+    sprite: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
     audioclip: {fileID: 0}
+    message: 
+    alternativeSecondSprite: {fileID: 0}
+    alternativeAudioclip: {fileID: 0}
+    alternativeMessage: 
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}
