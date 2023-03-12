@@ -108,17 +108,21 @@ public class DragAndDropGameController : MonoBehaviour
             else
             {
                 dropContainerObject.spriteRenderer.sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                if (dragAndDropGameProperties.overrideContainerColor)
-                {
-                    dropContainerObject.spriteRenderer.material.EnableKeyword("HITEFFECT_ON");
-                    dropContainerObject.spriteRenderer.material.SetColor("_HitEffectColor", dragAndDropGameProperties.containerColor);
-                }
-                else
-                {
-                    dropContainerObject.spriteRenderer.material.DisableKeyword("HITEFFECT_ON");
-                }
-                dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
+               
             }
+            if (dragAndDropGameProperties.overrideContainerColor)
+            {
+                dropContainerObject.spriteRenderer.material.EnableKeyword("HITEFFECT_ON");
+                dropContainerObject.spriteRenderer.material.SetColor("_HitEffectColor", dragAndDropGameProperties.containerColor);
+            }
+            else
+            {
+                dropContainerObject.spriteRenderer.material.DisableKeyword("HITEFFECT_ON");
+            }
+            dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
+
+
+
             dropContainerObject.dragAndDropObjectController = dragObject;
             dropContainerObject.gameObject.AddComponent<PolygonCollider2D>();
         }
