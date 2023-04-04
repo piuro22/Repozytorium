@@ -70,12 +70,14 @@ public class DragAndDropGameController : MonoBehaviour
             Texture2D dragTexture = duplicateTexture(dragAndDrop.texture);
             dragObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
             dragObject.gameObject.AddComponent<PolygonCollider2D>();
+         
             dragObject.name = dragAndDrop.texture.name;
             dragObject.dragAndDropGameProperties = dragAndDropGameProperties;
             dragObject.dragAndDropObjectProperties = dragAndDrop;
             dragObject.dragAndDropGameController = this;
             dragObject.id = dragAndDrop.id;
-            dragAndDropObjectControllers.Add(dragObject);
+            dragObject.GetComponent<SpriteRenderer>().sortingLayerID = dragAndDrop.layer;
+         dragAndDropObjectControllers.Add(dragObject);
             DropContainerObjectController dropContainerObject = Instantiate(dropContainerPrefab.GetComponent<DropContainerObjectController>());
             dragObject.dropContainerObjectController = dropContainerObject;
             if (dragAndDrop.useRandomPositionForContainerObjects)
@@ -104,7 +106,7 @@ public class DragAndDropGameController : MonoBehaviour
                 Texture2D dropContainerTexture = duplicateTexture(dragAndDrop.alternativeTargetTexture);
                 dropContainerObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dropContainerTexture, new Rect(0.0f, 0.0f, dropContainerTexture.width, dropContainerTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
-
+               
             }
             else
             {
@@ -123,7 +125,7 @@ public class DragAndDropGameController : MonoBehaviour
             dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
 
 
-
+            dropContainerObject.GetComponent<SpriteRenderer>().sortingLayerID = dragAndDrop.targetLayer;
             dropContainerObject.dragAndDropObjectController = dragObject;
             dropContainerObject.gameObject.AddComponent<PolygonCollider2D>();
         }
