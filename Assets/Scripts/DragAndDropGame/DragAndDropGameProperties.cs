@@ -242,8 +242,7 @@ public class DragAndDropObjectProperties
     public Vector2 rotationMinMaxAngle;
 
     [BoxGroup("Obiekt do podnoszenia")]
-    [ShowIf("CheckUseRandomRotationForContainerObjects")]
-    [LabelText("Warstwa obiektu kontenera")]
+    [LabelText("Warstwa obiektu do podnoszenia")]
     public int layer;
 
 
@@ -306,7 +305,6 @@ public class DragAndDropObjectProperties
     public Vector2 targetRotationMinMaxAngle;
 
     [BoxGroup("Obiekt kontenera")]
-    [ShowIf("CheckUseRandomRotationForContainerObjects")]
     [LabelText("Warstwa obiektu kontenera")]
     public int targetLayer;
 
