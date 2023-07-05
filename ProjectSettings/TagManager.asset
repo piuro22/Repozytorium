@@ -47,3 +47,6 @@ TagManager:
   - name: New Layer 2
     uniqueID: 139443169
     locked: 0
+  - name: World Space Canvas
+    uniqueID: 1537654709
+    locked: 0
