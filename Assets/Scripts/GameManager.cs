@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public void BackToUnitSelect()
+    {
+        SceneManager.LoadScene("UnitSelect");
+    }
 }
 
 
