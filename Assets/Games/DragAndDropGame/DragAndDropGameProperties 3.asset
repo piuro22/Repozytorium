@@ -23,6 +23,8 @@ MonoBehaviour:
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 0
+  containerTransparency: 0.39
+  overrideContainerColor: 0
   containerColor: {r: 0.44459772, g: 0.8118885, b: 0.9150943, a: 0.24705882}
   useSequence: 0
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}

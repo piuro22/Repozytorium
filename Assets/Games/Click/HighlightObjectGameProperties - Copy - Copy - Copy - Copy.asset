@@ -15,6 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: f57e3c24f5e19c04dbffddc1e72b39ab, type: 3}
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 0}
+  wrongClickAudioClip: {fileID: 0}
   gameSequence:
   - audioClipOnSingleSequenceStart: {fileID: 0}
     objectsToHighlights:
