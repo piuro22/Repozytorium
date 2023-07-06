@@ -241,7 +241,7 @@ Material:
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _GradBotLeftCol: {r: 0.06334141, g: 0.26415092, b: 0.061053753, a: 1}
     - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
-    - _GradTopLeftCol: {r: 0.65367705, g: 1, b: 0.5707547, a: 1}
+    - _GradTopLeftCol: {r: 1, g: 1, b: 1, a: 1}
     - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}

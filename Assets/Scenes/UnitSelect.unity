@@ -432,7 +432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56, y: -42.559998}
+  m_AnchoredPosition: {x: 744, y: -40}
   m_SizeDelta: {x: 49.5799, y: 49.5799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347285139
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     sceneToLoadName: Scene Level Change
   - UnitPrefab: {fileID: 7357801014477358990, guid: dcb465d4c110cbd44a6bffe55a795ef5, type: 3}
     unitName: Unit 2
-    sceneToLoadName: Scene Level Change
+    sceneToLoadName: Scene Level Change 1
   - UnitPrefab: {fileID: 7357801014477358990, guid: 78d66ae365bea0946b6e9a2db0b4b1d4, type: 3}
     unitName: Unit 3
     sceneToLoadName: Scene Level Change
@@ -6373,10 +6373,10 @@ RectTransform:
   m_Father: {fileID: 1763332600}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56, y: -106}
-  m_SizeDelta: {x: 49.5799, y: 49.5799}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -745, y: -39}
+  m_SizeDelta: {x: 49.579895, y: 49.5799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030495064
 MonoBehaviour:
