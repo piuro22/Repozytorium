@@ -7,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TreeMaterial
+  m_Name: asdsadasd
   m_Shader: {fileID: 4800000, guid: a53f4bb29f3644b43b5075c6dcfecb32, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - WIND_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -132,9 +133,9 @@ Material:
     - _GradIsRadial: 0
     - _GrassManualAnim: -0.128
     - _GrassManualToggle: 0
-    - _GrassRadialBend: 0.1
-    - _GrassSpeed: 1.6
-    - _GrassWind: 4
+    - _GrassRadialBend: 0.06
+    - _GrassSpeed: 11.5
+    - _GrassWind: 3.6
     - _GreyscaleBlend: 1
     - _GreyscaleLuminosity: 0
     - _GreyscaleOutline: 0

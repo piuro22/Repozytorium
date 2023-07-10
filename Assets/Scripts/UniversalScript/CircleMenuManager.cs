@@ -5,6 +5,7 @@ using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CircleMenuManager : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class CircleMenuManager : MonoBehaviour
     private Tweener swipeTween;
     private bool canSwipe;
     private Vector3 startPosition;
-
+    [SerializeField] private Button leftArrow;
+    [SerializeField] private Button rightArrow;
     private void OnEnable()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -38,6 +40,8 @@ public class CircleMenuManager : MonoBehaviour
         swipeController.OnSwipeRight += SwipeRight;
         swipeController.OnSwipeUpperRight += SwipeRight;
         swipeController.OnSwipeLowerRight += SwipeRight;
+        leftArrow.onClick.AddListener(delegate () { SwipeLeft(Vector2.zero); });
+        rightArrow.onClick.AddListener(delegate () { SwipeRight(Vector2.zero); });
         InstantiateUnits();
         canSwipe = true;
     }
@@ -85,10 +89,11 @@ public class CircleMenuManager : MonoBehaviour
             return;
 
         int previousIndex = currentUnitIndex;
-        currentUnitIndex = (currentUnitIndex + 1) % spawnedUnits.Count;
-        currentRotation += rotationAngle;
+        currentUnitIndex = (currentUnitIndex - 1 + spawnedUnits.Count) % spawnedUnits.Count;
+  
+        currentRotation -= rotationAngle;
 
-        swipeTween = circleMenuTransform.DOLocalRotate(new Vector3(0, 0, -90), swipeTime, RotateMode.LocalAxisAdd)
+        swipeTween = circleMenuTransform.DOLocalRotate(new Vector3(0, 0, 90), swipeTime, RotateMode.LocalAxisAdd)
             .SetEase(swipeCurve)
             .OnComplete(() =>
             {
@@ -107,10 +112,10 @@ public class CircleMenuManager : MonoBehaviour
             return;
 
         int previousIndex = currentUnitIndex;
-        currentUnitIndex = (currentUnitIndex - 1 + spawnedUnits.Count) % spawnedUnits.Count;
-        currentRotation -= rotationAngle;
+        currentUnitIndex = (currentUnitIndex + 1) % spawnedUnits.Count;
+        currentRotation += rotationAngle;
 
-        swipeTween = circleMenuTransform.DOLocalRotate(new Vector3(0, 0, 90), swipeTime, RotateMode.LocalAxisAdd)
+        swipeTween = circleMenuTransform.DOLocalRotate(new Vector3(0, 0, -90), swipeTime, RotateMode.LocalAxisAdd)
             .SetEase(swipeCurve)
             .OnComplete(() =>
             {
