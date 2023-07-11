@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -15,19 +15,17 @@ public class GameManager : MonoBehaviour
     private GameType gameType;
     public int currentGame;
     public UnityEngine.Object currentGameProperties;
+    [SerializeField] private Button backButton;
 
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        if (Instance!=null && Instance!=this)
-        {
-            Destroy(this);
-        }
-        else
+        if (Instance == null)
         {
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+        backButton.onClick.AddListener(delegate () { BackToUnitSelect(); });
     }
     public void OpenNextGame()
     {

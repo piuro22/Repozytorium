@@ -2666,6 +2666,7 @@ MonoBehaviour:
   gamePropertiesList: []
   currentGame: 0
   currentGameProperties: {fileID: 0}
+  backButton: {fileID: 1485213354}
 --- !u!224 &1188155785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8066591379758516163, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
@@ -3621,19 +3622,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1485213355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1110859995}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: BackToUnitSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1485213355
 MonoBehaviour:
   m_ObjectHideFlags: 0
