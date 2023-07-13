@@ -1,5 +1,7 @@
 using System;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 public class SwipeController : MonoBehaviour
@@ -239,7 +241,7 @@ public class SwipeController : MonoBehaviour
         isLongTap = false;
         startTouch = swipeDelta = Vector2.zero;
     }
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         // Draw swipe angle arcs
@@ -296,6 +298,6 @@ public class SwipeController : MonoBehaviour
             currentAngle += angleStep;
         }
     }
-
+#endif
 }
 
