@@ -89,7 +89,7 @@ public class CircleMenuManager : MonoBehaviour
             return;
 
         int previousIndex = currentUnitIndex;
-        currentUnitIndex = (currentUnitIndex - 1 + spawnedUnits.Count) % spawnedUnits.Count;
+        currentUnitIndex = (currentUnitIndex + 1 + spawnedUnits.Count) % spawnedUnits.Count;
   
         currentRotation -= rotationAngle;
 
@@ -112,7 +112,7 @@ public class CircleMenuManager : MonoBehaviour
             return;
 
         int previousIndex = currentUnitIndex;
-        currentUnitIndex = (currentUnitIndex + 1) % spawnedUnits.Count;
+        currentUnitIndex = (currentUnitIndex - 1) % spawnedUnits.Count;
         currentRotation += rotationAngle;
 
         swipeTween = circleMenuTransform.DOLocalRotate(new Vector3(0, 0, -90), swipeTime, RotateMode.LocalAxisAdd)
