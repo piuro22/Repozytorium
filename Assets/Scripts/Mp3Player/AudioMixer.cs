@@ -12,6 +12,7 @@ public class AudioMixer : MonoBehaviour
 
     public void Start()
     {
+       
         foreach (AudioProperties audioSource in audioSources)
         {
             audioSource.audioSource.clip = audioSource.audioClip;

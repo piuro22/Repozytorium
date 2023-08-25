@@ -82,42 +82,42 @@ MonoBehaviour:
   memoryCardDatas4x3:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: df123a59849acf549aff60a32d227012, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 62ce5291670b91f4897c36894af88f96, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: a469a6b22169e394b9d130faf84f1f34, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: f194a57847cbd834fa906923d7a5364f, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: 4670e03b152294548894d708f5be7fb5, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: d84ccd9e86bf5d94180f746feb17ec34, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: 0bbe903cafc94b04199ec5ebf48f6622, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 496c9efe323194348aae686a67d1128d, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 6495b65a2d8748944be0baebaed62262, type: 3}
-    audioclip: {fileID: 0}
+    audioclip: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

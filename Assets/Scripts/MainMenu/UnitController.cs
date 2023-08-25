@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class UnitController : MonoBehaviour
 {
+    void Start()
+    {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+    }
     public Button startButton;
 
     public void Initialize(Unit unit)

@@ -1,8 +1,11 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEditor;
 [CustomEditor(typeof(SwipeControllerEditor))]
+
 public class SwipeControllerEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -37,7 +40,7 @@ public class SwipeControllerEditor : Editor
 
             if (i > 0)
             {
-                
+
                 Handles.DrawSolidArc(position, Vector3.forward, prevPoint - position, angleStep, arcWidth);
             }
 
@@ -46,3 +49,4 @@ public class SwipeControllerEditor : Editor
         }
     }
 }
+#endif
