@@ -9,12 +9,15 @@ public class LoadingAppController : MonoBehaviour
     [SerializeField] private TMP_Text loadingText;
     private void Awake()
     {
+
+        Application.targetFrameRate = 60;
         downloadCompletedButton.SetActive(false);
     }
 
     private void Start()
     {
         // Subscribe to the event
+        downloadController.OnDownloadStarted += HandleDownloadStarted;
         downloadController.OnDownloadCompleted += HandleDownloadCompleted;
         downloadController.OnInternetErrorHandler += HandleNoInternetConnection;
     }
@@ -25,8 +28,14 @@ public class LoadingAppController : MonoBehaviour
         loadingText.SetText("Brak połączenia z internetem");
     }
 
+    private void HandleDownloadStarted()
+    {
+        loadingText.SetText("Pobieranie treści...");
+    }
+
     private void HandleDownloadCompleted()
     {
+        loadingText.SetText("Ładowanie zakończone");
         downloadCompletedButton.SetActive(true);
     }
 

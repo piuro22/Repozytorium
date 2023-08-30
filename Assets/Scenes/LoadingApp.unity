@@ -152,11 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9068e6e1a0b89438778746f0cea9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  consoleScrollRect: {fileID: 125489999}
-  screenConsole: {fileID: 945597884}
+  shouldCleanUnnecessaryFiles: 1
+  shouldShowConsole: 1
+  downloadPath: download
+  tableLink: http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php
   downloadedList:
     mp3TrackProperties: []
-  shouldCleanUnnecessaryFiles: 0
+  consoleScrollRect: {fileID: 125489999}
+  screenConsole: {fileID: 945597884}
   loadingSlider: {fileID: 1830814128}
   globalProgressSlider: {fileID: 1277133257}
 --- !u!4 &23235759
@@ -186,7 +189,7 @@ GameObject:
   - component: {fileID: 68031065}
   - component: {fileID: 68031064}
   m_Layer: 5
-  m_Name: Single Slider
+  m_Name: Single Download Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,6 +313,7 @@ GameObject:
   - component: {fileID: 125489999}
   - component: {fileID: 125490002}
   - component: {fileID: 125490003}
+  - component: {fileID: 125490004}
   m_Layer: 5
   m_Name: Panel Console
   m_TagString: Untagged
@@ -446,6 +450,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &125490004
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125489997}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &144556934
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +777,7 @@ GameObject:
   - component: {fileID: 919507529}
   - component: {fileID: 919507528}
   m_Layer: 5
-  m_Name: Main Slider
+  m_Name: Main Download Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -217.374}
+  m_AnchoredPosition: {x: 400, y: -217.37502}
   m_SizeDelta: {x: 800, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945597884
@@ -1156,7 +1172,7 @@ GameObject:
   - component: {fileID: 1277133258}
   - component: {fileID: 1277133257}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Main Download Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1586,7 +1602,7 @@ GameObject:
   - component: {fileID: 1830814129}
   - component: {fileID: 1830814128}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Single Download Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

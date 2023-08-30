@@ -32,7 +32,7 @@ public class Mp3PlayerController : MonoBehaviour
     [SerializeField] private Button previousTrackButton;
     // [SerializeField] private Button slowDownButton;
     // [SerializeField] private Button speedUpButton;
-
+    [SerializeField] private string downloadPath = "download";
     [SerializeField, ReadOnly] private bool isPlaying = false;
     [SerializeField, ReadOnly] private bool isPaused = false;
     [SerializeField, ReadOnly] private int currentTrack = 0;
@@ -139,7 +139,7 @@ public class Mp3PlayerController : MonoBehaviour
 
     public static Texture2D LoadImageFromFile(string filePath)
     {
-        string path = Path.Combine(Application.persistentDataPath, "Tracks", filePath);
+        string path = Path.Combine(Application.persistentDataPath, "download",  filePath);
 
         Texture2D tex = null;
         byte[] fileData;
@@ -154,7 +154,7 @@ public class Mp3PlayerController : MonoBehaviour
     }
     private IEnumerator LoadAudioClipFromFile(string filePath, Action<AudioClip> callback)
     {
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + Path.Combine(Application.persistentDataPath, "Tracks", filePath), AudioType.MPEG))
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + Path.Combine(Application.persistentDataPath, downloadPath, filePath), AudioType.MPEG))
         {
             yield return www.SendWebRequest();
 
@@ -278,7 +278,7 @@ public class Mp3PlayerController : MonoBehaviour
             trackImage.color = new Color(0, 0, 0, 0);
             mediaPlayerObject.SetActive(true);
             string filePath = GetFilenameFromURL(track.trackAudioClipPath);
-            filePath = Path.Combine(Application.persistentDataPath, "Tracks", filePath);
+            filePath = Path.Combine(Application.persistentDataPath, downloadPath, filePath);
             mediaPlayer.OpenMedia(new MediaPath(filePath, MediaPathType.RelativeToDataFolder), autoPlay: true);
             Debug.Log((float)mediaPlayer.Info.GetDuration());
 

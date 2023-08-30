@@ -10,19 +10,33 @@ using UnityEngine.UI;
 
 public class DownloadController : MonoBehaviour
 {
+    [Header("Properties")]
+    [SerializeField] private bool shouldCleanUnnecessaryFiles;
+    [SerializeField] private bool shouldShowConsole;
+
+    [Header("Server Related")]
+    [SerializeField] private string downloadPath = "download";
+    [SerializeField] private string tableLink = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
+    [SerializeField] private RootMp3TrackProperties downloadedList;
+    
+    [Header("Console Related")]
     [SerializeField] private ScrollRect consoleScrollRect;
     [SerializeField] private TMP_Text screenConsole;
-    [SerializeField] private RootMp3TrackProperties downloadedList;
-    [SerializeField] private bool shouldCleanUnnecessaryFiles;
 
+    [Header("User Interface")]
     [SerializeField] private Image loadingSlider;
     [SerializeField] private Image globalProgressSlider;
+
     private float currentDownloadProgress = 0f;
     private float globalDownloadProgress = 0f;
     private long totalSizeOfFilesToDownload = 0;
     private float downloadStartTime;
+
     private Dictionary<string, long> fileSizeByUrl = new Dictionary<string, long>();
     private HashSet<string> encounteredUrls = new HashSet<string>();
+
+    public delegate void DownloadStartHandler();
+    public event DownloadCompletedHandler OnDownloadStarted;
 
     public delegate void DownloadCompletedHandler();
     public event DownloadCompletedHandler OnDownloadCompleted;
@@ -33,27 +47,44 @@ public class DownloadController : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        SetupProgressSliders();
+        SetupConsole();
+        StartCoroutine(GetTable());
+    }
+
+    private void SetupProgressSliders()
+    {
         loadingSlider.fillAmount = 0f;
         globalProgressSlider.fillAmount = 0f;
-        StartCoroutine(GetTable());
+    }
+
+    private void SetupConsole()
+    {
+        if (shouldShowConsole)
+        {
+            consoleScrollRect.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else
+        {
+            consoleScrollRect.GetComponent<CanvasGroup>().alpha = 0;
+        }
     }
 
     #region Download And Save
     [Obsolete]
     public IEnumerator GetTable()
     {
-        UnityWebRequest www = UnityWebRequest.Post("http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php", new WWWForm());
+        UnityWebRequest www = UnityWebRequest.Post(tableLink, new WWWForm());
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
         {
-            PrintToConsole("Download table failed", true, Color.red);
-            Debug.Log(www.error);
             OnInternetErrorHandler.Invoke();
+            PrintToConsole("Download table failed", true, Color.red);
         }
         else
         {
+            OnDownloadStarted.Invoke();
             downloadedList = JsonUtility.FromJson<RootMp3TrackProperties>("{\"mp3TrackProperties\":" + www.downloadHandler.text + "}");
             SaveDownloadedListToJson(downloadedList);
             CalculateTotalSizeOfFilesToDownload();
@@ -73,7 +104,7 @@ public class DownloadController : MonoBehaviour
             string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
             string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
 
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", audioFile)))
+            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile)))
             {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipPath));
             }
@@ -81,7 +112,7 @@ public class DownloadController : MonoBehaviour
             {
                 PrintToConsole($"File already exist: {audioFile}", false, Color.green);
             }
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", textureFile)))
+            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile)))
             {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipTexturePath));
             }
@@ -90,7 +121,7 @@ public class DownloadController : MonoBehaviour
                 PrintToConsole($"File already exist: {textureFile}", false, Color.green);
             }
 
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", playlistTextureFile)))
+            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile)))
             {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackPlaylistTexturePath));
             }
@@ -113,6 +144,23 @@ public class DownloadController : MonoBehaviour
         string messagepath = Path.Combine(subDir, "Tracks" + ".json");
         File.WriteAllText(messagepath, JsonUtility.ToJson(list));
         PrintToConsole("Download table successful");
+    }
+
+
+
+    private float GetCurrentDownloadSpeed(UnityWebRequest request, ulong initialDownloadedBytes)
+    {
+        ulong downloadedBytes = request.downloadedBytes - initialDownloadedBytes;
+        float elapsedTime = Time.time - downloadStartTime;
+
+        // Calculate download speed only after a certain threshold
+        if (downloadedBytes > 1024 && elapsedTime > 1f)
+        {
+            float downloadSpeed = downloadedBytes / elapsedTime;
+            return downloadSpeed;
+        }
+
+        return 0f; // Return 0 if download speed cannot be calculated yet
     }
 
     IEnumerator DownloadFile(string fileUrl)
@@ -138,19 +186,10 @@ public class DownloadController : MonoBehaviour
                 }
             }
 
-            // Calculate download speed only after a certain threshold
-            ulong downloadedBytes = request.downloadedBytes - initialDownloadedBytes;
-            float elapsedTime = Time.time - downloadStartTime;
-
-            // Add a minimum threshold for download speed calculation
-            if (downloadedBytes > 1024 && elapsedTime > 1f)
+            float downloadSpeed = GetCurrentDownloadSpeed(request, initialDownloadedBytes);
+            if (downloadSpeed > 0f)
             {
-                float downloadSpeed = downloadedBytes / elapsedTime;
-                long remainingBytes = fileSize - (long)(request.downloadedBytes - initialDownloadedBytes);
-                float estimatedTime = remainingBytes / downloadSpeed;
-                string estimatedTimeFormatted = FormatTime(estimatedTime);
-
-                PrintToConsole($"Download speed: {FileUtils.FormatFileSize((long)downloadSpeed)}/s  {(currentDownloadProgress * 100).ToString("0.00")}%  Estimated time: {estimatedTimeFormatted}", false, Color.yellow, true);
+                PrintToConsole($"Current download speed: {FileUtils.FormatFileSize((long)downloadSpeed)}/s", false, Color.yellow, true);
             }
 
             yield return null;
@@ -178,7 +217,7 @@ public class DownloadController : MonoBehaviour
 
     private void SaveDownloadedFile(byte[] data, string fileUrl)
     {
-        string subDir = Path.Combine(Application.persistentDataPath, "Tracks");
+        string subDir = Path.Combine(Application.persistentDataPath, downloadPath);
         Directory.CreateDirectory(subDir);
         string fileName = GetFilenameFromURL(fileUrl);
         string filePath = Path.Combine(subDir, fileName);
@@ -218,13 +257,13 @@ public class DownloadController : MonoBehaviour
             string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
             string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
 
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", audioFile)))
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile)))
                 downloadedFiles++;
 
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", textureFile)))
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile)))
                 downloadedFiles++;
 
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", playlistTextureFile)))
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile)))
                 downloadedFiles++;
         }
 
@@ -326,7 +365,7 @@ public class DownloadController : MonoBehaviour
         if (!encounteredUrls.Contains(url))
         {
             long fileSize = GetFileSizeFromUrl(url);
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, "Tracks", GetFilenameFromURL(url))))
+            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, GetFilenameFromURL(url))))
             {
                 totalSizeOfFilesToDownload += fileSize;
             }
@@ -336,7 +375,7 @@ public class DownloadController : MonoBehaviour
 
     private void CleanUpFiles()
     {
-        string tracksPath = Path.Combine(Application.persistentDataPath, "Tracks");
+        string tracksPath = Path.Combine(Application.persistentDataPath, downloadPath);
 
         if (downloadedList != null)
         {
