@@ -16,6 +16,8 @@ MonoBehaviour:
     keys:
     - cd32def67a02be8439a162c4dbf0a133
     - 
+    - e9c49683e0ebd834d873f7515a6a7269
+    - d8d9c7b1a6e273347ae87080bcf0c9d2
     values:
     - goDatasByGlobalId:
         keys:
@@ -38,6 +40,12 @@ MonoBehaviour:
           icon: cs Script Icon
         - iColor: 0
           icon: cs Script Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+    - goDatasByGlobalId:
+        keys: []
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []

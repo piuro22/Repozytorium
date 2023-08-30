@@ -8,10 +8,13 @@ using System.IO;
 using UnityEngine.Networking;
 using System.Net;
 using System.Collections;
+using RenderHeads.Media.AVProVideo;
 
 public class Mp3PlayerController : MonoBehaviour
 {
     public static Mp3PlayerController Instance { get; private set; }
+    [SerializeField] MediaPlayer mediaPlayer;
+    [SerializeField] GameObject mediaPlayerObject;
     [SerializeField] AudioSource audioSource;
     [SerializeField] Slider timeSlider;
     [SerializeField] TMP_Text currentTimeText;
@@ -61,9 +64,25 @@ public class Mp3PlayerController : MonoBehaviour
     {
         Initialize();
         LoadJson();
-        LoadPlaylist("PlayLista 1");
     }
 
+    private void GetFromSave()
+    {
+        string playListSave = PlayerPrefs.GetString("QRCode");
+        string[] parts = playListSave.Split('/');
+
+        if (parts.Length >= 2)
+        {
+            LoadPlaylist(parts[1]);
+        }
+
+        if (parts.Length >= 2)
+        {
+            PlayTrack(parts[2]);
+        }
+    }
+
+    [Button]
     public void LoadPlaylist(string playListName)
     {
         foreach (Mp3TrackProperties mp3TrackProperties in downloadedList.mp3TrackProperties)
@@ -113,6 +132,8 @@ public class Mp3PlayerController : MonoBehaviour
         {
             downloadedList = JsonUtility.FromJson<RootMp3TrackProperties>(jsonString);
         }
+
+        GetFromSave();
     }
 
 
@@ -177,35 +198,93 @@ public class Mp3PlayerController : MonoBehaviour
 
     private void Update()
     {
-
-        currentTimeText.text = $"{FormatTime(audioSource.time)}/{totalClipTime}";
-        if (isPlaying && !isPaused)
+        if (currentFileType == FileType.MP3)
         {
-            timeSlider.value = audioSource.time;
-            if (Mathf.Approximately(timeSlider.value, timeSlider.maxValue))
+            currentTimeText.text = $"{FormatTime(audioSource.time)}/{totalClipTime}";
+            if (isPlaying && !isPaused)
             {
-                Stop();
+                timeSlider.value = audioSource.time;
+                if (Mathf.Approximately(timeSlider.value, timeSlider.maxValue))
+                {
+                    Stop();
+                }
+            }
+        }
+        else
+        {
+            if (isPlaying && !isPaused)
+            {
+                timeSlider.value = (float)mediaPlayer.Control.GetCurrentTime();
+                currentTimeText.text = $"{FormatTime((float)mediaPlayer.Control.GetCurrentTime())}/{FormatTime((float)mediaPlayer.Info.GetDuration())}";
+                timeSlider.maxValue = (float)mediaPlayer.Info.GetDuration();
+
+                if (timeSlider.maxValue > 0)
+                    if (Mathf.Approximately(timeSlider.value, timeSlider.maxValue))
+                    {
+                        Stop();
+                    }
             }
         }
     }
 
+    FileType currentFileType;
     private void InitializeTrack(Mp3TrackProperties track)
     {
-        trackTitleText.text = track.title;
-        Texture2D trackTexture = LoadImageFromFile(GetFilenameFromURL(track.trackAudioClipTexturePath));
-        trackImage.sprite = Sprite.Create(trackTexture, new Rect(0, 0, trackTexture.width, trackTexture.height), Vector2.one * 0.5f);
-        Texture2D playlistTexture = LoadImageFromFile(GetFilenameFromURL(track.trackPlaylistTexturePath));
-        playlistImage.sprite = Sprite.Create(playlistTexture, new Rect(0, 0, playlistTexture.width, playlistTexture.height), Vector2.one * 0.5f);
-        
-        StartCoroutine(LoadAudioClipFromFile(GetFilenameFromURL(track.trackAudioClipPath), (AudioClip loadedAudioClip) =>
+
+        currentFileType = CheckFileType(track.trackAudioClipPath);
+
+        if (currentFileType == FileType.MP3)
         {
-            audioSource.clip = loadedAudioClip;
-            timeSlider.value = 0;
-            audioSource.time = 0;
-            currentTimeText.text = FormatTime(0);
-            totalClipTime = FormatTime(audioSource.clip.length);
-            timeSlider.maxValue = audioSource.clip.length;
-            if(isPlaying)
+            trackImage.color = Color.white;
+            mediaPlayerObject.SetActive(false);
+            trackTitleText.text = track.title;
+            Texture2D trackTexture = LoadImageFromFile(GetFilenameFromURL(track.trackAudioClipTexturePath));
+            trackImage.sprite = Sprite.Create(trackTexture, new Rect(0, 0, trackTexture.width, trackTexture.height), Vector2.one * 0.5f);
+            Texture2D playlistTexture = LoadImageFromFile(GetFilenameFromURL(track.trackPlaylistTexturePath));
+            playlistImage.sprite = Sprite.Create(playlistTexture, new Rect(0, 0, playlistTexture.width, playlistTexture.height), Vector2.one * 0.5f);
+
+            StartCoroutine(LoadAudioClipFromFile(GetFilenameFromURL(track.trackAudioClipPath), (AudioClip loadedAudioClip) =>
+            {
+                audioSource.clip = loadedAudioClip;
+                timeSlider.value = 0;
+                audioSource.time = 0;
+                currentTimeText.text = FormatTime(0);
+                totalClipTime = FormatTime(audioSource.clip.length);
+                timeSlider.maxValue = audioSource.clip.length;
+                if (isPlaying)
+                {
+                    Stop();
+                    PlayPause();
+                }
+                else
+                {
+                    Stop();
+                }
+                for (int i = 0; i < trackButtons.Count; i++)
+                {
+                    if (i == currentTrack)
+                    {
+                        trackButtons[i].HighLightButton(true);
+                    }
+                    else
+                    {
+                        trackButtons[i].HighLightButton(false);
+                    }
+                }
+            }));
+        }
+        if (currentFileType == FileType.MP4)
+        {
+            trackImage.color = new Color(0, 0, 0, 0);
+            mediaPlayerObject.SetActive(true);
+            string filePath = GetFilenameFromURL(track.trackAudioClipPath);
+            filePath = Path.Combine(Application.persistentDataPath, "Tracks", filePath);
+            mediaPlayer.OpenMedia(new MediaPath(filePath, MediaPathType.RelativeToDataFolder), autoPlay: true);
+            Debug.Log((float)mediaPlayer.Info.GetDuration());
+
+           
+
+            if (isPlaying)
             {
                 Stop();
                 PlayPause();
@@ -216,7 +295,7 @@ public class Mp3PlayerController : MonoBehaviour
             }
             for (int i = 0; i < trackButtons.Count; i++)
             {
-                if(i == currentTrack)
+                if (i == currentTrack)
                 {
                     trackButtons[i].HighLightButton(true);
                 }
@@ -225,10 +304,7 @@ public class Mp3PlayerController : MonoBehaviour
                     trackButtons[i].HighLightButton(false);
                 }
             }
-
-        }));
-
-
+        }
     }
 
 
@@ -236,14 +312,24 @@ public class Mp3PlayerController : MonoBehaviour
     {
         if (!isPlaying && isPaused)
         {
+            if(currentFileType == FileType.MP3)
+            {
+                audioSource.Play();
+            }
+            if (currentFileType == FileType.MP4)
+            {
+                mediaPlayer.Play();
+            }
+          
             playPauseImage.sprite = pauseSprite;
-            audioSource.Play();
+        
             isPaused = false;
             isPlaying = true;
             return;
         }
         if (isPlaying && !isPaused)
         {
+            mediaPlayer.Pause();
             playPauseImage.sprite = playSprite;
             audioSource.Pause();
             isPaused = true;
@@ -254,17 +340,19 @@ public class Mp3PlayerController : MonoBehaviour
 
     private void Stop()
     {
+        mediaPlayer.Stop();
         audioSource.Stop();
         isPlaying = false;
         isPaused = true;
         timeSlider.value = 0;
         audioSource.time = 0;
+        mediaPlayer.Control.Seek(0);
         currentTimeText.text = FormatTime(0);
     }
 
     private void NextTrack()
     {
-        if (currentTrack == trackList.Count-1)
+        if (currentTrack == trackList.Count - 1)
             currentTrack = 0;
         else
             currentTrack++;
@@ -275,7 +363,7 @@ public class Mp3PlayerController : MonoBehaviour
     private void PreviousTrack()
     {
         if (currentTrack == 0)
-            currentTrack = trackList.Count-1;
+            currentTrack = trackList.Count - 1;
         else
             currentTrack--;
         timeSlider.value = 0;
@@ -318,6 +406,8 @@ public class Mp3PlayerController : MonoBehaviour
             audioSource.time = timeSlider.value;
             PlayPause();
             isPaused = false;
+
+            mediaPlayer.Control.Seek(timeSlider.value);
         }
     }
     #endregion
@@ -334,6 +424,45 @@ public class Mp3PlayerController : MonoBehaviour
         TimeSpan timeSpan = TimeSpan.FromSeconds(time);
         return string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
     }
+
+
+
+
+    enum FileType
+    {
+        Unknown,
+        MP3,
+        MP4
+    }
+
+    FileType CheckFileType(string filePath)
+    {
+        string extension = Path.GetExtension(filePath);
+
+        if (!string.IsNullOrEmpty(extension))
+        {
+            if (extension.Equals(".mp3", System.StringComparison.OrdinalIgnoreCase))
+            {
+                return FileType.MP3;
+            }
+            else if (extension.Equals(".mp4", System.StringComparison.OrdinalIgnoreCase))
+            {
+                return FileType.MP4;
+            }
+            else
+            {
+                return FileType.Unknown;
+            }
+        }
+        else
+        {
+            return FileType.Unknown;
+        }
+    }
+
+
+
+
 
     [Button]
     private void ShowPersistentDataPath()

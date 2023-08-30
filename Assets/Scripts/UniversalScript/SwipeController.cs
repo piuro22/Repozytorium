@@ -43,6 +43,12 @@ public class SwipeController : MonoBehaviour
     private float currentTapDuration;
     private bool isSwiped = false;
 
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
+
+
     private void Update()
     {
         HandleTouchInput();

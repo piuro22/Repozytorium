@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DragAndDrop.unity
     guid: e9c49683e0ebd834d873f7515a6a7269
+  - enabled: 1
+    path: Assets/Scenes/QRScanner.unity
+    guid: 049e6a0d654a3e74b96a04f621b68ec9
   m_configObjects: {}
