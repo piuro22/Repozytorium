@@ -5,8 +5,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
-using Sirenix.OdinInspector;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
 public class DownloadController : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class DownloadController : MonoBehaviour
     [SerializeField] private string downloadPath = "download";
     [SerializeField] private string tableLink = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
     [SerializeField] private RootMp3TrackProperties downloadedList;
-    
+
     [Header("Console Related")]
     [SerializeField] private ScrollRect consoleScrollRect;
     [SerializeField] private TMP_Text screenConsole;
@@ -27,29 +27,26 @@ public class DownloadController : MonoBehaviour
     [SerializeField] private Image loadingSlider;
     [SerializeField] private Image globalProgressSlider;
 
-    private float currentDownloadProgress = 0f;
+    private float totalSizeOfFilesToDownload = 0f;
     private float globalDownloadProgress = 0f;
-    private long totalSizeOfFilesToDownload = 0;
+    private ulong downloadedBytes = 0;
     private float downloadStartTime;
 
     private Dictionary<string, long> fileSizeByUrl = new Dictionary<string, long>();
     private HashSet<string> encounteredUrls = new HashSet<string>();
 
-    public delegate void DownloadStartHandler();
-    public event DownloadCompletedHandler OnDownloadStarted;
-
-    public delegate void DownloadCompletedHandler();
-    public event DownloadCompletedHandler OnDownloadCompleted;
-
-    public delegate void InternetErrorHandler();
-    public event InternetErrorHandler OnInternetErrorHandler;
-
+    public event Action OnDownloadStarted;
+    public event Action<float> OnDownloadSpeedUpdate;
+    public event Action OnAllDownloadCompleted;
+    public event Action OnDownloadFileCompleted;
+    public event Action OnInternetErrorHandler;
 
     private void Start()
     {
         SetupProgressSliders();
         SetupConsole();
         StartCoroutine(GetTable());
+        StartCoroutine(CheckTableDownloadStatus());
     }
 
     private void SetupProgressSliders()
@@ -60,18 +57,17 @@ public class DownloadController : MonoBehaviour
 
     private void SetupConsole()
     {
-        if (shouldShowConsole)
-        {
-            consoleScrollRect.GetComponent<CanvasGroup>().alpha = 1;
-        }
-        else
-        {
-            consoleScrollRect.GetComponent<CanvasGroup>().alpha = 0;
-        }
+        consoleScrollRect.GetComponent<CanvasGroup>().alpha = shouldShowConsole ? 1 : 0;
     }
 
     #region Download And Save
-    [Obsolete]
+
+
+    /// <summary>
+    /// Download Table From Server
+    /// </summary>
+    /// 
+
     public IEnumerator GetTable()
     {
         UnityWebRequest www = UnityWebRequest.Post(tableLink, new WWWForm());
@@ -79,12 +75,12 @@ public class DownloadController : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            OnInternetErrorHandler.Invoke();
+            OnInternetErrorHandler?.Invoke();
             PrintToConsole("Download table failed", true, Color.red);
         }
         else
         {
-            OnDownloadStarted.Invoke();
+            OnDownloadStarted?.Invoke();
             downloadedList = JsonUtility.FromJson<RootMp3TrackProperties>("{\"mp3TrackProperties\":" + www.downloadHandler.text + "}");
             SaveDownloadedListToJson(downloadedList);
             CalculateTotalSizeOfFilesToDownload();
@@ -92,49 +88,29 @@ public class DownloadController : MonoBehaviour
         StartCoroutine(CheckFiles());
     }
 
-    public IEnumerator CheckFiles()
+    private IEnumerator CheckTableDownloadStatus()
     {
-        foreach (Mp3TrackProperties trackProperties in downloadedList.mp3TrackProperties)
+        int secondsWait = 0;
+        while (!IsTableDownloaded())
         {
-            PrintToConsole($"____________________________\n{ trackProperties.title}", false, Color.white);
+            secondsWait++;
+            PrintToConsole($"Try to connect with host {secondsWait}", false, Color.white, true);
 
-            yield return new WaitUntil(() => CanContinueCheck());
-
-            string audioFile = GetFilenameFromURL(trackProperties.trackAudioClipPath);
-            string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
-            string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
-
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile)))
+            if(secondsWait>10)
             {
-                yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipPath));
+                PrintToConsole($"[ERROR] Unable to conect with host", false, Color.red, false);
+                StopAllCoroutines();
             }
-            else
-            {
-                PrintToConsole($"File already exist: {audioFile}", false, Color.green);
-            }
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile)))
-            {
-                yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipTexturePath));
-            }
-            else
-            {
-                PrintToConsole($"File already exist: {textureFile}", false, Color.green);
-            }
-
-            if (!FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile)))
-            {
-                yield return StartCoroutine(DownloadFile(trackProperties.trackPlaylistTexturePath));
-            }
-            else
-            {
-                PrintToConsole($"File already exist: {playlistTextureFile}", false, Color.green);
-            }
+            yield return new WaitForSeconds(1f);
         }
-        if (shouldCleanUnnecessaryFiles)
-        {
-            CleanUpFiles();
-        }
-        OnDownloadCompleted.Invoke();
+
+        // Once the table is downloaded, start checking files
+
+    }
+    private bool IsTableDownloaded()
+    {
+        // Check if the downloadedList is not null or empty
+        return downloadedList != null && downloadedList.mp3TrackProperties.Length > 0;
     }
 
     private void SaveDownloadedListToJson(RootMp3TrackProperties list)
@@ -146,22 +122,37 @@ public class DownloadController : MonoBehaviour
         PrintToConsole("Download table successful");
     }
 
-
-
-    private float GetCurrentDownloadSpeed(UnityWebRequest request, ulong initialDownloadedBytes)
+    public IEnumerator CheckFiles()
     {
-        ulong downloadedBytes = request.downloadedBytes - initialDownloadedBytes;
-        float elapsedTime = Time.time - downloadStartTime;
-
-        // Calculate download speed only after a certain threshold
-        if (downloadedBytes > 1024 && elapsedTime > 1f)
+        Debug.Log("4");
+        foreach (Mp3TrackProperties trackProperties in downloadedList.mp3TrackProperties)
         {
-            float downloadSpeed = downloadedBytes / elapsedTime;
-            return downloadSpeed;
-        }
+            PrintToConsole($"____________________________\n{trackProperties.title}", false, Color.white);
 
-        return 0f; // Return 0 if download speed cannot be calculated yet
+            string audioFile = GetFilenameFromURL(trackProperties.trackAudioClipPath);
+            string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
+            string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
+
+            bool shouldDownloadAudio = !FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile));
+            bool shouldDownloadTexture = !FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile));
+            bool shouldDownloadPlaylistTexture = !FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile));
+
+            if (shouldDownloadAudio)
+                yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipPath));
+
+            if (shouldDownloadTexture)
+                yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipTexturePath));
+
+            if (shouldDownloadPlaylistTexture)
+                yield return StartCoroutine(DownloadFile(trackProperties.trackPlaylistTexturePath));
+        }
+        if (shouldCleanUnnecessaryFiles)
+        {
+            CleanUpFiles();
+        }
+        OnAllDownloadCompleted?.Invoke();
     }
+
 
     IEnumerator DownloadFile(string fileUrl)
     {
@@ -170,36 +161,38 @@ public class DownloadController : MonoBehaviour
 
         long fileSize = -1;
         downloadStartTime = Time.time; // Record download start time
-        ulong initialDownloadedBytes = 0;
 
+        ulong initialDownloadedBytes = request.downloadedBytes;
         while (!operation.isDone)
         {
-            currentDownloadProgress = request.downloadProgress;
-            UpdateLoadingSlider();
+            float currentDownloadProgress = request.downloadProgress;
+            UpdateLoadingSlider(currentDownloadProgress);
             UpdateGlobalProgress();
 
             if (fileSize < 0 && !string.IsNullOrEmpty(request.GetResponseHeader("Content-Length")))
             {
                 if (long.TryParse(request.GetResponseHeader("Content-Length"), out fileSize))
                 {
-                    PrintToConsole($"Prepare to download file from: {fileUrl} [{ FileUtils.FormatFileSize(fileSize)}]\n", false, Color.cyan);
+                    PrintToConsole($"Prepare to download file from: {fileUrl} [{FileUtils.FormatFileSize(fileSize)}]\n", false, Color.cyan);
                 }
             }
 
             float downloadSpeed = GetCurrentDownloadSpeed(request, initialDownloadedBytes);
             if (downloadSpeed > 0f)
             {
-                PrintToConsole($"Current download speed: {FileUtils.FormatFileSize((long)downloadSpeed)}/s", false, Color.yellow, true);
+                float estimatedTimeInSeconds = ((float)totalSizeOfFilesToDownload - downloadedBytes) / downloadSpeed;
+                string estimatedTimeFormatted = FormatTime(estimatedTimeInSeconds);
+
+                PrintToConsole($"Speed: {FileUtils.FormatFileSize((long)downloadSpeed)}/s {estimatedTimeFormatted}", false, Color.yellow, true);
             }
 
             yield return null;
         }
 
-
         if (request.isNetworkError || request.isHttpError)
         {
             PrintToConsole($"Download file failed {request.error}", true, Color.red);
-            OnInternetErrorHandler.Invoke();
+            OnInternetErrorHandler?.Invoke();
             Debug.Log(request.error + " " + fileUrl);
         }
         else
@@ -207,12 +200,6 @@ public class DownloadController : MonoBehaviour
             PrintToConsole($"", false, Color.yellow, true);
             SaveDownloadedFile(request.downloadHandler.data, fileUrl);
         }
-
-        // Calculate and display final download speed
-        float finalDownloadTime = Time.time - downloadStartTime;
-        ulong totalDownloadedBytes = request.downloadedBytes - initialDownloadedBytes;
-        float finalDownloadSpeed = totalDownloadedBytes / finalDownloadTime;
-        PrintToConsole($"Avarage downloadspeed: {FileUtils.FormatFileSize((long)finalDownloadSpeed)}/s", false, Color.yellow);
     }
 
     private void SaveDownloadedFile(byte[] data, string fileUrl)
@@ -225,9 +212,9 @@ public class DownloadController : MonoBehaviour
         if (!File.Exists(filePath))
         {
             File.WriteAllBytes(filePath, data);
-            PrintToConsole($"Downloaded completed: {fileName}", false, Color.green);
+            OnDownloadFileCompleted?.Invoke();
         }
-        loadingSlider.fillAmount = 1;
+        downloadedBytes += (ulong)data.Length;
         globalDownloadProgress = CalculateGlobalDownloadProgress();
         UpdateGlobalProgress();
     }
@@ -241,50 +228,12 @@ public class DownloadController : MonoBehaviour
             AddFileSizeFromUrlIfUnique(trackProperties.trackAudioClipTexturePath);
             AddFileSizeFromUrlIfUnique(trackProperties.trackPlaylistTexturePath);
         }
-        PrintToConsole($"Total size of files to download: { FileUtils.FormatFileSize(totalSizeOfFilesToDownload)}", false, Color.white);
+        PrintToConsole($"Total size of files to download: {FileUtils.FormatFileSize((long)totalSizeOfFilesToDownload)}", false, Color.white);
     }
 
-
-
-    private float CalculateGlobalDownloadProgress()
+    private void UpdateLoadingSlider(float progress)
     {
-        int totalFiles = downloadedList.mp3TrackProperties.Length * 3; // Assuming 3 files per track
-        int downloadedFiles = 0;
-
-        foreach (Mp3TrackProperties trackProperties in downloadedList.mp3TrackProperties)
-        {
-            string audioFile = GetFilenameFromURL(trackProperties.trackAudioClipPath);
-            string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
-            string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
-
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile)))
-                downloadedFiles++;
-
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile)))
-                downloadedFiles++;
-
-            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile)))
-                downloadedFiles++;
-        }
-
-        return (float)downloadedFiles / totalFiles;
-    }
-
-    private bool CanContinueCheck()
-    {
-        return true;
-    }
-
-    private string GetFilenameFromURL(string url)
-    {
-        Uri uri = new Uri(url);
-        string filename = Path.GetFileName(uri.LocalPath);
-        return filename;
-    }
-
-    private void UpdateLoadingSlider()
-    {
-        loadingSlider.fillAmount = currentDownloadProgress;
+        loadingSlider.fillAmount = progress;
     }
 
     private void UpdateGlobalProgress()
@@ -298,15 +247,11 @@ public class DownloadController : MonoBehaviour
 
         if (deleteLastLine && !string.IsNullOrEmpty(screenConsole.text))
         {
-            // Split the current text by newlines and remove the last line.
             string[] lines = screenConsole.text.Split('\n');
             if (lines.Length > 1)
             {
-                string[] newLines = new string[lines.Length - 1];
-                for (int i = 0; i < newLines.Length; i++)
-                {
-                    newLines[i] = lines[i];
-                }
+                List<string> newLines = new List<string>(lines);
+                newLines.RemoveAt(newLines.Count - 1);
                 screenConsole.text = string.Join("\n", newLines);
             }
             else
@@ -323,10 +268,6 @@ public class DownloadController : MonoBehaviour
         screenConsole.text += formattedMessage;
         consoleScrollRect.verticalNormalizedPosition = 0;
     }
-
-
-
-
 
     private long GetFileSizeFromUrl(string fileUrl)
     {
@@ -407,16 +348,70 @@ public class DownloadController : MonoBehaviour
         return validFilenames.Contains(filename);
     }
 
-    [Button]
-    private void ShowPersistentDataPath()
+    private float GetCurrentDownloadSpeed(UnityWebRequest request, ulong initialDownloadedBytes)
     {
-        System.Diagnostics.Process.Start("explorer.exe", "/select," + Application.persistentDataPath.Replace("/", "\\"));
+        ulong downloadedBytes = request.downloadedBytes - initialDownloadedBytes;
+        float elapsedTime = Time.time - downloadStartTime;
+
+        if (downloadedBytes > 1024 && elapsedTime > 1f)
+        {
+            float downloadSpeed = downloadedBytes / elapsedTime;
+            OnDownloadSpeedUpdate?.Invoke(downloadSpeed);
+            return downloadSpeed;
+        }
+
+        return 0f;
+    }
+
+    private float CalculateGlobalDownloadProgress()
+    {
+        float downloadedSize = 0;
+        foreach (Mp3TrackProperties trackProperties in downloadedList.mp3TrackProperties)
+        {
+            string audioFile = GetFilenameFromURL(trackProperties.trackAudioClipPath);
+            string textureFile = GetFilenameFromURL(trackProperties.trackAudioClipTexturePath);
+            string playlistTextureFile = GetFilenameFromURL(trackProperties.trackPlaylistTexturePath);
+
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, audioFile)))
+                downloadedSize += GetFileSizeFromPath(audioFile);
+
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, textureFile)))
+                downloadedSize += GetFileSizeFromPath(textureFile);
+
+            if (FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile)))
+                downloadedSize += GetFileSizeFromPath(playlistTextureFile);
+        }
+
+        return downloadedSize / totalSizeOfFilesToDownload;
+    }
+
+    private long GetFileSizeFromPath(string filename)
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, downloadPath, filename);
+        if (File.Exists(filePath))
+        {
+            FileInfo fileInfo = new FileInfo(filePath);
+            return fileInfo.Length;
+        }
+        return 0;
+    }
+
+    private string GetFilenameFromURL(string url)
+    {
+        Uri uri = new Uri(url);
+        return Path.GetFileName(uri.LocalPath);
     }
 
     private string FormatTime(float seconds)
     {
         TimeSpan timeSpan = TimeSpan.FromSeconds(seconds);
         return $"{timeSpan.Hours:D2}H {timeSpan.Minutes:D2}Min {timeSpan.Seconds:D2}S";
+    }
+
+    [Button]
+    private void ShowPersistentDataPath()
+    {
+        System.Diagnostics.Process.Start("explorer.exe", "/select," + Application.persistentDataPath.Replace("/", "\\"));
     }
 }
 
