@@ -83,11 +83,13 @@ public class Mp3PlayerController : MonoBehaviour
     }
 
     [Button]
-    public void LoadPlaylist(string playListName)
+    public void LoadPlaylist(string playListsNames)
     {
+        string[] playLists = playListsNames.Split(',');
+
         foreach (Mp3TrackProperties mp3TrackProperties in downloadedList.mp3TrackProperties)
         {
-            if (playListName == mp3TrackProperties.playListName)
+            if (Array.Exists(playLists, playlist => playlist == mp3TrackProperties.playListName))
             {
                 trackList.Add(mp3TrackProperties);
                 GameObject newTrackButton = Instantiate(trackButton, trackButtonParrent);
@@ -139,7 +141,7 @@ public class Mp3PlayerController : MonoBehaviour
 
     public static Texture2D LoadImageFromFile(string filePath)
     {
-        string path = Path.Combine(Application.persistentDataPath, "download",  filePath);
+        string path = Path.Combine(Application.persistentDataPath, "download", filePath);
 
         Texture2D tex = null;
         byte[] fileData;
@@ -282,7 +284,7 @@ public class Mp3PlayerController : MonoBehaviour
             mediaPlayer.OpenMedia(new MediaPath(filePath, MediaPathType.RelativeToDataFolder), autoPlay: true);
             Debug.Log((float)mediaPlayer.Info.GetDuration());
 
-           
+
 
             if (isPlaying)
             {
@@ -312,7 +314,7 @@ public class Mp3PlayerController : MonoBehaviour
     {
         if (!isPlaying && isPaused)
         {
-            if(currentFileType == FileType.MP3)
+            if (currentFileType == FileType.MP3)
             {
                 audioSource.Play();
             }
@@ -320,9 +322,9 @@ public class Mp3PlayerController : MonoBehaviour
             {
                 mediaPlayer.Play();
             }
-          
+
             playPauseImage.sprite = pauseSprite;
-        
+
             isPaused = false;
             isPlaying = true;
             return;
