@@ -13,12 +13,7 @@ public class AdminController : MonoBehaviour
     [SerializeField] private string wwwUpdateRecord = "http://www.skydomesoftware.usermd.net/Toki/UpdateRecord.php";
     public RootMp3TrackProperties downloadedList;
 
-    public int id;
-    public string title;
-    public string playListName;
-    public string trackAudioClipPath;
-    public string trackAudioClipTexturePath;
-    public string trackPlaylistTexturePath;
+ 
 
 
 
@@ -30,7 +25,7 @@ public class AdminController : MonoBehaviour
     }
 
     [Button]
-    public void UpdateTrackInDatabase()
+    public void UpdateTrackInDatabase(int id, string title, string playListName, string trackAudioClipPath, string trackAudioClipTexturePath, string trackPlaylistTexturePath)
     {
         StartCoroutine(UpdateTrackCoroutine(id,title, playListName,  trackAudioClipPath, trackAudioClipTexturePath, trackPlaylistTexturePath));
     }
@@ -62,7 +57,7 @@ public class AdminController : MonoBehaviour
     }
 
     [Button]
-    public void AddTrackToDatabase()
+    public void AddTrackToDatabase(string title, string playListName, string trackAudioClipPath, string trackAudioClipTexturePath, string trackPlaylistTexturePath)
     {
         StartCoroutine(AddTrackCoroutine(title, playListName, trackAudioClipPath, trackAudioClipTexturePath, trackPlaylistTexturePath));
     }
