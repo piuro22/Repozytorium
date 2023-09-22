@@ -236,7 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f02fc78f629244f9e84246b8ea2eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableLink: http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php
+  wwwDownloadTable: http://yoopieenglish.pl/Unity/GetTableJson.php
+  wwwRemoveRecord: http://yoopieenglish.pl/Unity/RemoveRecord.php
+  wwwAddRecord: http://yoopieenglish.pl/Unity/AddRecord.php
+  wwwUpdateRecord: http://yoopieenglish.pl/Unity/UpdateRecord.php
   downloadedList:
     mp3TrackProperties: []
   id: 0

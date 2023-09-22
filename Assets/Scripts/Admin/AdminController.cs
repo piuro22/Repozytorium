@@ -7,8 +7,10 @@ using UnityEngine.Networking;
 
 public class AdminController : MonoBehaviour
 {
-    [SerializeField] private string tableLink = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
-
+    [SerializeField] private string wwwDownloadTable = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
+    [SerializeField] private string wwwRemoveRecord = "http://www.skydomesoftware.usermd.net/Toki/RemoveRecord.php";
+    [SerializeField] private string wwwAddRecord = "http://www.skydomesoftware.usermd.net/Toki/AddRecord.php";
+    [SerializeField] private string wwwUpdateRecord = "http://www.skydomesoftware.usermd.net/Toki/UpdateRecord.php";
     public RootMp3TrackProperties downloadedList;
 
     public int id;
@@ -43,7 +45,7 @@ public class AdminController : MonoBehaviour
         form.AddField("trackAudioClipTexturePath", trackAudioClipTexturePath);
         form.AddField("trackPlaylistTexturePath", trackPlaylistTexturePath);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://www.skydomesoftware.usermd.net/Toki/UpdateRecord.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(wwwUpdateRecord, form))
         {
             yield return www.SendWebRequest();
 
@@ -74,7 +76,7 @@ public class AdminController : MonoBehaviour
         form.AddField("trackAudioClipTexturePath", trackAudioClipTexturePath);
         form.AddField("trackPlaylistTexturePath", trackPlaylistTexturePath);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://www.skydomesoftware.usermd.net/Toki/AddRecord.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(wwwAddRecord, form))
         {
             yield return www.SendWebRequest();
 
@@ -101,7 +103,7 @@ public class AdminController : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("id", trackId.ToString());
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://www.skydomesoftware.usermd.net/Toki/RemoveRecord.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(wwwRemoveRecord, form))
         {
             yield return www.SendWebRequest();
 
@@ -120,7 +122,7 @@ public class AdminController : MonoBehaviour
 
     public IEnumerator GetTable()
     {
-        UnityWebRequest www = UnityWebRequest.Post(tableLink, new WWWForm());
+        UnityWebRequest www = UnityWebRequest.Post(wwwDownloadTable, new WWWForm());
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)

@@ -155,7 +155,7 @@ MonoBehaviour:
   shouldCleanUnnecessaryFiles: 1
   shouldShowConsole: 1
   downloadPath: download
-  tableLink: http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php
+  tableLink: http://yoopieenglish.pl/Unity/GetTableJson.php
   downloadedList:
     mp3TrackProperties: []
   consoleScrollRect: {fileID: 125489999}
@@ -1713,6 +1713,11 @@ MonoBehaviour:
   downloadController: {fileID: 23235758}
   downloadCompletedButton: {fileID: 1040458493}
   loadingText: {fileID: 1466363828}
+  loadingSlider: {fileID: 0}
+  globalProgressSlider: {fileID: 0}
+  consoleScrollRect: {fileID: 0}
+  screenConsole: {fileID: 0}
+  concoleCanvasGroup: {fileID: 0}
 --- !u!1 &2082842182
 GameObject:
   m_ObjectHideFlags: 0
