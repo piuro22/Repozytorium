@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1361332765}
   - component: {fileID: 1361332764}
   - component: {fileID: 1361332763}
+  - component: {fileID: 1361332766}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361332766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361332762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1468826917
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,13 +275,98 @@ MonoBehaviour:
   wwwAddRecord: http://yoopieenglish.pl/Unity/AddRecord.php
   wwwUpdateRecord: http://yoopieenglish.pl/Unity/UpdateRecord.php
   downloadedList:
-    mp3TrackProperties: []
-  id: 0
-  title: 
-  playListName: 
-  trackAudioClipPath: 
-  trackAudioClipTexturePath: 
-  trackPlaylistTexturePath: 
+    mp3TrackProperties:
+    - id: 1
+      playListName: Track1
+      title: asd
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Shrek.mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Playlist.jpg
+    - id: 2
+      playListName: PlayLista1
+      title: Track2
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Blue.mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Blue.jpg
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Playlist.jpg
+    - id: 3
+      playListName: PlayLista2
+      title: Track3
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Summer69.mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Summer69.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/Playlist.jpg
+    - id: 4
+      playListName: ACDC
+      title: ACDC (1)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (1).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 5
+      playListName: ACDC
+      title: ACDC (2)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (2).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 6
+      playListName: ACDC
+      title: ACDC (3)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (3).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 7
+      playListName: ACDC
+      title: ACDC (4)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (4).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 8
+      playListName: ACDC
+      title: ACDC (5)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (5).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 9
+      playListName: ACDC
+      title: ACDC (6)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (6).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 10
+      playListName: ACDC
+      title: ACDC (7)
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/ACDC
+        (7).mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 11
+      playListName: Playlista nowa
+      title: "Tytu\u0142"
+      trackAudioClipPath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ACDC/video.mp4
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+    - id: 12
+      playListName: Level1Unit1Page5
+      title: Page5Ex2
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U1P5,2.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/mis.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/mis.png
+    - id: 13
+      playListName: Level1Unit1Page5
+      title: Page5Ex3
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U1P5,3.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/mis.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/mis.png
+    - id: 14
+      playListName: Level1Unit1Page5
+      title: L1U1P5,4
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U1P5,4.mp3
+      trackAudioClipTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
+      trackPlaylistTexturePath: http://www.skydomesoftware.usermd.net/Toki/Tracks/ShrekTrackImage.png
 --- !u!4 &1468826919
 Transform:
   m_ObjectHideFlags: 0

@@ -1734,6 +1734,7 @@ MonoBehaviour:
   stopButton: {fileID: 615644475}
   nextTrackButton: {fileID: 12568268}
   previousTrackButton: {fileID: 1882051757}
+  downloadPath: download
   isPlaying: 0
   isPaused: 0
   currentTrack: 0
@@ -5446,7 +5447,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 644513704}
   m_HandleRect: {fileID: 644513703}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6995,7 +6996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.2363, y: 175.03}
+  m_AnchoredPosition: {x: 372.2363, y: 155.5}
   m_SizeDelta: {x: 36.9838, y: 36.9838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426385910
