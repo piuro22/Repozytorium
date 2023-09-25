@@ -11,23 +11,16 @@ public class QRScannerToki : MonoBehaviour
 
     private void Awake()
     {
-        qrHandler.SetActive(false);
-        StartCoroutine(OpenQRHandler());
-    }
-
-    IEnumerator OpenQRHandler()
-    {
-        Screen.orientation = ScreenOrientation.Portrait;
-        yield return new WaitForSeconds(2);
         qrHandler.SetActive(true);
     }
+
 
     private void Start()
     {
 
     }
 
-
+    [Button]
     public void OnDecodeFinished(string dataText)
     {
         PlayerPrefs.SetString("QRCode", dataText);
@@ -42,5 +35,5 @@ public class QRScannerToki : MonoBehaviour
 
     }
 
-
+    // Mp3Player/NazwaPlaylisty
 }

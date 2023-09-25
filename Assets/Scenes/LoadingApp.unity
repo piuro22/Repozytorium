@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldCleanUnnecessaryFiles: 1
-  shouldShowConsole: 1
+  shouldShowConsole: 0
   downloadPath: download
   tableLink: http://yoopieenglish.pl/Unity/GetTableJson.php
   downloadedList:
@@ -649,7 +649,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 438}
-  m_SizeDelta: {x: 407.1147, y: 407.11475}
+  m_SizeDelta: {x: 976.7103, y: 976.7104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425252982
 MonoBehaviour:
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8761706169716364fbe608791b910317, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 413886579b0d4f14887763a220b17ef9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -724,8 +724,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 540, y: 0}
+  m_SizeDelta: {x: 1340.2847, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665692966
 MonoBehaviour:
@@ -747,8 +747,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6e9b6371fa60dce42a77f5b94f4b2a73, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1119,7 +1119,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UnitSelect
+          m_StringArgument: Scene Login
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1040458497
@@ -1354,13 +1354,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42.39
+  m_fontSizeBase: 42.39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
