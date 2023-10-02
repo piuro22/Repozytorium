@@ -1191,22 +1191,22 @@ MonoBehaviour:
   prefabScale: {x: 0.1, y: 0.1, z: 0.1}
   units:
   - UnitPrefab: {fileID: 7357801014477358990, guid: 254f58ba1743fc844988e458915ea48d, type: 3}
-    unitName: Colours
+    unitName: Farm animals
     sceneToLoadName: Scene Level 1
   - UnitPrefab: {fileID: 7357801014477358990, guid: dcb465d4c110cbd44a6bffe55a795ef5, type: 3}
-    unitName: Toys
+    unitName: Home
     sceneToLoadName: Scene Level Change
   - UnitPrefab: {fileID: 7357801014477358990, guid: 78d66ae365bea0946b6e9a2db0b4b1d4, type: 3}
-    unitName: Family
+    unitName: Morning routine
     sceneToLoadName: Scene Level Change 1
   - UnitPrefab: {fileID: 7357801014477358990, guid: 495d0044381d5a74195a8f46aab5ebb3, type: 3}
-    unitName: Pets
+    unitName: Winter clothes
     sceneToLoadName: Scene Level Change 2
   - UnitPrefab: {fileID: 7357801014477358990, guid: f578f20003f035a4d82207fb4d904fb8, type: 3}
-    unitName: Food
+    unitName: Parts of the body
     sceneToLoadName: Mp3Player
   - UnitPrefab: {fileID: 7357801014477358990, guid: 24661446a49f4b44cab224c737232be8, type: 3}
-    unitName: Clothes
+    unitName: Fruits
     sceneToLoadName: Mp3Player
   swipeCurve:
     serializedVersion: 2
