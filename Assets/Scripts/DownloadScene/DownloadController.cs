@@ -39,7 +39,8 @@ public class DownloadController : MonoBehaviour
     public event Action<float> OnDownloadSpeedUpdate;
     public event Action OnAllDownloadCompleted;
     public event Action OnDownloadFileCompleted;
-    public event Action OnInternetErrorHandler;
+    public event Action OnInternetErrorFileExistHandler;
+    public event Action OnInternetErrorFileNotExistHandler;
 
     private void Start()
     {
@@ -73,10 +74,27 @@ public class DownloadController : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Post(tableLink, new WWWForm());
         yield return www.SendWebRequest();
 
+
+
+
+
         if (www.isNetworkError || www.isHttpError)
         {
-            OnInternetErrorHandler?.Invoke();
             PrintToConsole("Download table failed", true, Color.red);
+
+            string subDir = Path.Combine(Application.persistentDataPath, downloadPath);
+            Directory.CreateDirectory(subDir);
+            string filePath = Path.Combine(subDir, "Tracks" + ".json");
+
+            if (!File.Exists(filePath))
+            {
+                OnInternetErrorFileNotExistHandler?.Invoke();
+            }
+            else
+            {
+                OnInternetErrorFileExistHandler?.Invoke();
+            }
+
         }
         else
         {
@@ -96,7 +114,7 @@ public class DownloadController : MonoBehaviour
             secondsWait++;
             PrintToConsole($"Try to connect with host {secondsWait}", false, Color.white, true);
 
-            if(secondsWait>10)
+            if (secondsWait > 10)
             {
                 PrintToConsole($"[ERROR] Unable to conect with host", false, Color.red, false);
                 StopAllCoroutines();
@@ -192,7 +210,6 @@ public class DownloadController : MonoBehaviour
         if (request.isNetworkError || request.isHttpError)
         {
             PrintToConsole($"Download file failed {request.error}", true, Color.red);
-            OnInternetErrorHandler?.Invoke();
             Debug.Log(request.error + " " + fileUrl);
         }
         else

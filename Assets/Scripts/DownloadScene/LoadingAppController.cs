@@ -34,21 +34,28 @@ public class LoadingAppController : MonoBehaviour
         downloadController.OnDownloadStarted += HandleDownloadStarted;
         downloadController.OnDownloadSpeedUpdate += HandleDownloadSpeed;
         downloadController.OnAllDownloadCompleted += HandleAllDownloadCompleted;
-        downloadController.OnInternetErrorHandler += HandleNoInternetConnection;
+        downloadController.OnInternetErrorFileExistHandler += HandleOnInternetErrorFileExistHandler;
+        downloadController.OnInternetErrorFileNotExistHandler += HandleOnInternetErrorFileNotExistHandler;
     }
 
 
 
+    private void HandleOnInternetErrorFileNotExistHandler()
+    {
+        loadingText.SetText("Połącz aplikację z internetem");
+        downloadCompletedButton.SetActive(false);
+    }
 
-
-    private void HandleNoInternetConnection()
+    private void HandleOnInternetErrorFileExistHandler()
     {
         loadingText.SetText("Brak połączenia z internetem");
+        downloadCompletedButton.SetActive(true);
     }
 
     private void HandleDownloadStarted()
     {
         loadingText.SetText("Pobieranie treści...");
+        downloadCompletedButton.SetActive(false);
     }
 
     private void HandleDownloadSpeed(float speed)
