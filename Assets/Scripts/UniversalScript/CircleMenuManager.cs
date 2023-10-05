@@ -81,6 +81,7 @@ public class CircleMenuManager : MonoBehaviour
 
         spawnedUnits[0].SetActive(true);
         spawnedUnits[0].transform.localEulerAngles = Vector3.zero;
+        unityNameText.SetText(units[currentUnitIndex].unitName);
     }
 
     private void SwipeLeft(Vector2 tapPosition)
