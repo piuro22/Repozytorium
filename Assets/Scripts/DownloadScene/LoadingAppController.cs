@@ -71,7 +71,10 @@ public class LoadingAppController : MonoBehaviour
 
     private void OnDestroy()
     {
-        downloadController.OnInternetErrorHandler -= HandleNoInternetConnection;
-        downloadController.OnDownloadFileCompleted -= HandleAllDownloadCompleted;
+        downloadController.OnDownloadStarted -= HandleDownloadStarted;
+        downloadController.OnDownloadSpeedUpdate -= HandleDownloadSpeed;
+        downloadController.OnAllDownloadCompleted -= HandleAllDownloadCompleted;
+        downloadController.OnInternetErrorFileExistHandler -= HandleOnInternetErrorFileExistHandler;
+        downloadController.OnInternetErrorFileNotExistHandler -= HandleOnInternetErrorFileNotExistHandler;
     }
 }
