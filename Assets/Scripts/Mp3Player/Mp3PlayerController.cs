@@ -69,6 +69,7 @@ public class Mp3PlayerController : MonoBehaviour
     private void GetFromSave()
     {
         string playListSave = PlayerPrefs.GetString("QRCode");
+        PlayerPrefs.DeleteKey("QRCode");
         string[] parts = playListSave.Split('/');
 
         if (parts.Length >= 2)
@@ -134,8 +135,11 @@ public class Mp3PlayerController : MonoBehaviour
         {
             downloadedList = JsonUtility.FromJson<RootMp3TrackProperties>(jsonString);
         }
-
-        GetFromSave();
+        if (PlayerPrefs.HasKey("QRCode"))
+        {
+            GetFromSave();
+        }
+     
     }
 
 
