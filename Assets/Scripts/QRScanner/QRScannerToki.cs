@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class QRScannerToki : MonoBehaviour
 {
+    public QRCodeDecodeController codeDecodeController;
     public GameObject qrHandler;
 
 
     private void Awake()
     {
+        codeDecodeController.Reset();
         qrHandler.SetActive(true);
     }
 
@@ -23,6 +25,7 @@ public class QRScannerToki : MonoBehaviour
     [Button]
     public void OnDecodeFinished(string dataText)
     {
+        codeDecodeController.Reset();
         PlayerPrefs.SetString("QRCode", dataText);
 
         string[] parts = dataText.Split('/');
