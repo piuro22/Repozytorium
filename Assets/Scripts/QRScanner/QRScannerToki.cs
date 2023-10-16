@@ -12,10 +12,19 @@ public class QRScannerToki : MonoBehaviour
 
     private void Awake()
     {
-        codeDecodeController.Reset();
-        qrHandler.SetActive(true);
+
+        StartCoroutine(Delay());
     }
 
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        qrHandler.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        codeDecodeController.Reset();
+        codeDecodeController.enabled = true;
+    }
 
     private void Start()
     {
