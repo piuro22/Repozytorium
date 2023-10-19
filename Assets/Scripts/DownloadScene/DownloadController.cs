@@ -16,7 +16,7 @@ public class DownloadController : MonoBehaviour
 
     [Header("Server Related")]
     [SerializeField] private string downloadPath = "download";
-    [SerializeField] private string tableLink = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
+    [SerializeField] private string tableLink = "http://yoopieenglish.pl/Unity/GetTableJson.php";
     [SerializeField] private RootMp3TrackProperties downloadedList;
 
     [Header("Console Related")]
