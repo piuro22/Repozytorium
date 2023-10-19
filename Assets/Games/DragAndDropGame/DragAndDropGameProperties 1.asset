@@ -23,7 +23,7 @@ MonoBehaviour:
   snapOnClick: 0
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
-  useOtherTextureForContainer: 0
+  useOtherTextureForContainer: 1
   containerTransparency: 1
   overrideContainerColor: 0
   containerColor: {r: 0.8490566, g: 0, b: 0, a: 0.79607844}
@@ -60,7 +60,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -180,7 +180,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -210,7 +210,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 0
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1

@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b1bcfa7bccb7d94682be39ffeb28b43, type: 3}
-  m_Name: HighlightObjectGameProperties - Copy - Copy - Copy
+  m_Name: HighlightObjectGameProperties - balloon 2
   m_EditorClassIdentifier: 
   backGroundTexture: {fileID: 21300000, guid: 6e9b6371fa60dce42a77f5b94f4b2a73, type: 3}
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 0}
+  wrongClickAudioClip: {fileID: 0}
   gameSequence:
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
     objectsToHighlights:
-    - ObjectID: 0
+    - ObjectID: 3
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
     objectsToHighlights:
-    - ObjectID: 1
+    - ObjectID: 0
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
@@ -34,9 +35,9 @@ MonoBehaviour:
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
     objectsToHighlights:
-    - ObjectID: 3
+    - ObjectID: 1
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 0}

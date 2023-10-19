@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1bcfa7bccb7d94682be39ffeb28b43, type: 3}
+  m_Name: HighlightObjectGameProperties - balloon
+  m_EditorClassIdentifier: 
+  backGroundTexture: {fileID: 21300000, guid: 6e9b6371fa60dce42a77f5b94f4b2a73, type: 3}
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}
+  gameSequence:
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
+    objectsToHighlights:
+    - ObjectID: 0
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 0}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
+    objectsToHighlights:
+    - ObjectID: 1
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 0}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d2357b82ac0591e469660e7cb0851f2b, type: 3}
+    objectsToHighlights:
+    - ObjectID: 2
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 0}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
+    objectsToHighlights:
+    - ObjectID: 3
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 0}
+  higlightObjects:
+  - id: 0
+    texture: {fileID: 2800000, guid: 903c3dd12f804364fa212c813e09c6bf, type: 3}
+    position: {x: 0.57, y: 0.15}
+    scale: {x: 0.2, y: 0.2}
+    outlineOnTime: 1.93
+    outlineWidth: 1
+    outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
+    soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+  - id: 1
+    texture: {fileID: 2800000, guid: 8811ebc4eb4a1d24ea31d2173ecfced6, type: 3}
+    position: {x: 0.57, y: -1.29}
+    scale: {x: 0.2, y: 0.2}
+    outlineOnTime: 0
+    outlineWidth: 1
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 2
+    texture: {fileID: 2800000, guid: 6a20599f0d47e3b4ab0873e2b90f5dfa, type: 3}
+    position: {x: 2.55, y: 0.15}
+    scale: {x: 0.2, y: 0.2}
+    outlineOnTime: 0
+    outlineWidth: 0.747
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 3
+    texture: {fileID: 2800000, guid: 2bc7be1296369b14f9769fc938663a94, type: 3}
+    position: {x: 2.55, y: -1.29}
+    scale: {x: 0.2, y: 0.2}
+    outlineOnTime: 0
+    outlineWidth: 0.755
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}

@@ -810,6 +810,120 @@ MonoBehaviour:
       trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P49.4.mp3
       trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
       trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 90
+      playListName: Level1Unit3Page17
+      title: page17.1
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U3P17.1.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 91
+      playListName: Level1Unit3Page17
+      title: page17.2
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U3P17.2.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 92
+      playListName: Level1Unit3Page17
+      title: page17.3
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U3P17.3.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 93
+      playListName: Level1Unit3Page17
+      title: page17.4
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U3P17.4.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 94
+      playListName: Level1Unit2Page15
+      title: page15.1
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U2P15.1.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 95
+      playListName: Level1Unit2Page15
+      title: page15.2
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U2P15.2.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 96
+      playListName: Level1Unit2Page15
+      title: page15.3
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U2P15.3.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 97
+      playListName: Level1Unit6Page50
+      title: page50.1
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.1.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 98
+      playListName: Level1Unit6Page50
+      title: page50.2
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.2.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 99
+      playListName: Level1Unit6Page50
+      title: page50.3
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.3.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 100
+      playListName: Level1Unit6Page50
+      title: page50.4
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.4.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 101
+      playListName: Level1Unit6Page50
+      title: page50.5
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.5.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 102
+      playListName: Level1Unit6Page50
+      title: page50.6
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.6.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 103
+      playListName: Level1Unit6Page50
+      title: page50.7
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.7.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 104
+      playListName: Level1Unit6Page50
+      title: page50.8
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P50.8.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 105
+      playListName: Level1Unit6Page51
+      title: page51.1
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P51.1.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 106
+      playListName: Level1Unit6Page51
+      title: page51.2
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P51.2.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 107
+      playListName: Level1Unit6Page51
+      title: page51.3
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P51.3.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+    - id: 108
+      playListName: Level1Unit6Page51
+      title: page51.4
+      trackAudioClipPath: http://yoopieenglish.pl/Unity/Tracks/L1U6P51.4.mp3
+      trackAudioClipTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
+      trackPlaylistTexturePath: http://yoopieenglish.pl/Unity/Image/logo app.png
 --- !u!4 &1468826919
 Transform:
   m_ObjectHideFlags: 0
