@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 using UnityEngine.Events;
+using System.Collections;
 
 public class LoginController : MonoBehaviour
 {
@@ -13,16 +13,39 @@ public class LoginController : MonoBehaviour
 
     public string loginURL = "http://yoopieenglish.pl/Unity/GetTableJson.php"; // Replace with your server URL
     public UnityEvent OnSuccesLogin;
-    public void OnLoginButtonClicked()
+
+    private const string CREDENTIALS_FILE_NAME = "userCredentials.json";
+
+    private void Start()
     {
-        StartCoroutine(Login());
+        TryAutoLogin();
     }
 
-    IEnumerator Login()
+
+    public void OnLogoutButtonClicked()
+    {
+        string path = Path.Combine(Application.persistentDataPath, CREDENTIALS_FILE_NAME);
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            messageText.text = "Logged out successfully!";
+        }
+        else
+        {
+            messageText.text = "No credentials found to logout!";
+        }
+    }
+
+    public void OnLoginButtonClicked()
+    {
+        StartCoroutine(Login(loginInput.text, passwordInput.text));
+    }
+
+    IEnumerator Login(string login, string password)
     {
         WWWForm form = new WWWForm();
-        form.AddField("login", loginInput.text);
-        form.AddField("password", passwordInput.text);
+        form.AddField("login", login);
+        form.AddField("password", password);
 
         UnityWebRequest www = UnityWebRequest.Post(loginURL, form);
         yield return www.SendWebRequest();
@@ -39,11 +62,36 @@ public class LoginController : MonoBehaviour
             if (jsonResponse.status == "success")
             {
                 OnSuccesLogin.Invoke();
+                SaveCredentials(login, password);
             }
             else
             {
-                Debug.Log("Invaild Login");
+                Debug.Log("Invalid Login");
             }
+        }
+    }
+
+    void SaveCredentials(string login, string password)
+    {
+        UserCredentials credentials = new UserCredentials
+        {
+            Login = login,
+            Password = password
+        };
+
+        string json = JsonUtility.ToJson(credentials);
+        string path = Path.Combine(Application.persistentDataPath, CREDENTIALS_FILE_NAME);
+        File.WriteAllText(path, json);
+    }
+
+    void TryAutoLogin()
+    {
+        string path = Path.Combine(Application.persistentDataPath, CREDENTIALS_FILE_NAME);
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            UserCredentials credentials = JsonUtility.FromJson<UserCredentials>(json);
+            StartCoroutine(Login(credentials.Login, credentials.Password));
         }
     }
 
@@ -52,5 +100,12 @@ public class LoginController : MonoBehaviour
     {
         public string status;
         public string message;
+    }
+
+    [System.Serializable]
+    public class UserCredentials
+    {
+        public string Login;
+        public string Password;
     }
 }

@@ -57,7 +57,7 @@ public class SceneController : MonoBehaviour
     }
 
 
-    private void SwitchCard(string cardName)
+    public void SwitchCard(string cardName)
     {
         foreach(MainMenuCard mainMenuCard in mainMenuCards)
         {
