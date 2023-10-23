@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
         backButton.onClick.AddListener(delegate () { BackToUnitSelect(); });
+      
     }
     public void OpenNextGame()
     {
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenGame(GameType _gameType)
     {
+      
         gameType = _gameType;
         foreach (Games game in games)
         {

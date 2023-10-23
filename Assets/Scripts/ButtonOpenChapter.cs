@@ -36,6 +36,7 @@ public class ButtonOpenChapter : MonoBehaviour, IPointerClickHandler, IPointerEn
 
     public void OnPointerClick(PointerEventData eventData)// gdy klikniemy
     {
+        PlayerPrefs.SetString("LastChoseGameScene", gameObject.scene.name);
         GameManager.Instance.OnGameFirstStart(gameType, gameProperties);
 
     }

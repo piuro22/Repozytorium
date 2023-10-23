@@ -166,6 +166,6 @@ public class HighlightObjectGameController : MonoBehaviour
 
     public void BackToChoseLevels()
     {
-        SceneManager.LoadScene("Scene Level Change");
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
 }
