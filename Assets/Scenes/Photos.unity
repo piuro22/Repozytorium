@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.79992676, y: 23.400024}
-  m_SizeDelta: {x: -293.1308, y: 0}
+  m_AnchoredPosition: {x: 0.40039062, y: 5.6691895}
+  m_SizeDelta: {x: -343.1046, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509472382
 MonoBehaviour:
@@ -307,7 +307,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 7c4613c664e81b749bf0ac199318a2eb, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -472,8 +472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8000488, y: 23.400024}
-  m_SizeDelta: {x: -293.1308, y: 0}
+  m_AnchoredPosition: {x: 0, y: 5.6691895}
+  m_SizeDelta: {x: -342.304, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816155337
 MonoBehaviour:
@@ -519,7 +519,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 7c4613c664e81b749bf0ac199318a2eb, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -778,10 +778,68 @@ MonoBehaviour:
   previousButton: {fileID: 640960182}
   playAudioButton: {fileID: 1853543798}
   photosWithAudio:
-  - photo: {fileID: 21300000, guid: 758ac31a9bff9ac4181f54de54a6ecb7, type: 3}
+  - photo: {fileID: 21300000, guid: 1647d25ea39c03f4eb64f6ef3b1e5972, type: 3}
     audioClip: {fileID: 8300000, guid: 0612948356428f6418b19f454dd64608, type: 3}
-  - photo: {fileID: 21300000, guid: be304275dbf36014ca9828884588ac47, type: 3}
+  - photo: {fileID: 21300000, guid: 7ade88bf7498f7546a02fd2ab2c3ab66, type: 3}
     audioClip: {fileID: 8300000, guid: 430c7e7b98c416546a122fe92a487aad, type: 3}
+  - photo: {fileID: 21300000, guid: bc055187647fac449a299bafc5b51e24, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: cf1c941a3e65da6428d81a4e1f478fe8, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: e795779e6e25a1a40804e708819817e8, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: b799747d7766f5845a8f49b3b2f11ad7, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: a546276d34451644ba325d2a3742adfc, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 6ba29a1ac8cf75842bef3e946630fbf8, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: e41a8528b55553f44ab0b235af30b138, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: b2f3a1d942b5c6446bf568ffdbe75147, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: bf6c30e09afa7234a806a72e2a100057, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: c1f1e1e2e2dfd534eb72612765cfbd9d, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: c1858e2d5f0146d42ab048c472fe5c5d, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 73f4ae7fc8f8f6343813e36306cf97df, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 60fde377ab06b4940b0b5f47f656cb41, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 36a01693415ee0c4bae5c902a36dd6e3, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 58eabddff59b23942908056f14b9d8a6, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 652f0576c3bf58645953cc0c4c44d370, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: c157ae696f187054c9126108a7ad4fdc, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 9b0c534063e82da4ebe341350a0483d9, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 33dc75ff4b787b74ea3768ce756caf48, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 0}
+    audioClip: {fileID: 0}
   fadeDuration: 1
   shouldPlayAudioAutomatically: 0
 --- !u!4 &1283648777
@@ -924,7 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6721698, g: 0.85677046, b: 0.8962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

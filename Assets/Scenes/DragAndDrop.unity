@@ -272,6 +272,7 @@ MonoBehaviour:
   messageText: {fileID: 2055165059}
   gameFinishScreen: {fileID: 1673306154}
   gameCanvasController: {fileID: 726518685}
+  background: {fileID: 1519228349}
 --- !u!1 &654729906
 GameObject:
   m_ObjectHideFlags: 0

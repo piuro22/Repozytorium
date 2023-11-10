@@ -826,7 +826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 44.99998, y: 45}
+  m_AnchoredPosition: {x: 38.79997, y: 40}
   m_SizeDelta: {x: 37.7225, y: 41.0509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1813060428881393114
@@ -1042,10 +1042,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onEnterScale: {x: 1.2, y: 1.2, z: 1.2}
   onEnterScaleAnimationTime: 0.25
-  progressPanelOffset: {x: 0, y: -100, z: 0}
   chapterTitleText: {fileID: 5582804837462836365}
   gameType: 2
-  gameProperties: {fileID: 11400000, guid: e38b8591618495d4eaf7a00b6288b776, type: 2}
+  gameProperties:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   chapterTitle: 
 --- !u!225 &1933016810
 CanvasGroup:

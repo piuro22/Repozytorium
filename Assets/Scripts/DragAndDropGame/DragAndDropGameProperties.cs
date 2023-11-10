@@ -8,8 +8,10 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "DragAndDropGameProperties", menuName = "ScriptableObjects/DragAndDropGameProperties", order = 1)]
 public class DragAndDropGameProperties : ScriptableObject
 {
-
-
+    // ??? dodane z high...
+    [BoxGroup("Ogólne")]
+    [LabelText("Tekstura tła gry")]
+    public Sprite backGroundTexture;
 
 
     [BoxGroup("Ogólne")]

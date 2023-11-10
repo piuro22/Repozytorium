@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragAndDropGameController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DragAndDropGameController : MonoBehaviour
     public TMP_Text messageText;
     [SerializeField] private GameFinishScreen gameFinishScreen;
     [SerializeField] private GameCanvasController gameCanvasController;
-
+    public SpriteRenderer background;
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
@@ -29,7 +30,9 @@ public class DragAndDropGameController : MonoBehaviour
 
     [Button]
     private void Initialize()
+
     {
+        background.sprite = dragAndDropGameProperties.backGroundTexture;
         if (Application.isPlaying)
         {
             if (GameManager.Instance.currentGameProperties is DragAndDropGameProperties)
