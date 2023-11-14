@@ -32,13 +32,13 @@ public class DragAndDropGameController : MonoBehaviour
     private void Initialize()
 
     {
-        background.sprite = dragAndDropGameProperties.backGroundTexture;
+     
         if (Application.isPlaying)
         {
             if (GameManager.Instance.currentGameProperties is DragAndDropGameProperties)
                 dragAndDropGameProperties = GameManager.Instance.currentGameProperties as DragAndDropGameProperties;
         }
-
+        background.sprite = dragAndDropGameProperties.backGroundTexture;
         audioSource.PlayOneShot(dragAndDropGameProperties.gameCommandAudioClip);
         messageText.text = dragAndDropGameProperties.commandText;
         gameFinishScreen.gameObject.SetActive(false);
