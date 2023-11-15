@@ -126,35 +126,35 @@ MonoBehaviour:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: e5c4b115beebcc34393f544ecd7cfce0, type: 3}
     audioclip: {fileID: 8300000, guid: 0bbe903cafc94b04199ec5ebf48f6622, type: 3}
-    message: Fioletowy balon
+    message: 
     alternativeSecondSprite: {fileID: 21300000, guid: e5d001b226bb89b4daf62d8abe7916e9, type: 3}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: "Czerwony l\xF3d"
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
     audioclip: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
-    message: "\u017B\xF3\u0142ty balon"
+    message: 
     alternativeSecondSprite: {fileID: 21300000, guid: 1583e915d5c725442a6ad127e5c0b826, type: 3}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: "\u017B\xF3\u0142ty l\xF3d"
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
     audioclip: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
-    message: Niebieski balon
+    message: 
     alternativeSecondSprite: {fileID: 21300000, guid: 9cecc4ce121f91c448e261e9ee96154a, type: 3}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: "niebieski l\xF3d"
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
     audioclip: {fileID: 8300000, guid: 098dba8292e498946878a9eccc8cae3e, type: 3}
-    message: "Pomara\u0144czowy balon"
+    message: 
     alternativeSecondSprite: {fileID: 21300000, guid: 41a7b8eb51e8fd348b43164b666f3983, type: 3}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: "pomara\u0144czowy l\xF3d"
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: b819f2e7ff09db646a423abbc080e24f, type: 3}
     audioclip: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
-    message: Zielony balon
+    message: 
     alternativeSecondSprite: {fileID: 21300000, guid: 5223733516084dc458d73248e1a7d0ec, type: 3}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: "Zielony l\xF3d"
@@ -216,4 +216,4 @@ MonoBehaviour:
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: 5a4185a6d586ddd4dbe0ed7ad5cd393c, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: eca79e404a54ba342bd48950f5145d85, type: 3}
