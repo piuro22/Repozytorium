@@ -47,7 +47,12 @@ public class DropContainerObjectController : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
-                    spriteRenderer.DOFade(1, 0.5f);
+                    if (!dragAndDropObjectController.isLockedBySequence)
+                    {
+                        dragAndDropObjectController.dragAndDropGameController.CheckSequence();
+                        spriteRenderer.DOFade(1, 0.5f);
+                    }
+                   
                 }
             }
         }
