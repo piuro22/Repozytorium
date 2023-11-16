@@ -58,6 +58,7 @@ public class DragAndDropObjectController : MonoBehaviour
                     {
                         dropContainerObjectController.spriteRenderer.DOFade(1, 0.5f);
                         dragAndDropGameController.audioSource.PlayOneShot(dragAndDropGameProperties.onGoodContainerAudioClip);
+                        transform.DOScale(dragAndDropObjectProperties.endScaleObjectIfAlternativeTexture, dragAndDropGameProperties.snapToContainterTime);
                         isCorrect = true;
                         dragAndDropGameController.CheckSequence();
                         return;
