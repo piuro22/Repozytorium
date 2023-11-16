@@ -27,6 +27,15 @@ public class DragAndDropObjectController : MonoBehaviour
     private void Start()
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();
+        if (!dragAndDropGameProperties.containerFillTransparency)
+        {
+            polygonCollider2D.enabled = false;
+        }
+        else
+        {
+            polygonCollider2D.enabled = true;
+        }
+     
         outlinable.OutlineParameters.BlurShift = 0;
         outlinable.OutlineParameters.DilateShift = 0;
         outlinable.OutlineParameters.Color = dragAndDropGameProperties.onWrongContainerOutlineColor;
