@@ -49,6 +49,7 @@ public class DropContainerObjectController : MonoBehaviour
                 {
                     if (!dragAndDropObjectController.isLockedBySequence)
                     {
+                        dragAndDropObjectController.isCorrect = true;
                         dragAndDropObjectController.dragAndDropGameController.CheckSequence();
                         spriteRenderer.DOFade(1, 0.5f);
                     }
