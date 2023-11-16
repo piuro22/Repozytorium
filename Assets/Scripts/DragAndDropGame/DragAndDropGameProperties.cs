@@ -74,6 +74,14 @@ public class DragAndDropGameProperties : ScriptableObject
     public float containerTransparency;
 
     [BoxGroup("Obiekt kontenera")]
+    [LabelText("Zakoloruj kontener gdy prawda")]
+    [Range(0, 1)]
+    public bool containerFillTransparency;
+
+
+
+
+    [BoxGroup("Obiekt kontenera")]
     [LabelText("Nadpisz kolor kontenera")]
     public bool overrideContainerColor;
 

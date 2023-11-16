@@ -6,6 +6,6 @@ public class GameFinishScreen : MonoBehaviour
 {
    public void OnBackButtonClicked()
     {
-        SceneManager.LoadScene("Scene Level Change");
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
 }
