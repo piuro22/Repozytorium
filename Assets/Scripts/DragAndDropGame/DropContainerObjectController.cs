@@ -32,31 +32,30 @@ public class DropContainerObjectController : MonoBehaviour
                 polygonCollider2D.enabled = false;
             }
         }
-
     }
-    private void LateUpdate()
-    {
+    //private void LateUpdate()
+    //{
 
-        if (dragAndDropObjectController.dragAndDropGameProperties.containerFillTransparency)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+    //    if (dragAndDropObjectController.dragAndDropGameProperties.containerFillTransparency)
+    //    {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
 
 
-                if (hit.collider != null && hit.collider.gameObject == gameObject)
-                {
-                    if (!dragAndDropObjectController.isLockedBySequence)
-                    {
-                        dragAndDropObjectController.isCorrect = true;
-                        dragAndDropObjectController.dragAndDropGameController.CheckSequence();
-                        spriteRenderer.DOFade(1, 0.5f);
-                    }
+    //            if (hit.collider != null && hit.collider.gameObject == gameObject)
+    //            {
+    //                if (!dragAndDropObjectController.isLockedBySequence)
+    //                {
+    //                    dragAndDropObjectController.isCorrect = true;
+    //                    dragAndDropObjectController.dragAndDropGameController.CheckSequence();
+    //                    spriteRenderer.DOFade(1, 0.5f);
+    //                }
                    
-                }
-            }
-        }
+    //            }
+    //        }
+    //    }
 
-    }
+    //}
 }
