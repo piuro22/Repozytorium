@@ -18,7 +18,7 @@ public class HighlightObjectGameController : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private AudioSource musicController;
     [SerializeField] private GameCanvasController gameCanvasController;
-  private void Start()
+    private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         SetupGame();
@@ -168,4 +168,5 @@ public class HighlightObjectGameController : MonoBehaviour
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
+   
 }

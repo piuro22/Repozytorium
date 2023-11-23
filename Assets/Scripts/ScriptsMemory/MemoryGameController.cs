@@ -288,7 +288,8 @@ public class MemoryGameController : MonoBehaviour
 
     public void BackToChoseLevels()
     {
-        SceneManager.LoadScene("Scene Level Change");
+        // SceneManager.LoadScene("Scene Level Change");
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
 
 }

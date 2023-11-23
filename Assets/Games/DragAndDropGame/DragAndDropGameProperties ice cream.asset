@@ -21,34 +21,35 @@ MonoBehaviour:
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 0
   snapToContainterTime: 0.5
-  snapOnClick: 0
+  snapOnClick: 1
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 1
   containerTransparency: 1
+  containerFillTransparency: 0
   overrideContainerColor: 0
   containerColor: {r: 0.8490566, g: 0, b: 0, a: 0.79607844}
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
   dragAndDropGameSequences:
   - objectID: 0
-    textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 2d1539eadb1adb740909adbd21dd8362, type: 3}
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 8ac4fb46408bf2941bbe656ae8972c31, type: 3}
   - objectID: 1
-    textMessage: "Przesu\u0144 niebieski balonik do czerwonego balonika"
-    dialogOnSequenceStart: {fileID: 8300000, guid: f84baa0706a08f54aa4aff11d2bec006, type: 3}
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: f2c521735c86fb047ae17d956ee40f50, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d2357b82ac0591e469660e7cb0851f2b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0a321db7a522f434290506a78b3172f9, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 638ba2f0790107f4790ecd2ce4ad232a, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: e768d28ee84e72a43b78549e9155b0fd, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 64b4937b3180c6c4887743fefd3c4831, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2f809311f77ba6040aa0421ea439f137, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: dc81a069a0f658c4da69c7d04cdad595, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 68ad9e8e0414b7246be3353a6c13e705, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

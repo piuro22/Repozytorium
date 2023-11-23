@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e5ed1193521b24abb688f2d6a72c3b, type: 3}
+  m_Name: "DragAndDropGamePropertiesTt\u0119cza 2"
+  m_EditorClassIdentifier: 
+  backGroundTexture: {fileID: 21300000, guid: f78c562405500574393ba9ca6af33d1c, type: 3}
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
+  commandText: 
+  useRandomPositionForDragObjects: 0
+  useRandomRotationForDragObjects: 0
+  useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+  useCustomAudioClipForSingleObjectOnDrag: 1
+  snapToContainterTime: 0.5
+  snapOnClick: 1
+  useRandomPositionForContainerObjects: 0
+  useRandomRotationForContainerObjects: 0
+  useOtherTextureForContainer: 1
+  containerTransparency: 0
+  containerFillTransparency: 1
+  overrideContainerColor: 0
+  containerColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 0.15686275}
+  useSequence: 1
+  onWrongObjectAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
+  dragAndDropGameSequences:
+  - objectID: 0
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0a321db7a522f434290506a78b3172f9, type: 3}
+  - objectID: 1
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 68ad9e8e0414b7246be3353a6c13e705, type: 3}
+  - objectID: 2
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: e768d28ee84e72a43b78549e9155b0fd, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  onWrongContainerShakePower: 20
+  onWrongContainerShakeDuration: 0.5
+  onWrongContainerOutlineWidth: 0.576
+  onWrongContainerOutlineFadeTime: 1.003
+  onWrongContainerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  onWrongContainerAudioClip: {fileID: 8300000, guid: 1801ac15cc25d184a927c397a45180db, type: 3}
+  objects:
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 0
+    texture: {fileID: 2800000, guid: e750029cb161bd743a1a49cd071b2709, type: 3}
+    startPosition: {x: 3.75, y: 0.608}
+    startPositionMinMaxX: {x: 1, y: 2}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.4, y: 0.4}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: -70, y: 70}
+    layer: 0
+    alternativeTargetTexture: {fileID: 2800000, guid: fc3af8d44e59ad948aea7a60efba271e, type: 3}
+    additionalOffset: {x: 0.2, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 0.74, y: -0.01}
+    targetPositionMinMaxX: {x: 0, y: 4}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.4, y: 0.4}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 8300000, guid: 7ab3337959e1c5e41b1953dfeb760644, type: 3}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 1
+    texture: {fileID: 2800000, guid: 430179ccc67c97b4793f1ec5c531c314, type: 3}
+    startPosition: {x: 3.75, y: -0.2}
+    startPositionMinMaxX: {x: 3, y: 4}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.4, y: 0.4}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: -70, y: 70}
+    layer: 0
+    alternativeTargetTexture: {fileID: 2800000, guid: 3cdbb2fc1f61d964e91381584b8c8959, type: 3}
+    additionalOffset: {x: 0, y: 0.6}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 0.74, y: -0.406}
+    targetPositionMinMaxX: {x: 0, y: 4}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.4, y: 0.4}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 1
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 2
+    texture: {fileID: 2800000, guid: 47d5747d85c46b948b58ed509f2ff0f7, type: 3}
+    startPosition: {x: 3.75, y: -1}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.4, y: 0.4}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    layer: 0
+    alternativeTargetTexture: {fileID: 2800000, guid: 0701c4ac90022884a86651979832cf35, type: 3}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 0.769, y: -0.801}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.4, y: 0.4}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}

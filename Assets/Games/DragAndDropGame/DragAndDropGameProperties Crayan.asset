@@ -21,11 +21,12 @@ MonoBehaviour:
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 0
   snapToContainterTime: 0.5
-  snapOnClick: 0
+  snapOnClick: 1
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 1
   containerTransparency: 1
+  containerFillTransparency: 0
   overrideContainerColor: 0
   containerColor: {r: 0.44459772, g: 0.8118885, b: 0.9150943, a: 0.24705882}
   useSequence: 1
