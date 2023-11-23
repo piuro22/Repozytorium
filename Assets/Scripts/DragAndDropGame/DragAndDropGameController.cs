@@ -14,6 +14,7 @@ public class DragAndDropGameController : MonoBehaviour
     public DragAndDropGameProperties dragAndDropGameProperties;
     public GameObject dragAndDropObjectPrefab;
     public GameObject dropContainerPrefab;
+    public GameObject decorationPrefab;
     public AudioSource audioSource;
     public List<DragAndDropObjectController> dragAndDropObjectControllers = new List<DragAndDropObjectController>();
     private int currentSequenceStep;
@@ -32,7 +33,7 @@ public class DragAndDropGameController : MonoBehaviour
     private void Initialize()
 
     {
-     
+
         if (Application.isPlaying)
         {
             if (GameManager.Instance.currentGameProperties is DragAndDropGameProperties)
@@ -42,6 +43,19 @@ public class DragAndDropGameController : MonoBehaviour
         audioSource.PlayOneShot(dragAndDropGameProperties.gameCommandAudioClip);
         messageText.text = dragAndDropGameProperties.commandText;
         gameFinishScreen.gameObject.SetActive(false);
+
+
+        foreach (DragAndDropObjectDecorationsProperties decoration in dragAndDropGameProperties.dragAndDropObjectDecorations)
+        {
+            GameObject newDecoration = Instantiate(decorationPrefab);
+            newDecoration.transform.position = decoration.position;
+            newDecoration.transform.localScale = decoration.scale;
+            newDecoration.GetComponent<SpriteRenderer>().sprite = Sprite.Create(decoration.texture, new Rect(0.0f, 0.0f, decoration.texture.width, decoration.texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+            newDecoration.GetComponent<SpriteRenderer>().sortingOrder = decoration.layer;
+
+        }
+
+
         foreach (DragAndDropObjectProperties dragAndDrop in dragAndDropGameProperties.objects)
         {
             DragAndDropObjectController dragObject = Instantiate(dragAndDropObjectPrefab.GetComponent<DragAndDropObjectController>());
@@ -73,14 +87,14 @@ public class DragAndDropGameController : MonoBehaviour
             Texture2D dragTexture = duplicateTexture(dragAndDrop.texture);
             dragObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
             dragObject.gameObject.AddComponent<PolygonCollider2D>();
-         
+
             dragObject.name = dragAndDrop.texture.name;
             dragObject.dragAndDropGameProperties = dragAndDropGameProperties;
             dragObject.dragAndDropObjectProperties = dragAndDrop;
             dragObject.dragAndDropGameController = this;
             dragObject.id = dragAndDrop.id;
             dragObject.GetComponent<SpriteRenderer>().sortingLayerID = dragAndDrop.layer;
-         dragAndDropObjectControllers.Add(dragObject);
+            dragAndDropObjectControllers.Add(dragObject);
             DropContainerObjectController dropContainerObject = Instantiate(dropContainerPrefab.GetComponent<DropContainerObjectController>());
             dragObject.dropContainerObjectController = dropContainerObject;
             if (dragAndDrop.useRandomPositionForContainerObjects)
@@ -109,12 +123,12 @@ public class DragAndDropGameController : MonoBehaviour
                 Texture2D dropContainerTexture = duplicateTexture(dragAndDrop.alternativeTargetTexture);
                 dropContainerObject.GetComponent<SpriteRenderer>().sprite = Sprite.Create(dropContainerTexture, new Rect(0.0f, 0.0f, dropContainerTexture.width, dropContainerTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
-               
+
             }
             else
             {
                 dropContainerObject.spriteRenderer.sprite = Sprite.Create(dragTexture, new Rect(0.0f, 0.0f, dragTexture.width, dragTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
-               
+
             }
             if (dragAndDropGameProperties.overrideContainerColor)
             {
@@ -188,7 +202,7 @@ public class DragAndDropGameController : MonoBehaviour
             {
                 correctDrags++;
             }
-            if(correctDrags == dragAndDropObjectControllers.Count)
+            if (correctDrags == dragAndDropObjectControllers.Count)
             {
 
                 if (GameManager.Instance.CheckNextGameExist())
@@ -223,6 +237,6 @@ public class DragAndDropGameController : MonoBehaviour
         RenderTexture.ReleaseTemporary(renderTex);
         return readableText;
 
-     
+
     }
 }

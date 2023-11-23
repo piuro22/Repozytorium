@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEditor;
+using JetBrains.Annotations;
 
 [CreateAssetMenu(fileName = "DragAndDropGameProperties", menuName = "ScriptableObjects/DragAndDropGameProperties", order = 1)]
 public class DragAndDropGameProperties : ScriptableObject
@@ -13,6 +14,7 @@ public class DragAndDropGameProperties : ScriptableObject
     [LabelText("Tekstura tła gry")]
     public Sprite backGroundTexture;
 
+    public List<DragAndDropObjectDecorationsProperties> dragAndDropObjectDecorations = new List<DragAndDropObjectDecorationsProperties>();
 
     [BoxGroup("Ogólne")]
     [LabelText("Muzyka gry")]
@@ -189,6 +191,21 @@ public class DragAndDropGameProperties : ScriptableObject
             return false;
     }
 }
+
+
+[Serializable]
+public class DragAndDropObjectDecorationsProperties
+{
+    [LabelText("Tekstura dekoracji")]
+    public Texture2D texture;
+    [LabelText("Pozycja dekoracji")]
+    public Vector2 position;
+    [LabelText("Skala dekoracji")]
+    public Vector2 scale;
+    [LabelText("Warstwa tekoracji")]
+    public int layer;
+}
+
 
 
 [Serializable]
