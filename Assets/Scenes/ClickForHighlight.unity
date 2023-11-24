@@ -159,6 +159,7 @@ MonoBehaviour:
   background: {fileID: 1519228349}
   musicController: {fileID: 1771980557}
   gameCanvasController: {fileID: 726518686}
+  tempAudioClipOnSingleSequenceStart: {fileID: 0}
 --- !u!4 &306067982
 Transform:
   m_ObjectHideFlags: 0
@@ -353,9 +354,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 306067980}
+      - m_Target: {fileID: 306067981}
         m_TargetAssemblyTypeName: HighlightObjectGameController, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Question
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -654,6 +655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 445095516987947135, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 445095517231121233, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -661,6 +666,10 @@ PrefabInstance:
     - target: {fileID: 445095517731401765, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744262543410163797, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
@@ -1097,7 +1106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1871105910
 ParticleSystemRenderer:
   serializedVersion: 6

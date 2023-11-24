@@ -22,6 +22,7 @@ public class DragAndDropGameController : MonoBehaviour
     [SerializeField] private GameFinishScreen gameFinishScreen;
     [SerializeField] private GameCanvasController gameCanvasController;
     public SpriteRenderer background;
+    public AudioClip temdialogOnSequenceStart;
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
@@ -189,6 +190,7 @@ public class DragAndDropGameController : MonoBehaviour
                         dragAndDropObjectController.isLockedBySequence = true;
                         messageText.text = dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].textMessage;
                         audioSource.PlayOneShot(dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].dialogOnSequenceStart);
+                        temdialogOnSequenceStart = dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].dialogOnSequenceStart;
                     }
                 }
             }
@@ -238,5 +240,10 @@ public class DragAndDropGameController : MonoBehaviour
         return readableText;
 
 
+    }
+    public void DragDropquestion()
+    {
+        if (temdialogOnSequenceStart != null)
+            audioSource.PlayOneShot(temdialogOnSequenceStart);
     }
 }

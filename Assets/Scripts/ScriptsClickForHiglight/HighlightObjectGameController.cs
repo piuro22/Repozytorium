@@ -18,6 +18,7 @@ public class HighlightObjectGameController : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private AudioSource musicController;
     [SerializeField] private GameCanvasController gameCanvasController;
+    public AudioClip tempAudioClipOnSingleSequenceStart;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -94,7 +95,9 @@ public class HighlightObjectGameController : MonoBehaviour
                             spawnedObject.shouldCheckClickedAction = true;
                         }
                         if (gameSequence.audioClipOnSingleSequenceStart != null)
+
                         {
+                            tempAudioClipOnSingleSequenceStart = gameSequence.audioClipOnSingleSequenceStart;
                             audioSource.PlayOneShot(gameSequence.audioClipOnSingleSequenceStart);
                         }
                         Debug.Log(spawnedObject.name);
@@ -162,11 +165,17 @@ public class HighlightObjectGameController : MonoBehaviour
         {
             GameEndScreen.SetActive(true);
         }
+
     }
 
     public void BackToChoseLevels()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
+    }
+    public void Question()
+    {
+    if(tempAudioClipOnSingleSequenceStart != null)
+        audioSource.PlayOneShot(tempAudioClipOnSingleSequenceStart);
     }
    
 }
