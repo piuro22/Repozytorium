@@ -15,6 +15,8 @@ public class PhotosRotateGameProperties : ScriptableObject
     public List<AngleChance> angleChances;
     [LabelText("Przerwa między poleceniem gry a pojawieniem się kostek")]
     public float delayBetweenCommandAndInitializeGrid;
+    [LabelText("Dźwięk na skończoną grę")]
+    public AudioClip soundOnEndGame;
 
     [BoxGroup("Animacja przy Pojawieniu się obrazka")]
     [LabelText("Czas trwania animacji")]

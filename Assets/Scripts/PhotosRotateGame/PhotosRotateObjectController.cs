@@ -27,7 +27,7 @@ public class PhotosRotateObjectController : MonoBehaviour
             {
                 // Start rotation and set isRotating to true
                 isRotating = true;
-
+                PhotosRotateGameController.Instance.audioSource.PlayOneShot(PhotosRotateGameController.Instance.gameProperties.onPhotoClickAudioClip);
                 // Use DOTween to smoothly rotate the sprite by 90 degrees around the Z axis
                 transform.DOLocalRotate(new Vector3(0, 0, transform.localEulerAngles.z + 90), gameController.gameProperties.rotateDuration).SetEase(gameController.gameProperties.rotateCurve)
                         .OnComplete(() =>

@@ -22,12 +22,12 @@ public class PhotosRotateGameController : MonoBehaviour
     public SpriteGrid grid3x4;
     public SpriteGrid grid4x4;
     public GameObject endPanel;
+    public AudioSource musicAudioSource;
 
-
-
+    public AudioSource audioSource;
     private SpriteGrid currentUsingGrid;
     private Dictionary<SpriteRenderer, Vector3> originalScales = new Dictionary<SpriteRenderer, Vector3>();
-   
+    private DG.Tweening.Sequence endGameSequence;
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
@@ -41,11 +41,19 @@ public class PhotosRotateGameController : MonoBehaviour
 
     private void Initialize()
     {
+
         if (Application.isPlaying)
         {
             if(GameManager.Instance!=null)
             if (GameManager.Instance.currentGameProperties is PhotosRotateGameProperties)
                 gameProperties = GameManager.Instance.currentGameProperties as PhotosRotateGameProperties;
+        }
+        musicAudioSource.clip = gameProperties.gameMusic;
+        musicAudioSource.Play();
+        audioSource = GetComponent<AudioSource>();
+        if (gameProperties.gameCommandAudioClip != null)
+        {
+            audioSource.PlayOneShot(gameProperties.gameCommandAudioClip);
         }
         background.sprite = Sprite.Create(gameProperties.background, new Rect(0.0f, 0.0f, gameProperties.background.width, gameProperties.background.height), new Vector2(0.5f, 0.5f),100f);
         textCommand.text = gameProperties.commandText;
@@ -185,7 +193,12 @@ public class PhotosRotateGameController : MonoBehaviour
 
     public void OnGameReady()
     {
-        endPanel.SetActive(true);
+
+        if (endGameSequence != null) endGameSequence.Kill();
+        endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
+        endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
+        endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
+
     }
 
 
