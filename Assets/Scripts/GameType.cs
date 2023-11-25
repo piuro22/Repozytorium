@@ -6,5 +6,6 @@ public enum GameType
 {
     memory,
     clickForHighlight,
-    dragAndDrop
+    dragAndDrop,
+    photoRotation
 }
