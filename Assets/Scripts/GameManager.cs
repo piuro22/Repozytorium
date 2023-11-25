@@ -20,11 +20,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        if(backButton != null)
         backButton.onClick.AddListener(delegate () { BackToUnitSelect(); });
       
     }
