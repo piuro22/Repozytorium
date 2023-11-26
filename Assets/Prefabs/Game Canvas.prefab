@@ -336,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congats!
+  m_text: Congrats!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3fef19935dc66c442b4e6a9b7e85444a, type: 2}
   m_sharedMaterial: {fileID: -2007378974882807061, guid: 3fef19935dc66c442b4e6a9b7e85444a, type: 2}
