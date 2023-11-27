@@ -52,7 +52,9 @@ MonoBehaviour:
   - gameType: 2
     sceneName: DragAndDrop
   - gameType: 3
-    sceneName: PhotoRotation
+    sceneName: PhotosRotate
+  - gameType: 4
+    sceneName: QuizPictures
   gamePropertiesList: []
   currentGame: 0
   currentGameProperties: {fileID: 0}
