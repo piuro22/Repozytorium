@@ -1225,7 +1225,6 @@ GameObject:
   - component: {fileID: 765707944}
   - component: {fileID: 765707946}
   - component: {fileID: 765707945}
-  - component: {fileID: 765707947}
   - component: {fileID: 765707948}
   - component: {fileID: 765707949}
   m_Layer: 5
@@ -1294,21 +1293,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765707943}
   m_CullTransparentMesh: 1
---- !u!114 &765707947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765707943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6085a0d2919ffaf408f5f3d61c6f3914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chapterButtons:
-  - {fileID: 1556685629}
-  chapterProgressPanel: {fileID: 1241666809}
 --- !u!114 &765707948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2588,17 +2572,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8066591379758516163, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
   m_PrefabInstance: {fileID: 2210901680789588965}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1556685629 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
-  m_PrefabInstance: {fileID: 2210901680789588965}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e347b60ea8fdb64391eddaf32135259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1557162915
 PrefabInstance:
   m_ObjectHideFlags: 0
