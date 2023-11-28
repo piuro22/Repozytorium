@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-
-
+using UnityEngine.SceneManagement;
 
 public class PhotosRotateGameController : MonoBehaviour
 {
@@ -201,7 +200,11 @@ public class PhotosRotateGameController : MonoBehaviour
         endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
 
     }
-
+    public void BackToChoseLevels()
+    {
+        // SceneManager.LoadScene("Scene Level Change");
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
+    }
 
     [System.Serializable]
     public class SpriteGrid
