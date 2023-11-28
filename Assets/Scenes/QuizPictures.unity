@@ -1057,6 +1057,7 @@ MonoBehaviour:
   goodAnswered: 0
   finishScreen: {fileID: 683534077}
   questionText: {fileID: 961072622}
+  background: {fileID: 1280123597}
 --- !u!4 &1651843593
 Transform:
   m_ObjectHideFlags: 0

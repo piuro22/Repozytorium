@@ -6,6 +6,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class QuizPucturesGameController : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class QuizPucturesGameController : MonoBehaviour
     public TMP_Text questionText;
     //  public List<QuizTwoPicturesObjectController> quizTwoPicturesObjectControllers = new List<QuizTwoPicturesObjectController>();
     private int currentQuizIndex;
+    public UnityEngine.UI.Image background;
 
     private void Awake()
     {
@@ -40,7 +43,7 @@ public class QuizPucturesGameController : MonoBehaviour
                 if (GameManager.Instance.currentGameProperties is QuizPicturesProperties)
                     gameProperties = GameManager.Instance.currentGameProperties as QuizPicturesProperties;
         }
-
+        background.sprite = gameProperties.background;
         SetupQuizPart(0);
     }
 

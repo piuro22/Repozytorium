@@ -14,7 +14,8 @@ public class QuizPicturesProperties : ScriptableObject
     public AudioClip badAnswerSound;
     [LabelText("Dźwięk dobra odpowiedź")]
     public AudioClip goodAnswerSound;
-
+    [LabelText("Background")]
+    public Sprite background;
 
     public List<QuizPicturesQuestionProperties> questions;
 
