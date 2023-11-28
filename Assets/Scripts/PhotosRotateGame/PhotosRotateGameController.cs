@@ -121,9 +121,7 @@ public class PhotosRotateGameController : MonoBehaviour
             Sprite previousSprite = photorRotateObjectController[i].spriteRenderer.sprite;
 
             // Create the new sprite
-            Sprite newSprite = Sprite.Create(gameProperties.images[i],
-                                new Rect(0.0f, 0.0f, gameProperties.images[i].width, gameProperties.images[i].height),
-                                new Vector2(0.5f, 0.5f));
+            Sprite newSprite = gameProperties.images[i];
 
             // Assign the new sprite to the sprite renderer
             photorRotateObjectController[i].spriteRenderer.sprite = newSprite;

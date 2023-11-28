@@ -10,7 +10,7 @@ public class PhotosRotateGameProperties : ScriptableObject
     [LabelText("Siatka")]
     public PhotosRotateGameType grid;
     [LabelText("Obrazki")]
-    public List<Texture2D> images;
+    public List<Sprite> images;
     [LabelText("Szanse na rotację ustawione od 0-1")]
     public List<AngleChance> angleChances;
     [LabelText("Przerwa między poleceniem gry a pojawieniem się kostek")]
