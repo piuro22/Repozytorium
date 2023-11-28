@@ -17,22 +17,18 @@ MonoBehaviour:
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   questions:
   - singleQuizPictures:
-    - isCorrect: 1
+    - isCorrect: 0
       picture: {fileID: 21300000, guid: eb46123af04298b43a6565e06ae8af33, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
-      pictureSize: {x: 150, y: 150}
-    - isCorrect: 0
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 1
       picture: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
-      pictureSize: {x: 150, y: 150}
+      pictureSize: {x: 150, y: 200}
     - isCorrect: 0
       picture: {fileID: 21300000, guid: b819f2e7ff09db646a423abbc080e24f, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
-      pictureSize: {x: 150, y: 150}
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
-      additionalPictureSound: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
-      pictureSize: {x: 150, y: 150}
+      pictureSize: {x: 150, y: 200}
     questionText: zaznacz czerwony balonik
     questionClip: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
   - singleQuizPictures:
