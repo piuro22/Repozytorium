@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: 0
   images:
-  - {fileID: 2800000, guid: b55283825f876ea4782f419f0b66498a, type: 3}
-  - {fileID: 2800000, guid: 9db29fdfe3fbf704385d311e065ece60, type: 3}
-  - {fileID: 2800000, guid: 4b98d12805f79ce4d9fdfe2157a863dc, type: 3}
-  - {fileID: 2800000, guid: b897c4d2c3ea47e4b89ace7326e9a388, type: 3}
-  - {fileID: 0}
+  - {fileID: 1327913637, guid: d531a1c5cd70c854ba73912a96c22814, type: 3}
+  - {fileID: 1752178280, guid: d531a1c5cd70c854ba73912a96c22814, type: 3}
+  - {fileID: -2069851023, guid: d531a1c5cd70c854ba73912a96c22814, type: 3}
+  - {fileID: -1956033867, guid: d531a1c5cd70c854ba73912a96c22814, type: 3}
   angleChances:
   - angle: 0
     chance: 0
@@ -57,7 +56,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   onPhotoClickAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
-  background: {fileID: 2800000, guid: aaf102e38a193a14786d0872fe3175d1, type: 3}
+  background: {fileID: 2800000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: 0612948356428f6418b19f454dd64608, type: 3}
   commandText: fdsfsdfdsfsdf

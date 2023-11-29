@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
-  m_Name: QuizPicuresProperties
+  m_Name: QuizPicuresProperties 1
   m_EditorClassIdentifier: 
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
@@ -27,12 +27,8 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
       pictureSize: {x: 150, y: 200}
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 200, y: 150}
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
-      additionalPictureSound: {fileID: 0}
+      picture: {fileID: 21300000, guid: b819f2e7ff09db646a423abbc080e24f, type: 3}
+      additionalPictureSound: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
       pictureSize: {x: 150, y: 200}
     questionText: zaznacz czerwony balonik
     questionClip: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
@@ -40,7 +36,7 @@ MonoBehaviour:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
-      pictureSize: {x: 150, y: 200}
+      pictureSize: {x: 150, y: 150}
     - isCorrect: 1
       picture: {fileID: 21300000, guid: 70a145ba667dca0468a69ada8870c6a8, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
@@ -48,13 +44,17 @@ MonoBehaviour:
     questionText: zaznacz niebieski balonik
     questionClip: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
   - singleQuizPictures:
-    - isCorrect: 1
+    - isCorrect: 0
       picture: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
       additionalPictureSound: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
+      pictureSize: {x: 150, y: 150}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 509d4845cb84d27498cd13f8b48bce1a, type: 3}
+      additionalPictureSound: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
       pictureSize: {x: 150, y: 150}
     questionText: zaznacz zielony balonik
     questionClip: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}

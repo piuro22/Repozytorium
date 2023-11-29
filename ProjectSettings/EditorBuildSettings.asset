@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PhotosRotate.unity
     guid: e452078e572fa0f47971f7f62426ac3e
+  - enabled: 1
+    path: Assets/Scenes/QuizPictures.unity
+    guid: 1409b03e80ddd3f46b8206bf2c6f50f6
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

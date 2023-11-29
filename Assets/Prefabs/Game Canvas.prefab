@@ -997,17 +997,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238810209048722602}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 445095516165935539}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -72.74572}
+  m_AnchoredPosition: {x: 14, y: 266}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8377915925311668395
@@ -1053,13 +1053,13 @@ MonoBehaviour:
   _width: 100
   _height: 100
   _angle: 45
-  _length: 674.5859
+  _length: 950.3373
   _fitRect: 0
   _emitOnSurface: 1
   _emitterThickness: 0
-  _loop: 0
+  _loop: 1
   _prewarm: 0
-  _duration: 2
+  _duration: 2.28
   _playMode: 2
   _startSize:
     separable: 1
@@ -1210,7 +1210,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 1
+    m_ConstantMax: 2.14
   _startSpeed:
     m_Mode: 0
     m_CurveMultiplier: 0

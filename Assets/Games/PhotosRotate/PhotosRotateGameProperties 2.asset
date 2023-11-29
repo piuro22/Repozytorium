@@ -10,14 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc41b27b40c4ed44e97d12adef92f214, type: 3}
-  m_Name: PhotosRotateGameProperties 1
+  m_Name: PhotosRotateGameProperties 2
   m_EditorClassIdentifier: 
-  grid: 0
+  grid: 1
   images:
-  - {fileID: 979544287, guid: 09a866db56b2b7e4ebf55369a7976d71, type: 3}
-  - {fileID: 701608080, guid: 09a866db56b2b7e4ebf55369a7976d71, type: 3}
-  - {fileID: -282549267, guid: 09a866db56b2b7e4ebf55369a7976d71, type: 3}
-  - {fileID: -408518978, guid: 09a866db56b2b7e4ebf55369a7976d71, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+  - {fileID: 0}
   angleChances:
   - angle: 0
     chance: 0
@@ -56,7 +67,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   onPhotoClickAudioClip: {fileID: 8300000, guid: 4fbb1aa02e81595448ae34007c9b0f13, type: 3}
-  background: {fileID: 2800000, guid: 9241f300d97965f488c7ae9e19ac4d83, type: 3}
+  background: {fileID: 2800000, guid: aaf102e38a193a14786d0872fe3175d1, type: 3}
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: 0612948356428f6418b19f454dd64608, type: 3}
   commandText: fdsfsdfdsfsdf
