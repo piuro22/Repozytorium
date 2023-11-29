@@ -190,7 +190,7 @@ public class PhotosRotateGameController : MonoBehaviour
 
     public void OnGameReady()
     {
-
+        OnGameFinished();
         if (endGameSequence != null) endGameSequence.Kill();
         endGameSequence = DOTween.Sequence();
         endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
@@ -198,6 +198,28 @@ public class PhotosRotateGameController : MonoBehaviour
         endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
 
     }
+
+    private void OnGameFinished()
+    {
+        if (GameManager.Instance.CheckNextGameExist())
+        {
+            GameManager.Instance.OpenNextGame();
+        }
+        else
+        {
+            if (endGameSequence != null) endGameSequence.Kill();
+            endGameSequence = DOTween.Sequence();
+            endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
+            endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
+            endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
+        }
+    }
+
+
+
+
+
+
     public void BackToChoseLevels()
     {
         // SceneManager.LoadScene("Scene Level Change");
