@@ -21,7 +21,7 @@ public class QuizPucturesGameController : MonoBehaviour
     public TMP_Text questionText;
     //  public List<QuizTwoPicturesObjectController> quizTwoPicturesObjectControllers = new List<QuizTwoPicturesObjectController>();
     private int currentQuizIndex;
-    public UnityEngine.UI.Image background;
+    public SpriteRenderer background;
 
     private void Awake()
     {

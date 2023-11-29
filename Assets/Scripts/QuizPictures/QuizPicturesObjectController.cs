@@ -23,7 +23,7 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         badAnswerParticles.Stop();
         badAnswerParticles.loop = false;
         pictureImage.sprite = SingleQuizPicture.picture;
-        pictureImage.rectTransform.sizeDelta = SingleQuizPicture.pictureSize;
+        pictureImage.rectTransform.sizeDelta = new Vector2( SingleQuizPicture.picture.rect.width ,SingleQuizPicture.picture.rect.height);
 
     }
     public void OnPointerClick(PointerEventData eventData)

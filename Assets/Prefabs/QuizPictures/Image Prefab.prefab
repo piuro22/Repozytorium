@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2936408810477626047}
   - component: {fileID: 6230469242780647694}
   m_Layer: 5
-  m_Name: Frame
+  m_Name: Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,16 +27,16 @@ RectTransform:
   m_GameObject: {fileID: 192162940196962326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 389657274565257583}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: -7}
-  m_SizeDelta: {x: 112.0932, y: 112.0932}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -8, y: -36}
+  m_SizeDelta: {x: 150, y: 155.84851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2936408810477626047
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58f3bb66d6ee25e458542797659c89a3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -116,7 +116,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 581.7, y: 68}
-  m_SizeDelta: {x: 221.3146, y: 227.5541}
+  m_SizeDelta: {x: 200, y: 274.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &389657274565257581
 CanvasRenderer:
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 31df0ee2aac99cc4dbc7cc7ffa92a7a9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38aab8826bb669b43a3884dcedad5d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pictureImage: {fileID: 389657274565257582}
+  pictureImage: {fileID: 6230469242780647694}
   goodAnswerParticles: {fileID: 389657276180163990}
   badAnswerParticles: {fileID: 389657274658186588}
   SingleQuizPicture:
