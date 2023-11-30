@@ -146,7 +146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31df0ee2aac99cc4dbc7cc7ffa92a7a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f324e4d13140c2b48a361e730cd3ac98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389657274658186590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0ce80c06832d4a49a2a30ece9fb2df6, type: 3}
   m_Name: 
@@ -1627,13 +1627,13 @@ MonoBehaviour:
   _emitterConstraintEnabled:
     enabled: 0
   _emitterConstraintTransform: {fileID: 0}
-  _shape: 2
+  _shape: 1
   _spread: 0
   _spreadLoop: 1
   _startDelay: 0
   _radius: 89.331604
   _width: 100
-  _height: 100
+  _height: 0
   _angle: 45
   _length: 100
   _fitRect: 0
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   _emitterThickness: 0
   _loop: 1
   _prewarm: 0
-  _duration: 5
+  _duration: 1
   _playMode: 0
   _startSize:
     separable: 1
@@ -1662,7 +1662,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       m_ConstantMin: 0
-      m_ConstantMax: 20
+      m_ConstantMax: 15
     xCurve:
       m_Mode: 0
       m_CurveMultiplier: 0
@@ -1775,7 +1775,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     m_ColorMin: {r: 0, g: 0, b: 0, a: 1}
-    m_ColorMax: {r: 0.03184688, g: 1, b: 0, a: 1}
+    m_ColorMax: {r: 1, g: 1, b: 1, a: 1}
   _lifetime:
     m_Mode: 0
     m_CurveMultiplier: 0
@@ -1792,7 +1792,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 3
+    m_ConstantMax: 0.61
   _startSpeed:
     m_Mode: 0
     m_CurveMultiplier: 0
@@ -1809,7 +1809,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: 2
+    m_ConstantMax: 0.81
   _colorOverLifetime:
     m_Mode: 1
     m_GradientMin:
@@ -2548,7 +2548,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 0
-    m_ConstantMax: -9.81
+    m_ConstantMax: -2.27
   _targetModule:
     enabled: 0
   _attractorTarget: {fileID: 0}
@@ -2589,13 +2589,13 @@ MonoBehaviour:
     m_ConstantMax: 0
   _targetMode: 0
   _noiseModule:
-    enabled: 1
+    enabled: 0
   _gravityModule:
     enabled: 1
   _vortexModule:
     enabled: 0
   _velocityModule:
-    enabled: 0
+    enabled: 1
   _velocitySpace: 0
   _velocityOverLifetime:
     separable: 0
@@ -2650,7 +2650,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       m_ConstantMin: 0
-      m_ConstantMax: 0
+      m_ConstantMax: 0.1
     zCurve:
       m_Mode: 0
       m_CurveMultiplier: 0
@@ -2734,7 +2734,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 50
-    used: 0
+    used: 1
   _particleTrailRenderer: {fileID: 0}
   _trailModule:
     enabled: 0
@@ -2904,8 +2904,8 @@ MonoBehaviour:
   _dieWithParticle: 0
   _trailRatio: 1
   _noiseOffset: {x: 0, y: 0}
-  _noiseFrequency: 1
-  _noiseStrength: 1.9
+  _noiseFrequency: -1.75
+  _noiseStrength: 0.53
   _multithreadModule:
     enabled: 0
   _multithreadEnabled: 0
@@ -2929,5 +2929,5 @@ MonoBehaviour:
   moduleMovementFoldout: 1
   moduleEventsFoldout: 0
   moduleAdvancedFoldout: 0
-  m_Sprite: {fileID: 21300000, guid: 53bb667b335d54942aa1c0dd9f76670b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47693a14ace57e843b4ae7bd656f297a, type: 3}
   m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
