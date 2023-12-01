@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e5ed1193521b24abb688f2d6a72c3b, type: 3}
   m_Name: "DragAndDropGamePropertiesTt\u0119cza 2"
   m_EditorClassIdentifier: 
-  backGroundTexture: {fileID: 21300000, guid: f78c562405500574393ba9ca6af33d1c, type: 3}
+  backGroundTexture: {fileID: 21300000, guid: c511b78ac3191974299184b7ba6e8c3f, type: 3}
+  dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
   commandText: 
