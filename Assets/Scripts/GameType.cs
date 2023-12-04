@@ -8,5 +8,6 @@ public enum GameType
     clickForHighlight,
     dragAndDrop,
     photoRotation,
-    quizPictures
+    quizPictures,
+    photosGallery
 }

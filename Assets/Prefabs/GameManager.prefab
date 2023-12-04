@@ -55,6 +55,8 @@ MonoBehaviour:
     sceneName: PhotosRotate
   - gameType: 4
     sceneName: QuizPictures
+  - gameType: 5
+    sceneName: PhotosGallery
   gamePropertiesList: []
   currentGame: 0
   currentGameProperties: {fileID: 0}
