@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoGalleryProperties
+  m_EditorClassIdentifier: 
+  photoWithAudios:
+  - photo: {fileID: 21300000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
+    audioClip: {fileID: 8300000, guid: 2b27140a18cef0c4aab13566d3756d9a, type: 3}
+  - photo: {fileID: 21300000, guid: 74ac16302f2994b898e17f225c303437, type: 3}
+    audioClip: {fileID: 8300000, guid: a9a81ca7aab71e54a98801bb993883d7, type: 3}
+  useAudio: 0

@@ -3,16 +3,12 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class PhotoWithAudio
+public class PhotoGalleryController : MonoBehaviour
 {
-    public Sprite photo;
-    public AudioClip audioClip;
-}
-
-public class PhotoGallery : MonoBehaviour
-{
+    [SerializeField] public PhotoGalleryProperties gameProperties;
+    public static PhotoGalleryController Instance { get; private set; }
     [Header("UI References")]
     [SerializeField] private Image image1;
     [SerializeField] private Image image2;
@@ -25,8 +21,8 @@ public class PhotoGallery : MonoBehaviour
     [SerializeField] private Button playAudioButton;        // Button to play the audio clip manually
 
 
-    [Header("Gallery Settings")]
-    [SerializeField] private List<PhotoWithAudio> photosWithAudio = new List<PhotoWithAudio>();
+
+
     [SerializeField] private float fadeDuration = 1f;
 
     private int currentIndex = 0;
@@ -34,9 +30,15 @@ public class PhotoGallery : MonoBehaviour
     private Image inactiveImage;
     private AudioSource audioSource;
     [SerializeField] private bool shouldPlayAudioAutomatically;
+    public GameObject finishScreen;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this) Destroy(this);
+        else Instance = this;
+
+
+
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -46,21 +48,32 @@ public class PhotoGallery : MonoBehaviour
         // Initialize buttons and listeners
         nextButton.onClick.AddListener(ShowNextPhoto);
         previousButton.onClick.AddListener(ShowPreviousPhoto);
-        playAudioButton.onClick.AddListener(PlayAudioClipForCurrentPhoto);
+        if (gameProperties.useAudio)
+        {
+            playAudioButton.onClick.AddListener(PlayAudioClipForCurrentPhoto);
+        }
+        else
+        {
+            playAudioButton.gameObject.SetActive(false);
+        }
 
+      
+    }
+    private void Start()
+    {
         InitializeGallery();
     }
 
     private void InitializeGallery()
     {
-        if (photosWithAudio.Count < 2)
+        if (gameProperties.photoWithAudios.Count < 2)
         {
             Debug.LogError("Please add at least two photos with audio for the crossfade effect.");
             return;
         }
 
-        image1.sprite = photosWithAudio[currentIndex].photo;
-        image2.sprite = photosWithAudio[GetNextPhotoIndex()].photo;
+        image1.sprite = gameProperties.photoWithAudios[currentIndex].photo;
+        image2.sprite = gameProperties.photoWithAudios[GetNextPhotoIndex()].photo;
 
         image1.color = Color.white;
         image2.color = new Color(1, 1, 1, 0);
@@ -78,9 +91,9 @@ public class PhotoGallery : MonoBehaviour
 
     public void PlayAudioClipForCurrentPhoto()
     {
-        if (audioSource != null && photosWithAudio[currentIndex].audioClip != null)
+        if (audioSource != null && gameProperties.photoWithAudios[currentIndex].audioClip != null)
         {
-            audioSource.clip = photosWithAudio[currentIndex].audioClip;
+            audioSource.clip = gameProperties.photoWithAudios[currentIndex].audioClip;
             audioSource.Play();
         }
     }
@@ -93,6 +106,8 @@ public class PhotoGallery : MonoBehaviour
         {
             PlayAudioClipForCurrentPhoto();
         }
+        if (currentIndex == gameProperties.photoWithAudios.Count-1)
+          Invoke("FinishGame", 2);
     }
 
     public void ShowPreviousPhoto()
@@ -108,7 +123,7 @@ public class PhotoGallery : MonoBehaviour
 
     private void CrossfadeToNewPhoto()
     {
-        inactiveImage.sprite = photosWithAudio[currentIndex].photo;
+        inactiveImage.sprite = gameProperties.photoWithAudios[currentIndex].photo;
 
         activeImage.DOFade(0f, fadeDuration);
         inactiveImage.DOFade(1f, fadeDuration).OnComplete(() =>
@@ -120,12 +135,13 @@ public class PhotoGallery : MonoBehaviour
 
     private int GetNextPhotoIndex()
     {
-        return (currentIndex + 1) % photosWithAudio.Count;
+      
+        return (currentIndex + 1) % gameProperties.photoWithAudios.Count;
     }
 
     private int GetPreviousPhotoIndex()
     {
-        return (currentIndex - 1 + photosWithAudio.Count) % photosWithAudio.Count;
+        return (currentIndex - 1 + gameProperties.photoWithAudios.Count) % gameProperties.photoWithAudios.Count;
     }
 
     private void SwapActiveImages()
@@ -137,6 +153,14 @@ public class PhotoGallery : MonoBehaviour
 
     private void UpdatePhotoCounterText()
     {
-        photoCounterText.text = $"{currentIndex + 1}/{photosWithAudio.Count}";
+        photoCounterText.text = $"{currentIndex + 1}/{gameProperties.photoWithAudios.Count}";
+    }
+    public void FinishGame()
+    {
+        finishScreen.SetActive(true);
+    }
+    public void BackToChoseLevels()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
 }
