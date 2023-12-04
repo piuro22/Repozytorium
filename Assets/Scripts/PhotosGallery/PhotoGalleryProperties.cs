@@ -7,7 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PhotoGalleryProperties", menuName = "ScriptableObjects/PhotoGalleryProperties", order = 1)]
 public class PhotoGalleryProperties : ScriptableObject
 {
-    //t³o
+    
     [LabelText("Background")]
     public Sprite background;
     public List<PhotoWithAudio> photoWithAudios = new List<PhotoWithAudio>();

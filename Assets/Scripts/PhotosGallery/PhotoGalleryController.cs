@@ -33,7 +33,7 @@ public class PhotoGalleryController : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private bool shouldPlayAudioAutomatically;
     public GameObject finishScreen;
-    //t³o
+
     public SpriteRenderer background;
 
     private void Awake()
@@ -71,12 +71,18 @@ public class PhotoGalleryController : MonoBehaviour
     private void InitializeGallery()
     {
 
+        if (Application.isPlaying)
+        {
+            if (GameManager.Instance != null)
+                if (GameManager.Instance.currentGameProperties is PhotoGalleryProperties)
+                    gameProperties = GameManager.Instance.currentGameProperties as PhotoGalleryProperties;
+        }
+
         if (gameProperties.photoWithAudios.Count < 2)
         {
             Debug.LogError("Please add at least two photos with audio for the crossfade effect.");
             return;
         }
-        //t³o
         background.sprite = gameProperties.background;
 
         image1.sprite = gameProperties.photoWithAudios[currentIndex].photo;
