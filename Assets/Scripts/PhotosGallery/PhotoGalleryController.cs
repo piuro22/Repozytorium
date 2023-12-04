@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class PhotoGalleryController : MonoBehaviour
 {
     [SerializeField] public PhotoGalleryProperties gameProperties;
+
+    
     public static PhotoGalleryController Instance { get; private set; }
     [Header("UI References")]
     [SerializeField] private Image image1;
@@ -31,6 +33,8 @@ public class PhotoGalleryController : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private bool shouldPlayAudioAutomatically;
     public GameObject finishScreen;
+    //t³o
+    public SpriteRenderer background;
 
     private void Awake()
     {
@@ -44,7 +48,6 @@ public class PhotoGalleryController : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-
         // Initialize buttons and listeners
         nextButton.onClick.AddListener(ShowNextPhoto);
         previousButton.onClick.AddListener(ShowPreviousPhoto);
@@ -62,15 +65,19 @@ public class PhotoGalleryController : MonoBehaviour
     private void Start()
     {
         InitializeGallery();
+       
     }
-
+    
     private void InitializeGallery()
     {
+
         if (gameProperties.photoWithAudios.Count < 2)
         {
             Debug.LogError("Please add at least two photos with audio for the crossfade effect.");
             return;
         }
+        //t³o
+        background.sprite = gameProperties.background;
 
         image1.sprite = gameProperties.photoWithAudios[currentIndex].photo;
         image2.sprite = gameProperties.photoWithAudios[GetNextPhotoIndex()].photo;
@@ -85,7 +92,7 @@ public class PhotoGalleryController : MonoBehaviour
         {
             PlayAudioClipForCurrentPhoto();
         }
-
+        
         UpdatePhotoCounterText();
     }
 

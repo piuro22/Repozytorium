@@ -4190,7 +4190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: chapterTitle
@@ -4202,12 +4202,12 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: af1bf56234d4a1f4e8d57d1bc35f6769, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: af1bf56234d4a1f4e8d57d1bc35f6769, type: 2}
+      objectReference: {fileID: 11400000, guid: 50ed960706165564ba886a7dc7a2aadf, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
