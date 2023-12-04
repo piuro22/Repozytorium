@@ -22,12 +22,6 @@ public class PhotoGalleryProperties : ScriptableObject
 [System.Serializable]
 public class PhotoWithAudio
 {
-
     public Sprite photo;
-
-
     public AudioClip audioClip;
-
-    public Sprite Photo => photo;
-    public AudioClip AudioClip => audioClip;
 }
