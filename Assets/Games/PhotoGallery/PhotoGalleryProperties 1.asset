@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
-  m_Name: PhotoGalleryProperties
+  m_Name: PhotoGalleryProperties 1
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 712fee7f5dc907a448aeb2fdf911af90, type: 3}
+  background: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
   photoWithAudios:
-  - photo: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
+  - photo: {fileID: 21300000, guid: 6983762998070b44b8ef15d6a3ad2ef9, type: 3}
     audioClip: {fileID: 8300000, guid: 2b27140a18cef0c4aab13566d3756d9a, type: 3}
   - photo: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
     audioClip: {fileID: 8300000, guid: a9a81ca7aab71e54a98801bb993883d7, type: 3}
@@ -26,4 +26,4 @@ MonoBehaviour:
     audioClip: {fileID: 0}
   - photo: {fileID: 21300000, guid: 34141258d7dfca94496abfb22616fcdc, type: 3}
     audioClip: {fileID: 0}
-  useAudio: 1
+  useAudio: 0
