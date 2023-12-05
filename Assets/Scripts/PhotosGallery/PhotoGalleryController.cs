@@ -54,6 +54,13 @@ public class PhotoGalleryController : MonoBehaviour
     private void InitializeComponents()
     {
         audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
+
+        if (Application.isPlaying)
+        {
+            if (GameManager.Instance != null)
+                if (GameManager.Instance.currentGameProperties is PhotoGalleryProperties)
+                    gameProperties = GameManager.Instance.currentGameProperties as PhotoGalleryProperties;
+        }
     }
 
     private void SetupButtons()
