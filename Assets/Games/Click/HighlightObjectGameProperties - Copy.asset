@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGroundTexture: {fileID: 0}
   gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}
+  wrongClickAudioClip: {fileID: 0}
   gameSequence: []
   higlightObjects:
   - id: 0

@@ -29,15 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuizPictures.unity
     guid: 1409b03e80ddd3f46b8206bf2c6f50f6
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Scene Family.unity
+    guid: b365e185343b8eb49826e3e5bdf5e500
   - enabled: 1
     path: Assets/Scenes/Mp3Player.unity
     guid: 70b72f8f4d6d4c2478d858a7ce545e71
@@ -74,7 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PhotosGallery.unity
     guid: cbbd952c9681c0442b4f203ef28057b5
-  - enabled: 1
-    path: Assets/Scenes/Scene Family.unity
-    guid: e7cfa16ede9bfe940b8fff607ae9160e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
