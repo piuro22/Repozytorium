@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31e461d859dce0c46bbd0f16e83e7679
+guid: e513deb5dfdc33a4eaf3c3423c17bc14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -127,7 +127,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Car puzzle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469
+        width: 469
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a868fa9f13ca18409a246fcee2b0838
+      internalID: -496803622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Car puzzle_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 469
+        width: 469
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a28c66f2072ba048a1919ef71b7059f
+      internalID: -950470189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Car puzzle_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 469
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed899be66a18b6e4c8605f3a8b347182
+      internalID: -1896034236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Car puzzle_3
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1
+        width: 469
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be77bab6900c63e4681b1ea920ec2500
+      internalID: 1508487818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +222,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Car puzzle_0: -496803622
+      Car puzzle_1: -950470189
+      Car puzzle_2: -1896034236
+      Car puzzle_3: 1508487818
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
