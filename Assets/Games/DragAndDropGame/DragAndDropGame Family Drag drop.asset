@@ -93,7 +93,7 @@ MonoBehaviour:
     useSequence: 1
     id: 1
     texture: {fileID: 2800000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
-    startPosition: {x: -1.54, y: 1}
+    startPosition: {x: 1.8, y: 1}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.25, y: 0.25}

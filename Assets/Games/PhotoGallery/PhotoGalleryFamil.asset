@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
-  m_Name: PhotoGalleryFamili
+  m_Name: PhotoGalleryFamil
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   photoWithAudios:
