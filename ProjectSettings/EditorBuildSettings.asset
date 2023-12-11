@@ -61,7 +61,10 @@ EditorBuildSettings:
     guid: 17849e3b10290e943ada4c30e2fca5a0
   - enabled: 1
     path: Assets/Scenes/Scene Pets.unity
-    guid: d050140a26a9759469134fae7b65bb02
+    guid: 78779fc246a3aff43aff32a465fbc634
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Scene Food.unity
     guid: 3377dfbb108e4c44d88a42d563adc781

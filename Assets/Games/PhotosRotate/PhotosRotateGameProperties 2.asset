@@ -28,7 +28,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
   - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
   - {fileID: 2800000, guid: 10c4abc92cc804da1bb186d952d18e96, type: 3}
-  - {fileID: 0}
   angleChances:
   - angle: 0
     chance: 0
