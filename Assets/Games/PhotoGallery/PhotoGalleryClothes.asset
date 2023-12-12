@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoGalleryClothes
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
+  photoWithAudios:
+  - photo: {fileID: 21300000, guid: 2326015c56b527f4bb59cb4140b9fe81, type: 3}
+    audioClip: {fileID: 8300000, guid: 2b27140a18cef0c4aab13566d3756d9a, type: 3}
+  - photo: {fileID: 21300000, guid: fa3465cf8b4155242bae7814225159d5, type: 3}
+    audioClip: {fileID: 8300000, guid: a9a81ca7aab71e54a98801bb993883d7, type: 3}
+  - photo: {fileID: 21300000, guid: daf8c23018227b044b3779aff9aed3b5, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 00f039f8bcc3b454984431caedaff090, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: e5edb8e275d50cf4e97ab04dcf4d31a7, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 0bfacfc7685662a48841229b4e3fae0a, type: 3}
+    audioClip: {fileID: 0}
+  useAudio: 0

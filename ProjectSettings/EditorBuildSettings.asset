@@ -54,20 +54,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene Colours.unity
     guid: 6ef3c62b1e15ba24a9063b36ccb8b240
   - enabled: 1
+    path: Assets/Scenes/Scene Clothes.unity
+    guid: 14b3bf8550a14224288da1713d459c09
+  - enabled: 1
     path: Assets/Scenes/Scene Toys.unity
     guid: e50ab8641bd818848bee3ced07e64c91
   - enabled: 1
-    path: Assets/Scenes/Scene Clothes.unity
-    guid: 17849e3b10290e943ada4c30e2fca5a0
+    path: Assets/Scenes/Scene Food.unity
+    guid: f7c633deabb54c949852fa0cd48f91ac
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Scene Pets.unity
     guid: 78779fc246a3aff43aff32a465fbc634
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Scene Food.unity
-    guid: 3377dfbb108e4c44d88a42d563adc781
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/PhotosGallery.unity
     guid: cbbd952c9681c0442b4f203ef28057b5
