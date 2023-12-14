@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc41b27b40c4ed44e97d12adef92f214, type: 3}
-  m_Name: PhotosRotateGame Blocks
+  m_Name: PhotosRotateGame Yogurt
   m_EditorClassIdentifier: 
   grid: 0
   images:
-  - {fileID: -21498858, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -215553395, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -361187093, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -1924825232, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
+  - {fileID: -1952142212, guid: 1aaf92be4acff6f4798175990c11dd4f, type: 3}
+  - {fileID: -33564858, guid: 1aaf92be4acff6f4798175990c11dd4f, type: 3}
+  - {fileID: -868341480, guid: 1aaf92be4acff6f4798175990c11dd4f, type: 3}
+  - {fileID: -1212393745, guid: 1aaf92be4acff6f4798175990c11dd4f, type: 3}
   angleChances:
   - angle: 0
     chance: 0

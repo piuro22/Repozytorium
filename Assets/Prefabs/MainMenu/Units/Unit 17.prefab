@@ -328,7 +328,9 @@ GameObject:
   - component: {fileID: 4399521436056355071}
   - component: {fileID: 7893495060432433492}
   - component: {fileID: 6145586456111131900}
+  - component: {fileID: 4817343016546987618}
   - component: {fileID: 240825645740195337}
+  - component: {fileID: 2461066474078904712}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -394,6 +396,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4817343016546987618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838260527273390314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31d00a871b26a740abc150e35f81df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &240825645740195337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,4 +451,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6145586456111131900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4817343016546987618}
+        m_TargetAssemblyTypeName: ButtonUnitAnimation, Assembly-CSharp
+        m_MethodName: Button_touch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!111 &2461066474078904712
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838260527273390314}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d9cd2f1d4a3ca9c4faa95398f0358eb4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d9cd2f1d4a3ca9c4faa95398f0358eb4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

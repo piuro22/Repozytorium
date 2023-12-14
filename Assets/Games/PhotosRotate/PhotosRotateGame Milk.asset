@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc41b27b40c4ed44e97d12adef92f214, type: 3}
-  m_Name: PhotosRotateGame Blocks
+  m_Name: PhotosRotateGame Milk
   m_EditorClassIdentifier: 
   grid: 0
   images:
-  - {fileID: -21498858, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -215553395, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -361187093, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -1924825232, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
+  - {fileID: 1223399466, guid: 7cc73a5f9db725d4ca9cf2329afc7b18, type: 3}
+  - {fileID: 744732236, guid: 7cc73a5f9db725d4ca9cf2329afc7b18, type: 3}
+  - {fileID: 424817118, guid: 7cc73a5f9db725d4ca9cf2329afc7b18, type: 3}
+  - {fileID: -78885457, guid: 7cc73a5f9db725d4ca9cf2329afc7b18, type: 3}
   angleChances:
   - angle: 0
     chance: 0

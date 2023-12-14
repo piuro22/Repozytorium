@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc41b27b40c4ed44e97d12adef92f214, type: 3}
-  m_Name: PhotosRotateGame Blocks
+  m_Name: PhotosRotateGame Panckake
   m_EditorClassIdentifier: 
   grid: 0
   images:
-  - {fileID: -21498858, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -215553395, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -361187093, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
-  - {fileID: -1924825232, guid: edf670124273a884e9a3f1ad7d5a886b, type: 3}
+  - {fileID: 154675436, guid: 4c15c7d6615abb94b86c48a48a1cff33, type: 3}
+  - {fileID: -1635623239, guid: 4c15c7d6615abb94b86c48a48a1cff33, type: 3}
+  - {fileID: 716359505, guid: 4c15c7d6615abb94b86c48a48a1cff33, type: 3}
+  - {fileID: 720367681, guid: 4c15c7d6615abb94b86c48a48a1cff33, type: 3}
   angleChances:
   - angle: 0
     chance: 0

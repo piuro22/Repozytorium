@@ -2369,16 +2369,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.size
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 7720828069ca3074d8cfa662e04b3c7a, type: 2}
+      objectReference: {fileID: 11400000, guid: 96df78ff47a6dec42b18265d0037e288, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 2b63b176526651941ab2e390383f0058, type: 2}
+      objectReference: {fileID: 11400000, guid: 54adc4e953221df4c806a0bbeb1903a6, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f7ddf9a672b02f46a1b8be1fc7efcb8, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1307068cb168ad444ab0aee24283119e, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e1da70df75d6fc499d6f29a7beb7db9, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f42db9f32d785c4aa9891f7370c3117, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameProperties.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7706f029492bc72469fc0f7dd8834518, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Puzzle

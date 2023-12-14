@@ -29,7 +29,7 @@ MonoBehaviour:
   containerTransparency: 0.992
   containerFillTransparency: 0
   overrideContainerColor: 0
-  containerColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.15686275}
+  containerColor: {r: 0.32941177, g: 0.45882356, b: 0.48627454, a: 0.15686275}
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
   dragAndDropGameSequences:
