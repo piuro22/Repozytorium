@@ -41,7 +41,7 @@ public class DownloadController : MonoBehaviour
     public event Action OnDownloadFileCompleted;
     public event Action OnInternetErrorFileExistHandler;
     public event Action OnInternetErrorFileNotExistHandler;
-
+    private int completedDownloads = 0;
     private void Start()
     {
         SetupProgressSliders();
@@ -156,19 +156,29 @@ public class DownloadController : MonoBehaviour
             bool shouldDownloadPlaylistTexture = !FileUtils.CheckFileExist(Path.Combine(Application.persistentDataPath, downloadPath, playlistTextureFile));
 
             if (shouldDownloadAudio)
+            {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipPath));
+                downloadedBytes += (ulong)GetFileSizeFromPath(audioFile); // Update downloadedBytes
+            }
 
             if (shouldDownloadTexture)
+            {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackAudioClipTexturePath));
+                downloadedBytes += (ulong)GetFileSizeFromPath(textureFile); // Update downloadedBytes
+            }
 
             if (shouldDownloadPlaylistTexture)
+            {
                 yield return StartCoroutine(DownloadFile(trackProperties.trackPlaylistTexturePath));
+                downloadedBytes += (ulong)GetFileSizeFromPath(playlistTextureFile); // Update downloadedBytes
+            }
         }
         if (shouldCleanUnnecessaryFiles)
         {
             CleanUpFiles();
         }
         OnAllDownloadCompleted?.Invoke();
+        UpdateGlobalProgress(); // Update global progress after all downloads are completed
     }
 
 
@@ -216,6 +226,14 @@ public class DownloadController : MonoBehaviour
         {
             PrintToConsole($"", false, Color.yellow, true);
             SaveDownloadedFile(request.downloadHandler.data, fileUrl);
+
+            // Increment completedDownloads when a file download is completed
+            completedDownloads++;
+            if (completedDownloads == downloadedList.mp3TrackProperties.Length)
+            {
+                // All downloads are completed, invoke the event
+                OnAllDownloadCompleted?.Invoke();
+            }
         }
     }
 
@@ -255,7 +273,8 @@ public class DownloadController : MonoBehaviour
 
     private void UpdateGlobalProgress()
     {
-        globalProgressSlider.fillAmount = globalDownloadProgress;
+        float progress = (float)completedDownloads / downloadedList.mp3TrackProperties.Length;
+        globalProgressSlider.fillAmount = progress;
     }
 
     private void PrintToConsole(string message, bool isError = false, Color textColor = default, bool deleteLastLine = false)
