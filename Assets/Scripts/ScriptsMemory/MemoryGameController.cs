@@ -172,6 +172,8 @@ public class MemoryGameController : MonoBehaviour
         {
             if (CheckRevealedCards())
             {
+                _firstRevealCard.correctMatchParticles.Play();
+                _secondRevealCard.correctMatchParticles.Play();
                 OnCorrectReveal();
             }
             else

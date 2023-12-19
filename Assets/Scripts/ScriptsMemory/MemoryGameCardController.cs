@@ -24,11 +24,12 @@ public class MemoryGameCardController : MonoBehaviour
     private Vector3 startPosition;
     private Vector3 startScale;
     private Vector3 randomPosition;
-
+    public ParticleSystem correctMatchParticles;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+   
+     audioSource = GetComponent<AudioSource>();
         boxCollider = GetComponent<BoxCollider>();
 
     }
@@ -76,7 +77,8 @@ public class MemoryGameCardController : MonoBehaviour
 
     public void OnCardClick()
     {
-
+        correctMatchParticles.transform.SetParent(null);
+        correctMatchParticles.transform.localScale = Vector3.one;
         if (!MemoryGameController.Instance.CheckSequencesCompleted())
             return;
         boxCollider.enabled = false;
