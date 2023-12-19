@@ -15,9 +15,9 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 712fee7f5dc907a448aeb2fdf911af90, type: 3}
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
-    audioClip: {fileID: 8300000, guid: 2b27140a18cef0c4aab13566d3756d9a, type: 3}
+    audioClip: {fileID: 8300000, guid: aef8b2fd66f4ebf4b890afe749f9da88, type: 3}
   - photo: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
-    audioClip: {fileID: 8300000, guid: a9a81ca7aab71e54a98801bb993883d7, type: 3}
+    audioClip: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
   - photo: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
     audioClip: {fileID: 0}
   - photo: {fileID: 0}

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DragAndDropGameController : MonoBehaviour
@@ -245,5 +246,9 @@ public class DragAndDropGameController : MonoBehaviour
     {
         if (temdialogOnSequenceStart != null)
             audioSource.PlayOneShot(temdialogOnSequenceStart);
+    }
+    public void BackToChoseLevels()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
     }
 }

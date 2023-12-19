@@ -22,16 +22,16 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: 473f4fca28be5264e91b81042637df08, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 100, y: 150}
-    - isCorrect: 0
+    - isCorrect: 1
       picture: {fileID: 21300000, guid: 9b2bf538dec6b674d92d94b1ed8af652, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 140, y: 190}
-    - isCorrect: 1
+    - isCorrect: 0
       picture: {fileID: 21300000, guid: 02e6abf5650feda4285e3fb2c9cd281a, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 200}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 71b173677868b2b41b4babbbc13c5dd6, type: 3}
+    questionClip: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: bee6b0ce97bbdb247b0afa005d75690b, type: 3}
@@ -46,19 +46,19 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 200, y: 200}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 71b173677868b2b41b4babbbc13c5dd6, type: 3}
+    questionClip: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
-      additionalPictureSound: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
+      additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
-      additionalPictureSound: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
+      additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 1
       picture: {fileID: 21300000, guid: 509d4845cb84d27498cd13f8b48bce1a, type: 3}
-      additionalPictureSound: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
+      additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     questionText: 
-    questionClip: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
+    questionClip: {fileID: 8300000, guid: 89b301d66582f4f47aa2677f3d73db2b, type: 3}

@@ -39,25 +39,25 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: aef8b2fd66f4ebf4b890afe749f9da88, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: d123605adfd9a904296f66d0f5c193a7, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
-  - objectID: 0
+    dialogOnSequenceStart: {fileID: 8300000, guid: 48c8f66697e15a846b2daf3190b6d3b9, type: 3}
+  - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
-  - objectID: 0
+    dialogOnSequenceStart: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
+  - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
-  - objectID: 0
+    dialogOnSequenceStart: {fileID: 8300000, guid: 06f84461a126503469439dcbaed25738, type: 3}
+  - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
@@ -194,7 +194,7 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
-    id: 0
+    id: 4
     texture: {fileID: 2800000, guid: 0f77ca6604fcad449a7ec6c46362de4d, type: 3}
     startPosition: {x: -0.64, y: -1.53}
     startPositionMinMaxX: {x: 0, y: 0}
@@ -224,7 +224,7 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
-    id: 0
+    id: 5
     texture: {fileID: 2800000, guid: c3feaf9c8d96a56428e07b3a1519a116, type: 3}
     startPosition: {x: 2.55, y: -1.84}
     startPositionMinMaxX: {x: 0, y: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
-    id: 0
+    id: 6
     texture: {fileID: 2800000, guid: 24e700b3764e1804e9a07e3a032e526d, type: 3}
     startPosition: {x: 4.16, y: -1.69}
     startPositionMinMaxX: {x: 0, y: 0}
