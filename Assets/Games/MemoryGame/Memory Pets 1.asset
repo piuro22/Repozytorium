@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db6e1b656736ee348bfa7b2b7503bc54, type: 3}
-  m_Name: Memory Famili
+  m_Name: Memory Pets 1
   m_EditorClassIdentifier: 
   cardFrontTexture: {fileID: 21300000, guid: 0c576288172d5fc4e8032b5a3bc287e3, type: 3}
   cardBackTexture: {fileID: 21300000, guid: 08dd6a7884153824cbb35ffeaed13b00, type: 3}
@@ -52,29 +52,29 @@ MonoBehaviour:
     alternativeMessage: 
   memoryCardDatas4x2:
   - useAlternativeTexture: 0
-    sprite: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
-    audioclip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: fad82f4e7e324164f8e5c8b04914cb15, type: 3}
+    audioclip: {fileID: 8300000, guid: fa4b1dc34533ec24b9aa059543dde76d, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
-    sprite: {fileID: 21300000, guid: 5676d16d653c8ac45aa73533e411ec04, type: 3}
-    audioclip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: c4559d69d5fc00343a80e071a90286f7, type: 3}
+    audioclip: {fileID: 8300000, guid: 3698a3a9a7b7f5d4da5cfe544cc3a713, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
-    sprite: {fileID: 21300000, guid: b0e981615d77c8448b5d296b53f899d4, type: 3}
-    audioclip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 1118cc0fe6879124db360774e8559fe6, type: 3}
+    audioclip: {fileID: 8300000, guid: 527b659170fcee546a9126eac3699a5f, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
-    sprite: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
-    audioclip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 2c871e9437477e34ea2aa530b6f60fb7, type: 3}
+    audioclip: {fileID: 8300000, guid: 1bd26014f6da4b24bbda948a51cf1063, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

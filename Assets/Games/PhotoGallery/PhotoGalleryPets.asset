@@ -15,17 +15,17 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 47181a221557b8c468eeb991077ac162, type: 3}
-    audioClip: {fileID: 8300000, guid: 2b27140a18cef0c4aab13566d3756d9a, type: 3}
+    audioClip: {fileID: 8300000, guid: bc4bbdbe0ebd03648a5b2a9dca9983dc, type: 3}
   - photo: {fileID: 21300000, guid: c16178daec6ed2c4c9395e25f8380191, type: 3}
-    audioClip: {fileID: 8300000, guid: a9a81ca7aab71e54a98801bb993883d7, type: 3}
+    audioClip: {fileID: 8300000, guid: 417ebfe716a1e8a44be326561ea020b3, type: 3}
   - photo: {fileID: 21300000, guid: 2c871e9437477e34ea2aa530b6f60fb7, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1bd26014f6da4b24bbda948a51cf1063, type: 3}
   - photo: {fileID: 21300000, guid: b44b36a37e5ef6c4390893807b95fa77, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 27771ad6e0b00a14d9c56694f6d192b3, type: 3}
   - photo: {fileID: 21300000, guid: 1118cc0fe6879124db360774e8559fe6, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 527b659170fcee546a9126eac3699a5f, type: 3}
   - photo: {fileID: 21300000, guid: fad82f4e7e324164f8e5c8b04914cb15, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: fa4b1dc34533ec24b9aa059543dde76d, type: 3}
   - photo: {fileID: 21300000, guid: c4559d69d5fc00343a80e071a90286f7, type: 3}
-    audioClip: {fileID: 0}
-  useAudio: 0
+    audioClip: {fileID: 8300000, guid: 3698a3a9a7b7f5d4da5cfe544cc3a713, type: 3}
+  useAudio: 1

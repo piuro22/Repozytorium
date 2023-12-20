@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LoadingAppController : MonoBehaviour
 {
+    public SwitchScene switchscene;
     [SerializeField] private DownloadController downloadController;
     [SerializeField] private GameObject downloadCompletedButton;
     [SerializeField] private TMP_Text loadingText;
@@ -67,6 +68,7 @@ public class LoadingAppController : MonoBehaviour
     {
         loadingText.SetText("Ładowanie zakończone");
         downloadCompletedButton.SetActive(true);
+        switchscene.LoadScene("Scene Login");
     }
 
     private void OnDestroy()

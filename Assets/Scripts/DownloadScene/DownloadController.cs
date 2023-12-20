@@ -7,10 +7,11 @@ using UnityEngine.Networking;
 using TMPro;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
+using System.Net.Http.Headers;
 
 public class DownloadController : MonoBehaviour
 {
-    [Header("Properties")]
+    
     [SerializeField] private bool shouldCleanUnnecessaryFiles;
     [SerializeField] private bool shouldShowConsole;
 
