@@ -22,7 +22,7 @@ MonoBehaviour:
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 1
   snapToContainterTime: 0.5
-  snapOnClick: 1
+  snapOnClick: 0
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 1

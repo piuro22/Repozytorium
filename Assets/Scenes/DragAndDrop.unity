@@ -543,6 +543,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DragAndDropGameController, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2161456019312483541, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 306067984}
+    - target: {fileID: 2161456019312483541, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DragDropquestion
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
 --- !u!114 &726518685 stripped
