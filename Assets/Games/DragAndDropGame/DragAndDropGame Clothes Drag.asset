@@ -15,7 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
   dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: 3222c08672fbeac4d8eedb58120b7a2c, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -35,16 +35,16 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 12f1f2f8dba715d4897686eff1865271, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: cb5e4f0eb875bf84083a686311c44af3, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: dfba1df9efb26674baf267239d71d186, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 8e327463a8a4f1649bbddd9e34b72646, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

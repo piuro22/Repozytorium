@@ -26,8 +26,8 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 200}
-    questionText: zaznacz czerwony balonik
-    questionClip: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
@@ -37,27 +37,27 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: 26354ebb63324d74c9b29aecec014ba7, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
-    questionText: zaznacz niebieski balonik
-    questionClip: {fileID: 8300000, guid: f79c8d9768e999c47b3225c9bcbe9d79, type: 3}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 2ae4680e86da22d4b8edb8891ed6fc2d, type: 3}
+      picture: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 7be322b3e3c4258449fed38a22c81334, type: 3}
+      picture: {fileID: 21300000, guid: 35440a9bc3454df4f8077bb1ace5f7b4, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
-    questionText: zaznacz zielony balonik
-    questionClip: {fileID: 8300000, guid: b2c644abba9c5c64eba0389bb5c49b21, type: 3}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
   - singleQuizPictures:
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: f777f463c6c138145a4e5e5c38707681, type: 3}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 398a8518af12f8c4e85442a7d195ed79, type: 3}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 0}
+    questionClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}

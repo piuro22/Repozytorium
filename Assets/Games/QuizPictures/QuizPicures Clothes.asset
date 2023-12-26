@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
+  m_Name: QuizPicures Clothes
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 0}
+  badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
+  goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  background: {fileID: 21300000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
+  questions:
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 0bfacfc7685662a48841229b4e3fae0a, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 7b0bfc1ed6e409342825cb67c654d5d3, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: daf8c23018227b044b3779aff9aed3b5, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 35440a9bc3454df4f8077bb1ace5f7b4, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}

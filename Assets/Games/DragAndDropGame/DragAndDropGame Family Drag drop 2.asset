@@ -35,16 +35,16 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2601322cf91ba82408d600251a6e7be6, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

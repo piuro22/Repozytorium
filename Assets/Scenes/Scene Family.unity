@@ -2797,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d1fa4f5bd4261be42a55d5db4facd434, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
@@ -2806,7 +2806,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 37e0b2b8423aa93459c56f3470d141c7, type: 2}
+      objectReference: {fileID: 11400000, guid: 294dafea7a16d4a4ba6ab854329247d7, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Memory
@@ -3149,7 +3149,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 50d94241f8433e84590fb8cc7235e683, type: 2}
+      objectReference: {fileID: 11400000, guid: 3b51730cc50b1de46b2bba4f15d3cf25, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Quiz revision

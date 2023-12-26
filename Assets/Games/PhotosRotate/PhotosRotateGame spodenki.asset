@@ -27,8 +27,8 @@ MonoBehaviour:
     chance: 33.3
   - angle: 180
     chance: 33.3
-  delayBetweenCommandAndInitializeGrid: 3
-  soundOnEndGame: {fileID: 8300000, guid: 7ab3337959e1c5e41b1953dfeb760644, type: 3}
+  delayBetweenCommandAndInitializeGrid: 1
+  soundOnEndGame: {fileID: 8300000, guid: 7a850dce9957cf841a7d1d5a7742f6e9, type: 3}
   scaleDuration: 0.25
   rotateDuration: 0.25
   rotateCurve:
@@ -58,5 +58,5 @@ MonoBehaviour:
   onPhotoClickAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
   background: {fileID: 2800000, guid: 9241f300d97965f488c7ae9e19ac4d83, type: 3}
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: 0612948356428f6418b19f454dd64608, type: 3}
+  gameCommandAudioClip: {fileID: 0}
   commandText: 

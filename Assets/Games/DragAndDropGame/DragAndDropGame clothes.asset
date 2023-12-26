@@ -15,7 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: 3f4a140a939961f43bb5a33d1acbe1ac, type: 3}
   dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: Dopasuj obiekty
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -35,19 +35,19 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 62512c6c387c62742a639ae824fd640b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 90d2eb6f3905bc842a89d43084661d4d, type: 3}
   - objectID: 1
     textMessage: "Przesu\u0144 niebieski balonik do czerwonego balonika"
-    dialogOnSequenceStart: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 7b0bfc1ed6e409342825cb67c654d5d3, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 8e4915b1fe03c2446b3e89d4d387a7ba, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 7a850dce9957cf841a7d1d5a7742f6e9, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: c2fb41bccb332c04c8b449ab0e89626d, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
