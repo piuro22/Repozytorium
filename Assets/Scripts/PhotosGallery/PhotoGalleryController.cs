@@ -155,7 +155,7 @@ public class PhotoGalleryController : MonoBehaviour
     private void CheckEndOfGallery()
     {
         if (currentIndex == gameProperties.photoWithAudios.Count - 1)
-            Invoke("FinishGame", 2);
+            Invoke("FinishGame", 4);
     }
 
     public void FinishGame()

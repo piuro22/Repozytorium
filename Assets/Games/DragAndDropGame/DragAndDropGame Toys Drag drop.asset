@@ -26,7 +26,7 @@ MonoBehaviour:
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 0
-  containerTransparency: 0.653
+  containerTransparency: 0.65
   containerFillTransparency: 0
   overrideContainerColor: 1
   containerColor: {r: 0, g: 0, b: 0, a: 1}
@@ -38,7 +38,7 @@ MonoBehaviour:
     dialogOnSequenceStart: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 48c8f66697e15a846b2daf3190b6d3b9, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 89b301d66582f4f47aa2677f3d73db2b, type: 3}
   - objectID: 2
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}

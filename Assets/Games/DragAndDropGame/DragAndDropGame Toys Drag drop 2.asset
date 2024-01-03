@@ -26,10 +26,10 @@ MonoBehaviour:
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 0
-  containerTransparency: 0.771
+  containerTransparency: 1
   containerFillTransparency: 0
   overrideContainerColor: 1
-  containerColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0.15686275}
+  containerColor: {r: 0, g: 0, b: 0, a: 0.15686275}
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
   dragAndDropGameSequences:

@@ -61,3 +61,25 @@ MonoBehaviour:
       pictureSize: {x: 0, y: 0}
     questionText: 
     questionClip: {fileID: 8300000, guid: d123605adfd9a904296f66d0f5c193a7, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 7be322b3e3c4258449fed38a22c81334, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 398a8518af12f8c4e85442a7d195ed79, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 2ae4680e86da22d4b8edb8891ed6fc2d, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 48c8f66697e15a846b2daf3190b6d3b9, type: 3}

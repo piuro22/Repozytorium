@@ -30,8 +30,4 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}
   - photo: {fileID: 21300000, guid: f777f463c6c138145a4e5e5c38707681, type: 3}
     audioClip: {fileID: 8300000, guid: d123605adfd9a904296f66d0f5c193a7, type: 3}
-  - photo: {fileID: 21300000, guid: 4ae82511430a1df439deec527eec0a58, type: 3}
-    audioClip: {fileID: 8300000, guid: cf71b8d3ff7c1d14fbbb717560d9e071, type: 3}
-  - photo: {fileID: 21300000, guid: 50a5a91077aca534cbf226124f412ecb, type: 3}
-    audioClip: {fileID: 0}
   useAudio: 1
