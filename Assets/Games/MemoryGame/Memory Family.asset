@@ -216,4 +216,4 @@ MonoBehaviour:
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 51bc30e1fb86f034c95ea88460d15d64, type: 3}

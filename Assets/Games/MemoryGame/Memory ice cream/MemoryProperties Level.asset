@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFrontTexture: {fileID: 21300000, guid: 0c576288172d5fc4e8032b5a3bc287e3, type: 3}
   cardBackTexture: {fileID: 21300000, guid: 08dd6a7884153824cbb35ffeaed13b00, type: 3}
-  shakePower: 0
-  shakeDouration: 0
+  shakePower: 0.03
+  shakeDouration: 0.05
   useRotationAnimation: 1
   useFadeAnimation: 0
   useClippingAnimation: 0
@@ -216,4 +216,4 @@ MonoBehaviour:
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: eca79e404a54ba342bd48950f5145d85, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: 51bc30e1fb86f034c95ea88460d15d64, type: 3}
