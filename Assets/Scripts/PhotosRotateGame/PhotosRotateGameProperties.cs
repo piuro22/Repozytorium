@@ -22,7 +22,7 @@ public class PhotosRotateGameProperties : ScriptableObject
     [LabelText("Czas trwania animacji")]
     public float scaleDuration = 0.25f;
 
-
+    
 
 
     [BoxGroup("Animacja przy kliknięciu")]

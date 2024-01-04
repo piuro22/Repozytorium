@@ -1000,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: chapterTitle
@@ -1017,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d1fa4f5bd4261be42a55d5db4facd434, type: 2}
+      objectReference: {fileID: 11400000, guid: 7cc1318f3c6e791448a26ef7a73da0a7, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Click
@@ -1033,7 +1033,7 @@ PrefabInstance:
     - target: {fileID: 7295547552871599218, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3c0e35a1405c11a4b966a788b257c659, type: 3}
+      objectReference: {fileID: 21300000, guid: 73575e958585a684a99f9455a2c0a201, type: 3}
     - target: {fileID: 7387036803097435536, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 141.3

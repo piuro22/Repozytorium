@@ -17,7 +17,13 @@ public class PhotoGalleryProperties : ScriptableObject
     public Sprite Background => background;
     public IReadOnlyList<PhotoWithAudio> PhotoWithAudios => photoWithAudios;
     public bool UseAudio => useAudio;
+
+    [InfoBox("Muzyka gry")]
+    public AudioClip gameMusic;
+    [LabelText("Dźwięk polecenia do gry")]
+    public AudioClip gameCommandAudioClip;
 }
+
 
 [System.Serializable]
 public class PhotoWithAudio

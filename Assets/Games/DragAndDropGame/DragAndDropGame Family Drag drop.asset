@@ -26,7 +26,7 @@ MonoBehaviour:
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
   useOtherTextureForContainer: 0
-  containerTransparency: 0.653
+  containerTransparency: 0.65
   containerFillTransparency: 0
   overrideContainerColor: 1
   containerColor: {r: 0, g: 0, b: 0, a: 1}
