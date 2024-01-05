@@ -185,7 +185,7 @@ public class PhotosRotateGameController : MonoBehaviour
             }
               
         }
-        OnGameReady();
+        Invoke("OnGameReady", 1);
     }
 
     public void OnGameReady()
