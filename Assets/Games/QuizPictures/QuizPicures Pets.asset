@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
+  m_Name: QuizPicures Pets
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 0}
+  badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
+  goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  background: {fileID: 21300000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
+  questions:
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: c16178daec6ed2c4c9395e25f8380191, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 47181a221557b8c468eeb991077ac162, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 417ebfe716a1e8a44be326561ea020b3, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 2c871e9437477e34ea2aa530b6f60fb7, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 1118cc0fe6879124db360774e8559fe6, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 527b659170fcee546a9126eac3699a5f, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: fad82f4e7e324164f8e5c8b04914cb15, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: b44b36a37e5ef6c4390893807b95fa77, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: fa4b1dc34533ec24b9aa059543dde76d, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: c16178daec6ed2c4c9395e25f8380191, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: c4559d69d5fc00343a80e071a90286f7, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 3698a3a9a7b7f5d4da5cfe544cc3a713, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: b44b36a37e5ef6c4390893807b95fa77, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: fad82f4e7e324164f8e5c8b04914cb15, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 27771ad6e0b00a14d9c56694f6d192b3, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: c4559d69d5fc00343a80e071a90286f7, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 2c871e9437477e34ea2aa530b6f60fb7, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 1bd26014f6da4b24bbda948a51cf1063, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 47181a221557b8c468eeb991077ac162, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 2c871e9437477e34ea2aa530b6f60fb7, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: bc4bbdbe0ebd03648a5b2a9dca9983dc, type: 3}

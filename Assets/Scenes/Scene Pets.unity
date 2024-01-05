@@ -1000,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: chapterTitle
@@ -1017,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d1fa4f5bd4261be42a55d5db4facd434, type: 2}
+      objectReference: {fileID: 11400000, guid: 903c4d19ab2cb494faca2a46230ecaad, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Click
@@ -1033,7 +1033,7 @@ PrefabInstance:
     - target: {fileID: 7295547552871599218, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3c0e35a1405c11a4b966a788b257c659, type: 3}
+      objectReference: {fileID: 21300000, guid: f133d880967c6c54b80820205e6a2725, type: 3}
     - target: {fileID: 7387036803097435536, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 141.3
@@ -2374,31 +2374,31 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 1f7ddf9a672b02f46a1b8be1fc7efcb8, type: 2}
+      objectReference: {fileID: 11400000, guid: 0b415f60303f99340a625d07e3e92b6f, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 96df78ff47a6dec42b18265d0037e288, type: 2}
+      objectReference: {fileID: 11400000, guid: 8e49b5325a632d64f8d2e53bb22085b6, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 54adc4e953221df4c806a0bbeb1903a6, type: 2}
+      objectReference: {fileID: 11400000, guid: 872995af33b3587429898dde67e7c8c5, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 0f42db9f32d785c4aa9891f7370c3117, type: 2}
+      objectReference: {fileID: 11400000, guid: f90d2c3df3c993747b1e304947d48238, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 1307068cb168ad444ab0aee24283119e, type: 2}
+      objectReference: {fileID: 11400000, guid: 42fff1916268d154a960821a372b3e94, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 3e1da70df75d6fc499d6f29a7beb7db9, type: 2}
+      objectReference: {fileID: 11400000, guid: 144cd132f9f4cbf4e8cbf09ef7e9aef5, type: 2}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 7706f029492bc72469fc0f7dd8834518, type: 2}
+      objectReference: {fileID: 11400000, guid: c0280a6929559ee48bceb5ce6747d0c7, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Puzzle
@@ -2693,7 +2693,7 @@ PrefabInstance:
     - target: {fileID: 7295547552871599218, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f9a5d0f61af04df4c8490dc1cf16ff62, type: 3}
+      objectReference: {fileID: 21300000, guid: 4695b25952b22b64f910d34cd141167f, type: 3}
     - target: {fileID: 7387036803097435536, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 138.3425
@@ -3638,12 +3638,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 31ae6e360a9af5c489290ee2cd1d4077, type: 2}
+      objectReference: {fileID: 11400000, guid: 4b9248cbf56487344a2fdf6f2a28bcbc, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: Quiz
