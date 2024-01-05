@@ -18,6 +18,7 @@ public class PhotoGalleryController : MonoBehaviour
     [SerializeField] private Button playAudioButton;
     [SerializeField] private GameObject finishScreen;
     [SerializeField] private SpriteRenderer background;
+    [SerializeField] private AudioSource musicController;
 
     [Header("Settings")]
     [SerializeField] private float fadeDuration = 1f;
@@ -35,9 +36,18 @@ public class PhotoGalleryController : MonoBehaviour
         InitializeComponents();
         SetupButtons();
     }
+    private void SetupMusic()
+    {
+        musicController.clip = gameProperties.gameMusic;
+        musicController.loop = true;
+        musicController.Play();
+        musicController.PlayOneShot(gameProperties.gameCommandAudioClip);
+
+    }
 
     private void Start()
     {
+        
         InitializeGallery();
     }
 
@@ -53,6 +63,7 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void InitializeComponents()
     {
+       
         audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
 
         if (Application.isPlaying)
@@ -81,7 +92,7 @@ public class PhotoGalleryController : MonoBehaviour
             Debug.LogError("Insufficient photos with audio.");
             return;
         }
-
+        SetupMusic();
         background.sprite = gameProperties.background;
         SetupInitialImages();
 
@@ -155,7 +166,7 @@ public class PhotoGalleryController : MonoBehaviour
     private void CheckEndOfGallery()
     {
         if (currentIndex == gameProperties.photoWithAudios.Count - 1)
-            Invoke("FinishGame", 2);
+            Invoke("FinishGame", 4);
     }
 
     public void FinishGame()

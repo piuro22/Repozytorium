@@ -15,7 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: f57e3c24f5e19c04dbffddc1e72b39ab, type: 3}
   dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: Dopasuj obiekty
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   - objectID: 4
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
-  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
   onWrongContainerOutlineWidth: 0.362

@@ -85,7 +85,9 @@ public class PhotosRotateGameController : MonoBehaviour
             default:
                 Debug.LogError("Unsupported game type");
                 break;
+
         }
+        
     }
 
     private void DeactivateAllGrids()
@@ -193,6 +195,7 @@ public class PhotosRotateGameController : MonoBehaviour
         OnGameFinished();
         if (endGameSequence != null) endGameSequence.Kill();
         endGameSequence = DOTween.Sequence();
+        
         endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
         endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
         endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
@@ -209,10 +212,13 @@ public class PhotosRotateGameController : MonoBehaviour
         {
             if (endGameSequence != null) endGameSequence.Kill();
             endGameSequence = DOTween.Sequence();
+           
             endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
             endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
             endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
+
         }
+
     }
 
 

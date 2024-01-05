@@ -74,7 +74,7 @@ public class HighlightObjectGameController : MonoBehaviour
 
     IEnumerator GameSequence()
     {
-        yield return new WaitForSeconds(highlightObjectGameScriptable.gameCommandAudioClip.length + 1.5f);
+        yield return new WaitForSeconds(highlightObjectGameScriptable.gameCommandAudioClip.length + 0.5f);
         foreach (HighlightGameSequence gameSequence in highlightObjectGameScriptable.gameSequence)
         {
 

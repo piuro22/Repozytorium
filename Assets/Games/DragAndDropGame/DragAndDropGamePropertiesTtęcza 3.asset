@@ -18,10 +18,6 @@ MonoBehaviour:
     position: {x: 0.78, y: -1.24}
     scale: {x: 0.4, y: 0.42}
     layer: 2
-  - texture: {fileID: 2800000, guid: 9271e8041a0c62b47965b98e051eb7ad, type: 3}
-    position: {x: 0, y: 0}
-    scale: {x: 0.5, y: 0.5}
-    layer: 0
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
   commandText: 
