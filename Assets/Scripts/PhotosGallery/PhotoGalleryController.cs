@@ -19,7 +19,6 @@ public class PhotoGalleryController : MonoBehaviour
     [SerializeField] private GameObject finishScreen;
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private AudioSource musicController;
-
     [Header("Settings")]
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private bool shouldPlayAudioAutomatically;
@@ -47,7 +46,7 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void Start()
     {
-        
+
         InitializeGallery();
     }
 
@@ -63,7 +62,7 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void InitializeComponents()
     {
-       
+
         audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
 
         if (Application.isPlaying)
@@ -76,8 +75,21 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void SetupButtons()
     {
-        nextButton.onClick.AddListener(ShowNextPhoto);
-        previousButton.onClick.AddListener(ShowPreviousPhoto);
+
+        if (gameProperties.useScreenClick)
+        {
+            nextButton.gameObject.SetActive(false);
+            previousButton.gameObject.SetActive(false);
+            photoCounterText.gameObject.SetActive(false);
+            image1.GetComponent<Button>().onClick.AddListener(ShowNextPhoto);
+            image2.GetComponent<Button>().onClick.AddListener(ShowNextPhoto);
+        }
+        else
+        {
+
+            nextButton.onClick.AddListener(ShowNextPhoto);
+            previousButton.onClick.AddListener(ShowPreviousPhoto);
+        }
 
         if (gameProperties.useAudio)
             playAudioButton.onClick.AddListener(PlayAudioClipForCurrentPhoto);

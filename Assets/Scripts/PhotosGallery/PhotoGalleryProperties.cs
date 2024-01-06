@@ -13,6 +13,7 @@ public class PhotoGalleryProperties : ScriptableObject
 
 
     public bool useAudio;
+    public bool useScreenClick;
 
     public Sprite Background => background;
     public IReadOnlyList<PhotoWithAudio> PhotoWithAudios => photoWithAudios;
