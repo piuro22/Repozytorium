@@ -29,7 +29,6 @@ public class QuizPicturesQuestionProperties
     public string questionText;
     [LabelText("pytanie w formie dźwiękowej")]
     public AudioClip questionClip;
-
 }
 
 [Serializable]
@@ -43,4 +42,6 @@ public class SingleQuizPictures
     public AudioClip additionalPictureSound;
     [LabelText("Rozmiar obrazka")]
     public Vector2 pictureSize;
+    [LabelText("Ramka")]
+    public Sprite frameSprite;
 }

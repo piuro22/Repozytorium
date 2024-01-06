@@ -23,7 +23,8 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         badAnswerParticles.Stop();
         badAnswerParticles.loop = false;
         pictureImage.sprite = SingleQuizPicture.picture;
-        pictureImage.rectTransform.sizeDelta = new Vector2( SingleQuizPicture.picture.rect.width ,SingleQuizPicture.picture.rect.height);
+        pictureImage.sprite = SingleQuizPicture.frameSprite;
+        pictureImage.rectTransform.sizeDelta = new Vector2(SingleQuizPicture.picture.rect.width, SingleQuizPicture.picture.rect.height);
 
     }
     public void OnPointerClick(PointerEventData eventData)
@@ -72,19 +73,19 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
                 answerSequence = null;
             });
 
-          
+
         }
         else
         {
             answerSequence.AppendCallback(() =>
             {
                 quizPucturesGameController.OnGoodAnswer();
-               
+
                 answerSequence.Kill();
                 answerSequence = null;
             });
         }
-    
+
 
     }
 
@@ -92,10 +93,10 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
     {
         if (answerSequence != null) return;
         answerSequence = DOTween.Sequence();
-        transform.DOShakeRotation(0.25f,30,5);
+        transform.DOShakeRotation(0.25f, 30, 5);
         answerSequence.AppendCallback(() =>
         {
-            
+
             badAnswerParticles.Play();
             quizPucturesGameController.audioSource.PlayOneShot(quizPucturesGameController.gameProperties.badAnswerSound);
         });
