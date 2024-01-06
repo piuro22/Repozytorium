@@ -16,7 +16,8 @@ public class QuizPicturesProperties : ScriptableObject
     public AudioClip goodAnswerSound;
     [LabelText("Background")]
     public Sprite background;
-
+    [LabelText("Ramka")]
+    public Sprite frameSprite;
     public List<QuizPicturesQuestionProperties> questions;
 
 }
@@ -42,6 +43,5 @@ public class SingleQuizPictures
     public AudioClip additionalPictureSound;
     [LabelText("Rozmiar obrazka")]
     public Vector2 pictureSize;
-    [LabelText("Ramka")]
-    public Sprite frameSprite;
+   
 }

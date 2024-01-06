@@ -8,6 +8,7 @@ using DG.Tweening;
 public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
 {
     public Image pictureImage;
+
     public ParticleImage goodAnswerParticles;
     public ParticleImage badAnswerParticles;
     public SingleQuizPictures SingleQuizPicture;
@@ -23,7 +24,7 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         badAnswerParticles.Stop();
         badAnswerParticles.loop = false;
         pictureImage.sprite = SingleQuizPicture.picture;
-        pictureImage.sprite = SingleQuizPicture.frameSprite;
+        gameObject.GetComponent<Image>().sprite = quizPucturesGameController.gameProperties.frameSprite;
         pictureImage.rectTransform.sizeDelta = new Vector2(SingleQuizPicture.picture.rect.width, SingleQuizPicture.picture.rect.height);
 
     }
