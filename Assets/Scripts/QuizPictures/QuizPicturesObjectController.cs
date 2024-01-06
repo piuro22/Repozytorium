@@ -24,6 +24,7 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         badAnswerParticles.Stop();
         badAnswerParticles.loop = false;
         pictureImage.sprite = SingleQuizPicture.picture;
+        if(quizPucturesGameController.gameProperties.frameSprite!=null)
         gameObject.GetComponent<Image>().sprite = quizPucturesGameController.gameProperties.frameSprite;
         pictureImage.rectTransform.sizeDelta = new Vector2(SingleQuizPicture.picture.rect.width, SingleQuizPicture.picture.rect.height);
 
