@@ -7,8 +7,8 @@ public class PhotoGalleryProperties : ScriptableObject
 {
     [SerializeField, LabelText("Tło")]
     public Sprite background;
+    [SerializeField] public bool shouldPlayAudioAutomatically;
 
- 
     public List<PhotoWithAudio> photoWithAudios = new List<PhotoWithAudio>();
 
 

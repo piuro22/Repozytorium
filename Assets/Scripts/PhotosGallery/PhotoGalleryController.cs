@@ -12,6 +12,8 @@ public class PhotoGalleryController : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private Image image1;
     [SerializeField] private Image image2;
+    [SerializeField] private Image backgroundUI;
+
     [SerializeField] private TMP_Text photoCounterText;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
@@ -21,7 +23,7 @@ public class PhotoGalleryController : MonoBehaviour
     [SerializeField] private AudioSource musicController;
     [Header("Settings")]
     [SerializeField] private float fadeDuration = 1f;
-    [SerializeField] private bool shouldPlayAudioAutomatically;
+    
 
     private AudioSource audioSource;
     private int currentIndex = 0;
@@ -82,6 +84,7 @@ public class PhotoGalleryController : MonoBehaviour
             previousButton.gameObject.SetActive(false);
             photoCounterText.gameObject.SetActive(false);
             image1.GetComponent<Button>().onClick.AddListener(ShowNextPhoto);
+            backgroundUI.GetComponent<Button>().onClick.AddListener(ShowNextPhoto);
             image2.GetComponent<Button>().onClick.AddListener(ShowNextPhoto);
         }
         else
@@ -108,7 +111,7 @@ public class PhotoGalleryController : MonoBehaviour
         background.sprite = gameProperties.background;
         SetupInitialImages();
 
-        if (shouldPlayAudioAutomatically)
+        if (gameProperties.shouldPlayAudioAutomatically)
             PlayAudioClipForCurrentPhoto();
 
         UpdatePhotoCounterText();
@@ -138,7 +141,7 @@ public class PhotoGalleryController : MonoBehaviour
     {
         currentIndex = GetNextPhotoIndex();
         CrossfadeToNewPhoto();
-        if (shouldPlayAudioAutomatically)
+        if (gameProperties.shouldPlayAudioAutomatically)
             PlayAudioClipForCurrentPhoto();
 
         CheckEndOfGallery();
@@ -148,7 +151,7 @@ public class PhotoGalleryController : MonoBehaviour
     {
         currentIndex = GetPreviousPhotoIndex();
         CrossfadeToNewPhoto();
-        if (shouldPlayAudioAutomatically)
+        if (gameProperties.shouldPlayAudioAutomatically)
             PlayAudioClipForCurrentPhoto();
     }
 
