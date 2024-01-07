@@ -213,7 +213,13 @@ public class PhotosRotateGameController : MonoBehaviour
 
         if (GameManager.Instance.CheckNextGameExist())
         {
-            GameManager.Instance.OpenNextGame();
+            if (endGameSequence != null) endGameSequence.Kill();
+            endGameSequence = DOTween.Sequence();
+            endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
+            endGameSequence.AppendCallback(() =>
+            {
+                GameManager.Instance.OpenNextGame();
+            });
         }
         else
         {
