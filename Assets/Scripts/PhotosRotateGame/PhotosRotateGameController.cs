@@ -43,9 +43,9 @@ public class PhotosRotateGameController : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            if(GameManager.Instance!=null)
-            if (GameManager.Instance.currentGameProperties is PhotosRotateGameProperties)
-                gameProperties = GameManager.Instance.currentGameProperties as PhotosRotateGameProperties;
+            if (GameManager.Instance != null)
+                if (GameManager.Instance.currentGameProperties is PhotosRotateGameProperties)
+                    gameProperties = GameManager.Instance.currentGameProperties as PhotosRotateGameProperties;
         }
         musicAudioSource.clip = gameProperties.gameMusic;
         musicAudioSource.Play();
@@ -54,11 +54,11 @@ public class PhotosRotateGameController : MonoBehaviour
         {
             audioSource.PlayOneShot(gameProperties.gameCommandAudioClip);
         }
-        background.sprite = Sprite.Create(gameProperties.background, new Rect(0.0f, 0.0f, gameProperties.background.width, gameProperties.background.height), new Vector2(0.5f, 0.5f),100f);
+        background.sprite = Sprite.Create(gameProperties.background, new Rect(0.0f, 0.0f, gameProperties.background.width, gameProperties.background.height), new Vector2(0.5f, 0.5f), 100f);
         textCommand.text = gameProperties.commandText;
         DeactivateAllGrids();
         StartCoroutine(ActivateGridCoroutine());
-    
+
     }
 
     IEnumerator ActivateGridCoroutine()
@@ -87,7 +87,7 @@ public class PhotosRotateGameController : MonoBehaviour
                 break;
 
         }
-        
+
     }
 
     private void DeactivateAllGrids()
@@ -151,6 +151,7 @@ public class PhotosRotateGameController : MonoBehaviour
             photorRotateObjectController[i].transform.DOScale(targetScale, gameProperties.scaleDuration)
                 .SetEase(Ease.OutBack)
                 .SetDelay(randomDelay); // Set the random start delay
+            photorRotateObjectController[i].canRotate = true;
         }
     }
 
@@ -178,16 +179,15 @@ public class PhotosRotateGameController : MonoBehaviour
 
     public void CheckGameReady()
     {
-        foreach(PhotosRotateObjectController photo in currentUsingGrid.photosRotateObjectControllers)
+        foreach (PhotosRotateObjectController photo in currentUsingGrid.photosRotateObjectControllers)
         {
             if (photo.transform.localEulerAngles.z != 0)
             {
-                Debug.Log($"{photo.gameObject.name} rotation = {photo.transform.localEulerAngles.z}", photo.gameObject );
                 return;
             }
-              
+
         }
-       // Invoke("OnGameReady", 1);
+        OnGameReady();
     }
 
     public void OnGameReady()
@@ -204,6 +204,13 @@ public class PhotosRotateGameController : MonoBehaviour
 
     private void OnGameFinished()
     {
+        foreach (PhotosRotateObjectController photo in currentUsingGrid.photosRotateObjectControllers)
+        {
+            photo.canRotate = false;
+        }
+
+
+
         if (GameManager.Instance.CheckNextGameExist())
         {
             GameManager.Instance.OpenNextGame();
@@ -212,7 +219,7 @@ public class PhotosRotateGameController : MonoBehaviour
         {
             if (endGameSequence != null) endGameSequence.Kill();
             endGameSequence = DOTween.Sequence();
-           
+
             endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
             endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length);
             endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });

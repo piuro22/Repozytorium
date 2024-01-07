@@ -7,6 +7,7 @@ public class PhotosRotateObjectController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool isRotating = false; // Flag to track if rotation is in progress
     private PhotosRotateGameController gameController;
+    public bool canRotate;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class PhotosRotateObjectController : MonoBehaviour
 
     void Update()
     {
+        if (!canRotate) return;
         // Check if the left mouse button was clicked and rotation is not in progress
         if (Input.GetMouseButtonDown(0) && !isRotating)
         {
