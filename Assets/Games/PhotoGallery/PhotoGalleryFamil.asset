@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PhotoGalleryFamil
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
+  shouldPlayAudioAutomatically: 1
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
     audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
@@ -27,6 +28,6 @@ MonoBehaviour:
   - photo: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
     audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
   useAudio: 1
-  useScreenClick: 1
+  useScreenClick: 0
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 0}
