@@ -193,13 +193,6 @@ public class PhotosRotateGameController : MonoBehaviour
     public void OnGameReady()
     {
         OnGameFinished();
-        if (endGameSequence != null) endGameSequence.Kill();
-        endGameSequence = DOTween.Sequence();
-        endGameSequence.AppendInterval(0.5f);
-        endGameSequence.AppendCallback(() => audioSource.PlayOneShot(gameProperties.soundOnEndGame));
-        endGameSequence.AppendInterval(gameProperties.soundOnEndGame.length + 1);
-        endGameSequence.AppendCallback(() => { endPanel.SetActive(true); });
-
     }
 
     private void OnGameFinished()
