@@ -71,6 +71,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Scene Animals.unity
+    guid: b98626fd012128f4eaadd06577ba8310
+  - enabled: 1
+    path: Assets/Scenes/UnitSelect lewel 2.unity
+    guid: dfd8feb15ba33b944a61b9111886fd7a
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
