@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
-  m_Name: PhotoGalleryFamil
+  m_Name: PhotoGalleryAnimals
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
-  - photo: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
+  - photo: {fileID: 21300000, guid: 53f8cd129ed12ab4eb1fe55d1d049662, type: 3}
     audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
-  - photo: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
+  - photo: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
     audioClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
-  - photo: {fileID: 21300000, guid: 35440a9bc3454df4f8077bb1ace5f7b4, type: 3}
+  - photo: {fileID: 21300000, guid: 1241a2db914652d41a024ad48c71676c, type: 3}
     audioClip: {fileID: 8300000, guid: 2cfb36512a0b419469de82777330cbac, type: 3}
-  - photo: {fileID: 21300000, guid: 26354ebb63324d74c9b29aecec014ba7, type: 3}
+  - photo: {fileID: 21300000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
     audioClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
-  - photo: {fileID: 21300000, guid: 5676d16d653c8ac45aa73533e411ec04, type: 3}
+  - photo: {fileID: 21300000, guid: ae31bec1089ccd84e915594ae1ede01d, type: 3}
     audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
-  - photo: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
+  - photo: {fileID: 21300000, guid: 61bf0cf5d5612d043a78171c95bfb657, type: 3}
     audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
   useAudio: 0
   useScreenClick: 1

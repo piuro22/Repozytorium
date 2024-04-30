@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PhotoGalleryPets
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
+  shouldPlayAudioAutomatically: 1
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 47181a221557b8c468eeb991077ac162, type: 3}
     audioClip: {fileID: 8300000, guid: bc4bbdbe0ebd03648a5b2a9dca9983dc, type: 3}
@@ -28,4 +29,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: fa4b1dc34533ec24b9aa059543dde76d, type: 3}
   - photo: {fileID: 21300000, guid: c4559d69d5fc00343a80e071a90286f7, type: 3}
     audioClip: {fileID: 8300000, guid: 3698a3a9a7b7f5d4da5cfe544cc3a713, type: 3}
-  useAudio: 1
+  useAudio: 0
+  useScreenClick: 1
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}
