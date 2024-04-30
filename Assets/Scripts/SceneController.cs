@@ -8,12 +8,6 @@ public class SceneController : MonoBehaviour
 {
     public List<MainMenuCard> mainMenuCards = new List<MainMenuCard>();
 
-    private void Awake()
-    {
-#if UNITY_EDITOR
-        GameViewUtils.SetSize(8);
-#endif
-    }
 
     private void Start()
     {

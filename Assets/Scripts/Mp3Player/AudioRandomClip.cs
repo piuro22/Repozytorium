@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class AudioRandomClip : MonoBehaviour
 {
-    void Start()
-    {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-    }
+  
     public List<AudioClip> audioClips;
     public float repeatInterval = 5.0f; // Time interval between repetitions
     [SerializeField] private AudioSource audioSource;

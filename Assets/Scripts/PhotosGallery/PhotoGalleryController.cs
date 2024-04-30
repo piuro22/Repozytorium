@@ -154,13 +154,15 @@ public class PhotoGalleryController : MonoBehaviour
         if (gameProperties.shouldPlayAudioAutomatically)
             PlayAudioClipForCurrentPhoto();
     }
-
+    private Sequence crossSequence;
     private void CrossfadeToNewPhoto()
     {
         inactiveImage.sprite = gameProperties.photoWithAudios[currentIndex].photo;
 
-        activeImage.DOFade(0f, fadeDuration);
-        inactiveImage.DOFade(1f, fadeDuration).OnComplete(SwapActiveImages);
+        if (crossSequence != null) crossSequence.Kill();
+        crossSequence = DOTween.Sequence();
+        crossSequence.Append( activeImage.DOFade(0f, fadeDuration));
+        crossSequence.Join(inactiveImage.DOFade(1f, fadeDuration).OnComplete(SwapActiveImages));
     }
 
     private int GetNextPhotoIndex() => (currentIndex + 1) % gameProperties.photoWithAudios.Count;

@@ -30,9 +30,11 @@ public class CircleMenuManager : MonoBehaviour
     private Vector3 startPosition;
     [SerializeField] private Button leftArrow;
     [SerializeField] private Button rightArrow;
+    private Sequence swipeTextSequence;
     private void OnEnable()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+     //   if (Screen.orientation == ScreenOrientation.Portrait)
+     //   Screen.orientation = ScreenOrientation.LandscapeLeft;
         startPosition = transform.localPosition;
         swipeController.OnSwipeLeft += SwipeLeft;
         swipeController.OnSwipeUpperLeft += SwipeLeft;
@@ -104,7 +106,11 @@ public class CircleMenuManager : MonoBehaviour
 
         spawnedUnits[currentUnitIndex].SetActive(true);
         spawnedUnits[currentUnitIndex].transform.localEulerAngles = new Vector3(0, 0, currentRotation);
-        unityNameText.SetText(units[currentUnitIndex].unitName);
+        if (swipeTextSequence != null) swipeTextSequence.Kill();
+        swipeTextSequence = DOTween.Sequence();
+        swipeTextSequence.Append(unityNameText.DOFade(0, swipeTime / 2));
+        swipeTextSequence.AppendCallback(() => unityNameText.SetText(units[currentUnitIndex].unitName));
+        swipeTextSequence.Append(unityNameText.DOFade(1, swipeTime / 2));
     }
 
     private void SwipeRight(Vector2 tapPosition)
@@ -126,7 +132,12 @@ public class CircleMenuManager : MonoBehaviour
 
         spawnedUnits[currentUnitIndex].SetActive(true);
         spawnedUnits[currentUnitIndex].transform.localEulerAngles = new Vector3(0, 0, currentRotation);
-        unityNameText.SetText(units[currentUnitIndex].unitName);
+        if (swipeTextSequence != null) swipeTextSequence.Kill();
+            swipeTextSequence = DOTween.Sequence();
+        swipeTextSequence.Append(unityNameText.DOFade(0, swipeTime / 2));
+        swipeTextSequence.AppendCallback(() => unityNameText.SetText(units[currentUnitIndex].unitName));
+        swipeTextSequence.Append(unityNameText.DOFade(1, swipeTime / 2));
+
     }
 
     public void OnGridButtonPressed()
