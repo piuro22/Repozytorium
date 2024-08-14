@@ -18,6 +18,7 @@ public class LoginController : MonoBehaviour
 
     private void Start()
     {
+        GetComponent<ScreenRotation>().SetRotation(0);
         TryAutoLogin();
     }
 
