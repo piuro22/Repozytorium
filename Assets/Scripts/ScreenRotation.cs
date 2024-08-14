@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenRotation : MonoBehaviour
 {
+    [Serializable]
     public enum RotationType
     {
         Portrait,
@@ -42,6 +44,13 @@ public class ScreenRotation : MonoBehaviour
     public void SetRotation(RotationType newRotationType)
     {
         rotationType = newRotationType;
+        ApplyRotation();
+    }
+
+    // Overloaded method to be called from UnityEvent
+    public void SetRotation(int newRotationType)
+    {
+        rotationType = (RotationType)newRotationType;
         ApplyRotation();
     }
 }

@@ -2500,7 +2500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166, y: -63.419983}
+  m_AnchoredPosition: {x: -166, y: -63.420044}
   m_SizeDelta: {x: 297.1974, y: 127.04187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986367187
@@ -3690,6 +3690,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 35484491}
+        m_TargetAssemblyTypeName: ScreenRotation, Assembly-CSharp
+        m_MethodName: SetRotation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 35484489}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: OpenScene

@@ -1605,6 +1605,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 389657274658186588, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
+      propertyPath: _colorBySpeed.m_GradientMax.atime0
+      value: 58789
+      objectReference: {fileID: 0}
+    - target: {fileID: 389657274658186588, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
+      propertyPath: _colorBySpeed.m_GradientMax.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389657274658186588, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: _colorOverLifetime.m_GradientMax.atime0
       value: 52043
       objectReference: {fileID: 0}
@@ -1619,14 +1627,6 @@ PrefabInstance:
     - target: {fileID: 389657276180163990, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: _startSize.mainCurve.m_ConstantMax
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 389657276180163990, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
-      propertyPath: _colorOverLifetime.m_GradientMax.atime0
-      value: 52043
-      objectReference: {fileID: 0}
-    - target: {fileID: 389657276180163990, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
-      propertyPath: _colorOverLifetime.m_GradientMax.key1.a
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6230469242780647694, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_Sprite
