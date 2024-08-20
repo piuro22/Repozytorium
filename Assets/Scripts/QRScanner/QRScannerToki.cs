@@ -34,6 +34,7 @@ public class QRScannerToki : MonoBehaviour
     [Button]
     public void OnDecodeFinished(string dataText)
     {
+     
         codeDecodeController.Reset();
         PlayerPrefs.SetString("QRCode", dataText);
 
@@ -44,7 +45,7 @@ public class QRScannerToki : MonoBehaviour
         {
             SceneManager.LoadScene(parts[0]);
         }
-
+        Debug.Log(dataText);
     }
 
     // Mp3Player/NazwaPlaylisty
