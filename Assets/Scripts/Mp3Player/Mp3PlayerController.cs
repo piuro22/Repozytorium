@@ -354,6 +354,7 @@ public class Mp3PlayerController : MonoBehaviour
         audioSource.time = 0;
         mediaPlayer.Control.Seek(0);
         currentTimeText.text = FormatTime(0);
+        playButton.image.sprite = playSprite;
     }
 
     private void NextTrack()
