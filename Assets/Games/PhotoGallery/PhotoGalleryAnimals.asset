@@ -27,7 +27,13 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
   - photo: {fileID: 21300000, guid: 61bf0cf5d5612d043a78171c95bfb657, type: 3}
     audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
-  useAudio: 0
+  - photo: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
+    audioClip: {fileID: 0}
+  - photo: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
+    audioClip: {fileID: 0}
+  useAudio: 1
   useScreenClick: 1
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 0}

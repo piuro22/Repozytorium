@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoGalleryColor
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
+  shouldPlayAudioAutomatically: 1
+  photoWithAudios:
+  - photo: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
+    audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
+  - photo: {fileID: 21300000, guid: c29777447fe13694ba0ecbb59d73a7ac, type: 3}
+    audioClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
+  - photo: {fileID: 21300000, guid: 473f4fca28be5264e91b81042637df08, type: 3}
+    audioClip: {fileID: 8300000, guid: 2cfb36512a0b419469de82777330cbac, type: 3}
+  - photo: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
+    audioClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
+  - photo: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
+    audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
+  - photo: {fileID: 21300000, guid: e5c4b115beebcc34393f544ecd7cfce0, type: 3}
+    audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
+  useAudio: 0
+  useScreenClick: 1
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}

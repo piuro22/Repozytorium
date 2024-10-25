@@ -2650,6 +2650,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2101014171884770104, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c4ba8ee744f36b4ea5b6db70271e95a, type: 3}
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameType
       value: 2

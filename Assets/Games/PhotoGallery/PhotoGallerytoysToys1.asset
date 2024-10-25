@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoGallerytoysToys1
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
+  shouldPlayAudioAutomatically: 1
+  photoWithAudios:
+  - photo: {fileID: 21300000, guid: f777f463c6c138145a4e5e5c38707681, type: 3}
+    audioClip: {fileID: 8300000, guid: aef8b2fd66f4ebf4b890afe749f9da88, type: 3}
+  - photo: {fileID: 21300000, guid: 398a8518af12f8c4e85442a7d195ed79, type: 3}
+    audioClip: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
+  - photo: {fileID: 21300000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
+    audioClip: {fileID: 8300000, guid: 48c8f66697e15a846b2daf3190b6d3b9, type: 3}
+  - photo: {fileID: 21300000, guid: 6fcab98a5367e0f4eabcfb0b1c7e6c80, type: 3}
+    audioClip: {fileID: 8300000, guid: 89b301d66582f4f47aa2677f3d73db2b, type: 3}
+  - photo: {fileID: 21300000, guid: bcebae1f3cbe84348bce4dd5e9801a90, type: 3}
+    audioClip: {fileID: 8300000, guid: 06f84461a126503469439dcbaed25738, type: 3}
+  - photo: {fileID: 21300000, guid: 2ae4680e86da22d4b8edb8891ed6fc2d, type: 3}
+    audioClip: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
+  - photo: {fileID: 21300000, guid: 7be322b3e3c4258449fed38a22c81334, type: 3}
+    audioClip: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}
+  - photo: {fileID: 21300000, guid: 708819f45b74c224ebfcea3fa0be5ba7, type: 3}
+    audioClip: {fileID: 8300000, guid: d123605adfd9a904296f66d0f5c193a7, type: 3}
+  useAudio: 0
+  useScreenClick: 1
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}
