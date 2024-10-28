@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc41b27b40c4ed44e97d12adef92f214, type: 3}
+  m_Name: PhotosRotateBiurko
+  m_EditorClassIdentifier: 
+  grid: 1
+  images:
+  - {fileID: -761362090, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  - {fileID: -498044464, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  - {fileID: 566075799, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  - {fileID: -1968899941, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  - {fileID: 1198395902, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  - {fileID: 852439923, guid: 38d7cdeaec8e7da4aad159472d1f1fed, type: 3}
+  angleChances:
+  - angle: 0
+    chance: 0
+  - angle: -90
+    chance: 33.3
+  - angle: 90
+    chance: 33.3
+  - angle: 180
+    chance: 33.3
+  delayBetweenCommandAndInitializeGrid: 1
+  soundOnEndGame: {fileID: 8300000, guid: 3ff71b8f622e3ec4f88634c0c04271c0, type: 3}
+  scaleDuration: 0.25
+  rotateDuration: 0.25
+  rotateCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  onPhotoClickAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  background: {fileID: 2800000, guid: 9241f300d97965f488c7ae9e19ac4d83, type: 3}
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}
+  commandText: 
