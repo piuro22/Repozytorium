@@ -11,7 +11,7 @@ public class LoginController : MonoBehaviour
     public TMP_InputField passwordInput;
     public TMP_Text messageText;
 
-    public string loginURL = "http://yoopieenglish.pl/Unity/GetTableJson.php"; // Replace with your server URL
+    public string loginURL = "https://yoopieenglish.pl/Unity/GetTableJson.php"; // Replace with your server URL
     public UnityEvent OnSuccesLogin;
 
     private const string CREDENTIALS_FILE_NAME = "userCredentials.json";
