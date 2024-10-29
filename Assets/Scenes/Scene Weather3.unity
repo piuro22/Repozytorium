@@ -2057,13 +2057,17 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: c2e492def1e96bd4586445a8052ab514, type: 3}
+      propertyPath: gameProperties.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: c2e492def1e96bd4586445a8052ab514, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 2bafda4501fc8c642885c81563263648, type: 2}
+      objectReference: {fileID: 11400000, guid: 37ea81ba6f5382543a2cad3e5ad1f9ff, type: 2}
     - target: {fileID: 2154314670046141368, guid: c2e492def1e96bd4586445a8052ab514, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 6c9ce908b88b52248820e60f20717ee4, type: 2}
+      objectReference: {fileID: 11400000, guid: 582f430aae102a64d949e7168807bb0b, type: 2}
     - target: {fileID: 2154314670046141368, guid: c2e492def1e96bd4586445a8052ab514, type: 3}
       propertyPath: gameProperties.Array.data[2]
       value: 
