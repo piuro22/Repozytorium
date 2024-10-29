@@ -189,7 +189,7 @@ MonoBehaviour:
   loginInput: {fileID: 1011262103}
   passwordInput: {fileID: 1360156952}
   messageText: {fileID: 134099872}
-  loginURL: http://yoopieenglish.pl/Unity/login.php
+  loginURL: https://yoopieenglish.pl/Unity/login.php
   OnSuccesLogin:
     m_PersistentCalls:
       m_Calls:
