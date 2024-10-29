@@ -511,7 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4da378e78a037bd48abe36ec3d469820, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7665ecd05596c504bad14b90e7018162, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -970,7 +970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &955195898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1190,12 +1190,24 @@ MonoBehaviour:
   rotationAngle: 90
   prefabScale: {x: 0.1, y: 0.1, z: 0.1}
   units:
-  - UnitPrefab: {fileID: 7357801014477358990, guid: 254f58ba1743fc844988e458915ea48d, type: 3}
-    unitName: Unit 7
-    sceneToLoadName: Scene Level 1
-  - UnitPrefab: {fileID: 7357801014477358990, guid: dcb465d4c110cbd44a6bffe55a795ef5, type: 3}
-    unitName: Unit 8
-    sceneToLoadName: Scene Level Change
+  - UnitPrefab: {fileID: 7357801014477358990, guid: b8b7b4eb46d1e054f98fd7ac9080dbc2, type: 3}
+    unitName: Animals
+    sceneToLoadName: Scene Animals2
+  - UnitPrefab: {fileID: 7357801014477358990, guid: 59e95d48b0861894aa278d1a04866d46, type: 3}
+    unitName: Home
+    sceneToLoadName: Scene Home2
+  - UnitPrefab: {fileID: 7357801014477358990, guid: d369d754e4b711046a6bdb8ca22448eb, type: 3}
+    unitName: Routine
+    sceneToLoadName: Scene Routine2
+  - UnitPrefab: {fileID: 7357801014477358990, guid: 5e8ab627389572e46a71580f90757202, type: 3}
+    unitName: Winter clothes
+    sceneToLoadName: Scene WClothes2
+  - UnitPrefab: {fileID: 7357801014477358990, guid: 791034d9fe9d8784c998427da02ebbe5, type: 3}
+    unitName: Body
+    sceneToLoadName: Scene Body2
+  - UnitPrefab: {fileID: 7357801014477358990, guid: 27f5f2c1fb0870843b1987dfff2da612, type: 3}
+    unitName: Fruits
+    sceneToLoadName: Scene Fruit2
   swipeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1285,8 +1297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 245, y: -39}
-  m_SizeDelta: {x: 63.5505, y: 39.123596}
+  m_AnchoredPosition: {x: 270, y: -39}
+  m_SizeDelta: {x: 49.5799, y: 49.5799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210617338
 MonoBehaviour:
@@ -1377,8 +1389,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 01ff5aadde40bb0428beb93d8471bc5e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1432,8 +1444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40.213257}
-  m_SizeDelta: {x: -197.6193, y: 389.7867}
+  m_AnchoredPosition: {x: 0, y: -98.1}
+  m_SizeDelta: {x: -197.6193, y: 0}
   m_Pivot: {x: 0.49999997, y: 1}
 --- !u!114 &1319067494
 MonoBehaviour:
@@ -1697,10 +1709,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unit 1
+  m_text: Unit 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 32eed0b735a369d46ab9c6d57c3c68d6, type: 2}
+  m_sharedMaterial: {fileID: 6968251955923977856, guid: 32eed0b735a369d46ab9c6d57c3c68d6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1724,8 +1736,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7068,7 +7080,7 @@ RectTransform:
   m_GameObject: {fileID: 2030495062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1763332600}
@@ -7155,7 +7167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 41e2584dfda23854c8fa82847e3cf8d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d5b5f825889d794781a48a7dd2e9bd4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -18,6 +18,8 @@ public class HighlightObjectGameScriptable : ScriptableObject
     [LabelText("Dźwięk gdy źle klikniemy")]
     public AudioClip wrongClickAudioClip;
 
+   // [LabelText("Dźwięk gdy dobrze klikniemy")]
+  //  public AudioClip goodClickAudioClip;
 
 
 

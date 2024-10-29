@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &70411155
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &235297484
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &278159538
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &331518514
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &345220302
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &351539756
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &444371049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &457803793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &468861945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468861945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16839981, y: 2.0133, z: 0}
+  m_LocalPosition: {x: -0.0171, y: 1.918, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1248,6 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &471615305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &480102984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &482268339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &552674093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +1653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &590005449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &655965225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &677705728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &687985239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,6 +2169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &797884139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &844677317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &862536631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &868846886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +2612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &930265423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 445095517731401765, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
@@ -2694,6 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &989671496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,6 +2815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1198613836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +2842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198613836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8143003, y: 2.0229998, z: 0}
+  m_LocalPosition: {x: -0.017, y: -1.918, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2890,6 +2914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1213870426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,7 +2941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213870426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19519973, y: -1.9715002, z: 0}
+  m_LocalPosition: {x: -3.85234, y: -1.918, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2988,6 +3013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1227021284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,6 +3112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1319908761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,6 +3421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!114 &1341835785 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2055165059, guid: 27e6bade7867213459264d286c00b6c7, type: 3}
@@ -3503,6 +3531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1458871193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3601,6 +3630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1466059639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,6 +3729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1466244814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,7 +3756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466244814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.18, y: 2.0133, z: 0}
+  m_LocalPosition: {x: -3.85241, y: 1.91808, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3797,6 +3828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1466988825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,6 +3927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1480993466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,6 +4026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1503137659
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,6 +4125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1507890929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1511238810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,6 +4323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1513893519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,6 +4422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1533093988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +4521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1567212084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,6 +4688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1848624428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,6 +4915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1881978609
 GameObject:
   m_ObjectHideFlags: 0
@@ -5013,6 +5054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &1921064287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,7 +5124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958720295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.18, y: -1.96, z: 0}
+  m_LocalPosition: {x: 3.81755, y: 1.91805, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5154,6 +5196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &2076762676
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,7 +5260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088920069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8143003, y: -1.987, z: 0}
+  m_LocalPosition: {x: 3.8179, y: -1.9183, z: 0}
   m_LocalScale: {x: 3.8315322, y: 3.8315322, z: 3.8315322}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5289,6 +5332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &2110351917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5387,6 +5431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &2124673789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5485,6 +5530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &2131511535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,6 +5629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
+  canRotate: 0
 --- !u!1 &2131592074
 GameObject:
   m_ObjectHideFlags: 0

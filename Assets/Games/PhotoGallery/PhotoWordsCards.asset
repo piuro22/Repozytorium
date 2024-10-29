@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoWordsCards
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 91f159b2f733aff449e120651f4563af, type: 3}
+  shouldPlayAudioAutomatically: 1
+  photoWithAudios:
+  - photo: {fileID: 21300000, guid: d48738d9d3791504f8bf48572602eb3e, type: 3}
+    audioClip: {fileID: 8300000, guid: f7ebb2a455307d2439b872a050dabaf1, type: 3}
+  - photo: {fileID: 21300000, guid: 5793a20590ae4c04d923f636585133bb, type: 3}
+    audioClip: {fileID: 8300000, guid: 3e2a269ecd4449644b5010ac1ad874c6, type: 3}
+  - photo: {fileID: 21300000, guid: 43c204a1f36c47142802da981e443af2, type: 3}
+    audioClip: {fileID: 8300000, guid: a2e8268684255a0459c2df5ca187715e, type: 3}
+  - photo: {fileID: 21300000, guid: 0ea3ecb80f9458144a729895dbc3e4eb, type: 3}
+    audioClip: {fileID: 8300000, guid: 26d9391dfbdcb324bb89ed08e403567c, type: 3}
+  - photo: {fileID: 21300000, guid: ee536e5ba71ec67459bb2e3cfe4ad658, type: 3}
+    audioClip: {fileID: 8300000, guid: e295897a5ae0caa40af07b49d9b03610, type: 3}
+  - photo: {fileID: 21300000, guid: ca817af09ec49994d8ff6447b12a81a8, type: 3}
+    audioClip: {fileID: 8300000, guid: f78298cfc0062e84d89e66f173af8465, type: 3}
+  - photo: {fileID: 21300000, guid: 15d7dc48bbbccb84db0058b019eb8a54, type: 3}
+    audioClip: {fileID: 8300000, guid: 15ae61f72d6e1364d9d3b77223743c37, type: 3}
+  - photo: {fileID: 21300000, guid: ebabdddb48ddb424d9a0a6590d6097e1, type: 3}
+    audioClip: {fileID: 8300000, guid: b550a24122cd4724683c67d0a6eb65cf, type: 3}
+  - photo: {fileID: 21300000, guid: 6085d339847e89440b57aa00141c534b, type: 3}
+    audioClip: {fileID: 8300000, guid: e5cd6c85fc547fd4a98578f2ae646301, type: 3}
+  useAudio: 1
+  useScreenClick: 1
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}

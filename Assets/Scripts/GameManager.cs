@@ -77,8 +77,23 @@ public class GameManager : MonoBehaviour
     public void BackToUnitSelect()
     {
         SceneManager.LoadScene("UnitSelect");
-        
+
     }
+    public void BackToUnitSelect3()
+    {
+        SceneManager.LoadScene("UnitSelect 3");
+
+    }    
+    public void BackToUnitSelect2()
+    {
+        SceneManager.LoadScene("UnitSelect 2");
+
+    } public void BackToUnitSelect4()
+    {
+        SceneManager.LoadScene("UnitSelect 4");
+
+    }
+
 }
 
 

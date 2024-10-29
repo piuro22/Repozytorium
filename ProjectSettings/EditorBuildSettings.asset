@@ -18,23 +18,74 @@ EditorBuildSettings:
     path: Assets/Scenes/UnitSelect.unity
     guid: cd32def67a02be8439a162c4dbf0a133
   - enabled: 1
-    path: Assets/Scenes/UnitSelect 1.unity
-    guid: d05bfc05da079294eaffe0ae47b44402
-  - enabled: 1
     path: Assets/Scenes/UnitSelect 2.unity
-    guid: 714c69f8e0345a64eb4bc81ea2ddb93e
+    guid: 9004f02a46824194890e86009e9ff15f
   - enabled: 1
     path: Assets/Scenes/UnitSelect 3.unity
-    guid: 58568f024701c8d489349e6172b2533b
+    guid: 8b12f9beced201940bdf3489a48d4d7a
   - enabled: 1
-    path: Assets/Scenes/PhotosRotate.unity
-    guid: e452078e572fa0f47971f7f62426ac3e
+    path: Assets/Scenes/UnitSelect 4.unity
+    guid: 74eac92bf8c561242ac27a42659446e5
+  - enabled: 1
+    path: Assets/Scenes/Scene Animals2.unity
+    guid: acb9861504fadd44b9c631d83a329f83
+  - enabled: 1
+    path: Assets/Scenes/Scene Body2.unity
+    guid: 093175279817be94aa81c043ac03b93c
+  - enabled: 1
+    path: Assets/Scenes/Scene Fruits2.unity
+    guid: c65f700d67d5d0f499627d3c5f295e69
+  - enabled: 1
+    path: Assets/Scenes/Scene Home2.unity
+    guid: d0ba51c978e01f74cbe983f78f03eefa
+  - enabled: 1
+    path: Assets/Scenes/Scene Routine2.unity
+    guid: d9217efb41ac64545ba7ccab398d7b65
+  - enabled: 1
+    path: Assets/Scenes/Scene WClothes2.unity
+    guid: 73bdd74a7184c3149a78097b4daa8851
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Scene Furniture3.unity
+    guid: 6cb255e58e4e54446a3974cf6d2fe464
+  - enabled: 1
+    path: Assets/Scenes/Scene Town3.unity
+    guid: fff15a85a6fead545af853ef846a8168
+  - enabled: 1
+    path: Assets/Scenes/Scene Vegetables3.unity
+    guid: d8f84eb3b121a7b479d7e781f7a62b6e
+  - enabled: 1
+    path: Assets/Scenes/Scene Vehicles3.unity
+    guid: c8ba89dfb733e9f4a848be839faee5d9
+  - enabled: 1
+    path: Assets/Scenes/Scene Weather3.unity
+    guid: 10d297d86f20a554680249f68654cd72
+  - enabled: 1
+    path: Assets/Scenes/Scene MyDay4.unity
+    guid: fcf0d641f6c124b42a660570f8baa5f3
+  - enabled: 1
+    path: Assets/Scenes/Scene Feeling4.unity
+    guid: 18d73625ee1684646be6b7904c6e85bd
+  - enabled: 1
+    path: Assets/Scenes/Scene Jobs4.unity
+    guid: 983ec95b7b575154d957667eab56f91a
+  - enabled: 1
+    path: Assets/Scenes/Scene BedTime4.unity
+    guid: 7958ceab7d54de6458714f4be216d434
+  - enabled: 1
+    path: Assets/Scenes/Scene School4.unity
+    guid: 280219ed13055124c8bbee74461ff043
+  - enabled: 1
+    path: Assets/Scenes/Scene Playground4.unity
+    guid: 890e272ec569bad40a801d8ed2045664
+  - enabled: 1
+    path: Assets/Scenes/Scene Zoo Animals3.unity
+    guid: 75f934667a115084b8c4bdb227c3d0ed
   - enabled: 1
     path: Assets/Scenes/QuizPictures.unity
     guid: 1409b03e80ddd3f46b8206bf2c6f50f6
-  - enabled: 1
-    path: Assets/Scenes/Scene Family.unity
-    guid: b365e185343b8eb49826e3e5bdf5e500
   - enabled: 1
     path: Assets/Scenes/Mp3Player.unity
     guid: 70b72f8f4d6d4c2478d858a7ce545e71
@@ -65,6 +116,60 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Food.unity
     guid: f7c633deabb54c949852fa0cd48f91ac
+  - enabled: 1
+    path: Assets/Scenes/PhotosRotate.unity
+    guid: e452078e572fa0f47971f7f62426ac3e
+  - enabled: 1
+    path: Assets/Scenes/Scene Family.unity
+    guid: b365e185343b8eb49826e3e5bdf5e500
+  - enabled: 0
+    path: Assets/Scenes/Scene Home.unity
+    guid: accdea71419b4544fb779896366fbe41
+  - enabled: 1
+    path: Assets/Scenes/Scene Clothes1.unity
+    guid: 58818322a790af34997a2253133e7111
+  - enabled: 1
+    path: Assets/Scenes/Scene Family1.unity
+    guid: 0025bb3b94414a242992d4d71d5457ed
+  - enabled: 1
+    path: Assets/Scenes/Scene Food1.unity
+    guid: 0a7f714dfc069b04d993473680982acc
+  - enabled: 1
+    path: Assets/Scenes/Scene Pets1.unity
+    guid: 563c9ae4db9b2bf4d8af34740c52cfb4
+  - enabled: 1
+    path: Assets/Scenes/Scene Toys1.unity
+    guid: 9731e9f90583e3d46b56b3cdc9276d0e
+  - enabled: 0
+    path: Assets/Scenes/Scene Fruit.unity
+    guid: b393aa26db9d55d48a7cfe98873470fc
+  - enabled: 0
+    path: Assets/Scenes/Scene Routine.unity
+    guid: 4d0ff12ddb8e40e49a5b8c1c14e0ef30
+  - enabled: 0
+    path: Assets/Scenes/Scene Winter clothes.unity
+    guid: 43026edc564ed2a4e876d131305b051d
+  - enabled: 0
+    path: Assets/Scenes/Scene Body.unity
+    guid: 73a4e6b389a525a4199527dc29759b5b
+  - enabled: 0
+    path: Assets/Scenes/Scene Furniture 3.unity
+    guid: 3b9f41a7ace9fdc4883effe4edfa26cf
+  - enabled: 0
+    path: Assets/Scenes/Scene Town 3.unity
+    guid: de6f561bb3c25f94abac36375f97bee3
+  - enabled: 0
+    path: Assets/Scenes/Scene Vegetables 3.unity
+    guid: 98e2f5be850d95345b63cc9406d8c76d
+  - enabled: 0
+    path: Assets/Scenes/Scene Vehicles 3.unity
+    guid: f09f4c74e2c22e84cbbdb31e6f0ffee5
+  - enabled: 0
+    path: Assets/Scenes/Scene Weather 3.unity
+    guid: 9dc0946f20c9c4f4896c462ac430d759
+  - enabled: 0
+    path: Assets/Scenes/Scene Zoo Animals 3.unity
+    guid: 984a8bc4e798f2a4c9d794888ebf73b1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -74,12 +179,30 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Animals.unity
     guid: b98626fd012128f4eaadd06577ba8310
-  - enabled: 1
-    path: Assets/Scenes/UnitSelect lewel 2.unity
-    guid: dfd8feb15ba33b944a61b9111886fd7a
+  - enabled: 0
+    path: Assets/Scenes/Scene Bedtime 4.unity
+    guid: a0aa3d6629658be46b174a63d950e539
+  - enabled: 0
+    path: Assets/Scenes/Scene Feeling 4.unity
+    guid: 1e23ebe8608fb5243a524bb6d44802b2
+  - enabled: 0
+    path: Assets/Scenes/Scene Jobs 4.unity
+    guid: 886d86882d7db7b4b9535bcee142c0fb
+  - enabled: 0
+    path: Assets/Scenes/Scene My Day 4.unity
+    guid: cb2c319b926b5bd49b1e2192da2cff1d
+  - enabled: 0
+    path: Assets/Scenes/Scene Playground 4.unity
+    guid: 186f4e9828da3b048801af31b5536b6c
+  - enabled: 0
+    path: Assets/Scenes/Scene School 4.unity
+    guid: f43518e1dae408b49926812c8e24926f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

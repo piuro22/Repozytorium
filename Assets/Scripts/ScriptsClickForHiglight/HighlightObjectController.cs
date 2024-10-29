@@ -84,13 +84,13 @@ public class HighlightObjectController : MonoBehaviour
                 }
                 else
                 {
-                 
+                    
                 }
+              
 
-        
             }
-            
 
+           // audioSource.PlayOneShot(highlightObjectGameController.highlightObjectGameScriptable.goodClickAudioClip);
         }
     }
 
