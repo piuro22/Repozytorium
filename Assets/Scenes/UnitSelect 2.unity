@@ -1207,7 +1207,7 @@ MonoBehaviour:
     sceneToLoadName: Scene Body2
   - UnitPrefab: {fileID: 7357801014477358990, guid: 27f5f2c1fb0870843b1987dfff2da612, type: 3}
     unitName: Fruits
-    sceneToLoadName: Scene Fruit2
+    sceneToLoadName: Scene Fruits2
   swipeCurve:
     serializedVersion: 2
     m_Curve:

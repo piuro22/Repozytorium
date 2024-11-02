@@ -135,7 +135,7 @@ public class DragAndDropGameProperties : ScriptableObject
 
     [BoxGroup("Gdy źle dopasujemy obrazek")]
     [LabelText("Grubość podświetlenia obrazka")]
-    [Range(0,1)]
+    [Range(0, 1)]
     public float onWrongContainerOutlineWidth = 0.5f;
 
     [BoxGroup("Gdy źle dopasujemy obrazek")]
@@ -333,6 +333,7 @@ public class DragAndDropObjectProperties
 
     [BoxGroup("Obiekt kontenera")]
     [LabelText("Warstwa obiektu kontenera")]
+    [ValueDropdown("GetLayerList")]
     public int targetLayer;
 
 
@@ -345,7 +346,19 @@ public class DragAndDropObjectProperties
     [LabelText("Unikalny dźwięk odtwarzany gdy podniesiemy obrazek")]
     public AudioClip onDragAudioClip;
 
-
+    private ValueDropdownList<int> GetLayerList()
+    {
+        ValueDropdownList<int> layers = new ValueDropdownList<int>();
+        for (int i = 0; i < 32; i++)
+        {
+            string layerName = LayerMask.LayerToName(i);
+            if (!string.IsNullOrEmpty(layerName))
+            {
+                layers.Add(layerName, i);
+            }
+        }
+        return layers;
+    }
 
     private bool CheckAlternativeTexture()
     {
@@ -392,7 +405,7 @@ public class DragAndDropObjectProperties
 [Serializable]
 public class DragAndDropGameSequence
 {
-   
+
     [LabelText("ID chwytanego obiektu")]
     public int objectID;
     [LabelText("Tekst wyświetlany podczas sekwencji")]

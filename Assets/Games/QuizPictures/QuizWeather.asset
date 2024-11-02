@@ -28,7 +28,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 200}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 417ebfe716a1e8a44be326561ea020b3, type: 3}
+    questionClip: {fileID: 8300000, guid: f03dbf48869264141bfca52bd96eed37, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 9cb1db35d1c79fb4aab787d18c118262, type: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 90fe9c9670ef1014597a4133114b6e11, type: 3}
+    questionClip: {fileID: 8300000, guid: 486c4590a15195c4da2d5177afdc945c, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: d14f848cbd3a0e343aba91e6cac61f1d, type: 3}
@@ -50,7 +50,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     questionText: 
-    questionClip: {fileID: 8300000, guid: f798108ee7a8e2444a3230af5b111822, type: 3}
+    questionClip: {fileID: 8300000, guid: e7f6d85ac1b16dc40a54cc7464bb145b, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: fd497781aae9ab547980db6a7646169f, type: 3}
@@ -61,7 +61,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: e5cd6c85fc547fd4a98578f2ae646301, type: 3}
+    questionClip: {fileID: 8300000, guid: 86faed97120a0e34fbf29b00edc959ed, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: f9719db2f8ddd924cb5a2df2f1cb7f8e, type: 3}
@@ -71,8 +71,8 @@ MonoBehaviour:
       picture: {fileID: 21300000, guid: 9cb1db35d1c79fb4aab787d18c118262, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
-    questionText: Do you see giraffe
-    questionClip: {fileID: 8300000, guid: ed791474d20cd634290a87e21c4cc552, type: 3}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: ecaaf9a9913e07345aa59319adb57f28, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: a027bd9898e40d343993a111ba4530d7, type: 3}
@@ -83,7 +83,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: a08fd38e32609b74880b8839520e4427, type: 3}
+    questionClip: {fileID: 8300000, guid: 85377a52da0cd614ca1e459b4a18da42, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: b30540004a197e14e96be46e658f4ea8, type: 3}
@@ -94,4 +94,4 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 2e6e3caaed182974fbcfafc3b478513d, type: 3}
+    questionClip: {fileID: 8300000, guid: c218c5213445f4d4a88bca4ce136af94, type: 3}

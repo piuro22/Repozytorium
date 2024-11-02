@@ -19,7 +19,7 @@ MonoBehaviour:
     scale: {x: 0.6, y: 0.54}
     layer: 1
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0

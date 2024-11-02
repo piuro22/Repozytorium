@@ -23,7 +23,7 @@ MonoBehaviour:
   useAlternativeTexture: 0
   backGroundTexture: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
   waitTimeOnIncorrectReveal: 1.5
-  OnRevealCorrectSound: {fileID: 0}
+  OnRevealCorrectSound: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   OnRevealInCorrectSound: {fileID: 0}
   OnGameFinishedSound: {fileID: 0}
   OnFirstCardRevealSound: {fileID: 0}
@@ -53,28 +53,28 @@ MonoBehaviour:
   memoryCardDatas4x2:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: cea165f4d23c9714db86005814533659, type: 3}
-    audioclip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
+    audioclip: {fileID: 8300000, guid: 1fa7f3fcfcf5cdf448e6a89df7053f72, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 68f2826de4ba16242ab71ae4043a92fb, type: 3}
-    audioclip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
+    audioclip: {fileID: 8300000, guid: 0fa75e42a3f4501408dbc7e361f045cb, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: da77e469befa4144597ba164fb8f487a, type: 3}
-    audioclip: {fileID: 8300000, guid: 2601322cf91ba82408d600251a6e7be6, type: 3}
+    audioclip: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: e21b966794813e6409232588be7e0609, type: 3}
-    audioclip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
+    audioclip: {fileID: 8300000, guid: fd8c2b6fee3b8144cad47f389e40faf0, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

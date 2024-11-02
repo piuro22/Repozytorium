@@ -17,7 +17,7 @@ MonoBehaviour:
   - texture: {fileID: 2800000, guid: 041207ee4e50bfc47ad8242ef88c5315, type: 3}
     position: {x: 4.02, y: 0.18}
     scale: {x: 0.4, y: 0.4}
-    layer: 0
+    layer: 10
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
   commandText: 
@@ -39,29 +39,29 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 7
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: f123bd07c0992d24083b9f13c7e0e699, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 69296faf800e89d40b72a2a24fec1f06, type: 3}
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7e6928b9c28b0f74189b7cdbc2603270, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: f5e7234318cf40e4683667a841c0fec7, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 4d3cbf08e44d3cf409e94f2e7217b003, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 4c917dec74c5a064d863b9e6d45f8dc6, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 07e1cb7acfbc52e479d7ef326b88b4c2, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 8916e66bcc8e16d4ab0b117e78b8ce52, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 988e1c54edcce1e47901711547af9ab9, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 2001a73ff3ae8e248b4607e672456a65, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 5888ff18d03045647abe84de56f9e64e, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 0}
-  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: bb9eb5418d20f2542bbcd28df9cef0f3, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
   onWrongContainerOutlineWidth: 0.576
@@ -85,7 +85,7 @@ MonoBehaviour:
     scale: {x: 0.5, y: 0.5}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
-    layer: 6
+    layer: 5
     alternativeTargetTexture: {fileID: 2800000, guid: e520ea79d43d07b47945ae60992e1dbb, type: 3}
     additionalOffset: {x: 0.2, y: 0.6}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
     scale: {x: 0.8, y: 0.8}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
-    layer: 2
+    layer: 7
     alternativeTargetTexture: {fileID: 2800000, guid: 0701c4ac90022884a86651979832cf35, type: 3}
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
-    layer: 1
+    layer: 9
     alternativeTargetTexture: {fileID: 0}
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}

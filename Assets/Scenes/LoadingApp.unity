@@ -155,7 +155,7 @@ MonoBehaviour:
   shouldCleanUnnecessaryFiles: 1
   shouldShowConsole: 1
   downloadPath: download
-  tableLink: http://yoopieenglish.pl/Unity/GetTableJson.php
+  tableLink: https://yoopieenglish.pl/Unity/GetTableJson.php
   downloadedList:
     mp3TrackProperties: []
   consoleScrollRect: {fileID: 125489999}
@@ -640,8 +640,8 @@ RectTransform:
   m_GameObject: {fileID: 425252980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 180488013}
   m_RootOrder: 1
@@ -649,7 +649,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -0.81152, y: -108}
-  m_SizeDelta: {x: 358.7, y: 254.4507}
+  m_SizeDelta: {x: 1005, y: 547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425252982
 MonoBehaviour:
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 413886579b0d4f14887763a220b17ef9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e554e5d1e4cccce4c837f67f945427af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

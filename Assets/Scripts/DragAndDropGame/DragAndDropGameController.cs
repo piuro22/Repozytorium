@@ -95,7 +95,7 @@ public class DragAndDropGameController : MonoBehaviour
             dragObject.dragAndDropObjectProperties = dragAndDrop;
             dragObject.dragAndDropGameController = this;
             dragObject.id = dragAndDrop.id;
-            dragObject.GetComponent<SpriteRenderer>().sortingLayerID = dragAndDrop.layer;
+            dragObject.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(dragAndDrop.layer));
             dragAndDropObjectControllers.Add(dragObject);
             DropContainerObjectController dropContainerObject = Instantiate(dropContainerPrefab.GetComponent<DropContainerObjectController>());
             dragObject.dropContainerObjectController = dropContainerObject;
@@ -144,7 +144,8 @@ public class DragAndDropGameController : MonoBehaviour
             dropContainerObject.spriteRenderer.color = new Color(1, 1, 1, dragAndDropGameProperties.containerTransparency);
 
 
-            dropContainerObject.GetComponent<SpriteRenderer>().sortingLayerID = dragAndDrop.targetLayer;
+            dropContainerObject.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(dragAndDrop.targetLayer));
+
             dropContainerObject.dragAndDropObjectController = dragObject;
             dropContainerObject.gameObject.AddComponent<PolygonCollider2D>();
         }
@@ -163,6 +164,7 @@ public class DragAndDropGameController : MonoBehaviour
                 dragAndDropObjectController.isLockedBySequence = false;
             }
         }
+        Debug.Log("Wait for command" + gameObject.name);
         StartCoroutine(WaitForCommandEnd());
     }
 
@@ -185,13 +187,16 @@ public class DragAndDropGameController : MonoBehaviour
                     if (dragAndDropObjectController.id == dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].objectID)
                     {
                         dragAndDropObjectController.isLockedBySequence = false;
-                    }
-                    else
-                    {
-                        dragAndDropObjectController.isLockedBySequence = true;
+                        Debug.Log("Check Sequence" + gameObject.name);
                         messageText.text = dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].textMessage;
                         audioSource.PlayOneShot(dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].dialogOnSequenceStart);
                         temdialogOnSequenceStart = dragAndDropGameProperties.dragAndDropGameSequences[currentSequenceStep].dialogOnSequenceStart;
+                    }
+                    else
+                    {
+
+                        dragAndDropObjectController.isLockedBySequence = true;
+
                     }
                 }
             }
@@ -215,10 +220,15 @@ public class DragAndDropGameController : MonoBehaviour
                 }
                 else
                 {
-                    gameFinishScreen.gameObject.SetActive(true);
+                    Invoke("ShowGameFinishScreen", 2f);
+                   // gameFinishScreen.gameObject.SetActive(true);
                 }
             }
         }
+    }
+    private void ShowGameFinishScreen()
+    {
+        gameFinishScreen.gameObject.SetActive(true);
     }
 
     Texture2D duplicateTexture(Texture2D source)

@@ -39,10 +39,11 @@ public class PhotoGalleryController : MonoBehaviour
     }
     private void SetupMusic()
     {
+        musicController.PlayOneShot(gameProperties.gameCommandAudioClip);
         musicController.clip = gameProperties.gameMusic;
         musicController.loop = true;
         musicController.Play();
-        musicController.PlayOneShot(gameProperties.gameCommandAudioClip);
+        
 
     }
 
@@ -77,7 +78,7 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void SetupButtons()
     {
-
+        
         if (gameProperties.useScreenClick)
         {
             nextButton.gameObject.SetActive(false);
@@ -102,12 +103,13 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void InitializeGallery()
     {
+        SetupMusic();
         if (gameProperties.photoWithAudios.Count < 2)
         {
             Debug.LogError("Insufficient photos with audio.");
             return;
         }
-        SetupMusic();
+       // SetupMusic();
         background.sprite = gameProperties.background;
         SetupInitialImages();
 

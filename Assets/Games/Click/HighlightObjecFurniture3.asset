@@ -17,60 +17,60 @@ MonoBehaviour:
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
   gameSequence:
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 436d2860c3289f74886ed50d0378e4ca, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: e0245efcd8cba6043977635a2fd8d039, type: 3}
     objectsToHighlights:
     - ObjectID: 3
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 42ffe8631b82f7c4e967b0ee40b6bb8f, type: 3}
     objectsToHighlights:
     - ObjectID: 0
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 07d9ef1d9ac8d9141b84804293154c5e, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 35bc642d150df6d448cf4a934b84022f, type: 3}
     objectsToHighlights:
     - ObjectID: 6
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 9fd277e5e01b69240bac19d0d90f2056, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d67c62fba003def4a9de498440efe85e, type: 3}
     objectsToHighlights:
     - ObjectID: 2
     SequenceTime: 0
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2669179d662245f44ac84d8731f1e514, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: aa64e34dfd4fc54419b285eb5f1b2136, type: 3}
     objectsToHighlights:
     - ObjectID: 4
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 7d5c12a7447ea0c43b0c5bcadf90fe6f, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 30161281d2dc5e74d8c1c4dbb4a19cbf, type: 3}
     objectsToHighlights:
     - ObjectID: 1
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 535adfc7b25ff2842a3ddccb2dfb9c0b, type: 3}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: ae5b0547a8f5fbd48b5c35fc9c466b71, type: 3}
     objectsToHighlights:
     - ObjectID: 5
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 30cfa6f868a95d54485a46e5103f2412, type: 3}
     objectsToHighlights:
     - ObjectID: 7
-    SequenceTime: 0
-    waitForClick: 0
-    audioClipOnClick: {fileID: 0}
-  - audioClipOnSingleSequenceStart: {fileID: 0}
+    SequenceTime: 4
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: fe735250a7566c542924e57e43f80d60, type: 3}
     objectsToHighlights:
     - ObjectID: 8
-    SequenceTime: 0
-    waitForClick: 0
-    audioClipOnClick: {fileID: 0}
+    SequenceTime: 2
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   higlightObjects:
   - id: 0
     texture: {fileID: 2800000, guid: 6b4b051aaf0c6ae48bd1f6d08c38ce76, type: 3}

@@ -745,6 +745,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_SizeDelta.y
       value: 150
       objectReference: {fileID: 0}
@@ -762,11 +766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000014305
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32.9
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
@@ -1183,7 +1187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651843591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2081.6414, y: 1129.7706, z: 8.005415}
+  m_LocalPosition: {x: -2.72, y: -0.22, z: 8.005415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1202,7 +1206,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.324
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1395,11 +1399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.9
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8831124691015225171, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36.8
+      value: -5.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0410c187d0b5bd74dbaf79303969ab93, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
   gameSequence:
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d68baaade2974d745843e607c9786666, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 15b3f7468a2d8964f993b3162039b1e3, type: 3}
     objectsToHighlights:
     - ObjectID: 3
     SequenceTime: 2
@@ -47,7 +47,7 @@ MonoBehaviour:
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 7ab3337959e1c5e41b1953dfeb760644, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 535adfc7b25ff2842a3ddccb2dfb9c0b, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 5c320a8a11b691f489722dee4a2c2ca5, type: 3}
     objectsToHighlights:
     - ObjectID: 5
     SequenceTime: 2

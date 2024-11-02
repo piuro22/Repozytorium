@@ -779,6 +779,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2050741405}
     m_Modifications:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: gameType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: chapterTitle
       value: 7
       objectReference: {fileID: 0}
@@ -789,7 +793,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 97ffa43fd6cdd5b4c90af2ab7ed4af99, type: 2}
+      objectReference: {fileID: 11400000, guid: 56dc97f1e4c2da344b374d6aa9836d16, type: 2}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: 7
