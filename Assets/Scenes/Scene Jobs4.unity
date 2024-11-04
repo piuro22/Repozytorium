@@ -626,7 +626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: gameType
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: chapterTitle
@@ -634,12 +634,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: gameProperties.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 810c91d93aaeb814e96085a57da8528b, type: 2}
+      objectReference: {fileID: 11400000, guid: 770252deb1b24c04db85fcbb291d47eb, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 49a167d4febcff04e913182c90d4ec2e, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: a9164418a801000419ccbf10eb462ccf, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 531bb37fbd4914940b77693c5e630a58, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 11ff44d20b255b94da18c3f9734871c2, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4bca426f01c65314a9ee210c07a44859, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 722ccf651aec35d49b54c146d42330c6, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c3605e327a2ac94d9025c49fcf48d6f, type: 2}
+    - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
+      propertyPath: gameProperties.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c661229e4afaff47a3978137346c728, type: 2}
     - target: {fileID: 5582804837462836365, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: m_text
       value: 6
@@ -3440,13 +3472,17 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2154314670046141368, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
+      propertyPath: gameProperties.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154314670046141368, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
       propertyPath: gameProperties.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 16f515c4ce57c7d41ac4a6702f6c5d28, type: 2}
+      objectReference: {fileID: 11400000, guid: b43c3c88b145334439439912f8ebbf6d, type: 2}
     - target: {fileID: 2154314670046141368, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
       propertyPath: gameProperties.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 81774540e105f0a448c3ebdeeafff138, type: 2}
+      objectReference: {fileID: 11400000, guid: f3e92dd9f56a0ff4eb71a87f907b80d1, type: 2}
     - target: {fileID: 2154314670046141368, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
       propertyPath: gameProperties.Array.data[2]
       value: 
