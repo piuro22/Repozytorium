@@ -7,10 +7,10 @@ using UnityEngine.Networking;
 
 public class AdminController : MonoBehaviour
 {
-    [SerializeField] private string wwwDownloadTable = "http://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
-    [SerializeField] private string wwwRemoveRecord = "http://www.skydomesoftware.usermd.net/Toki/RemoveRecord.php";
-    [SerializeField] private string wwwAddRecord = "http://www.skydomesoftware.usermd.net/Toki/AddRecord.php";
-    [SerializeField] private string wwwUpdateRecord = "http://www.skydomesoftware.usermd.net/Toki/UpdateRecord.php";
+    [SerializeField] private string wwwDownloadTable = "https://www.skydomesoftware.usermd.net/Toki/GetTableJson.php";
+    [SerializeField] private string wwwRemoveRecord = "https://www.skydomesoftware.usermd.net/Toki/RemoveRecord.php";
+    [SerializeField] private string wwwAddRecord = "https://www.skydomesoftware.usermd.net/Toki/AddRecord.php";
+    [SerializeField] private string wwwUpdateRecord = "https://www.skydomesoftware.usermd.net/Toki/UpdateRecord.php";
     public RootMp3TrackProperties downloadedList;
 
  
