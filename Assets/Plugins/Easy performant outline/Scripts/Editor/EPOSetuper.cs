@@ -500,7 +500,7 @@ namespace EPOOutline
                     pathNoExt = pathNoExt.Substring(0, pathNoExt.Length - 1);
 
                     var asset = PipelineAssetUtility.CreateAsset(pathNoExt);
-                    GraphicsSettings.renderPipelineAsset = asset;
+                    GraphicsSettings.defaultRenderPipeline = asset;
                 }
             }
             else
