@@ -15,7 +15,7 @@ MonoBehaviour:
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  background: {fileID: 21300000, guid: f2a62d9141ec213428031d76b5234f1d, type: 3}
+  background: {fileID: 21300000, guid: 4aeae96c4c499f0468f04191a18000a2, type: 3}
   frameSprite: {fileID: 0}
   questions:
   - singleQuizPictures:

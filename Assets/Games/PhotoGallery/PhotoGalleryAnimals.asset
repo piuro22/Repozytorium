@@ -16,23 +16,23 @@ MonoBehaviour:
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 53f8cd129ed12ab4eb1fe55d1d049662, type: 3}
-    audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
+    audioClip: {fileID: 8300000, guid: c33a8758bb5f5c54b8e1ce730aa2ed11, type: 3}
   - photo: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
-    audioClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
+    audioClip: {fileID: 8300000, guid: 94831d989d852844ab94233884585ef6, type: 3}
   - photo: {fileID: 21300000, guid: 1241a2db914652d41a024ad48c71676c, type: 3}
-    audioClip: {fileID: 8300000, guid: 2cfb36512a0b419469de82777330cbac, type: 3}
+    audioClip: {fileID: 8300000, guid: 73d2e001d3a7386478167f8b3371a2ef, type: 3}
   - photo: {fileID: 21300000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
-    audioClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
-  - photo: {fileID: 21300000, guid: ae31bec1089ccd84e915594ae1ede01d, type: 3}
-    audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
+    audioClip: {fileID: 8300000, guid: 2397d0d595a6fe74fa7564bdbfba79d0, type: 3}
   - photo: {fileID: 21300000, guid: 61bf0cf5d5612d043a78171c95bfb657, type: 3}
-    audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
+    audioClip: {fileID: 8300000, guid: 104a90c6bc6066e439a044a7f530ce10, type: 3}
+  - photo: {fileID: 21300000, guid: ae31bec1089ccd84e915594ae1ede01d, type: 3}
+    audioClip: {fileID: 8300000, guid: edaa35fb5ae8fcc47a1cb48bdfa15445, type: 3}
   - photo: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e3aabce0d32697e47aac9180dfcf0ae8, type: 3}
   - photo: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: edf789a01077b9d46914c476722e6560, type: 3}
   - photo: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1c85ed9e94ff6014e9a471184c0f1ee0, type: 3}
   useAudio: 1
   useScreenClick: 1
   gameMusic: {fileID: 0}

@@ -1198,16 +1198,16 @@ MonoBehaviour:
     sceneToLoadName: Scene Zoo Animals3
   - UnitPrefab: {fileID: 7357801014477358990, guid: 65218823da82cba4ab8fd8bc4af127df, type: 3}
     unitName: Weather
-    sceneToLoadName: Scene Weather3
+    sceneToLoadName: Scene Weather30
   - UnitPrefab: {fileID: 7357801014477358990, guid: 2278eb8bbbfb73744aa412dae543b1cd, type: 3}
     unitName: Furniture
-    sceneToLoadName: Scene Furniture3
+    sceneToLoadName: Scene Furniture30
   - UnitPrefab: {fileID: 7357801014477358990, guid: f0fcd6d04c884734ea1e8efd2b667c90, type: 3}
     unitName: Vehicles
-    sceneToLoadName: Scene Vehicles3
+    sceneToLoadName: Scene Vehicles30
   - UnitPrefab: {fileID: 7357801014477358990, guid: 5e5667a684c4fa045b876ce69dfb2140, type: 3}
     unitName: Town
-    sceneToLoadName: Scene Town3
+    sceneToLoadName: Scene Town30
   swipeCurve:
     serializedVersion: 2
     m_Curve:
