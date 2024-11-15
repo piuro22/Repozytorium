@@ -12,11 +12,11 @@ public class TrackButtonController : MonoBehaviour
         textTitle.SetText(mp3TrackProperties.title);
     }
 
-    public void OnButtonClick()
+   /* public void OnButtonClick()
     {
         Mp3PlayerController.Instance.PlayTrack(mp3TrackProperties.title);
     }
-
+   */
       public void HighLightButton(bool state)
     {
         if (state == false)

@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LoadingApp.unity
     guid: d8d9c7b1a6e273347ae87080bcf0c9d2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene LoginPC.unity
     guid: 20de900bb2112584d96e8331e913d0c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Login.unity
     guid: ad0bc726ae5a231439aaf8b4c38bf454
   - enabled: 1
@@ -44,9 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene WClothes2.unity
     guid: 73bdd74a7184c3149a78097b4daa8851
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Scene Furniture3.unity
     guid: 6cb255e58e4e54446a3974cf6d2fe464
@@ -86,7 +83,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuizPictures.unity
     guid: 1409b03e80ddd3f46b8206bf2c6f50f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mp3Player.unity
     guid: 70b72f8f4d6d4c2478d858a7ce545e71
   - enabled: 1
@@ -101,7 +98,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DragAndDrop.unity
     guid: e9c49683e0ebd834d873f7515a6a7269
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/QRScanner.unity
     guid: 049e6a0d654a3e74b96a04f621b68ec9
   - enabled: 1
@@ -110,21 +107,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Clothes.unity
     guid: 14b3bf8550a14224288da1713d459c09
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Toys.unity
     guid: e50ab8641bd818848bee3ced07e64c91
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Food.unity
     guid: f7c633deabb54c949852fa0cd48f91ac
   - enabled: 1
     path: Assets/Scenes/PhotosRotate.unity
     guid: e452078e572fa0f47971f7f62426ac3e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Family.unity
     guid: b365e185343b8eb49826e3e5bdf5e500
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Scene Clothes1.unity
     guid: 58818322a790af34997a2253133e7111
@@ -137,79 +131,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Pets1.unity
     guid: 563c9ae4db9b2bf4d8af34740c52cfb4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Toys1.unity
     guid: 9731e9f90583e3d46b56b3cdc9276d0e
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/Scene Pets.unity
     guid: 78779fc246a3aff43aff32a465fbc634
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/PhotosGallery.unity
     guid: cbbd952c9681c0442b4f203ef28057b5
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
