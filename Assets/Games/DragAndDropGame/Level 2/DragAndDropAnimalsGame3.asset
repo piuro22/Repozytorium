@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: DragAndDropAnimalsGame3
   m_EditorClassIdentifier: 
   backGroundTexture: {fileID: 21300000, guid: a1c65bdc518d2854c8142613fef24720, type: 3}
-  dragAndDropObjectDecorations:
-  - texture: {fileID: 2800000, guid: 58b6f507a40ecaf4ba33c7c99fc21103, type: 3}
-    position: {x: -1.16, y: -0.6}
-    scale: {x: 0.3, y: 0.3}
-    layer: 1
+  dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: 
@@ -39,28 +35,31 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7b2f37b42f637214f8983680724b82e4, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0a836d8e35a017e4d90a179f9efa13dd, type: 3}
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7e880878468793643bd59a64f4824ebe, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: e25d065e302d6334dbeb2073acf8a15f, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: f1bcfb76fde1d5947bdf2c0dc97e304d, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0cfca7f788032a54884d1434446482c2, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 979a4096b77408640afa627e2e88b8ae, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 32f3b2ed3a470fb4d8151c75fa1c4c5d, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 410154b61b9c17a44876a4eb1696d83e, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 4ba77f7e2209483438c1a680d15e6dda, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 5dfec8ebff43c0d40b715dc29c0f4c81, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 01d608eecea5b39439af36b878de221d, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 6abdc730b68445f4990245e6ef62fc83, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2f9ed0668c834ca4a88fe41c13dcf8f6, type: 3}
   - objectID: 7
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 4f7d31f0cf08e334598af3b9ea23b2cb, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 9935749d4921f9744a687ce4b2a582c2, type: 3}
+  - objectID: 8
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 696b39308b676c04d9431076c7b71a07, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
@@ -79,10 +78,10 @@ MonoBehaviour:
     useSequence: 1
     id: 1
     texture: {fileID: 2800000, guid: 53f8cd129ed12ab4eb1fe55d1d049662, type: 3}
-    startPosition: {x: 2.663, y: -0.48}
+    startPosition: {x: 2.489, y: -1.063}
     startPositionMinMaxX: {x: 1, y: 2}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.4, y: 0.4}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 9
@@ -90,10 +89,10 @@ MonoBehaviour:
     additionalOffset: {x: 0.2, y: 0.6}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -112,7 +111,7 @@ MonoBehaviour:
     startPosition: {x: 2.6, y: -2}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.5, y: 0.5}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 5
@@ -120,10 +119,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0.6}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -142,7 +141,7 @@ MonoBehaviour:
     startPosition: {x: 4.14, y: -1.35}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.4, y: 0.4}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 2
@@ -150,10 +149,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -180,10 +179,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: -0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -210,10 +209,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -240,10 +239,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -262,7 +261,7 @@ MonoBehaviour:
     startPosition: {x: -0.03, y: -2.06}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.5, y: 0.5}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 7
@@ -270,10 +269,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -289,7 +288,7 @@ MonoBehaviour:
     useSequence: 1
     id: 7
     texture: {fileID: 2800000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
-    startPosition: {x: 0.885, y: 0.491}
+    startPosition: {x: 1.024, y: -1.904}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.3, y: 0.3}
@@ -300,12 +299,42 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: -1.34, y: -1.23}
+    targetPosition: {x: 3.93, y: -1.19}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
     onSuccesfullDragAudioClip: {fileID: 0}
     onDragAudioClip: {fileID: 8300000, guid: 3ff71b8f622e3ec4f88634c0c04271c0, type: 3}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 0
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 8
+    texture: {fileID: 2800000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
+    startPosition: {x: -0.853, y: -1.019}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.3, y: 0.3}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    layer: 0
+    alternativeTargetTexture: {fileID: 0}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 3.93, y: -1.19}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0, y: 0}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}

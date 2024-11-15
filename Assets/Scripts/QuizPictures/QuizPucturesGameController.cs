@@ -22,6 +22,7 @@ public class QuizPucturesGameController : MonoBehaviour
     //  public List<QuizTwoPicturesObjectController> quizTwoPicturesObjectControllers = new List<QuizTwoPicturesObjectController>();
     private int currentQuizIndex;
     public SpriteRenderer background;
+    public AudioClip QuizAudioClipOnSingleSequenceStart;
 
     private void Awake()
     {
@@ -66,6 +67,8 @@ public class QuizPucturesGameController : MonoBehaviour
         for (int i = 0; i < quizPicturesQuestionProperties.singleQuizPictures.Count; i++)
         {
             audioSource.PlayOneShot(quizPicturesQuestionProperties.questionClip);
+            QuizAudioClipOnSingleSequenceStart = quizPicturesQuestionProperties.questionClip;
+            
             questionText.text = quizPicturesQuestionProperties.questionText;
             quizPicturesObjectControllers[i].transform.localScale = Vector3.zero;
             quizPicturesObjectControllers[i].transform.DOScale(Vector3.one, 0.25f);
@@ -86,6 +89,7 @@ public class QuizPucturesGameController : MonoBehaviour
             SetupQuizPart(currentQuizIndex);
             Debug.Log("Next game");
         }
+       
         else
         {
             FinishGame();
@@ -102,6 +106,11 @@ public class QuizPucturesGameController : MonoBehaviour
     public void BackToChoseLevels()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("LastChoseGameScene"));
+    }
+    public void QuizQuestion()
+    {
+        if (QuizAudioClipOnSingleSequenceStart != null)
+            audioSource.PlayOneShot(QuizAudioClipOnSingleSequenceStart);
     }
 
 }

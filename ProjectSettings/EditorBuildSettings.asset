@@ -104,7 +104,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Colours.unity
     guid: 6ef3c62b1e15ba24a9063b36ccb8b240
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Clothes.unity
     guid: 14b3bf8550a14224288da1713d459c09
   - enabled: 0
@@ -131,7 +131,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene Pets1.unity
     guid: 563c9ae4db9b2bf4d8af34740c52cfb4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene Toys1.unity
     guid: 9731e9f90583e3d46b56b3cdc9276d0e
   - enabled: 0
