@@ -1216,7 +1216,7 @@ MonoBehaviour:
     sceneToLoadName: Scene BedTime4
   - UnitPrefab: {fileID: 7357801014477358990, guid: b216eb2f89d6b5d4eac40d6e15ac4fcf, type: 3}
     unitName: My day
-    sceneToLoadName: Scene Myday40
+    sceneToLoadName: Scene Myday4
   - UnitPrefab: {fileID: 7357801014477358990, guid: 6cf7786d32bf78c489de0bc83e90a6e9, type: 3}
     unitName: Feeling & emotions
     sceneToLoadName: Scene Feeling40

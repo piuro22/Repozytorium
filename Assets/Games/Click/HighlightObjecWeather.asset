@@ -17,55 +17,55 @@ MonoBehaviour:
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
   gameSequence:
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d795fc9cd371a5642a9d4e6338d11abd, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 72e00a17bd0a30a4db57043ae75e9678, type: 3}
     objectsToHighlights:
     - ObjectID: 3
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: ecaaf9a9913e07345aa59319adb57f28, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: d08bac8fdba4063479eb3e3104934ed3, type: 3}
     objectsToHighlights:
     - ObjectID: 0
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 6f96fcf0950d1a744bf937c7403fc2c2, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 3b3e995b122172141ac94fdc8e4e12e8, type: 3}
     objectsToHighlights:
     - ObjectID: 6
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 486c4590a15195c4da2d5177afdc945c, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: e0d5848b0c986ec47a2c8f83a5bf546f, type: 3}
     objectsToHighlights:
     - ObjectID: 2
-    SequenceTime: 0
+    SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 3a9af217e5ddeeb4c8388a74219c946b, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: cf17826f251e44e4abc54df1fac6690d, type: 3}
     objectsToHighlights:
     - ObjectID: 4
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: bac35f245626ca54cac742b468782db6, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 6ef17650de3a653488f35234fb6ba5a2, type: 3}
     objectsToHighlights:
     - ObjectID: 1
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 9a4354f369bb3874f8390a32435209de, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: eb48e311aa7286042940c319bf3fa97c, type: 3}
     objectsToHighlights:
     - ObjectID: 5
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 920046e6f15aaa440adfb3bb7501fc5d, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 1503fb2f09addb64dae046e8769b0504, type: 3}
     objectsToHighlights:
     - ObjectID: 7
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 6e35fc3b56e95804d86ad3f535335a45, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 00b916e15d5bbda4d9bd149b4c4f0175, type: 3}
     objectsToHighlights:
     - ObjectID: 8
     SequenceTime: 2

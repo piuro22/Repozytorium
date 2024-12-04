@@ -107,4 +107,4 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 6405c1fd8ef09644394c880f1011616f, type: 3}
+    questionClip: {fileID: 8300000, guid: f76a2563213408e439013dd3513ef847, type: 3}

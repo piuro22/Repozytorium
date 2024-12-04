@@ -19,7 +19,7 @@ MonoBehaviour:
     scale: {x: 0.6, y: 0.54}
     layer: 1
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -37,24 +37,24 @@ MonoBehaviour:
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
   dragAndDropGameSequences:
-  - objectID: 1
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: c218c5213445f4d4a88bca4ce136af94, type: 3}
-  - objectID: 0
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 85377a52da0cd614ca1e459b4a18da42, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: e7f6d85ac1b16dc40a54cc7464bb145b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: dbe803f8a65f44645be6313e935098e2, type: 3}
+  - objectID: 1
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 95b4c428e53499f4ab9ced91534d5102, type: 3}
+  - objectID: 0
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: ec7ecc112994bbf4f8d08f26a7ea6756, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: f03dbf48869264141bfca52bd96eed37, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: c5addcef1bdee1b429d74b0a443b7db0, type: 3}
   - objectID: 7
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 86faed97120a0e34fbf29b00edc959ed, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 37c27d73b85c72f428853e1b2e2dc7a0, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 4964132a1266ebe4a91b23346a61b46c, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: dcc5e4958108713498abd51611c18a3e, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

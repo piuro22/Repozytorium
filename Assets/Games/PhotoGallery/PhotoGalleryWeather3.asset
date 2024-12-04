@@ -22,7 +22,7 @@ MonoBehaviour:
   - photo: {fileID: 21300000, guid: 9cb1db35d1c79fb4aab787d18c118262, type: 3}
     audioClip: {fileID: 8300000, guid: 939fb4c1409fbac43a05cb568d170364, type: 3}
   - photo: {fileID: 21300000, guid: d9184d91a5c9d8f4bb4a22c488eb9ec9, type: 3}
-    audioClip: {fileID: 8300000, guid: 913b383b6ee78624b8127f39af51d77f, type: 3}
+    audioClip: {fileID: 8300000, guid: e0d5848b0c986ec47a2c8f83a5bf546f, type: 3}
   - photo: {fileID: 21300000, guid: b30540004a197e14e96be46e658f4ea8, type: 3}
     audioClip: {fileID: 8300000, guid: 337a79011d427b34bb2457f05a7bba72, type: 3}
   - photo: {fileID: 21300000, guid: d14f848cbd3a0e343aba91e6cac61f1d, type: 3}

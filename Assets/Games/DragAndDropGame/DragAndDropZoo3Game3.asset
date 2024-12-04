@@ -16,8 +16,8 @@ MonoBehaviour:
   dragAndDropObjectDecorations:
   - texture: {fileID: 2800000, guid: 58b6f507a40ecaf4ba33c7c99fc21103, type: 3}
     position: {x: -1.16, y: -0.6}
-    scale: {x: 0.3, y: 0.3}
-    layer: 1
+    scale: {x: 0.28, y: 0.28}
+    layer: 0
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: 
@@ -42,7 +42,7 @@ MonoBehaviour:
     dialogOnSequenceStart: {fileID: 8300000, guid: 7b2f37b42f637214f8983680724b82e4, type: 3}
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7e880878468793643bd59a64f4824ebe, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: e68dd8447a8b796488ac215874ab2448, type: 3}
   - objectID: 1
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: f1bcfb76fde1d5947bdf2c0dc97e304d, type: 3}
@@ -93,7 +93,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -169,10 +169,10 @@ MonoBehaviour:
     useSequence: 1
     id: 3
     texture: {fileID: 2800000, guid: 592c5cd615b92ce449cb37a6646633f4, type: 3}
-    startPosition: {x: -2.11, y: -1.89}
+    startPosition: {x: -2.155, y: -1.979}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: -0.4, y: 0.4}
+    scale: {x: -0.38, y: 0.38}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 4
@@ -183,7 +183,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: -0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
     startPosition: {x: 0.885, y: 0.491}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.25, y: 0.25}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 8
@@ -303,7 +303,7 @@ MonoBehaviour:
     targetPosition: {x: -1.34, y: -1.23}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.1, y: 0.1}
+    targetScale: {x: 0, y: 0}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
