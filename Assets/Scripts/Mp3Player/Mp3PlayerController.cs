@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System.IO;
+using System.Collections;
 
 public class Mp3PlayerController : MonoBehaviour
 {
@@ -12,8 +13,6 @@ public class Mp3PlayerController : MonoBehaviour
     [SerializeField] private Slider timeSlider;
     [SerializeField] private TMP_Text currentTimeText;
     [SerializeField] private TMP_Text trackTitleText;
-    [SerializeField] private Image trackImage;
-    [SerializeField] private Image playlistImage;
     [SerializeField] private Image playPauseImage;
     [SerializeField] private Sprite playSprite;
     [SerializeField] private Sprite pauseSprite;
@@ -23,13 +22,17 @@ public class Mp3PlayerController : MonoBehaviour
     [SerializeField] private Button nextTrackButton;
     [SerializeField] private Button previousTrackButton;
 
-    [SerializeField] private List<AudioClip> trackList = new List<AudioClip>();
     [SerializeField] private Transform trackButtonParent;
     [SerializeField] private GameObject trackButtonPrefab;
 
+    private List<AudioClip> trackList = new List<AudioClip>();
+    private List<string> trackPaths = new List<string>();
+    private List<Button> trackButtons = new List<Button>();
+
     private int currentTrackIndex = 0;
     private bool isPlaying = false;
-    private List<Button> trackButtons = new List<Button>();
+
+    [SerializeField] private string downloadPath = "download";
 
     private void Awake()
     {
@@ -46,7 +49,7 @@ public class Mp3PlayerController : MonoBehaviour
     private void Start()
     {
         InitializeUI();
-        LoadTracks();
+        LoadTracksFromDirectory();
         UpdateTrackInfo();
     }
 
@@ -59,21 +62,60 @@ public class Mp3PlayerController : MonoBehaviour
         timeSlider.onValueChanged.AddListener(Seek);
     }
 
-    private void LoadTracks()
+    private void LoadTracksFromDirectory()
     {
-        // Add tracks dynamically (for example from a Resources folder or external directory)
-        // Here, it's assumed trackList is already populated with AudioClips.
-        foreach (var track in trackList)
+        string directoryPath = Path.Combine(Application.persistentDataPath, downloadPath);
+        if (!Directory.Exists(directoryPath))
         {
-            GameObject newTrackButton = Instantiate(trackButtonPrefab, trackButtonParent);
-            TMP_Text buttonText = newTrackButton.GetComponentInChildren<TMP_Text>();
-            buttonText.text = track.name;
-
-            Button button = newTrackButton.GetComponent<Button>();
-            int trackIndex = trackButtons.Count;
-            button.onClick.AddListener(() => PlayTrack(trackIndex));
-            trackButtons.Add(button);
+            Directory.CreateDirectory(directoryPath);
+            Debug.LogWarning($"Directory created at: {directoryPath}. Add MP3 files to this folder.");
+            return;
         }
+
+        string[] files = Directory.GetFiles(directoryPath, "*.mp3");
+
+        foreach (string file in files)
+        {
+            StartCoroutine(LoadAudioClip(file));
+        }
+    }
+
+    private IEnumerator LoadAudioClip(string filePath)
+    {
+        using (var www = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip($"file://{filePath}", AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                AudioClip clip = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(www);
+                trackList.Add(clip);
+                trackPaths.Add(filePath);
+
+                // Extract the file name without extension
+                string fileName = Path.GetFileNameWithoutExtension(filePath);
+                Debug.Log("File: " + fileName);
+
+                // Use the file name for the track button
+                CreateTrackButton(fileName);
+            }
+            else
+            {
+                Debug.LogError($"Failed to load track: {filePath}, Error: {www.error}");
+            }
+        }
+    }
+
+    private void CreateTrackButton(string trackName)
+    {
+        GameObject newTrackButton = Instantiate(trackButtonPrefab, trackButtonParent);
+        TMP_Text buttonText = newTrackButton.GetComponentInChildren<TMP_Text>();
+        buttonText.text = trackName;
+
+        Button button = newTrackButton.GetComponent<Button>();
+        int trackIndex = trackButtons.Count;
+        button.onClick.AddListener(() => PlayTrack(trackIndex));
+        trackButtons.Add(button);
     }
 
     private void Update()
@@ -87,7 +129,10 @@ public class Mp3PlayerController : MonoBehaviour
 
     private void UpdateTimeDisplay()
     {
-        currentTimeText.text = $"{ FormatTime(audioSource.time)}/{FormatTime(audioSource.clip.length)}";
+        if (audioSource.clip != null)
+        {
+            currentTimeText.text = $"{FormatTime(audioSource.time)}/{FormatTime(audioSource.clip.length)}";
+        }
     }
 
     private string FormatTime(float time)
@@ -190,9 +235,9 @@ public class Mp3PlayerController : MonoBehaviour
             UpdateTimeDisplay();
         }
     }
+
     public void PlayTrackByTitle(string trackTitle)
     {
-        // Find the index of the track with the specified title
         int trackIndex = trackList.FindIndex(track => track.name.Equals(trackTitle, System.StringComparison.OrdinalIgnoreCase));
 
         if (trackIndex != -1)
