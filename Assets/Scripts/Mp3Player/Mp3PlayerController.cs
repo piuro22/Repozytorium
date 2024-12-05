@@ -35,6 +35,7 @@ public class Mp3PlayerController : MonoBehaviour
     private bool isPlaying = false;
 
     [SerializeField] private string jsonFilePath = "Tracks.json";
+    [SerializeField]
     private RootMp3TrackProperties downloadedList;
 
     [SerializeField] private string downloadPath = "download";
@@ -170,6 +171,7 @@ public class Mp3PlayerController : MonoBehaviour
         Debug.Log($"Loading playlist: {playlistName}");
         ClearCurrentTracks();
 
+        // Filter tracks by playlist name
         var filteredTracks = new List<Mp3TrackProperties>();
         foreach (var track in downloadedList.mp3TrackProperties)
         {
@@ -179,10 +181,57 @@ public class Mp3PlayerController : MonoBehaviour
             }
         }
 
+        // Apply natural sorting on titles
+        filteredTracks.Sort((a, b) => NaturalSortComparer(a.title, b.title));
         foreach (var track in filteredTracks)
         {
+            Debug.Log($"Creating button for track: ID = {track.id}, Title = {track.title}");
             StartCoroutine(LoadAudioClipFromUrl(track.trackAudioClipPath, track.title));
         }
+    }
+
+    // Natural sorting comparer for strings
+    private int NaturalSortComparer(string a, string b)
+    {
+        int i = 0, j = 0;
+        while (i < a.Length && j < b.Length)
+        {
+            if (char.IsDigit(a[i]) && char.IsDigit(b[j]))
+            {
+                // Compare numbers
+                int numA = 0, numB = 0;
+
+                // Parse numbers from the strings
+                while (i < a.Length && char.IsDigit(a[i]))
+                {
+                    numA = numA * 10 + (a[i] - '0');
+                    i++;
+                }
+                while (j < b.Length && char.IsDigit(b[j]))
+                {
+                    numB = numB * 10 + (b[j] - '0');
+                    j++;
+                }
+
+                // Compare numeric parts
+                int result = numA.CompareTo(numB);
+                if (result != 0)
+                    return result;
+            }
+            else
+            {
+                // Compare characters
+                int result = a[i].CompareTo(b[j]);
+                if (result != 0)
+                    return result;
+
+                i++;
+                j++;
+            }
+        }
+
+        // Compare lengths if both strings are similar
+        return a.Length - b.Length;
     }
 
     private IEnumerator LoadAudioClipFromUrl(string url, string trackTitle)
