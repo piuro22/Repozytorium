@@ -56,6 +56,18 @@ public class Mp3PlayerController : MonoBehaviour
         // Then attempt to load the playlist from save
         GetFromSave();
     }
+
+    private void Update()
+    {
+        if (isPlaying && audioSource.isPlaying)
+        {
+            // Update the slider value based on the audio playback progress
+            timeSlider.value = audioSource.time / audioSource.clip.length;
+            UpdateTimeDisplay();
+        }
+    }
+
+
     private void InitializeUI()
     {
         playButton.onClick.AddListener(TogglePlayPause);
@@ -216,6 +228,10 @@ public class Mp3PlayerController : MonoBehaviour
             audioSource.Play();
             isPlaying = true;
             playPauseImage.sprite = pauseSprite;
+
+            // Update the slider maximum value
+            timeSlider.maxValue = 1f; // Slider represents normalized playback (0.0 to 1.0)
+            timeSlider.value = 0f;   // Reset slider position
         }
     }
 
@@ -237,7 +253,10 @@ public class Mp3PlayerController : MonoBehaviour
             isPlaying = false;
             audioSource.time = 0;
             playPauseImage.sprite = playSprite;
+
+            // Reset slider value
             timeSlider.value = 0;
+            UpdateTimeDisplay();
         }
     }
 
@@ -288,5 +307,19 @@ public class Mp3PlayerController : MonoBehaviour
 
         currentTrackIndex = (currentTrackIndex - 1 + trackList.Count) % trackList.Count;
         PlayTrack(currentTrackIndex);
+    }
+
+    private void UpdateTimeDisplay()
+    {
+        if (audioSource.clip != null)
+        {
+            currentTimeText.text = $"{FormatTime(audioSource.time)} / {FormatTime(audioSource.clip.length)}";
+        }
+    }
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        return $"{minutes:00}:{seconds:00}";
     }
 }
