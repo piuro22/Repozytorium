@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using System.IO;
 using System.Collections;
+using System.Linq;
+using System;
 
 public class Mp3PlayerController : MonoBehaviour
 {
@@ -32,7 +34,11 @@ public class Mp3PlayerController : MonoBehaviour
     private int currentTrackIndex = 0;
     private bool isPlaying = false;
 
+    [SerializeField] private string jsonFilePath = "Tracks.json";
+    private RootMp3TrackProperties downloadedList;
+
     [SerializeField] private string downloadPath = "download";
+    [SerializeField] private string jsonFileName = "Tracks.json";
 
     private void Awake()
     {
@@ -50,10 +56,10 @@ public class Mp3PlayerController : MonoBehaviour
     {
         InitializeUI();
 
-        // Load all tracks from the directory first
-        LoadTracksFromDirectory();
+        // Load JSON tracks
+        LoadTracksFromJson();
 
-        // Then attempt to load the playlist from save
+        // Load playlist from saved QR code
         GetFromSave();
     }
 
@@ -108,28 +114,26 @@ public class Mp3PlayerController : MonoBehaviour
         }
     }
 
-    private void LoadTracksFromDirectory()
+    private void LoadTracksFromJson()
     {
-        string directoryPath = Path.Combine(Application.persistentDataPath, downloadPath);
-        if (!Directory.Exists(directoryPath))
+        string filePath = Path.Combine(Application.persistentDataPath, jsonFileName);
+
+        if (!File.Exists(filePath))
         {
-            Directory.CreateDirectory(directoryPath);
-            Debug.LogWarning($"Directory created at: {directoryPath}. Add MP3 files to this folder.");
+            Debug.LogError($"JSON file not found at path: {filePath}");
             return;
         }
 
-        string[] files = Directory.GetFiles(directoryPath, "*.mp3");
+        string jsonContent = File.ReadAllText(filePath);
+        downloadedList = JsonUtility.FromJson<RootMp3TrackProperties>(jsonContent);
 
-        foreach (string file in files)
+        if (downloadedList == null || downloadedList.mp3TrackProperties == null)
         {
-            if (!trackPaths.Contains(file)) // Avoid duplicate entries
-            {
-                trackPaths.Add(file);
-            }
+            Debug.LogError("Failed to parse JSON or no tracks available.");
+            return;
         }
 
-        // Optionally log loaded tracks
-        Debug.Log($"Loaded {trackPaths.Count} tracks from directory.");
+        Debug.Log($"Loaded {downloadedList.mp3TrackProperties.Length} tracks from JSON.");
     }
 
     private IEnumerator LoadAudioClip(string filePath)
@@ -157,18 +161,50 @@ public class Mp3PlayerController : MonoBehaviour
 
     public void LoadPlaylist(string playlistName)
     {
+        if (downloadedList == null || downloadedList.mp3TrackProperties == null)
+        {
+            Debug.LogWarning("Track list is empty. Ensure JSON is loaded before calling this method.");
+            return;
+        }
+
         Debug.Log($"Loading playlist: {playlistName}");
         ClearCurrentTracks();
 
-        foreach (var filePath in trackPaths)
+        var filteredTracks = new List<Mp3TrackProperties>();
+        foreach (var track in downloadedList.mp3TrackProperties)
         {
-            Debug.Log($"Checking file: {filePath}");
-            if (Path.GetFileNameWithoutExtension(filePath).Contains(playlistName))
+            if (track.playListName.Equals(playlistName, StringComparison.OrdinalIgnoreCase))
             {
-                StartCoroutine(LoadAudioClip(filePath));
+                filteredTracks.Add(track);
+            }
+        }
+
+        foreach (var track in filteredTracks)
+        {
+            StartCoroutine(LoadAudioClipFromUrl(track.trackAudioClipPath, track.title));
+        }
+    }
+
+    private IEnumerator LoadAudioClipFromUrl(string url, string trackTitle)
+    {
+        using (var www = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                AudioClip clip = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(www);
+                trackList.Add(clip);
+
+                CreateTrackButton(trackTitle);
+            }
+            else
+            {
+                Debug.LogError($"Failed to load track from URL: {url}, Error: {www.error}");
             }
         }
     }
+
 
     private void ClearCurrentTracks()
     {
