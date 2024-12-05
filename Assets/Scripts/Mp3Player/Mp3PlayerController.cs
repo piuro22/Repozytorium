@@ -49,10 +49,13 @@ public class Mp3PlayerController : MonoBehaviour
     private void Start()
     {
         InitializeUI();
-        LoadTracksFromDirectory();
-        UpdateTrackInfo();
-    }
 
+        // Load all tracks from the directory first
+        LoadTracksFromDirectory();
+
+        // Then attempt to load the playlist from save
+        GetFromSave();
+    }
     private void InitializeUI()
     {
         playButton.onClick.AddListener(TogglePlayPause);
@@ -60,6 +63,37 @@ public class Mp3PlayerController : MonoBehaviour
         nextTrackButton.onClick.AddListener(PlayNextTrack);
         previousTrackButton.onClick.AddListener(PlayPreviousTrack);
         timeSlider.onValueChanged.AddListener(Seek);
+    }
+
+    private void GetFromSave()
+    {
+        if (!PlayerPrefs.HasKey("QRCode"))
+        {
+            Debug.LogWarning("No playlist saved. Loading default tracks.");
+            return;
+        }
+
+        string playListSave = PlayerPrefs.GetString("QRCode");
+        PlayerPrefs.DeleteKey("QRCode");
+
+        string[] parts = playListSave.Split('/');
+        if (parts.Length >= 2)
+        {
+            string playlistName = parts[1];
+            Debug.Log($"Attempting to load playlist: {playlistName}");
+            LoadPlaylist(playlistName);
+        }
+
+        if (parts.Length >= 3)
+        {
+            string trackTitle = parts[2];
+            Debug.Log($"Attempting to play track: {trackTitle}");
+            PlayTrackByTitle(trackTitle);
+        }
+        else if (trackList.Count > 0)
+        {
+            PlayTrack(0);
+        }
     }
 
     private void LoadTracksFromDirectory()
@@ -76,8 +110,14 @@ public class Mp3PlayerController : MonoBehaviour
 
         foreach (string file in files)
         {
-            StartCoroutine(LoadAudioClip(file));
+            if (!trackPaths.Contains(file)) // Avoid duplicate entries
+            {
+                trackPaths.Add(file);
+            }
         }
+
+        // Optionally log loaded tracks
+        Debug.Log($"Loaded {trackPaths.Count} tracks from directory.");
     }
 
     private IEnumerator LoadAudioClip(string filePath)
@@ -90,13 +130,10 @@ public class Mp3PlayerController : MonoBehaviour
             {
                 AudioClip clip = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(www);
                 trackList.Add(clip);
+                Debug.Log("Add Filepath" + filePath);
                 trackPaths.Add(filePath);
 
-                // Extract the file name without extension
                 string fileName = Path.GetFileNameWithoutExtension(filePath);
-                Debug.Log("File: " + fileName);
-
-                // Use the file name for the track button
                 CreateTrackButton(fileName);
             }
             else
@@ -106,53 +143,56 @@ public class Mp3PlayerController : MonoBehaviour
         }
     }
 
-    private void CreateTrackButton(string trackName)
+    public void LoadPlaylist(string playlistName)
     {
-        GameObject newTrackButton = Instantiate(trackButtonPrefab, trackButtonParent);
-        TMP_Text buttonText = newTrackButton.GetComponentInChildren<TMP_Text>();
-        buttonText.text = trackName;
+        Debug.Log($"Loading playlist: {playlistName}");
+        ClearCurrentTracks();
 
-        Button button = newTrackButton.GetComponent<Button>();
-        int trackIndex = trackButtons.Count;
-        button.onClick.AddListener(() => PlayTrack(trackIndex));
-        trackButtons.Add(button);
-    }
-
-    private void Update()
-    {
-        if (isPlaying && audioSource.isPlaying)
+        foreach (var filePath in trackPaths)
         {
-            timeSlider.value = audioSource.time / audioSource.clip.length;
-            UpdateTimeDisplay();
+            Debug.Log($"Checking file: {filePath}");
+            if (Path.GetFileNameWithoutExtension(filePath).Contains(playlistName))
+            {
+                StartCoroutine(LoadAudioClip(filePath));
+            }
         }
     }
 
-    private void UpdateTimeDisplay()
+    private void ClearCurrentTracks()
     {
-        if (audioSource.clip != null)
+        trackList.Clear();
+        foreach (Transform child in trackButtonParent)
         {
-            currentTimeText.text = $"{FormatTime(audioSource.time)}/{FormatTime(audioSource.clip.length)}";
+            Destroy(child.gameObject);
+        }
+        trackButtons.Clear();
+    }
+
+    public void PlayTrackByTitle(string trackTitle)
+    {
+        int trackIndex = trackList.FindIndex(track => track.name.Equals(trackTitle, System.StringComparison.OrdinalIgnoreCase));
+
+        if (trackIndex != -1)
+        {
+            PlayTrack(trackIndex);
+        }
+        else
+        {
+            Debug.LogWarning($"Track with title '{trackTitle}' not found.");
         }
     }
 
-    private string FormatTime(float time)
+    public void PlayTrack(int trackIndex)
     {
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time % 60);
-        return $"{minutes:00}:{seconds:00}";
+        if (trackIndex < 0 || trackIndex >= trackList.Count) return;
+
+        currentTrackIndex = trackIndex;
+        audioSource.clip = trackList[trackIndex];
+        StartPlayback();
+        UpdateTrackInfo();
     }
 
-    private void UpdateTrackInfo()
-    {
-        if (trackList.Count > 0 && currentTrackIndex < trackList.Count)
-        {
-            AudioClip currentTrack = trackList[currentTrackIndex];
-            trackTitleText.text = currentTrack.name;
-            timeSlider.value = 0;
-        }
-    }
-
-    public void TogglePlayPause()
+    private void TogglePlayPause()
     {
         if (isPlaying)
         {
@@ -201,6 +241,39 @@ public class Mp3PlayerController : MonoBehaviour
         }
     }
 
+    private void Seek(float value)
+    {
+        if (audioSource.clip != null)
+        {
+            audioSource.time = value * audioSource.clip.length;
+        }
+    }
+
+    private void UpdateTrackInfo()
+    {
+        if (trackList.Count > 0 && currentTrackIndex < trackList.Count)
+        {
+            AudioClip currentTrack = trackList[currentTrackIndex];
+            trackTitleText.text = currentTrack.name;
+        }
+    }
+
+    private void CreateTrackButton(string trackName)
+    {
+        GameObject newTrackButton = Instantiate(trackButtonPrefab, trackButtonParent);
+        TrackButtonController trackButtonController = newTrackButton.GetComponent<TrackButtonController>();
+
+        if (trackButtonController != null)
+        {
+            trackButtonController.Initialize(trackName);
+        }
+
+        Button button = newTrackButton.GetComponent<Button>();
+        int trackIndex = trackButtons.Count;
+        button.onClick.AddListener(() => PlayTrack(trackIndex));
+        trackButtons.Add(button);
+    }
+
     private void PlayNextTrack()
     {
         if (trackList.Count == 0) return;
@@ -215,38 +288,5 @@ public class Mp3PlayerController : MonoBehaviour
 
         currentTrackIndex = (currentTrackIndex - 1 + trackList.Count) % trackList.Count;
         PlayTrack(currentTrackIndex);
-    }
-
-    public void PlayTrack(int trackIndex)
-    {
-        if (trackIndex < 0 || trackIndex >= trackList.Count) return;
-
-        currentTrackIndex = trackIndex;
-        audioSource.clip = trackList[trackIndex];
-        StartPlayback();
-        UpdateTrackInfo();
-    }
-
-    private void Seek(float value)
-    {
-        if (audioSource.clip != null)
-        {
-            audioSource.time = value * audioSource.clip.length;
-            UpdateTimeDisplay();
-        }
-    }
-
-    public void PlayTrackByTitle(string trackTitle)
-    {
-        int trackIndex = trackList.FindIndex(track => track.name.Equals(trackTitle, System.StringComparison.OrdinalIgnoreCase));
-
-        if (trackIndex != -1)
-        {
-            PlayTrack(trackIndex);
-        }
-        else
-        {
-            Debug.LogWarning($"Track with title '{trackTitle}' not found.");
-        }
     }
 }

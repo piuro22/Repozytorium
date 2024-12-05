@@ -3,18 +3,18 @@ using TMPro;
 
 public class TrackButtonController : MonoBehaviour
 {
-    private Mp3TrackProperties mp3TrackProperties;
+    private string trackTitle;
 
     [SerializeField] private TMP_Text textTitle;
 
     /// <summary>
-    /// Initializes the track button with track properties.
+    /// Initializes the track button with the track title.
     /// </summary>
-    /// <param name="mp3TrackProperties">Properties of the track.</param>
-    public void Initialize(Mp3TrackProperties mp3TrackProperties)
+    /// <param name="trackTitle">The title of the track to display.</param>
+    public void Initialize(string trackTitle)
     {
-        this.mp3TrackProperties = mp3TrackProperties;
-        UpdateTitle(mp3TrackProperties.title);
+        this.trackTitle = trackTitle;
+        UpdateTitle(trackTitle);
     }
 
     /// <summary>
@@ -34,9 +34,13 @@ public class TrackButtonController : MonoBehaviour
     /// </summary>
     public void OnButtonClick()
     {
-        if (mp3TrackProperties != null)
+        if (!string.IsNullOrEmpty(trackTitle))
         {
-            Mp3PlayerController.Instance.PlayTrackByTitle(mp3TrackProperties.title);
+            Mp3PlayerController.Instance.PlayTrackByTitle(trackTitle);
+        }
+        else
+        {
+            Debug.LogWarning("Track title is null or empty.");
         }
     }
 
@@ -44,18 +48,12 @@ public class TrackButtonController : MonoBehaviour
     /// Highlights or unhighlights the button text based on the state.
     /// </summary>
     /// <param name="state">True to highlight, false to unhighlight.</param>
-    public void HighLightButton(bool state)
+    public void HighlightButton(bool state)
     {
-        if (textTitle != null)
-        {
-            if (state)
-            {
-                textTitle.text = $"<b>{mp3TrackProperties.title}</b>";
-            }
-            else
-            {
-                textTitle.text = mp3TrackProperties.title;
-            }
-        }
+        if (textTitle == null) return;
+
+        textTitle.text = state
+            ? $"<b>{trackTitle}</b>"
+            : trackTitle;
     }
 }
