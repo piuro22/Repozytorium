@@ -105,21 +105,22 @@ public class HighlightObjectController : MonoBehaviour
         }
     }
 
-    public void Play()
+    public void OnMouseDown()
     {
-        if (shouldPlayAudioOnClick)
-        {
-            PlayAudio();
-        }
-        HiglightObject();
+        PlayAudio();
     }
-
-
-
 
     public void PlayAudio()
     {
+        // Odtwórz dźwięk kliknięcia
         audioSource.PlayOneShot(higlightObjectProperites.soundOnClick);
+
+        // Powiększ obiekt o 20% i wróć do domyślnej skali
+        Vector3 originalScale = transform.localScale; // Zapisz oryginalną skalę
+        transform.DOScale(originalScale * highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickMultiplier, highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickTime) // Powiększenie o 20% w 0.2s
+            .OnComplete(() => transform.DOScale(originalScale, 0.2f)); // Powrót do domyślnej skali w 0.2s
+
+        // Poczekaj, aż dźwięk się zakończy
         StartCoroutine(WaitForStopSound());
     }
     IEnumerator WaitForStopSound()

@@ -6,6 +6,7 @@ using System.IO;
 using System.Collections;
 using System.Linq;
 using System;
+using Sirenix.OdinInspector;
 
 public class Mp3PlayerController : MonoBehaviour
 {
@@ -159,7 +160,7 @@ public class Mp3PlayerController : MonoBehaviour
             }
         }
     }
-
+    [Button]
     public void LoadPlaylist(string playlistName)
     {
         if (downloadedList == null || downloadedList.mp3TrackProperties == null)
@@ -172,24 +173,25 @@ public class Mp3PlayerController : MonoBehaviour
         ClearCurrentTracks();
 
         // Filter tracks by playlist name
-        var filteredTracks = new List<Mp3TrackProperties>();
-        foreach (var track in downloadedList.mp3TrackProperties)
-        {
-            if (track.playListName.Equals(playlistName, StringComparison.OrdinalIgnoreCase))
-            {
-                filteredTracks.Add(track);
-            }
-        }
+        var filteredTracks = downloadedList.mp3TrackProperties
+            .Where(track => track.playListName.Equals(playlistName, StringComparison.OrdinalIgnoreCase))
+            .OrderBy(track => track.title, StringComparer.Ordinal) // Natural sorting
+            .ToList();
 
-        // Apply natural sorting on titles
-        filteredTracks.Sort((a, b) => NaturalSortComparer(a.title, b.title));
-        foreach (var track in filteredTracks)
+        StartCoroutine(SequentiallyCreateButtons(filteredTracks));
+    }
+    private IEnumerator SequentiallyCreateButtons(List<Mp3TrackProperties> tracks)
+    {
+        foreach (var track in tracks)
         {
             Debug.Log($"Creating button for track: ID = {track.id}, Title = {track.title}");
-            StartCoroutine(LoadAudioClipFromUrl(track.trackAudioClipPath, track.title));
-        }
-    }
 
+            // Load the audio clip and create the button
+            yield return StartCoroutine(LoadAudioClipFromUrl(track.trackAudioClipPath, track.title));
+        }
+
+        Debug.Log("All track buttons created.");
+    }
     // Natural sorting comparer for strings
     private int NaturalSortComparer(string a, string b)
     {
@@ -245,6 +247,10 @@ public class Mp3PlayerController : MonoBehaviour
                 AudioClip clip = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(www);
                 trackList.Add(clip);
 
+                // Ensure the clip has the correct name for display
+                clip.name = trackTitle;
+
+                // Create the button for this track
                 CreateTrackButton(trackTitle);
             }
             else
@@ -374,7 +380,11 @@ public class Mp3PlayerController : MonoBehaviour
 
         Button button = newTrackButton.GetComponent<Button>();
         int trackIndex = trackButtons.Count;
+
+        // Add listener for playing the track
         button.onClick.AddListener(() => PlayTrack(trackIndex));
+
+        // Add button to the list
         trackButtons.Add(button);
     }
 

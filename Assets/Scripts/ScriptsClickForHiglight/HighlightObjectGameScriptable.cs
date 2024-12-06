@@ -18,8 +18,13 @@ public class HighlightObjectGameScriptable : ScriptableObject
     [LabelText("Dźwięk gdy źle klikniemy")]
     public AudioClip wrongClickAudioClip;
 
-   // [LabelText("Dźwięk gdy dobrze klikniemy")]
-  //  public AudioClip goodClickAudioClip;
+    [LabelText("Mnożnik skali przy kliknięciu")]
+    public float scaleOnClickMultiplier = 1.2f;
+    [LabelText("Czas skalowania przy kliknięciu")]
+    public float scaleOnClickTime = 0.2f;
+
+    // [LabelText("Dźwięk gdy dobrze klikniemy")]
+    //  public AudioClip goodClickAudioClip;
 
 
 
@@ -77,4 +82,5 @@ public class HiglightObject
     public Color outlineColor;
     [LabelText("Dźwięk kliknięcia w obrazek")]
     public AudioClip soundOnClick;
+
 }
