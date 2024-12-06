@@ -109,7 +109,7 @@ public class PhotoGalleryController : MonoBehaviour
             Debug.LogError("Insufficient photos with audio.");
             return;
         }
-       // SetupMusic();
+
         background.sprite = gameProperties.background;
         SetupInitialImages();
 
@@ -117,6 +117,7 @@ public class PhotoGalleryController : MonoBehaviour
             PlayAudioClipForCurrentPhoto();
 
         UpdatePhotoCounterText();
+        UpdateNavigationButtons(); // Ensure buttons are updated initially
     }
 
     private void SetupInitialImages()
@@ -142,20 +143,33 @@ public class PhotoGalleryController : MonoBehaviour
     private void ShowNextPhoto()
     {
         if (audioSource.isPlaying) return;
-        currentIndex = GetNextPhotoIndex();
-        CrossfadeToNewPhoto();
-        if (gameProperties.shouldPlayAudioAutomatically)
-            PlayAudioClipForCurrentPhoto();
 
-        CheckEndOfGallery();
+        if (currentIndex < gameProperties.photoWithAudios.Count - 1)
+        {
+            currentIndex++;
+            CrossfadeToNewPhoto();
+            if (gameProperties.shouldPlayAudioAutomatically)
+                PlayAudioClipForCurrentPhoto();
+
+            UpdateNavigationButtons();
+        }
+        else
+        {
+            CheckEndOfGallery(); // Call this if the last photo is reached
+        }
     }
 
     private void ShowPreviousPhoto()
     {
-        currentIndex = GetPreviousPhotoIndex();
-        CrossfadeToNewPhoto();
-        if (gameProperties.shouldPlayAudioAutomatically)
-            PlayAudioClipForCurrentPhoto();
+        if (currentIndex > 0)
+        {
+            currentIndex--;
+            CrossfadeToNewPhoto();
+            if (gameProperties.shouldPlayAudioAutomatically)
+                PlayAudioClipForCurrentPhoto();
+
+            UpdateNavigationButtons();
+        }
     }
     private Sequence crossSequence;
     private void CrossfadeToNewPhoto()
@@ -164,10 +178,17 @@ public class PhotoGalleryController : MonoBehaviour
 
         if (crossSequence != null) crossSequence.Kill();
         crossSequence = DOTween.Sequence();
-        crossSequence.Append( activeImage.DOFade(0f, fadeDuration));
+        crossSequence.Append(activeImage.DOFade(0f, fadeDuration));
         crossSequence.Join(inactiveImage.DOFade(1f, fadeDuration).OnComplete(SwapActiveImages));
     }
+    private void UpdateNavigationButtons()
+    {
+        // Disable the "Previous" button if at the first photo
+        previousButton.interactable = currentIndex > 0;
 
+        // Disable the "Next" button if at the last photo
+        nextButton.interactable = currentIndex < gameProperties.photoWithAudios.Count - 1;
+    }
     private int GetNextPhotoIndex() => (currentIndex + 1) % gameProperties.photoWithAudios.Count;
 
     private int GetPreviousPhotoIndex() => (currentIndex - 1 + gameProperties.photoWithAudios.Count) % gameProperties.photoWithAudios.Count;
@@ -183,10 +204,14 @@ public class PhotoGalleryController : MonoBehaviour
         photoCounterText.text = $"{currentIndex + 1}/{gameProperties.photoWithAudios.Count}";
     }
 
+
     private void CheckEndOfGallery()
     {
         if (currentIndex == gameProperties.photoWithAudios.Count - 1)
-            Invoke("FinishGame", 4);
+        {
+            finishScreen.SetActive(true);
+            nextButton.interactable = false; // Disable the "Next" button
+        }
     }
 
     public void FinishGame()
