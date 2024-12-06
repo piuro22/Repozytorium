@@ -141,6 +141,7 @@ public class PhotoGalleryController : MonoBehaviour
 
     private void ShowNextPhoto()
     {
+        if (audioSource.isPlaying) return;
         currentIndex = GetNextPhotoIndex();
         CrossfadeToNewPhoto();
         if (gameProperties.shouldPlayAudioAutomatically)
