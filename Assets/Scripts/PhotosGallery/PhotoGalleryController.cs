@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PhotoGalleryController : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PhotoGalleryController : MonoBehaviour
     [SerializeField] private AudioSource musicController;
     [Header("Settings")]
     [SerializeField] private float fadeDuration = 1f;
-    
+    public AudioSource commandAudioSource;
 
     private AudioSource audioSource;
     private int currentIndex = 0;
@@ -39,20 +40,52 @@ public class PhotoGalleryController : MonoBehaviour
     }
     private void SetupMusic()
     {
-        musicController.PlayOneShot(gameProperties.gameCommandAudioClip);
+        // Create a new AudioSource for the command audio if it doesn't already exist
+
+
+     
+        // Play the command audio
+        commandAudioSource.clip = gameProperties.gameCommandAudioClip;
+        commandAudioSource.Play();
+
+        // Configure the main music controller but do not start it yet
         musicController.clip = gameProperties.gameMusic;
         musicController.loop = true;
-        musicController.Play();
-        
-
     }
+
 
     private void Start()
     {
-
-        InitializeGallery();
+        SetupMusic();
+        StartCoroutine(WaitForCommandAudioToFinish());
     }
+    private IEnumerator WaitForCommandAudioToFinish()
+    {
+        // Ensure the command audio clip is playing
+        if (commandAudioSource != null && commandAudioSource.isPlaying)
+        {
+            yield return new WaitWhile(() => commandAudioSource.isPlaying);
+        }
 
+        // Start background music after command audio finishes
+        musicController.Play();
+
+        // Proceed to set up the gallery
+        if (gameProperties.photoWithAudios.Count < 2)
+        {
+            Debug.LogError("Insufficient photos with audio.");
+            yield break;
+        }
+
+        background.sprite = gameProperties.background;
+        SetupInitialImages();
+
+        if (gameProperties.shouldPlayAudioAutomatically)
+            PlayAudioClipForCurrentPhoto();
+
+        UpdatePhotoCounterText();
+        UpdateNavigationButtons(); // Ensure buttons are updated initially
+    }
     private void SetupSingleton()
     {
         if (Instance != null && Instance != this)
