@@ -15,7 +15,7 @@ public class HighlightObjectController : MonoBehaviour
     public Material material;
     [HideInInspector] public int index;
     [HideInInspector] public HiglightObject higlightObjectProperites;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private Sequence highlightSequence;
     private Outlinable outlinable;
     public bool shouldPlayAudioOnClick;
@@ -27,10 +27,10 @@ public class HighlightObjectController : MonoBehaviour
         get { return wasClicked; }
         set
         {
-            if (value == true)
+            if (value && shouldCheckClickedAction)
             {
-                if(shouldCheckClickedAction)
-                highlightObjectGameController.objectClickedAction.Invoke();
+                highlightObjectGameController.objectClickedAction?.Invoke();
+                Debug.Log($"WasClicked set to true for {name}");
             }
             wasClicked = value;
         }
@@ -101,31 +101,36 @@ public class HighlightObjectController : MonoBehaviour
         {
             isLocked = true;
             WasClicked = true;
-            HighlightObjectOnClick();
+            PlayAudio(); // Play sound for the clicked object
         }
     }
 
     public void OnMouseDown()
     {
-        PlayAudio();
+        if (!isLocked && !audioSource.isPlaying) // Ignore clicks if locked or sound is playing
+        {
+            PlayAudio();
+        }
     }
+
 
     public void PlayAudio()
     {
-        // Odtwórz dźwięk kliknięcia
+        // Play the click sound
         audioSource.PlayOneShot(higlightObjectProperites.soundOnClick);
 
-        // Powiększ obiekt o 20% i wróć do domyślnej skali
-        Vector3 originalScale = transform.localScale; // Zapisz oryginalną skalę
-        transform.DOScale(originalScale * highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickMultiplier, highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickTime) // Powiększenie o 20% w 0.2s
-            .OnComplete(() => transform.DOScale(originalScale, 0.2f)); // Powrót do domyślnej skali w 0.2s
+        // Scale the object up by 20% and back to default
+        Vector3 originalScale = transform.localScale; // Save the original scale
+        transform.DOScale(originalScale * highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickMultiplier, highlightObjectGameController.highlightObjectGameScriptable.scaleOnClickTime) // Scale up
+            .OnComplete(() => transform.DOScale(originalScale, 0.2f)); // Scale back
 
-        // Poczekaj, aż dźwięk się zakończy
+        // Wait for the sound to finish, then unlock the object
         StartCoroutine(WaitForStopSound());
     }
     IEnumerator WaitForStopSound()
     {
         yield return new WaitUntil(() => !audioSource.isPlaying);
+        isLocked = false; // Unlock the object after the sound finishes
         DeselectObject();
     }
 
@@ -133,12 +138,16 @@ public class HighlightObjectController : MonoBehaviour
     {
         if (highlightSequence != null) highlightSequence.Kill();
         highlightSequence = DOTween.Sequence();
-        highlightSequence.Append( DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Append(DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
         highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, higlightObjectProperites.outlineWidth, higlightObjectProperites.outlineOnTime));
         highlightSequence.Append(DOTween.To(() => outlinable.OutlineParameters.DilateShift, x => outlinable.OutlineParameters.DilateShift = x, 0, higlightObjectProperites.outlineOnTime));
-        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, 0, higlightObjectProperites.outlineOnTime));
+        highlightSequence.Join(DOTween.To(() => outlinable.OutlineParameters.BlurShift, x => outlinable.OutlineParameters.BlurShift = x, 0, higlightObjectProperites.outlineOnTime))
+            .OnComplete(() => UnlockObject()); // Unlock the object after animation
     }
-
+    private void UnlockObject()
+    {
+        isLocked = false; // Unlock the object
+    }
     public void HiglightObject()
     {
         if (highlightSequence != null) highlightSequence.Kill();

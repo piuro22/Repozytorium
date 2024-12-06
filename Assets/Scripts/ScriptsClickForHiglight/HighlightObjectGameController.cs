@@ -36,11 +36,16 @@ public class HighlightObjectGameController : MonoBehaviour
     }
     private void ObjectClicked()
     {
+        Debug.Log("ObjectClicked triggered");
         objectWasClicked = true;
     }
 
 
-
+    private IEnumerator ResetClickFlag()
+    {
+        yield return null; // Wait for the next frame
+        objectWasClicked = false; // Reset the flag
+    }
 
 
     [Button]
@@ -75,15 +80,15 @@ public class HighlightObjectGameController : MonoBehaviour
     IEnumerator GameSequence()
     {
         yield return new WaitForSeconds(highlightObjectGameScriptable.gameCommandAudioClip.length + 0.5f);
+
         foreach (HighlightGameSequence gameSequence in highlightObjectGameScriptable.gameSequence)
         {
-
             foreach (HighlightObjectController spawnedObject in spawnedObjects)
             {
                 spawnedObject.isLocked = true;
             }
 
-                foreach (HighlightObjectController spawnedObject in spawnedObjects)
+            foreach (HighlightObjectController spawnedObject in spawnedObjects)
             {
                 foreach (ObjectsToHighlight objectsToHighlight in gameSequence.objectsToHighlights)
                 {
@@ -94,56 +99,42 @@ public class HighlightObjectGameController : MonoBehaviour
                             spawnedObject.isLocked = false;
                             spawnedObject.shouldCheckClickedAction = true;
                         }
-                        if (gameSequence.audioClipOnSingleSequenceStart != null)
 
+                        if (gameSequence.audioClipOnSingleSequenceStart != null)
                         {
                             tempAudioClipOnSingleSequenceStart = gameSequence.audioClipOnSingleSequenceStart;
                             audioSource.PlayOneShot(gameSequence.audioClipOnSingleSequenceStart);
                         }
-                        Debug.Log(spawnedObject.name);
+
                         spawnedObject.HiglightObject();
-
                     }
-
-
-
-
-                    //    if (spawnedObject.higlightObjectProperites.id == objectsToHighlight.ObjectID)
-                    //    {
-
-                    //        if (gameSequence.waitForClick)
-                    //        {
-                    //            if (objectsToHighlight.shouldPlayAudio)
-                    //            {
-                    //                spawnedObject.PlayAudio();
-                    //            }
-                    //            spawnedObject.HiglightObject();
-
-
-                    //        }
-
-                    //        if(!gameSequence.waitForClick)
-                    //        spawnedObject.Play(objectsToHighlight.shouldPlayAudio);
-                    //    }
-                    //}
-                    //yield return new WaitUntil(() => spawnedObject.WasClicked);
                 }
-
-
             }
+
             if (gameSequence.waitForClick)
             {
-                yield return new WaitUntil(() => objectWasClicked);
-                objectWasClicked = false;
+                Debug.Log("Waiting for object to be clicked...");
+                yield return new WaitUntil(() => objectWasClicked); // Wait for object to be clicked
+                objectWasClicked = false; // Reset flag after click
+
+                // Find the clicked object
+                HighlightObjectController clickedObject = spawnedObjects.Find(obj => obj.WasClicked);
+
+                if (clickedObject != null && clickedObject.audioSource.isPlaying)
+                {
+                    Debug.Log($"Waiting for {clickedObject.name}'s audio to finish...");
+                    yield return new WaitUntil(() => !clickedObject.audioSource.isPlaying); // Wait for the audio to stop
+                }
+
                 if (gameSequence.audioClipOnClick)
                 {
                     audioSource.PlayOneShot(gameSequence.audioClipOnClick);
+                    yield return new WaitUntil(() => !audioSource.isPlaying); // Wait for game sequence audio to finish
                 }
             }
-         
-
 
             yield return new WaitForSeconds(gameSequence.SequenceTime);
+
             foreach (HighlightObjectController spawnedObject in spawnedObjects)
             {
                 spawnedObject.isLocked = true;
@@ -153,9 +144,6 @@ public class HighlightObjectGameController : MonoBehaviour
             }
         }
 
-
-
-    
         if (GameManager.Instance.CheckNextGameExist())
         {
             gameCanvasController.MaskScreen(true);
@@ -165,8 +153,8 @@ public class HighlightObjectGameController : MonoBehaviour
         {
             GameEndScreen.SetActive(true);
         }
-
     }
+
 
     public void BackToChoseLevels()
     {
