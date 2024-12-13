@@ -58,7 +58,7 @@ MonoBehaviour:
   - objectID: 6
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}
-  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: 6f7d2d702289bb24886d72437d6202f5, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
   onWrongContainerOutlineWidth: 0.362

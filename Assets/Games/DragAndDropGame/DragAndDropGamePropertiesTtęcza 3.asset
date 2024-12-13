@@ -25,7 +25,7 @@ MonoBehaviour:
   useRandomRotationForDragObjects: 0
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 1
-  snapToContainterTime: 0.5
+  snapToContainterTime: 1
   snapOnClick: 1
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   - objectID: 2
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: f2c521735c86fb047ae17d956ee40f50, type: 3}
-  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
   onWrongContainerOutlineWidth: 0.576

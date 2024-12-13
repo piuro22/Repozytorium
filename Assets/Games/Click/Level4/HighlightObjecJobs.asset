@@ -16,6 +16,8 @@ MonoBehaviour:
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
+  scaleOnClickMultiplier: 0.9
+  scaleOnClickTime: 0.2
   gameSequence:
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 19ceb38e6d8cda84a99af3fa10675c1b, type: 3}
     objectsToHighlights:
@@ -79,7 +81,7 @@ MonoBehaviour:
     outlineOnTime: 0.4
     outlineWidth: 0
     outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
-    soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 1
     texture: {fileID: 2800000, guid: 03e8ec29e4e6bba4bb0866a71f022cd3, type: 3}
     position: {x: 3.348, y: -0.28}
@@ -87,7 +89,7 @@ MonoBehaviour:
     outlineOnTime: 0.6
     outlineWidth: 0
     outlineColor: {r: 1, g: 0.9104993, b: 0, a: 1}
-    soundOnClick: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 2
     texture: {fileID: 2800000, guid: 5982d35c85752884487e9e881d7d9f9a, type: 3}
     position: {x: 1.4, y: 0.21}
@@ -95,7 +97,7 @@ MonoBehaviour:
     outlineOnTime: 0.3
     outlineWidth: 0
     outlineColor: {r: 1, g: 0.92589796, b: 0, a: 1}
-    soundOnClick: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 3
     texture: {fileID: 2800000, guid: 625702428f43ae54c946cae3a39bd058, type: 3}
     position: {x: 2.07, y: -1.13}
@@ -103,7 +105,7 @@ MonoBehaviour:
     outlineOnTime: 0.3
     outlineWidth: 0
     outlineColor: {r: 1, g: 0.92549026, b: 0, a: 1}
-    soundOnClick: {fileID: 0}
+    soundOnClick: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   - id: 4
     texture: {fileID: 2800000, guid: afb5680bb382a8a4282e3086e790ecc4, type: 3}
     position: {x: -0.36, y: 0.21}

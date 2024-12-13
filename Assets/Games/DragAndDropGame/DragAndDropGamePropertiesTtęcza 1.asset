@@ -19,13 +19,13 @@ MonoBehaviour:
     scale: {x: 0.4, y: 0.42}
     layer: 2
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: 21531234b0a33c14889118f2fa002de7, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
   useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
   useCustomAudioClipForSingleObjectOnDrag: 1
-  snapToContainterTime: 0.5
+  snapToContainterTime: 1
   snapOnClick: 1
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   - objectID: 1
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 4d3cbf08e44d3cf409e94f2e7217b003, type: 3}
-  onGoodContainerAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
+  onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
   onWrongContainerOutlineWidth: 0.576

@@ -44,7 +44,7 @@ MonoBehaviour:
     dialogOnSequenceStart: {fileID: 8300000, guid: 0cfca7f788032a54884d1434446482c2, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 32f3b2ed3a470fb4d8151c75fa1c4c5d, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: edf789a01077b9d46914c476722e6560, type: 3}
   - objectID: 4
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 4ba77f7e2209483438c1a680d15e6dda, type: 3}

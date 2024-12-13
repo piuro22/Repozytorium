@@ -16,17 +16,17 @@ MonoBehaviour:
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
-    audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
+    audioClip: {fileID: 8300000, guid: 00702221ced313348935635f5090840d, type: 3}
   - photo: {fileID: 21300000, guid: c29777447fe13694ba0ecbb59d73a7ac, type: 3}
-    audioClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
+    audioClip: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
   - photo: {fileID: 21300000, guid: 473f4fca28be5264e91b81042637df08, type: 3}
-    audioClip: {fileID: 8300000, guid: 2cfb36512a0b419469de82777330cbac, type: 3}
-  - photo: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
-    audioClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
-  - photo: {fileID: 21300000, guid: 1fe0cba84c4d56942a2e3cec800bf8f9, type: 3}
-    audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
+    audioClip: {fileID: 8300000, guid: 5a0ceff43a5efaa4daac04129c34fc4a, type: 3}
   - photo: {fileID: 21300000, guid: e5c4b115beebcc34393f544ecd7cfce0, type: 3}
-    audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
+    audioClip: {fileID: 8300000, guid: 0bbe903cafc94b04199ec5ebf48f6622, type: 3}
+  - photo: {fileID: 21300000, guid: dae2425129a38444c939f03d0371e9b0, type: 3}
+    audioClip: {fileID: 8300000, guid: 098dba8292e498946878a9eccc8cae3e, type: 3}
+  - photo: {fileID: 21300000, guid: 7bfa02e56ab422946aecc88e0d903313, type: 3}
+    audioClip: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
   useAudio: 0
   useScreenClick: 1
   gameMusic: {fileID: 0}

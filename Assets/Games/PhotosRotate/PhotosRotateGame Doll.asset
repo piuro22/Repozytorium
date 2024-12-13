@@ -55,8 +55,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  onPhotoClickAudioClip: {fileID: 8300000, guid: c0ede965e9a2a0e44b1b2b9f42423ef2, type: 3}
-  background: {fileID: 2800000, guid: d367de012d6464e4d93212f5c7847712, type: 3}
+  onPhotoClickAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
+  background: {fileID: 2800000, guid: 1c06b5b9d1efc4d41820447da41b5437, type: 3}
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 50d50802867e0744aaacc61e97f9356f, type: 3}
   commandText: 

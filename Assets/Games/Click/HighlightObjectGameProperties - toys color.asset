@@ -16,43 +16,45 @@ MonoBehaviour:
   gameMusic: {fileID: 0}
   gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}
   wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
+  scaleOnClickMultiplier: 1.2
+  scaleOnClickTime: 0.2
   gameSequence:
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2cedaafb6d2d3a14dbe609e3b7c3ff13, type: 3}
     objectsToHighlights:
     - ObjectID: 1
     SequenceTime: 2
-    waitForClick: 0
-    audioClipOnClick: {fileID: 8300000, guid: 430c7e7b98c416546a122fe92a487aad, type: 3}
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 3f85f62b8108ed04cbe0a66daca2f47f, type: 3}
     objectsToHighlights:
     - ObjectID: 0
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 526e373bb8c911646b80ddab7b57d94e, type: 3}
     objectsToHighlights:
     - ObjectID: 3
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 9013123f79502b7499eea5ef58ec9dde, type: 3}
     objectsToHighlights:
     - ObjectID: 4
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 204a7b67df959724aab976681c4c4d35, type: 3}
     objectsToHighlights:
     - ObjectID: 5
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 8c0cfab701684884783cbeb595108c69, type: 3}
     objectsToHighlights:
     - ObjectID: 2
     SequenceTime: 2
     waitForClick: 1
-    audioClipOnClick: {fileID: 0}
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   higlightObjects:
   - id: 0
     texture: {fileID: 2800000, guid: f777f463c6c138145a4e5e5c38707681, type: 3}
@@ -61,7 +63,7 @@ MonoBehaviour:
     outlineOnTime: 0.3
     outlineWidth: 0.7
     outlineColor: {r: 0.92502797, g: 1, b: 0, a: 1}
-    soundOnClick: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 1
     texture: {fileID: 2800000, guid: 414b159414636614ba57561e53c8800f, type: 3}
     position: {x: 1.43, y: -0.97}
@@ -69,7 +71,7 @@ MonoBehaviour:
     outlineOnTime: 0.3
     outlineWidth: 0.7
     outlineColor: {r: 1, g: 0.9104993, b: 0, a: 1}
-    soundOnClick: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 2
     texture: {fileID: 2800000, guid: 2ae4680e86da22d4b8edb8891ed6fc2d, type: 3}
     position: {x: 2.45, y: -0.88}
@@ -77,7 +79,7 @@ MonoBehaviour:
     outlineOnTime: 0.3
     outlineWidth: 0.7
     outlineColor: {r: 1, g: 0.92589796, b: 0, a: 1}
-    soundOnClick: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+    soundOnClick: {fileID: 0}
   - id: 3
     texture: {fileID: 2800000, guid: 4dfd73a0149496448a7e87262ed1eccd, type: 3}
     position: {x: 2.5, y: -1.62}

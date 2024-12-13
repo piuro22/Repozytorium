@@ -60,7 +60,7 @@ MonoBehaviour:
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 4c97f81ce1687f94e8dc18441fee608d, type: 3}
-    audioclip: {fileID: 8300000, guid: 55bc1b743ddc1dc4bbe54a08fe58d49c, type: 3}
+    audioclip: {fileID: 8300000, guid: 19cf8302db9db284ebd3024668c8eb9b, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: d8cf2b862c573a4459fff48a98a66cf4, type: 3}
-    audioclip: {fileID: 8300000, guid: 61049d5a660b256469232ff5a91b9eb7, type: 3}
+    audioclip: {fileID: 8300000, guid: 3f4bc6f4568e1eb4b92a6a0d2d7049fb, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

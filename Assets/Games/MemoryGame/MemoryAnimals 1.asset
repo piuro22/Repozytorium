@@ -53,7 +53,7 @@ MonoBehaviour:
   memoryCardDatas4x2:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
-    audioclip: {fileID: 8300000, guid: edf789a01077b9d46914c476722e6560, type: 3}
+    audioclip: {fileID: 8300000, guid: f9c18ae3e2bcd89478bae5b259c70111, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

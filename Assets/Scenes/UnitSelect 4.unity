@@ -1209,7 +1209,7 @@ MonoBehaviour:
   prefabScale: {x: 0.1, y: 0.1, z: 0.1}
   units:
   - UnitPrefab: {fileID: 7357801014477358990, guid: 4ebbd61ceb1442c4f82c970cb29b78ca, type: 3}
-    unitName: Jobs
+    unitName: Occupations
     sceneToLoadName: Scene Jobs4
   - UnitPrefab: {fileID: 7357801014477358990, guid: 2c799c1f2b4e52c40ad36bf4746e9f73, type: 3}
     unitName: Bedtime
