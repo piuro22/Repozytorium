@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      purpure  ballon 600_0: 3338240413741522733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

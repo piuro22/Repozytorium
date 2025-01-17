@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: New Web Profile
+  m_EditorClassIdentifier: 
+  m_AssetVersion: 1
+  m_BuildTarget: 20
+  m_Subtarget: 0
+  m_PlatformId: 84a3bb9e7420477f885e98145999eb20
+  m_PlatformBuildProfile:
+    rid: 8082824726058369027
+  m_OverrideGlobalSceneList: 0
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/LoadingApp.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene LoginPC.unity
+  - m_enabled: 0
+    m_path: Assets/Scenes/Scene Login.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/UnitSelect.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/UnitSelect 2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/UnitSelect 3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/UnitSelect 4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Animals2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Body2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Fruits2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Home2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Routine2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene WClothes2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Furniture3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Town3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Vegetables3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Vehicles3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Weather3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene MyDay4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Feeling4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Jobs4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene BedTime4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene School4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Playground4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Zoo Animals3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/QuizPictures.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Mp3Player.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Level Change.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/MemoryScene.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/ClickForHighlight.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/DragAndDrop.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/QRScanner.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Colours.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/PhotosRotate.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Clothes1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Family1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Food1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Pets1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Scene Toys1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/PhotosGallery.unity
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8082824726058369027
+      type: {class: WebGLPlatformSettings, ns: UnityEditor.WebGL, asm: UnityEditor.WebGL.Extensions}
+      data:
+        m_Development: 0
+        m_ConnectProfiler: 0
+        m_BuildWithDeepProfilingSupport: 0
+        m_AllowDebugging: 0
+        m_WaitForManagedDebugger: 0
+        m_ManagedDebuggerFixedPort: 0
+        m_ExplicitNullChecks: 0
+        m_ExplicitDivideByZeroChecks: 0
+        m_ExplicitArrayBoundsChecks: 0
+        m_CompressionType: -1
+        m_InstallInBuildFolder: 0
+        m_CodeOptimization: 0
+        m_WebGLClientBrowserPath: 
+        m_WebGLClientBrowserType: 0
+        m_WebGLTextureSubtarget: 0

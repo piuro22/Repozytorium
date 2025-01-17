@@ -100,7 +100,7 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 5
-    alternativeTargetTexture: {fileID: 2800000, guid: f06ab1f73fba7f146af62d23cbfe5b1f, type: 3}
+    alternativeTargetTexture: {fileID: 2800000, guid: 162cbd44598e29548b79dfe75ca59cb9, type: 3}
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0.25, y: 0.25}
     endRotationObjectIfAlternativeTexture: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
-    alternativeTargetTexture: {fileID: 2800000, guid: fd171107c5d92df4eae49f7fc246ee01, type: 3}
+    alternativeTargetTexture: {fileID: 2800000, guid: bb0b1d48084137c48a373bc916ec128c, type: 3}
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0.25, y: 0.25}
     endRotationObjectIfAlternativeTexture: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
     additionalOffset: {x: 0.1, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0.25, y: 0.25}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: 1.87, y: -1.7}
+    targetPosition: {x: 1.839, y: -1.7}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
     targetScale: {x: 0.25, y: 0.25}

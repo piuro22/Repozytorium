@@ -16,6 +16,7 @@ MonoBehaviour:
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
+  frameSprite: {fileID: 0}
   questions:
   - singleQuizPictures:
     - isCorrect: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 200}
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
+      picture: {fileID: -5641086745283838933, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 200}
     - isCorrect: 0
@@ -64,7 +65,7 @@ MonoBehaviour:
     questionClip: {fileID: 8300000, guid: 3c011c17ed8f3614da01dbd6095aa004, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
+      picture: {fileID: -5641086745283838933, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0
@@ -108,16 +109,16 @@ MonoBehaviour:
     questionText: 
     questionClip: {fileID: 8300000, guid: fea7f0080a90e57488e9b8568c3d9f3f, type: 3}
   - singleQuizPictures:
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: 6421fe010fadbd049b79bc3175a35d9f, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
     - isCorrect: 0
       picture: {fileID: 21300000, guid: eabfafd557b189d4ca7bd714e54c689e, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 7be322b3e3c4258449fed38a22c81334, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 6421fe010fadbd049b79bc3175a35d9f, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
@@ -138,16 +139,16 @@ MonoBehaviour:
     questionText: 
     questionClip: {fileID: 8300000, guid: 45c53a4cd71aa2e41a8939a764fb86c9, type: 3}
   - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: eabfafd557b189d4ca7bd714e54c689e, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
     - isCorrect: 1
       picture: {fileID: 21300000, guid: 8acdc184af4847442b202997872d44e2, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: c16178daec6ed2c4c9395e25f8380191, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: b0e981615d77c8448b5d296b53f899d4, type: 3}
+      picture: {fileID: 21300000, guid: 06cd9b92c5490d94e82a3b539fb2f26d, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
@@ -158,7 +159,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 4ae82511430a1df439deec527eec0a58, type: 3}
+      picture: {fileID: 21300000, guid: 47181a221557b8c468eeb991077ac162, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0

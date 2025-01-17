@@ -27,6 +27,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 098dba8292e498946878a9eccc8cae3e, type: 3}
   - photo: {fileID: 21300000, guid: 7bfa02e56ab422946aecc88e0d903313, type: 3}
     audioClip: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
+  - photo: {fileID: -2483858721532425789, guid: 683fb9548a4e3744fa68139bfcd4081b, type: 3}
+    audioClip: {fileID: 8300000, guid: 4670e03b152294548894d708f5be7fb5, type: 3}
   useAudio: 0
   useScreenClick: 1
   gameMusic: {fileID: 0}

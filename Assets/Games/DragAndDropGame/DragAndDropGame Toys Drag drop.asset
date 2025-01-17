@@ -25,10 +25,10 @@ MonoBehaviour:
   snapOnClick: 0
   useRandomPositionForContainerObjects: 0
   useRandomRotationForContainerObjects: 0
-  useOtherTextureForContainer: 0
+  useOtherTextureForContainer: 1
   containerTransparency: 0.65
   containerFillTransparency: 0
-  overrideContainerColor: 1
+  overrideContainerColor: 0
   containerColor: {r: 0, g: 0, b: 0, a: 1}
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
@@ -57,7 +57,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -70,9 +70,9 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 6
-    alternativeTargetTexture: {fileID: 2800000, guid: ab8b081a6c3accc489a9419f77fd7b55, type: 3}
-    additionalOffset: {x: 0.2, y: 0.6}
-    endScaleObjectIfAlternativeTexture: {x: 0.2, y: 0.2}
+    alternativeTargetTexture: {fileID: 2800000, guid: 74f7cea1cf0cc3948a92887530a6aa2f, type: 3}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0.5, y: 0.5}
     endRotationObjectIfAlternativeTexture: 0
     targetPosition: {x: -1.34, y: -1.7}
     targetPositionMinMaxX: {x: 0, y: 4}
@@ -87,7 +87,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -100,9 +100,9 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 5
-    alternativeTargetTexture: {fileID: 2800000, guid: eb46123af04298b43a6565e06ae8af33, type: 3}
+    alternativeTargetTexture: {fileID: 2800000, guid: 9cdae0049c2c4e149b6ef76d1c9596b4, type: 3}
     additionalOffset: {x: 0, y: 0}
-    endScaleObjectIfAlternativeTexture: {x: 0.4, y: 0.4}
+    endScaleObjectIfAlternativeTexture: {x: 0.5, y: 0.5}
     endRotationObjectIfAlternativeTexture: 0
     targetPosition: {x: 3.43, y: -1.7}
     targetPositionMinMaxX: {x: 0, y: 4}
@@ -117,7 +117,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -130,9 +130,9 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
-    alternativeTargetTexture: {fileID: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 53d724c8008a68b499c4a7d6cb31a416, type: 3}
     additionalOffset: {x: 0, y: 0}
-    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0.5, y: 0.5}
     endRotationObjectIfAlternativeTexture: 0
     targetPosition: {x: 0.25, y: -1.7}
     targetPositionMinMaxX: {x: 0, y: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
     useRandomPositionForContainerObjects: 0
     useRandomRotationForDragObjects: 0
     useRandomRotationForContainerObjects: 0
-    useOtherTextureForContainer: 0
+    useOtherTextureForContainer: 1
     useCustomAudioClipForSingleObjectOnDrag: 1
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
@@ -160,9 +160,9 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 1
-    alternativeTargetTexture: {fileID: 0}
+    alternativeTargetTexture: {fileID: 2800000, guid: 13b6fcb887e9f2840a77eff1e286db2f, type: 3}
     additionalOffset: {x: 0, y: 0}
-    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0.5, y: 0.5}
     endRotationObjectIfAlternativeTexture: 0
     targetPosition: {x: 1.87, y: -1.7}
     targetPositionMinMaxX: {x: 0, y: 0}

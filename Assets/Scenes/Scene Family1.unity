@@ -640,27 +640,27 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 2b63b176526651941ab2e390383f0058, type: 2}
+      objectReference: {fileID: 11400000, guid: 24090fb3aa4a56945acdccda07f1cb77, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4a9c436ebed77dc4cb32ff96d0740e86, type: 2}
+      objectReference: {fileID: 11400000, guid: c8ab4d3f6f9ae0344bd3f3773325d1c4, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 15598177c21aa5445b30a6122c3da668, type: 2}
+      objectReference: {fileID: 11400000, guid: 23621cbc5fa40484c9a737c3aedbceff, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[4]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4a7ce88fb8f2a3345915c16b4db2caf3, type: 2}
+      objectReference: {fileID: 11400000, guid: 4aa995bde656fc14e8f7de1aee65d302, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[5]'
       value: 
-      objectReference: {fileID: 11400000, guid: 8cc9a6554cb394149a7963ac88cf0fc3, type: 2}
+      objectReference: {fileID: 11400000, guid: 9b3f7e55e2f434947a12f15906d91694, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[6]'
       value: 
-      objectReference: {fileID: 11400000, guid: e0bbd9216ba9ceb4bb9cc2d235af9d0b, type: 2}
+      objectReference: {fileID: 11400000, guid: d6700777a2294be4c8d4883da94fd28b, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[7]'
       value: 
@@ -3695,14 +3695,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db49e13fa9e16dc44b5ffb6bc43d4235, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

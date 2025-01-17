@@ -15,7 +15,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
-  - photo: {fileID: 21300000, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
+  - photo: {fileID: -5641086745283838933, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
     audioClip: {fileID: 8300000, guid: 0571fe1a3b5a9c547ba7e08c91cb3fbb, type: 3}
   - photo: {fileID: 21300000, guid: c8c71c5d181633744844d9085e371a13, type: 3}
     audioClip: {fileID: 8300000, guid: 3c011c17ed8f3614da01dbd6095aa004, type: 3}
@@ -29,6 +29,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: fea7f0080a90e57488e9b8568c3d9f3f, type: 3}
   - photo: {fileID: 21300000, guid: 694afac61c99df64db9a6de81506d57d, type: 3}
     audioClip: {fileID: 8300000, guid: 85563eeb977e2c5448a39cc4605155bd, type: 3}
+  - photo: {fileID: 21300000, guid: f68cb6ece750c7e4a88f528fea0b8842, type: 3}
+    audioClip: {fileID: 8300000, guid: 45c53a4cd71aa2e41a8939a764fb86c9, type: 3}
   useAudio: 0
   useScreenClick: 1
   gameMusic: {fileID: 0}

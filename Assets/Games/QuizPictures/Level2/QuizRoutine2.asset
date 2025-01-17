@@ -15,7 +15,7 @@ MonoBehaviour:
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  background: {fileID: 21300000, guid: f2a62d9141ec213428031d76b5234f1d, type: 3}
+  background: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
   frameSprite: {fileID: 0}
   questions:
   - singleQuizPictures:
@@ -72,7 +72,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: b1566bb4d86fd0045b54208391c5ca4a, type: 3}
+    questionClip: {fileID: 8300000, guid: f380b5454f43b684aacffeff2b048351, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 0182ed2097f2cf64284321665d6bef52, type: 3}

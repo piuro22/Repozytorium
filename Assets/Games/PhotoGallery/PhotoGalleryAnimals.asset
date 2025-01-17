@@ -30,7 +30,7 @@ MonoBehaviour:
   - photo: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
     audioClip: {fileID: 8300000, guid: e3aabce0d32697e47aac9180dfcf0ae8, type: 3}
   - photo: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
-    audioClip: {fileID: 8300000, guid: edf789a01077b9d46914c476722e6560, type: 3}
+    audioClip: {fileID: 8300000, guid: f9c18ae3e2bcd89478bae5b259c70111, type: 3}
   - photo: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
     audioClip: {fileID: 8300000, guid: 1c85ed9e94ff6014e9a471184c0f1ee0, type: 3}
   useAudio: 1

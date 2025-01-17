@@ -9,6 +9,8 @@ using EPOOutline;
 
 public class HighlightObjectController : MonoBehaviour
 {
+    private bool isScaled = false;   //CHAT 4
+
     public SpriteRenderer spriteRenderer;
     public Texture2D _texture;
     private Sprite tempSprite;
@@ -116,6 +118,10 @@ public class HighlightObjectController : MonoBehaviour
 
     public void PlayAudio()
     {
+        if (isScaled) return; // Jeœli obiekt ju¿ zosta³ powiêkszony, zakoñcz dzia³anie CHAT4
+
+        isScaled = true; // Oznacz, ¿e obiekt zosta³ powiêkszony  CHAT4
+
         // Play the click sound
         audioSource.PlayOneShot(higlightObjectProperites.soundOnClick);
 

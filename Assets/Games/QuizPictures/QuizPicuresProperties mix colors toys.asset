@@ -16,6 +16,7 @@ MonoBehaviour:
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
+  frameSprite: {fileID: 0}
   questions:
   - singleQuizPictures:
     - isCorrect: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 0578660b82fc7b44e912e198c7bbe6b7, type: 3}
+    questionClip: {fileID: 8300000, guid: d36e401119835e54a83e187a679eaee6, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: bbe9a841d4b96ed4aa251f9063f8e517, type: 3}
@@ -136,7 +137,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 34ec6ea71b35db0478d7c8f61fe49ae4, type: 3}
+    questionClip: {fileID: 8300000, guid: 75b96b1ac7143874d8ca38f4932a35fc, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 0d967c34bc3dda04fac9e41a5c0a5ee5, type: 3}
