@@ -39,25 +39,25 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d9adbe464541b0740baaeac4eb2e7e5c, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 1067001e96776994b8894b68af24b121, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: aef8b2fd66f4ebf4b890afe749f9da88, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 18d7eee06bd893e46889be361d2acadb, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: d123605adfd9a904296f66d0f5c193a7, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 406747d7075433e45bdc52da482f89b5, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 48c8f66697e15a846b2daf3190b6d3b9, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: c6cb95854aef3fb41a68e080f0bec1c2, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 396fa96c454dbaa4ea1f776a2a28f833, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 06f84461a126503469439dcbaed25738, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 81ea6cceb1cb18b4e90580b9333e2205, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 9cbfca51b8437e84a9e9c07da8a27985, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: 6f7d2d702289bb24886d72437d6202f5, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

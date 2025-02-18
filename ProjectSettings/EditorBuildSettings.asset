@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene LoginPC.unity
     guid: 20de900bb2112584d96e8331e913d0c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Login.unity
     guid: ad0bc726ae5a231439aaf8b4c38bf454
   - enabled: 1

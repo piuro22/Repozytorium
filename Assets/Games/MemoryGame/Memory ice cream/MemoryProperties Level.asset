@@ -31,21 +31,21 @@ MonoBehaviour:
   memoryCardDatas3x2:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: c29777447fe13694ba0ecbb59d73a7ac, type: 3}
-    audioclip: {fileID: 8300000, guid: d746c0e3ea49863408056abb6f43caa0, type: 3}
+    audioclip: {fileID: 8300000, guid: fe74e5b4ec82faa4abf25aa27283c4fa, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 7bfa02e56ab422946aecc88e0d903313, type: 3}
-    audioclip: {fileID: 8300000, guid: b24b896c64453a24bb8c74497694b58f, type: 3}
+    audioclip: {fileID: 8300000, guid: d5f5e38a677b4044dac66f2017c22b10, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 473f4fca28be5264e91b81042637df08, type: 3}
-    audioclip: {fileID: 8300000, guid: 960242b066ce8f841a528c108cdf7995, type: 3}
+    audioclip: {fileID: 8300000, guid: c8b38b5fb9b0edb4abceb5e18ebd7f7b, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

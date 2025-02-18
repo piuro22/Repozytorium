@@ -34,26 +34,26 @@ MonoBehaviour:
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
   dragAndDropGameSequences:
   - objectID: 0
-    textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 417ebfe716a1e8a44be326561ea020b3, type: 3}
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 8303e2d2bdc69ee4c8fd3a863b32aebc, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 527b659170fcee546a9126eac3699a5f, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 5a82684f6c22d664684cde4773c76b98, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: fa4b1dc34533ec24b9aa059543dde76d, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: d07bdd7294d7a0448acf03ef9f46bd7e, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 3698a3a9a7b7f5d4da5cfe544cc3a713, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 9b562f0b174d0e246a00b1ee50195d76, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 27771ad6e0b00a14d9c56694f6d192b3, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 5c0d1d0402e6e8142ad9ae20ec8e34a3, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 1bd26014f6da4b24bbda948a51cf1063, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 54594068919420a46ac90ef6302690fa, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: bc4bbdbe0ebd03648a5b2a9dca9983dc, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 4daf88aff5f4a3c4a9dca5398fa89304, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

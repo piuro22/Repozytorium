@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1bcfa7bccb7d94682be39ffeb28b43, type: 3}
+  m_Name: HighlightObjecWinterClothes2
+  m_EditorClassIdentifier: 
+  backGroundTexture: {fileID: 21300000, guid: 76902f7d28ff656409b51e3d9ceb2317, type: 3}
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
+  wrongClickAudioClip: {fileID: 8300000, guid: 82dd31f4f21f58f49a20242fe569325c, type: 3}
+  scaleOnClickMultiplier: 1.2
+  scaleOnClickTime: 0.2
+  gameSequence:
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: cf0bbeec37258d942a05ddf92f9498b3, type: 3}
+    objectsToHighlights:
+    - ObjectID: 1
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: deee7278ab95f5740b39b9ade70cafcd, type: 3}
+    objectsToHighlights:
+    - ObjectID: 0
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: e3f99732db3f66f4e8517ad3a297bfe0, type: 3}
+    objectsToHighlights:
+    - ObjectID: 7
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: a3e633d3317260c48b05664c498533db, type: 3}
+    objectsToHighlights:
+    - ObjectID: 2
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 41eb58d6ad9046846b1a2ff23bf5fdbd, type: 3}
+    objectsToHighlights:
+    - ObjectID: 6
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: e48d27d68c2c3d04bb6beabbda3d73c9, type: 3}
+    objectsToHighlights:
+    - ObjectID: 3
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 6ce36ba4665df0041ac4ad838813ca16, type: 3}
+    objectsToHighlights:
+    - ObjectID: 4
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: ea4130d5cfb62e64d94fafbfb8c7d9b9, type: 3}
+    objectsToHighlights:
+    - ObjectID: 5
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 839c198eaecc3dc45b4fd30f8a12a6e3, type: 3}
+    objectsToHighlights:
+    - ObjectID: 8
+    SequenceTime: 1
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
+  higlightObjects:
+  - id: 0
+    texture: {fileID: 2800000, guid: 4fde235a6223ed24b8cdb6df014802f7, type: 3}
+    position: {x: 2.56, y: 0.18}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0.4
+    outlineWidth: 0
+    outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
+    soundOnClick: {fileID: 0}
+  - id: 1
+    texture: {fileID: 2800000, guid: 71535a90b440ac24a8eeecb9e0e19adc, type: 3}
+    position: {x: 3.47, y: -0.389}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0.4
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.9104993, b: 0, a: 1}
+    soundOnClick: {fileID: 0}
+  - id: 2
+    texture: {fileID: 2800000, guid: 27537484fe39154489e6cb0648dacda7, type: 3}
+    position: {x: 1.4, y: 0.21}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0.3
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92589796, b: 0, a: 1}
+    soundOnClick: {fileID: 0}
+  - id: 3
+    texture: {fileID: 2800000, guid: 77d0f611ed256ab4d8c14556e616eed8, type: 3}
+    position: {x: 2.07, y: -1.13}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0.3
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 1}
+    soundOnClick: {fileID: 0}
+  - id: 4
+    texture: {fileID: 2800000, guid: dbb08afceb6565b45b2e6564cbedd13c, type: 3}
+    position: {x: 0.441, y: -0.354}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 2
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 5
+    texture: {fileID: 2800000, guid: 82708f733b1f08644b9da7945ba2f557, type: 3}
+    position: {x: -0.25, y: -1.35}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 2
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 6
+    texture: {fileID: 2800000, guid: 3e63d90bed9b5d446893c942f0b834ae, type: 3}
+    position: {x: 3.28, y: -1.33}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 2
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 7
+    texture: {fileID: 2800000, guid: 74846c5ae07e04a419c2d605d0d72391, type: 3}
+    position: {x: -0.537, y: 0.167}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0
+    outlineWidth: 0
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 8
+    texture: {fileID: 2800000, guid: d2e3027293fbe014195c43ac64373a00, type: 3}
+    position: {x: 0.89, y: -1.28}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0
+    outlineWidth: 0
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}

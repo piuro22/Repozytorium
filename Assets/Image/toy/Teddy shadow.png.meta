@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Teddy shadow_0: 329777850146035683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

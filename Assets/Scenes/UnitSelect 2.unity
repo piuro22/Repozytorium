@@ -1219,10 +1219,10 @@ MonoBehaviour:
     sceneToLoadName: Scene Routine2
   - UnitPrefab: {fileID: 7357801014477358990, guid: 5e8ab627389572e46a71580f90757202, type: 3}
     unitName: Winter clothes
-    sceneToLoadName: Scene WClothes2 0
+    sceneToLoadName: Scene WClothes2
   - UnitPrefab: {fileID: 7357801014477358990, guid: 791034d9fe9d8784c998427da02ebbe5, type: 3}
     unitName: Body
-    sceneToLoadName: Scene Body2 0
+    sceneToLoadName: Scene Body20
   - UnitPrefab: {fileID: 7357801014477358990, guid: 27f5f2c1fb0870843b1987dfff2da612, type: 3}
     unitName: Fruits
     sceneToLoadName: Scene Fruits2 0
@@ -1296,7 +1296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1210617337
 RectTransform:
   m_ObjectHideFlags: 0

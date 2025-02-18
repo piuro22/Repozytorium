@@ -3064,7 +3064,7 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
       propertyPath: 'gameProperties.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 50d94241f8433e84590fb8cc7235e683, type: 2}
+      objectReference: {fileID: 11400000, guid: 00b7d1a0bf0d2af478dd8605ee5b9423, type: 2}
     - target: {fileID: 5582804837462836365, guid: c37f096c063cb3e4e9e567868bc4758e, type: 3}
       propertyPath: m_text
       value: 8

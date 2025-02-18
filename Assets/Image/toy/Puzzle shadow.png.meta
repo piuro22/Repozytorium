@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Puzzle shadow_0: -5291298344116875961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

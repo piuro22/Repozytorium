@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kanapka_0: -5641086745283838933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

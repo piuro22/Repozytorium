@@ -130,7 +130,7 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
-    alternativeTargetTexture: {fileID: 2800000, guid: b0e981615d77c8448b5d296b53f899d4, type: 3}
+    alternativeTargetTexture: {fileID: 2800000, guid: 0c2405c4ca62e0042916ae0fe355baff, type: 3}
     additionalOffset: {x: 0, y: -0.41}
     endScaleObjectIfAlternativeTexture: {x: 0.3, y: 0.3}
     endRotationObjectIfAlternativeTexture: 0

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brother shadow_0: 499849035133386644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ball shadow2_0: -7722312688666802958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,7 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: 90eab2659b50cf64e924be5ae9f6c942, type: 3}
   dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: e42769ecda72ac84ea69f6b3a640f505, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: da8a5848985b1a948a9586c5e04d2960, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
     dialogOnSequenceStart: {fileID: 8300000, guid: a9304c224bb1d3740b9d713eeb6f2e9b, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: acc0204f2e121994f9dfe09c0355d9aa, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 62e433cc712199a4fb97380ef05de7d5, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
@@ -152,7 +152,7 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 2
-    texture: {fileID: 2800000, guid: 592c5cd615b92ce449cb37a6646633f4, type: 3}
+    texture: {fileID: 2800000, guid: dedd59f83a7b89b4a80d43e23d6fa2df, type: 3}
     startPosition: {x: 0.2, y: 0.9}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 1
-    alternativeTargetTexture: {fileID: 2800000, guid: d025fb4f8a2b4024293c02f42c3d5470, type: 3}
+    alternativeTargetTexture: {fileID: 2800000, guid: ad813e2042c2db84490d1b7c19194de5, type: 3}
     additionalOffset: {x: 0, y: -0.3}
     endScaleObjectIfAlternativeTexture: {x: 0.2, y: 0.2}
     endRotationObjectIfAlternativeTexture: 0
