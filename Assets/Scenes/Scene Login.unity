@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 35484489}
   - component: {fileID: 35484492}
   - component: {fileID: 35484493}
+  - component: {fileID: 35484494}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -201,6 +202,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  levelController: {fileID: 0}
 --- !u!114 &35484493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +216,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationType: 0
+--- !u!114 &35484494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35484488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b472df1012aa8a4b96fef4156918254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelsURL: https://yoopieenglish.pl/Unity/GetUserLevels.php
+  levelButtons:
+  - {fileID: 1675355235}
+  - {fileID: 1170642088}
+  - {fileID: 984597680}
+  - {fileID: 1084037866}
 --- !u!1 &69893840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2612,7 @@ GameObject:
   - component: {fileID: 984597679}
   - component: {fileID: 984597678}
   - component: {fileID: 984597677}
+  - component: {fileID: 984597680}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -2714,6 +2735,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984597675}
   m_CullTransparentMesh: 1
+--- !u!225 &984597680
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984597675}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &986367185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,6 +3302,7 @@ GameObject:
   - component: {fileID: 1084037865}
   - component: {fileID: 1084037864}
   - component: {fileID: 1084037863}
+  - component: {fileID: 1084037866}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -3392,6 +3426,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084037861}
   m_CullTransparentMesh: 1
+--- !u!225 &1084037866
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084037861}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1161815439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3604,7 @@ GameObject:
   - component: {fileID: 1170642087}
   - component: {fileID: 1170642086}
   - component: {fileID: 1170642085}
+  - component: {fileID: 1170642088}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -3681,6 +3728,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170642083}
   m_CullTransparentMesh: 1
+--- !u!225 &1170642088
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170642083}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1177021412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,6 +5176,7 @@ GameObject:
   - component: {fileID: 1675355234}
   - component: {fileID: 1675355233}
   - component: {fileID: 1675355232}
+  - component: {fileID: 1675355235}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5240,6 +5300,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675355230}
   m_CullTransparentMesh: 1
+--- !u!225 &1675355235
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675355230}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1679395044
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class LoginController : MonoBehaviour
 
     public string loginURL = "https://yoopieenglish.pl/Unity/GetTableJson.php"; // Replace with your server URL
     public UnityEvent OnSuccesLogin;
-
+    [SerializeField] private LevelsController levelController;
     private const string CREDENTIALS_FILE_NAME = "userCredentials.json";
 
     private void Start()
@@ -63,6 +63,7 @@ public class LoginController : MonoBehaviour
             {
                 OnSuccesLogin.Invoke();
                 SaveCredentials(login, password);
+                levelController.StartGetLelvels(login);
             }
             else
             {
