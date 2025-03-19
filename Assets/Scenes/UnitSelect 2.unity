@@ -1222,7 +1222,7 @@ MonoBehaviour:
     sceneToLoadName: Scene WClothes2
   - UnitPrefab: {fileID: 7357801014477358990, guid: 791034d9fe9d8784c998427da02ebbe5, type: 3}
     unitName: Body
-    sceneToLoadName: Scene Body20
+    sceneToLoadName: Scene Body2
   - UnitPrefab: {fileID: 7357801014477358990, guid: 27f5f2c1fb0870843b1987dfff2da612, type: 3}
     unitName: Fruits
     sceneToLoadName: Scene Fruits2 0

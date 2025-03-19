@@ -168,9 +168,16 @@ public class CircleMenuManager : MonoBehaviour
 
     public void BackToUnitSelect()
     {
-         SceneManager.LoadScene("Scene Login 1");
-        
-        
+
+       
+       /*  #if UNITY_ANDROID || UNITY_IOS
+            SceneManager.LoadScene("Scene Login"); // Jeœli dzia³a na telefonie (Android/iOS)
+        #else
+            SceneManager.LoadScene("Scene Login 1"); // Jeœli dzia³a na PC
+        #endif  */
+         SceneManager.LoadScene("Scene Login");
+
+
     }
 }
 

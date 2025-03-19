@@ -19,7 +19,7 @@ MonoBehaviour:
     scale: {x: 0.4, y: 0.4}
     layer: 10
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: febe4ce8692ac71428ec99592a3fc979, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0
@@ -39,28 +39,28 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 7
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 69296faf800e89d40b72a2a24fec1f06, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: ef39ded254427524a92632289ddc657c, type: 3}
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: f5e7234318cf40e4683667a841c0fec7, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: b7c0833209836604fb18dfeefcd0f2e0, type: 3}
   - objectID: 1
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 4c917dec74c5a064d863b9e6d45f8dc6, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: c27a97f9798ce5e4eacf82a9cadadc51, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 07e1cb7acfbc52e479d7ef326b88b4c2, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2ae0e8831f777e4458f8b6843d114569, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 8916e66bcc8e16d4ab0b117e78b8ce52, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0981733b4f09742468c7267f1dd6ddb3, type: 3}
   - objectID: 5
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 988e1c54edcce1e47901711547af9ab9, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: d5be70941e71b504b8dc1a0eea5f41c9, type: 3}
   - objectID: 6
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 5888ff18d03045647abe84de56f9e64e, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 4a726d6468181094cab5cc6d927ea007, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: bb9eb5418d20f2542bbcd28df9cef0f3, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: f9c802700ef241845a7412a09f1df5fe, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

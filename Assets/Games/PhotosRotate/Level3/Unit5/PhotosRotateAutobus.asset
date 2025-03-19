@@ -30,7 +30,7 @@ MonoBehaviour:
   - angle: 180
     chance: 33.3
   delayBetweenCommandAndInitializeGrid: 1
-  soundOnEndGame: {fileID: 8300000, guid: 292879f94917a554eb033839407bfeaa, type: 3}
+  soundOnEndGame: {fileID: 8300000, guid: b60cbe3cffdeaf24e9035f28c39391e2, type: 3}
   scaleDuration: 0.25
   rotateDuration: 0.25
   rotateCurve:
