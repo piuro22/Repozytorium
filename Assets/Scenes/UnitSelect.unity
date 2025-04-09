@@ -1222,10 +1222,10 @@ MonoBehaviour:
     sceneToLoadName: Scene Pets1
   - UnitPrefab: {fileID: 7357801014477358990, guid: f578f20003f035a4d82207fb4d904fb8, type: 3}
     unitName: Food
-    sceneToLoadName: Scene Food10
+    sceneToLoadName: Scene Food1
   - UnitPrefab: {fileID: 7357801014477358990, guid: 24661446a49f4b44cab224c737232be8, type: 3}
     unitName: Clothes
-    sceneToLoadName: Scene Clothes10
+    sceneToLoadName: Scene Clothes1
   swipeCurve:
     serializedVersion: 2
     m_Curve:

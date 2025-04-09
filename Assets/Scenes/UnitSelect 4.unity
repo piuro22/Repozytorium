@@ -1290,7 +1290,7 @@ MonoBehaviour:
     sceneToLoadName: Scene Playground4
   - UnitPrefab: {fileID: 7357801014477358990, guid: 6aa088aa7266ce04895ad46cd60d4724, type: 3}
     unitName: School supplies
-    sceneToLoadName: Scene School40
+    sceneToLoadName: Scene School4
   swipeCurve:
     serializedVersion: 2
     m_Curve:

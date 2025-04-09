@@ -20,7 +20,7 @@ MonoBehaviour:
   questions:
   - singleQuizPictures:
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 0ea06d3f8b9fb8546ba15b7ead625221, type: 3}
+      picture: {fileID: 21300000, guid: 5347a81a34a222b45ac4f1c6afae6bef, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 027636f0934766246b375356066d1cd6, type: 3}
+      picture: {fileID: 21300000, guid: 195213874bc9df045ae0532e5e825e99, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 150, y: 150}
     questionText: 
@@ -57,14 +57,14 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 63b638d6682e7cf42a1313d008a87731, type: 3}
+      picture: {fileID: 6045610150164557280, guid: 4180fa920f3bebf4f88e85f29448b11c, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
     questionClip: {fileID: 8300000, guid: 9044fc2d947a58444891d97422edd590, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: 07498e8bf919d344e99f4de3717be240, type: 3}
+      picture: {fileID: -6756904660890755109, guid: f159932c317421048893ff5e46102000, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     questionClip: {fileID: 8300000, guid: adb4b614ae4dc59428cef67f29b1f921, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: d71cc412782e93e40b272f7b9635c11b, type: 3}
+      picture: {fileID: 21300000, guid: 027636f0934766246b375356066d1cd6, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 1
-      picture: {fileID: 21300000, guid: d71cc412782e93e40b272f7b9635c11b, type: 3}
+      picture: {fileID: -5003986716865755101, guid: d71cc412782e93e40b272f7b9635c11b, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 

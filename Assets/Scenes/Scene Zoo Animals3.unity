@@ -441,6 +441,10 @@ PrefabInstance:
       propertyPath: 'gameProperties.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 7b5beb4cdcdf5e84fb51470dd04103a4, type: 2}
+    - target: {fileID: 4316974855463491826, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5582804837462836365, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_text
       value: 1
@@ -532,6 +536,10 @@ PrefabInstance:
     - target: {fileID: 8591299768377241170, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
       propertyPath: m_Name
       value: Button Open Chapter (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162254282344998716, guid: 96c4abf156fcc00408cab9c6ea1b60b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

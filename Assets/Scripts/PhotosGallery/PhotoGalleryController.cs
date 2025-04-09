@@ -77,6 +77,8 @@ public class PhotoGalleryController : MonoBehaviour
             yield break;
         }
 
+        ShuffleGallery();  // Chat GPT
+
         background.sprite = gameProperties.background;
         SetupInitialImages();
 
@@ -86,6 +88,19 @@ public class PhotoGalleryController : MonoBehaviour
         UpdatePhotoCounterText();
         UpdateNavigationButtons(); // Ensure buttons are updated initially
     }
+
+    private void ShuffleGallery()   //Chat gpt
+    {
+        var list = gameProperties.photoWithAudios;
+        for (int i = 0; i < list.Count; i++)
+        {
+            int rand = Random.Range(i, list.Count);
+            var temp = list[i];
+            list[i] = list[rand];
+            list[rand] = temp;
+        }
+    }
+
     private void SetupSingleton()
     {
         if (Instance != null && Instance != this)

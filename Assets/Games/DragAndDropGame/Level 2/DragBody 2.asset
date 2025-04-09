@@ -77,11 +77,11 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 1
-    texture: {fileID: 2800000, guid: 3daa2c69b6aaba54fa12ef221335f6fe, type: 3}
-    startPosition: {x: 1.616, y: -1.564}
+    texture: {fileID: 2800000, guid: 2cd48960179a8e24c9ea960b0f094f6e, type: 3}
+    startPosition: {x: 1.848, y: -1.596}
     startPositionMinMaxX: {x: 1, y: 2}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.6, y: 0.6}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 0
@@ -107,11 +107,11 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 2
-    texture: {fileID: 2800000, guid: 0ea06d3f8b9fb8546ba15b7ead625221, type: 3}
-    startPosition: {x: 2.309, y: -0.506}
+    texture: {fileID: 2800000, guid: 5347a81a34a222b45ac4f1c6afae6bef, type: 3}
+    startPosition: {x: 1.953, y: -0.295}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.5, y: 0.5}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 0
@@ -138,10 +138,10 @@ MonoBehaviour:
     useSequence: 1
     id: 2
     texture: {fileID: 2800000, guid: 708819f45b74c224ebfcea3fa0be5ba7, type: 3}
-    startPosition: {x: 3.081, y: -1.564}
+    startPosition: {x: 3.648, y: -1.627}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.5, y: 0.5}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -168,10 +168,10 @@ MonoBehaviour:
     useSequence: 1
     id: 3
     texture: {fileID: 2800000, guid: f64fbbfac183df346ad328ff1a4e8e18, type: 3}
-    startPosition: {x: -1.615, y: 0.507}
+    startPosition: {x: -1.942, y: 0.536}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.5, y: 0.5}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
     startPosition: {x: -0.759, y: -0.506}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.4, y: 0.4}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -227,12 +227,12 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 5
-    texture: {fileID: 2800000, guid: 07498e8bf919d344e99f4de3717be240, type: 3}
-    startPosition: {x: -1.615, y: -1.564}
+    texture: {fileID: 2800000, guid: f159932c317421048893ff5e46102000, type: 3}
+    startPosition: {x: -1.703, y: -1.857}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
-    rotationAngle: 0
+    scale: {x: 0.5, y: 0.5}
+    rotationAngle: -19.495
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
     alternativeTargetTexture: {fileID: 0}
@@ -257,11 +257,11 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 6
-    texture: {fileID: 2800000, guid: 63b638d6682e7cf42a1313d008a87731, type: 3}
-    startPosition: {x: 3.081, y: 0.507}
+    texture: {fileID: 2800000, guid: 4180fa920f3bebf4f88e85f29448b11c, type: 3}
+    startPosition: {x: 3.161, y: 0.851}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.4, y: 0.4}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -287,11 +287,11 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 7
-    texture: {fileID: 2800000, guid: 6d558000d9058c94a844f10f02809c1c, type: 3}
-    startPosition: {x: 1.616, y: 0.507}
+    texture: {fileID: 2800000, guid: 8c22e606f2dcc604385aef434f235573, type: 3}
+    startPosition: {x: 0.496, y: 0.609}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.3, y: 0.3}
+    scale: {x: 0.4, y: 0.4}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -317,8 +317,8 @@ MonoBehaviour:
     useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
     useSequence: 1
     id: 9
-    texture: {fileID: 2800000, guid: d71cc412782e93e40b272f7b9635c11b, type: 3}
-    startPosition: {x: 0, y: -1.564}
+    texture: {fileID: 2800000, guid: 79450d71fbdd6114880ff5a0f5f71113, type: 3}
+    startPosition: {x: 0.232, y: -1.852}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.3, y: 0.3}
