@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/UnitSelect 4.unity
     guid: 74eac92bf8c561242ac27a42659446e5
   - enabled: 1
+    path: Assets/Scenes/Scene Colours Extra.unity
+    guid: acc6e8148e0dcc643b748d5aeb4b4368
+  - enabled: 1
+    path: Assets/Scenes/Scene Sesons.unity
+    guid: 07908c59608635e47a504419d36975cb
+  - enabled: 1
     path: Assets/Scenes/Scene Animals2.unity
     guid: acb9861504fadd44b9c631d83a329f83
   - enabled: 1

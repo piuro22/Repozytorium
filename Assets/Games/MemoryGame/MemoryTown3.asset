@@ -73,8 +73,8 @@ MonoBehaviour:
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
-    sprite: {fileID: 21300000, guid: f06ab1f73fba7f146af62d23cbfe5b1f, type: 3}
-    audioclip: {fileID: 8300000, guid: c54be926d51b3e44da18155c10b9c2a0, type: 3}
+    sprite: {fileID: 21300000, guid: 0068c5401080fce4e9c3f6d6b9a236e7, type: 3}
+    audioclip: {fileID: 8300000, guid: 25cd1879e47dda44a9d0fead4e0425ae, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

@@ -640,19 +640,19 @@ PrefabInstance:
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 24090fb3aa4a56945acdccda07f1cb77, type: 2}
+      objectReference: {fileID: 11400000, guid: 4aa995bde656fc14e8f7de1aee65d302, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: c8ab4d3f6f9ae0344bd3f3773325d1c4, type: 2}
+      objectReference: {fileID: 11400000, guid: 24090fb3aa4a56945acdccda07f1cb77, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 23621cbc5fa40484c9a737c3aedbceff, type: 2}
+      objectReference: {fileID: 11400000, guid: c8ab4d3f6f9ae0344bd3f3773325d1c4, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[4]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4aa995bde656fc14e8f7de1aee65d302, type: 2}
+      objectReference: {fileID: 11400000, guid: 23621cbc5fa40484c9a737c3aedbceff, type: 2}
     - target: {fileID: 2154314670046141368, guid: 4efe004f891efa447a161f81ebce0cd1, type: 3}
       propertyPath: 'gameProperties.Array.data[5]'
       value: 

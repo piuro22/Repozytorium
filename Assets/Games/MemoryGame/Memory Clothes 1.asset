@@ -53,28 +53,28 @@ MonoBehaviour:
   memoryCardDatas4x2:
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 0bfacfc7685662a48841229b4e3fae0a, type: 3}
-    audioclip: {fileID: 8300000, guid: c242a147c47686c46930106db4ab3b63, type: 3}
+    audioclip: {fileID: 8300000, guid: 70ba583e10b205744aeafb3156b7b990, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
-    audioclip: {fileID: 8300000, guid: 55bc1b743ddc1dc4bbe54a08fe58d49c, type: 3}
+    audioclip: {fileID: 8300000, guid: 159a894034c363446a43fcd098214dfc, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: fa3465cf8b4155242bae7814225159d5, type: 3}
-    audioclip: {fileID: 8300000, guid: 92c8c1fbfc6938443a595269bdbb0109, type: 3}
+    audioclip: {fileID: 8300000, guid: 3032125e298c6bf48a2109dd64665889, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: 00f039f8bcc3b454984431caedaff090, type: 3}
-    audioclip: {fileID: 8300000, guid: d13bb12b049dd714fbc2862ed8477dc1, type: 3}
+    audioclip: {fileID: 8300000, guid: 45463f31be3f51942875a1e5e3a28065, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

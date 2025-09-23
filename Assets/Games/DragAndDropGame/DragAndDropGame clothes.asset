@@ -34,20 +34,29 @@ MonoBehaviour:
   onWrongObjectAudioClip: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   dragAndDropGameSequences:
   - objectID: 0
-    textMessage: "Daj ch\u0142opcu \u017C\xF3\u0142ty balonik"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 90d2eb6f3905bc842a89d43084661d4d, type: 3}
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: f3e07e120f4bba94595e029747f1e85f, type: 3}
   - objectID: 1
-    textMessage: "Przesu\u0144 niebieski balonik do czerwonego balonika"
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7b0bfc1ed6e409342825cb67c654d5d3, type: 3}
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 21fea244c40e24746a01d27d479aef85, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 8e4915b1fe03c2446b3e89d4d387a7ba, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: d291cfa3269ce174bab2979be56ffd59, type: 3}
   - objectID: 3
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7a850dce9957cf841a7d1d5a7742f6e9, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 178c08edb90c117419187908ec2ae1d1, type: 3}
   - objectID: 4
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: c2fb41bccb332c04c8b449ab0e89626d, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2b307586413e1c0478b866096760db3f, type: 3}
+  - objectID: 5
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: d7355d836d9e7764c8ddc51cf7c9b901, type: 3}
+  - objectID: 6
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: c72fd457ee1025746b0f0784b5177d06, type: 3}
+  - objectID: 7
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 995a40f0d099f674eb3f141390e3f78c, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5
@@ -66,7 +75,7 @@ MonoBehaviour:
     useSequence: 1
     id: 0
     texture: {fileID: 2800000, guid: 2326015c56b527f4bb59cb4140b9fe81, type: 3}
-    startPosition: {x: -1.55, y: -0.88}
+    startPosition: {x: -1.579, y: -1.173}
     startPositionMinMaxX: {x: 1, y: 2}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.4, y: 0.4}
@@ -80,7 +89,7 @@ MonoBehaviour:
     targetPosition: {x: 0.39, y: -1}
     targetPositionMinMaxX: {x: 0, y: 4}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.5, y: 0.5}
+    targetScale: {x: 0.4, y: 0.4}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -96,10 +105,10 @@ MonoBehaviour:
     useSequence: 1
     id: 1
     texture: {fileID: 2800000, guid: e5edb8e275d50cf4e97ab04dcf4d31a7, type: 3}
-    startPosition: {x: 3.5, y: 0.44}
+    startPosition: {x: 3.515, y: 0.914}
     startPositionMinMaxX: {x: 3, y: 4}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.4, y: 0.4}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: -70, y: 70}
     layer: 0
@@ -126,10 +135,10 @@ MonoBehaviour:
     useSequence: 1
     id: 2
     texture: {fileID: 2800000, guid: 00f039f8bcc3b454984431caedaff090, type: 3}
-    startPosition: {x: -1.55, y: 0.44}
+    startPosition: {x: -1.558, y: 0.051}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
-    scale: {x: 0.35, y: 0.35}
+    scale: {x: 0.3, y: 0.3}
     rotationAngle: 0
     rotationMinMaxAngle: {x: 0, y: 0}
     layer: 0
@@ -137,10 +146,10 @@ MonoBehaviour:
     additionalOffset: {x: 0, y: 0}
     endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
     endRotationObjectIfAlternativeTexture: 0
-    targetPosition: {x: 1.57, y: 0.34}
+    targetPosition: {x: 1.005, y: -2.122}
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
-    targetScale: {x: 0.35, y: 0.35}
+    targetScale: {x: 0.32, y: 0.32}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0
@@ -156,7 +165,7 @@ MonoBehaviour:
     useSequence: 1
     id: 3
     texture: {fileID: 2800000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
-    startPosition: {x: 3.5, y: -0.88}
+    startPosition: {x: 3.509, y: -1.172}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.4, y: 0.4}
@@ -186,7 +195,7 @@ MonoBehaviour:
     useSequence: 1
     id: 4
     texture: {fileID: 2800000, guid: daf8c23018227b044b3779aff9aed3b5, type: 3}
-    startPosition: {x: -1.55, y: -2.1}
+    startPosition: {x: -1.55, y: -2.324}
     startPositionMinMaxX: {x: 0, y: 0}
     startPositionMinMaxY: {x: 0, y: 0}
     scale: {x: 0.3, y: 0.3}
@@ -201,6 +210,96 @@ MonoBehaviour:
     targetPositionMinMaxX: {x: 0, y: 0}
     targetPositionMinMaxY: {x: 0, y: 0}
     targetScale: {x: 0.3, y: 0.3}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 0
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 6
+    texture: {fileID: 2800000, guid: 28fd1cf2e3f573142b3a0e93043a0dc4, type: 3}
+    startPosition: {x: 3.55, y: -0.242}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.3, y: 0.3}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    layer: 0
+    alternativeTargetTexture: {fileID: 0}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 1.932, y: -2.134}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.32, y: 0.32}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 0
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 7
+    texture: {fileID: 2800000, guid: 62ce5291670b91f4897c36894af88f96, type: 3}
+    startPosition: {x: -1.547, y: 1.008}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.3, y: 0.3}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    layer: 0
+    alternativeTargetTexture: {fileID: 0}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 1.853, y: 0.334}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.32, y: 0.32}
+    targetRotationAngle: 0
+    targetRotationMinMaxAngle: {x: 0, y: 0}
+    targetLayer: 0
+    onSuccesfullDragAudioClip: {fileID: 0}
+    onDragAudioClip: {fileID: 0}
+  - useRandomPositionForDragObjects: 0
+    useRandomPositionForContainerObjects: 0
+    useRandomRotationForDragObjects: 0
+    useRandomRotationForContainerObjects: 0
+    useOtherTextureForContainer: 0
+    useCustomAudioClipForSingleObjectOnDrag: 1
+    useCustomAudioClipForSingleObjectOnSuccesfullDrag: 0
+    useSequence: 1
+    id: 5
+    texture: {fileID: 2800000, guid: 7e0abefa98b8a3948bb31607195be07a, type: 3}
+    startPosition: {x: 3.536, y: -2.234}
+    startPositionMinMaxX: {x: 0, y: 0}
+    startPositionMinMaxY: {x: 0, y: 0}
+    scale: {x: 0.3, y: 0.3}
+    rotationAngle: 0
+    rotationMinMaxAngle: {x: 0, y: 0}
+    layer: 0
+    alternativeTargetTexture: {fileID: 0}
+    additionalOffset: {x: 0, y: 0}
+    endScaleObjectIfAlternativeTexture: {x: 0, y: 0}
+    endRotationObjectIfAlternativeTexture: 0
+    targetPosition: {x: 1.014, y: 0.364}
+    targetPositionMinMaxX: {x: 0, y: 0}
+    targetPositionMinMaxY: {x: 0, y: 0}
+    targetScale: {x: 0.32, y: 0.32}
     targetRotationAngle: 0
     targetRotationMinMaxAngle: {x: 0, y: 0}
     targetLayer: 0

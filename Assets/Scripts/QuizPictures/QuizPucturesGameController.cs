@@ -35,7 +35,18 @@ public class QuizPucturesGameController : MonoBehaviour
     {
         Initialize();
     }
-
+    private void ShuffleQuestions()
+    {
+        for (int i = 0; i < gameProperties.questions.Count; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, gameProperties.questions.Count);
+            var temp = gameProperties.questions[i];
+            gameProperties.questions[i] = gameProperties.questions[randomIndex];
+            gameProperties.questions[randomIndex] = temp;
+        }
+        Debug.Log("Pytania zosta³y przetasowane.");
+    }
+    /*
     private void Initialize()
     {
         if (Application.isPlaying)
@@ -46,8 +57,24 @@ public class QuizPucturesGameController : MonoBehaviour
         }
         background.sprite = gameProperties.background;
         SetupQuizPart(0);
-    }
+    }*/
+    private void Initialize()
+    {
+        if (Application.isPlaying)
+        {
+            if (GameManager.Instance != null)
+                if (GameManager.Instance.currentGameProperties is QuizPicturesProperties)
+                    gameProperties = GameManager.Instance.currentGameProperties as QuizPicturesProperties;
+        }
 
+        background.sprite = gameProperties.background;
+
+        // Przetasuj pytania
+        ShuffleQuestions();
+
+        // Rozpocznij od pierwszego pytania
+        SetupQuizPart(0);
+    }
 
     public void ResetPictures()
     {
@@ -79,6 +106,8 @@ public class QuizPucturesGameController : MonoBehaviour
 
         }
     }
+
+   
 
     public void OnGoodAnswer()
     {

@@ -1290,7 +1290,13 @@ MonoBehaviour:
     sceneToLoadName: Scene Vehicles3
   - UnitPrefab: {fileID: 7357801014477358990, guid: 5e5667a684c4fa045b876ce69dfb2140, type: 3}
     unitName: Town
-    sceneToLoadName: Scene Town30
+    sceneToLoadName: Scene Town3
+  - UnitPrefab: {fileID: 7357801014477358990, guid: c7a5e8cd53287914f8bb11a70e3dfb7f, type: 3}
+    unitName: Colours
+    sceneToLoadName: Scene Colours Extra
+  - UnitPrefab: {fileID: 7357801014477358990, guid: c0365300f7ad9f44faa591d3ae2e3515, type: 3}
+    unitName: Seasons
+    sceneToLoadName: Scene Sesons
   swipeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1361,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1210617337
 RectTransform:
   m_ObjectHideFlags: 0

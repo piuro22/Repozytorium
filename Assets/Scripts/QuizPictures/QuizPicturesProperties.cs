@@ -18,6 +18,8 @@ public class QuizPicturesProperties : ScriptableObject
     public Sprite background;
     [LabelText("Ramka")]
     public Sprite frameSprite;
+    [LabelText("Włącz losowanie pytań")]
+    public bool enableShuffle = true; // Domyślnie losowanie włączone
     public List<QuizPicturesQuestionProperties> questions;
 
 }

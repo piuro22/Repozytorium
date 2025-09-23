@@ -11,6 +11,9 @@ public class HighlightObjectController : MonoBehaviour
 {
     private bool isScaled = false;   //CHAT 4
 
+    private bool isProcessingClick = false;
+
+
     public SpriteRenderer spriteRenderer;
     public Texture2D _texture;
     private Sprite tempSprite;
@@ -97,7 +100,7 @@ public class HighlightObjectController : MonoBehaviour
     }
 
 
-    public void OnClick()
+    /*public void OnClick()
     {
         if (!isLocked)
         {
@@ -105,6 +108,15 @@ public class HighlightObjectController : MonoBehaviour
             WasClicked = true;
             PlayAudio(); // Play sound for the clicked object
         }
+    }*/
+    public void OnClick()        //copailot
+    {
+        if (isLocked || isProcessingClick) return; // Ignoruj, jeœli obiekt jest zablokowany lub w trakcie obs³ugi klikniêcia
+
+        isProcessingClick = true; // Ustaw flagê, aby zablokowaæ kolejne klikniêcia
+        isLocked = true;
+        WasClicked = true;
+        PlayAudio(); // Odtwórz dŸwiêk dla klikniêtego obiektu
     }
 
     public void OnMouseDown()

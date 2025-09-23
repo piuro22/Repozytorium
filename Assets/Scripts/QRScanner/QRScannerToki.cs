@@ -30,7 +30,7 @@ public class QRScannerToki : MonoBehaviour
     {
 
     }
-
+    /*
     [Button]
     public void OnDecodeFinished(string dataText)
     {
@@ -48,5 +48,35 @@ public class QRScannerToki : MonoBehaviour
         Debug.Log(dataText);
     }
 
-    // Mp3Player/NazwaPlaylisty
+    // Mp3Player/NazwaPlaylisty*/
+    [Button]
+    public void OnDecodeFinished(string dataText)
+    {
+        codeDecodeController.Reset();
+        PlayerPrefs.SetString("QRCode", dataText);
+
+        string[] parts = dataText.Split('/');
+
+        if (parts.Length >= 2 && parts[0] == "Mp3Player")
+        {
+            // Stop camera before changing scene
+            if (codeDecodeController.e_DeviceController != null)
+                codeDecodeController.e_DeviceController.StopWork();
+
+            // Optionally, disable the QR code controller
+            codeDecodeController.enabled = false;
+
+            // Load scene with a short delay to ensure camera is released
+            StartCoroutine(LoadSceneWithDelay(parts[0]));
+            return;
+        }
+        Debug.Log(dataText);
+    }
+
+    private IEnumerator LoadSceneWithDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(sceneName);
+    }
+
 }

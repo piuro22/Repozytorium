@@ -2,9 +2,11 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+
 
 public class HighlightObjectGameController : MonoBehaviour
 {
@@ -26,14 +28,79 @@ public class HighlightObjectGameController : MonoBehaviour
         objectClickedAction += ObjectClicked;
         background.sprite = highlightObjectGameScriptable.backGroundTexture;
     }
-
-    private void SetupMusic()
+    public void ShuffleSequence()
     {
+        // Loguj zawartoœæ listy przed tasowaniem
+        Debug.Log("Przed tasowaniem: " + string.Join(", ", highlightObjectGameScriptable.higlightObjects.Select(obj => obj.id)));
+
+        for (int i = 0; i < highlightObjectGameScriptable.higlightObjects.Count; i++)
+        {
+            int rand = UnityEngine.Random.Range(i, highlightObjectGameScriptable.higlightObjects.Count);
+            var temp = highlightObjectGameScriptable.higlightObjects[i];
+            highlightObjectGameScriptable.higlightObjects[i] = highlightObjectGameScriptable.higlightObjects[rand];
+            highlightObjectGameScriptable.higlightObjects[rand] = temp;
+        }
+
+        // Loguj zawartoœæ listy po tasowaniu
+        Debug.Log("Po tasowaniu: " + string.Join(", ", highlightObjectGameScriptable.higlightObjects.Select(obj => obj.id)));
+
+        Debug.Log("Lista higlightObjects zosta³a przetasowana.");
+    }
+
+    //copailot 2
+    /*  public void ShuffleSequence()
+      {
+          var list = highlightObjectGameScriptable.higlightObjects;
+          for (int i = 0; i < list.Count; i++)
+          {
+              int rand = UnityEngine.Random.Range(i, list.Count); // Losuj indeks od i do koñca listy
+              var temp = list[i];
+              list[i] = list[rand];
+              list[rand] = temp; // Zamieñ elementy miejscami
+          }
+
+          Debug.Log("Lista higlightObjects zosta³a przetasowana.");
+      }*/
+    //copailot
+
+    /*private void SetupMusic()
+     {
+         musicController.clip = highlightObjectGameScriptable.gameMusic;
+         musicController.loop = true;
+         musicController.Play();
+         musicController.PlayOneShot(highlightObjectGameScriptable.gameCommandAudioClip);
+     }*/
+
+    //copailot
+    private IEnumerator SetupMusic()
+    {
+        // Zablokuj interakcje dla wszystkich obiektów
+        foreach (var spawnedObject in spawnedObjects)
+        {
+            spawnedObject.isLocked = true;
+        }
+
+        // Odtwórz dŸwiêk polecenia gry, jeœli istnieje
+        if (highlightObjectGameScriptable.gameCommandAudioClip != null)
+        {
+            audioSource.PlayOneShot(highlightObjectGameScriptable.gameCommandAudioClip);
+
+            // Poczekaj, a¿ dŸwiêk polecenia siê skoñczy
+            yield return new WaitWhile(() => audioSource.isPlaying);
+        }
+
+        // Odtwórz muzykê w tle
         musicController.clip = highlightObjectGameScriptable.gameMusic;
         musicController.loop = true;
         musicController.Play();
-        musicController.PlayOneShot(highlightObjectGameScriptable.gameCommandAudioClip);
+
+        // Odblokuj interakcje dla wszystkich obiektów
+        foreach (var spawnedObject in spawnedObjects)
+        {
+            spawnedObject.isLocked = false;
+        }
     }
+    //copailot
     private void ObjectClicked()
     {
         Debug.Log("ObjectClicked triggered");
@@ -51,24 +118,39 @@ public class HighlightObjectGameController : MonoBehaviour
     [Button]
     private void SetupGame()
     {
+        Debug.Log("SetupGame zosta³o wywo³ane.");
         if (GameManager.Instance.currentGameProperties is HighlightObjectGameScriptable)
             highlightObjectGameScriptable = GameManager.Instance.currentGameProperties as HighlightObjectGameScriptable;
+        ShuffleSequence(); // Przetasuj listê higlightObjects copailot 2
         SetupMusic();
 
         int index = 0;
-        foreach (HiglightObject higlightObject in highlightObjectGameScriptable.higlightObjects)
+        /* foreach (HiglightObject higlightObject in highlightObjectGameScriptable.higlightObjects)
+         {
+             HighlightObjectController spawnedObject = Instantiate(highlightObjectPrefab);
+             spawnedObject.transform.position = higlightObject.position;
+             spawnedObject._texture = higlightObject.texture;
+             spawnedObject.transform.localScale = higlightObject.scale;
+             spawnedObject.index = index;
+             spawnedObject.higlightObjectProperites = higlightObject;
+             spawnedObject.highlightObjectGameController = this;
+             spawnedObject.SetupSprite();
+             spawnedObjects.Add(spawnedObject);
+             index++;
+         }*/
+        foreach (HiglightObject higlightObject in highlightObjectGameScriptable.higlightObjects) //copailot
         {
             HighlightObjectController spawnedObject = Instantiate(highlightObjectPrefab);
             spawnedObject.transform.position = higlightObject.position;
             spawnedObject._texture = higlightObject.texture;
             spawnedObject.transform.localScale = higlightObject.scale;
-            spawnedObject.index = index;
+            spawnedObject.index = higlightObject.id;
             spawnedObject.higlightObjectProperites = higlightObject;
             spawnedObject.highlightObjectGameController = this;
             spawnedObject.SetupSprite();
             spawnedObjects.Add(spawnedObject);
-            index++;
         }
+        StartCoroutine(SetupMusic()); // Uruchom coroutine dla muzyki i dŸwiêku polecenia
         StartSequence();
     }
 

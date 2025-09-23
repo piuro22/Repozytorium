@@ -78,21 +78,21 @@ MonoBehaviour:
   - objectID: 12
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 7317537a7e26a3f4e94b81ad9dc3133a, type: 3}
-  - objectID: 16
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 0eef8bdfca565c2458aa7b027f53c9de, type: 3}
   - objectID: 17
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 8beedc9177fa9ac4095431bbb272ce7d, type: 3}
-  - objectID: 18
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: a3e035690131e9147ae0a26d7747865b, type: 3}
-  - objectID: 19
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: a3e035690131e9147ae0a26d7747865b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: edb7be2dbd06a404eb58c242caa64def, type: 3}
   - objectID: 20
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: a3e035690131e9147ae0a26d7747865b, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: a87e0d890a5abd74ea73deef978276d1, type: 3}
+  - objectID: 16
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 08edf0014dd3fe84b836a1979bb69f6b, type: 3}
+  - objectID: 19
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: c64cf1335baa6e9488db6a5eb4459679, type: 3}
+  - objectID: 18
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 0d558aaa36369704ca18170b405d6620, type: 3}
   onGoodContainerAudioClip: {fileID: 8300000, guid: f39b34fd7d2756f41a52aa7624feba89, type: 3}
   onWrongContainerShakePower: 20
   onWrongContainerShakeDuration: 0.5

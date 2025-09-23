@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: 0
   images:
-  - {fileID: -619582543, guid: 8db87c505fc42f540a90508d1753900f, type: 3}
-  - {fileID: -1031830986, guid: 8db87c505fc42f540a90508d1753900f, type: 3}
-  - {fileID: 395822283, guid: 8db87c505fc42f540a90508d1753900f, type: 3}
-  - {fileID: -2068895239, guid: 8db87c505fc42f540a90508d1753900f, type: 3}
+  - {fileID: 121821287, guid: ede613a3be2283243bbe5e3d4368f958, type: 3}
+  - {fileID: 432155081, guid: ede613a3be2283243bbe5e3d4368f958, type: 3}
+  - {fileID: 869317239, guid: ede613a3be2283243bbe5e3d4368f958, type: 3}
+  - {fileID: -2082757944, guid: ede613a3be2283243bbe5e3d4368f958, type: 3}
   angleChances:
   - angle: 0
     chance: 0

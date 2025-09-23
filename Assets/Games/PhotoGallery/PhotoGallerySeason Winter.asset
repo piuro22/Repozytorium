@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
+  m_Name: PhotoGallerySeason Winter
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
+  shouldPlayAudioAutomatically: 1
+  photoWithAudios:
+  - photo: {fileID: -562706349972584242, guid: f922d476ef8edcd4c83478b0ce751387, type: 3}
+    audioClip: {fileID: 8300000, guid: d2e7013439371af43b0833e9d631def0, type: 3}
+  - photo: {fileID: 4427026210493128679, guid: 9444d8f967c6d8541adcdf3c0f2d4b89, type: 3}
+    audioClip: {fileID: 8300000, guid: f79ee7aff16fc3440bc8ffb2b47ac05f, type: 3}
+  - photo: {fileID: -5394595406944817380, guid: 65ce1c4bf6fb3c94daeb38996c342d70, type: 3}
+    audioClip: {fileID: 8300000, guid: 0762100cbe99eb24aaf1b38076c1efd4, type: 3}
+  - photo: {fileID: 4986797050018433151, guid: 15453b5bc24755f4ab0ed3e232ff222c, type: 3}
+    audioClip: {fileID: 8300000, guid: 6be88f63b6677ea4890c8faedfbe983c, type: 3}
+  useAudio: 0
+  useScreenClick: 1
+  gameMusic: {fileID: 0}
+  gameCommandAudioClip: {fileID: 0}

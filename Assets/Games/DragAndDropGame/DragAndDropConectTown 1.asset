@@ -35,13 +35,13 @@ MonoBehaviour:
   dragAndDropGameSequences:
   - objectID: 0
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 436223c692a18a14a8caf6115b547359, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 2669179d662245f44ac84d8731f1e514, type: 3}
   - objectID: 1
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 57bdf8feff954a84fb592a0c6d75bd69, type: 3}
   - objectID: 2
     textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 0ada647a1f227464fbe75e32772f5343, type: 3}
+    dialogOnSequenceStart: {fileID: 8300000, guid: 14bf13d58245716498268f46d30986ed, type: 3}
   - objectID: 3
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 9e0ea268660b8044794f55096e120279, type: 3}
