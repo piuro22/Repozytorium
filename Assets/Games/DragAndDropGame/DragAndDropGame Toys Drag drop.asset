@@ -33,12 +33,12 @@ MonoBehaviour:
   useSequence: 1
   onWrongObjectAudioClip: {fileID: 8300000, guid: 586459aa252d6c54cbc7aafc23381a75, type: 3}
   dragAndDropGameSequences:
-  - objectID: 0
-    textMessage: 
-    dialogOnSequenceStart: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
   - objectID: 1
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 89b301d66582f4f47aa2677f3d73db2b, type: 3}
+  - objectID: 0
+    textMessage: 
+    dialogOnSequenceStart: {fileID: 8300000, guid: 7a15e5b62bd31dc47a3adb9e2073735a, type: 3}
   - objectID: 2
     textMessage: 
     dialogOnSequenceStart: {fileID: 8300000, guid: 7cb5272e136c17742937074991c11a4c, type: 3}

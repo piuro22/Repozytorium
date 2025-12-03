@@ -74,7 +74,7 @@ MonoBehaviour:
     alternativeMessage: 
   - useAlternativeTexture: 0
     sprite: {fileID: 21300000, guid: a818a956ce1d2fd489fa66545dc7f012, type: 3}
-    audioclip: {fileID: 8300000, guid: 4a0275cc1ab87b3438e89a8e1dd96c85, type: 3}
+    audioclip: {fileID: 8300000, guid: 7196c0eb065157a4bb038bac33da364f, type: 3}
     message: 
     alternativeSecondSprite: {fileID: 0}
     alternativeAudioclip: {fileID: 0}

@@ -22,9 +22,9 @@ MonoBehaviour:
   - photo: {fileID: 21300000, guid: ca4c2316c30ae1c428cf52dda48ee18e, type: 3}
     audioClip: {fileID: 8300000, guid: fb64cfefb29d3064ca87e607b9181c2e, type: 3}
   - photo: {fileID: 21300000, guid: ae4671af8ecc8be4eb52b7041287a4ef, type: 3}
-    audioClip: {fileID: 8300000, guid: a66ab149694cb7c4089cdf4304d15c95, type: 3}
+    audioClip: {fileID: 8300000, guid: 14bf13d58245716498268f46d30986ed, type: 3}
   - photo: {fileID: 21300000, guid: a818a956ce1d2fd489fa66545dc7f012, type: 3}
-    audioClip: {fileID: 8300000, guid: 4a0275cc1ab87b3438e89a8e1dd96c85, type: 3}
+    audioClip: {fileID: 8300000, guid: 7196c0eb065157a4bb038bac33da364f, type: 3}
   - photo: {fileID: 21300000, guid: 786622e9efd172f44b43785f54f6c91c, type: 3}
     audioClip: {fileID: 8300000, guid: d31750919d37499419da8be76b92d70e, type: 3}
   - photo: {fileID: 21300000, guid: 2be8d73ec859bf84eab4ebc3a8f6a610, type: 3}
@@ -36,4 +36,4 @@ MonoBehaviour:
   useAudio: 1
   useScreenClick: 1
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}

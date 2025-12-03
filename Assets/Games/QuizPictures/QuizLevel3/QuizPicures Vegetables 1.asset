@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizPicures Vegetables 1
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: cb7cc1d14b8953e4099b9ccf34f36a4e, type: 3}
   frameSprite: {fileID: 0}
+  enableShuffle: 1
   questions:
   - singleQuizPictures:
     - isCorrect: 0
@@ -65,7 +67,7 @@ MonoBehaviour:
     questionClip: {fileID: 8300000, guid: 8acf34145eea9f14c8a81cf4b5abce18, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 2205dd1e82462a84caaac649c4096333, type: 3}
+      picture: {fileID: 21300000, guid: 9d1830e8e290a734996610abd0b0b45d, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     - isCorrect: 1

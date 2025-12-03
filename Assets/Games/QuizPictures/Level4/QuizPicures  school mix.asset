@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizPicures  school mix
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: ca46addbd2ebb144ca72162984be1280, type: 3}
   frameSprite: {fileID: 0}
+  enableShuffle: 1
   questions:
   - singleQuizPictures:
     - isCorrect: 0

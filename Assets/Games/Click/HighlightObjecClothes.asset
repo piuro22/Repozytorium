@@ -45,7 +45,7 @@ MonoBehaviour:
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: a994456b1f338a84ab56d5402f5e62c0, type: 3}
     objectsToHighlights:
-    - ObjectID: 2
+    - ObjectID: 5
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
@@ -57,28 +57,46 @@ MonoBehaviour:
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 90d2eb6f3905bc842a89d43084661d4d, type: 3}
     objectsToHighlights:
-    - ObjectID: 6
+    - ObjectID: 7
     SequenceTime: 2
-    waitForClick: 0
-    audioClipOnClick: {fileID: 0}
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 8113674a9e1c6ae42a075f9690b11189, type: 3}
-    objectsToHighlights: []
-    SequenceTime: 7
-    waitForClick: 0
-    audioClipOnClick: {fileID: 0}
+    objectsToHighlights:
+    - ObjectID: 10
+    SequenceTime: 2
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 2f0abe00ab6ace240a286c0bbe2ff13e, type: 3}
-    objectsToHighlights: []
-    SequenceTime: 8
-    waitForClick: 0
-    audioClipOnClick: {fileID: 0}
+    objectsToHighlights:
+    - ObjectID: 8
+    SequenceTime: 2
+    waitForClick: 1
+    audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   higlightObjects:
-  - id: 2
-    texture: {fileID: 2800000, guid: daf8c23018227b044b3779aff9aed3b5, type: 3}
-    position: {x: 1.013, y: 0.063}
+  - id: 8
+    texture: {fileID: 2800000, guid: 28fd1cf2e3f573142b3a0e93043a0dc4, type: 3}
+    position: {x: 0.976, y: -1.454}
     scale: {x: 0.3, y: 0.3}
-    outlineOnTime: 0.3
+    outlineOnTime: 0
     outlineWidth: 0
-    outlineColor: {r: 1, g: 0.92589796, b: 0, a: 1}
+    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 1
+    texture: {fileID: 2800000, guid: e5edb8e275d50cf4e97ab04dcf4d31a7, type: 3}
+    position: {x: -0.25, y: -1.35}
+    scale: {x: 0.3, y: 0.3}
+    outlineOnTime: 2
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
+    soundOnClick: {fileID: 0}
+  - id: 5
+    texture: {fileID: 2800000, guid: fa3465cf8b4155242bae7814225159d5, type: 3}
+    position: {x: 3.335, y: -0.052}
+    scale: {x: 0.25, y: 0.25}
+    outlineOnTime: 0.6
+    outlineWidth: 0
+    outlineColor: {r: 1, g: 0.9104993, b: 0, a: 1}
     soundOnClick: {fileID: 0}
   - id: 4
     texture: {fileID: 2800000, guid: ea788077fa3f73d4d9d8396449b6fa9f, type: 3}
@@ -88,25 +106,17 @@ MonoBehaviour:
     outlineWidth: 0
     outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
     soundOnClick: {fileID: 0}
-  - id: 6
-    texture: {fileID: 2800000, guid: 2326015c56b527f4bb59cb4140b9fe81, type: 3}
-    position: {x: 3.23, y: -1.179}
+  - id: 3
+    texture: {fileID: 2800000, guid: 0bfacfc7685662a48841229b4e3fae0a, type: 3}
+    position: {x: 2.07, y: -1.13}
     scale: {x: 0.3, y: 0.3}
-    outlineOnTime: 0
+    outlineOnTime: 0.3
     outlineWidth: 0
-    outlineColor: {r: 0, g: 0, b: 0, a: 0}
+    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 1}
     soundOnClick: {fileID: 0}
-  - id: 1
-    texture: {fileID: 2800000, guid: fa3465cf8b4155242bae7814225159d5, type: 3}
-    position: {x: 3.335, y: -0.052}
-    scale: {x: 0.25, y: 0.25}
-    outlineOnTime: 0.6
-    outlineWidth: 0
-    outlineColor: {r: 1, g: 0.9104993, b: 0, a: 1}
-    soundOnClick: {fileID: 0}
-  - id: 8
-    texture: {fileID: 2800000, guid: 28fd1cf2e3f573142b3a0e93043a0dc4, type: 3}
-    position: {x: 0.976, y: -1.454}
+  - id: 10
+    texture: {fileID: 2800000, guid: 7e0abefa98b8a3948bb31607195be07a, type: 3}
+    position: {x: -0.331, y: 0.007}
     scale: {x: 0.3, y: 0.3}
     outlineOnTime: 0
     outlineWidth: 0
@@ -120,27 +130,19 @@ MonoBehaviour:
     outlineWidth: 0
     outlineColor: {r: 0, g: 0.29352832, b: 1, a: 1}
     soundOnClick: {fileID: 0}
-  - id: 5
-    texture: {fileID: 2800000, guid: e5edb8e275d50cf4e97ab04dcf4d31a7, type: 3}
-    position: {x: -0.25, y: -1.35}
+  - id: 6
+    texture: {fileID: 2800000, guid: daf8c23018227b044b3779aff9aed3b5, type: 3}
+    position: {x: 1.013, y: 0.063}
     scale: {x: 0.3, y: 0.3}
-    outlineOnTime: 2
+    outlineOnTime: 0.3
     outlineWidth: 0
-    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 0}
+    outlineColor: {r: 1, g: 0.92589796, b: 0, a: 1}
     soundOnClick: {fileID: 0}
   - id: 7
-    texture: {fileID: 2800000, guid: 7e0abefa98b8a3948bb31607195be07a, type: 3}
-    position: {x: -0.331, y: 0.007}
+    texture: {fileID: 2800000, guid: 2326015c56b527f4bb59cb4140b9fe81, type: 3}
+    position: {x: 3.23, y: -1.179}
     scale: {x: 0.3, y: 0.3}
     outlineOnTime: 0
     outlineWidth: 0
     outlineColor: {r: 0, g: 0, b: 0, a: 0}
-    soundOnClick: {fileID: 0}
-  - id: 3
-    texture: {fileID: 2800000, guid: 0bfacfc7685662a48841229b4e3fae0a, type: 3}
-    position: {x: 2.07, y: -1.13}
-    scale: {x: 0.3, y: 0.3}
-    outlineOnTime: 0.3
-    outlineWidth: 0
-    outlineColor: {r: 1, g: 0.92549026, b: 0, a: 1}
     soundOnClick: {fileID: 0}

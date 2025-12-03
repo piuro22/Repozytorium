@@ -15,23 +15,23 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
-  - photo: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
-    audioClip: {fileID: 8300000, guid: 7149675caad77da4ea386804e7988507, type: 3}
-  - photo: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
-    audioClip: {fileID: 8300000, guid: 72cff67f8f09c59458d172fccabcf128, type: 3}
-  - photo: {fileID: 21300000, guid: 35440a9bc3454df4f8077bb1ace5f7b4, type: 3}
-    audioClip: {fileID: 8300000, guid: 2cfb36512a0b419469de82777330cbac, type: 3}
   - photo: {fileID: 21300000, guid: 26354ebb63324d74c9b29aecec014ba7, type: 3}
-    audioClip: {fileID: 8300000, guid: 965d36c8e4e3cf849b82b2c34806cd59, type: 3}
-  - photo: {fileID: 21300000, guid: 5676d16d653c8ac45aa73533e411ec04, type: 3}
-    audioClip: {fileID: 8300000, guid: a93118967a5457845b7dd866e0339e1e, type: 3}
-  - photo: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
-    audioClip: {fileID: 8300000, guid: add1b39eb41b700429765f98dd28fec5, type: 3}
+    audioClip: {fileID: 8300000, guid: 11ddc49e98fece1488d0ac7459a89ed2, type: 3}
+  - photo: {fileID: 21300000, guid: 3ae6212e02ca557458126d66a2998f97, type: 3}
+    audioClip: {fileID: 8300000, guid: fd5cf0484e18ca34cb889ae4fa285ae1, type: 3}
   - photo: {fileID: -8945438146341193663, guid: 0c2405c4ca62e0042916ae0fe355baff, type: 3}
-    audioClip: {fileID: 8300000, guid: 2601322cf91ba82408d600251a6e7be6, type: 3}
+    audioClip: {fileID: 8300000, guid: da7ea63e871f18949a975e96a7b58f67, type: 3}
+  - photo: {fileID: 21300000, guid: 5676d16d653c8ac45aa73533e411ec04, type: 3}
+    audioClip: {fileID: 8300000, guid: 7bc64648cd874094d97721fed722ab21, type: 3}
   - photo: {fileID: 21300000, guid: 947fffc3ecd55904cb0a018351310dbe, type: 3}
-    audioClip: {fileID: 8300000, guid: a2ba92e05b45f984d9b7973430a3154d, type: 3}
+    audioClip: {fileID: 8300000, guid: 0a0406a2d8bf43f4d953905d7ee23e09, type: 3}
+  - photo: {fileID: 21300000, guid: 9ad6238310e2e2842bd5dd39cc05f4e0, type: 3}
+    audioClip: {fileID: 8300000, guid: aa376591418c7c44a8948d866e830071, type: 3}
+  - photo: {fileID: 21300000, guid: 35440a9bc3454df4f8077bb1ace5f7b4, type: 3}
+    audioClip: {fileID: 8300000, guid: e353e2e8639652a4ea66f17bf6386161, type: 3}
+  - photo: {fileID: 21300000, guid: 8c4664f9f7a23c642992b0dda58f8315, type: 3}
+    audioClip: {fileID: 8300000, guid: d5d880193ee84174e96ff9b4be6ee680, type: 3}
   useAudio: 0
   useScreenClick: 1
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}

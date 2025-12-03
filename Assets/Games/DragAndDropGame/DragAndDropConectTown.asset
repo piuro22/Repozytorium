@@ -15,7 +15,7 @@ MonoBehaviour:
   backGroundTexture: {fileID: 21300000, guid: 6120721c2e8811c4289bd6502f11a06d, type: 3}
   dragAndDropObjectDecorations: []
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 8300000, guid: 3222c08672fbeac4d8eedb58120b7a2c, type: 3}
+  gameCommandAudioClip: {fileID: 8300000, guid: da8a5848985b1a948a9586c5e04d2960, type: 3}
   commandText: 
   useRandomPositionForDragObjects: 0
   useRandomRotationForDragObjects: 0

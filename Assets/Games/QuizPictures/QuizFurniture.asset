@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizFurniture
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: f3558fc7bce835f40a315d07922b7024, type: 3}
   frameSprite: {fileID: 21300000, guid: 7a565e5a954a88a4581e9ea3a2ec0acd, type: 3}
+  enableShuffle: 1
   questions:
   - singleQuizPictures:
     - isCorrect: 1

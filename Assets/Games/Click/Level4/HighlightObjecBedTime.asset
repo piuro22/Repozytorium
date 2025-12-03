@@ -55,7 +55,7 @@ MonoBehaviour:
     SequenceTime: 2
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 82bf1b05d04c45249bcb375fd16a97c1, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: a6d583f688095d245b1849aefa64ba0e, type: 3}
     objectsToHighlights:
     - ObjectID: 4
     SequenceTime: 2

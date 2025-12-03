@@ -43,7 +43,7 @@ MonoBehaviour:
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: a66ab149694cb7c4089cdf4304d15c95, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 14bf13d58245716498268f46d30986ed, type: 3}
     objectsToHighlights:
     - ObjectID: 3
     SequenceTime: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     SequenceTime: 1
     waitForClick: 1
     audioClipOnClick: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
-  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 4a0275cc1ab87b3438e89a8e1dd96c85, type: 3}
+  - audioClipOnSingleSequenceStart: {fileID: 8300000, guid: 7196c0eb065157a4bb038bac33da364f, type: 3}
     objectsToHighlights:
     - ObjectID: 4
     SequenceTime: 1

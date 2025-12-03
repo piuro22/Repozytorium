@@ -12,45 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizAnimals2
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: f2a62d9141ec213428031d76b5234f1d, type: 3}
   frameSprite: {fileID: 0}
+  enableShuffle: 1
   questions:
-  - singleQuizPictures:
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 200}
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 53f8cd129ed12ab4eb1fe55d1d049662, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 200}
-    questionText: 
-    questionClip: {fileID: 8300000, guid: e6924f4d3e3acb943a6a8198a97da500, type: 3}
-  - singleQuizPictures:
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 200}
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: 61bf0cf5d5612d043a78171c95bfb657, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 150}
-    questionText: 
-    questionClip: {fileID: 8300000, guid: a32442e1cbaac13488bbecfc36b02c83, type: 3}
-  - singleQuizPictures:
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 150}
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 150, y: 150}
-    questionText: 
-    questionClip: {fileID: 8300000, guid: 5907d196805e56d4885c82b1b211bdb7, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: ae31bec1089ccd84e915594ae1ede01d, type: 3}
@@ -63,27 +32,16 @@ MonoBehaviour:
     questionText: 
     questionClip: {fileID: 8300000, guid: 810f6e176ba01b8479e4901dcd6fb6ec, type: 3}
   - singleQuizPictures:
-    - isCorrect: 1
-      picture: {fileID: 21300000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
     - isCorrect: 0
-      picture: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
-    questionText: 
-    questionClip: {fileID: 8300000, guid: f4d436cd212b8aa4bb0f198b642fd117, type: 3}
-  - singleQuizPictures:
-    - isCorrect: 0
-      picture: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
-      additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
-    - isCorrect: 1
       picture: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
       additionalPictureSound: {fileID: 0}
-      pictureSize: {x: 0, y: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 61bf0cf5d5612d043a78171c95bfb657, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 688f0461db3346045a341ba585d8f9f5, type: 3}
+    questionClip: {fileID: 8300000, guid: a32442e1cbaac13488bbecfc36b02c83, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
@@ -97,6 +55,28 @@ MonoBehaviour:
     questionClip: {fileID: 8300000, guid: 8d2782ba2d730564980c93425e4072df, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
+      picture: {fileID: 21300000, guid: 04e1beb32abcb774f9b3898c3735775b, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 150}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 5907d196805e56d4885c82b1b211bdb7, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: f4d436cd212b8aa4bb0f198b642fd117, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
       picture: {fileID: 21300000, guid: 60d427a3bcbb7f04493ab492a4e2a414, type: 3}
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
@@ -106,3 +86,25 @@ MonoBehaviour:
       pictureSize: {x: 0, y: 0}
     questionText: 
     questionClip: {fileID: 8300000, guid: 30d38114ce4bbd74f93d0a4f55ee480c, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: 40f21b9b6169b634e8361aba7c80ea66, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 53f8cd129ed12ab4eb1fe55d1d049662, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 150, y: 200}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: e6924f4d3e3acb943a6a8198a97da500, type: 3}
+  - singleQuizPictures:
+    - isCorrect: 0
+      picture: {fileID: 21300000, guid: 5e8ad2c3bdb0eb54da7cb8a5967c5704, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    - isCorrect: 1
+      picture: {fileID: 21300000, guid: e0992ce464d02b343b07ad96bb2cc195, type: 3}
+      additionalPictureSound: {fileID: 0}
+      pictureSize: {x: 0, y: 0}
+    questionText: 
+    questionClip: {fileID: 8300000, guid: 688f0461db3346045a341ba585d8f9f5, type: 3}

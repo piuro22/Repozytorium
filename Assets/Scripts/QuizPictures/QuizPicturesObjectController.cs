@@ -1,6 +1,6 @@
-using UnityEngine;
-using UnityEngine.UI; // Import the UI namespace
-using UnityEngine.EventSystems; // Import if you need more detailed event handling
+﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 using AssetKits.ParticleImage;
 using DG.Tweening;
@@ -13,9 +13,9 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
     public ParticleImage badAnswerParticles;
     public SingleQuizPictures SingleQuizPicture;
     private Sequence answerSequence;
+
     [HideInInspector]
     public QuizPucturesGameController quizPucturesGameController;
-
 
     public void SetupPicture()
     {
@@ -23,14 +23,23 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         goodAnswerParticles.loop = false;
         badAnswerParticles.Stop();
         badAnswerParticles.loop = false;
-        pictureImage.sprite = SingleQuizPicture.picture;
-        if(quizPucturesGameController.gameProperties.frameSprite!=null)
-        gameObject.GetComponent<Image>().sprite = quizPucturesGameController.gameProperties.frameSprite;
-        pictureImage.rectTransform.sizeDelta = new Vector2(SingleQuizPicture.picture.rect.width, SingleQuizPicture.picture.rect.height);
 
+        pictureImage.sprite = SingleQuizPicture.picture;
+
+        if (quizPucturesGameController.gameProperties.frameSprite != null)
+            gameObject.GetComponent<Image>().sprite = quizPucturesGameController.gameProperties.frameSprite;
+
+        pictureImage.rectTransform.sizeDelta = new Vector2(
+            SingleQuizPicture.picture.rect.width,
+            SingleQuizPicture.picture.rect.height);
     }
+
     public void OnPointerClick(PointerEventData eventData)
     {
+        // ❗ Blokada klikania, jeśli kontroler mówi "nie"
+        if (!quizPucturesGameController.canClick)
+            return;
+
         OnButtonClick();
     }
 
@@ -39,32 +48,33 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
         if (SingleQuizPicture.isCorrect)
         {
             OnGoodAnswer();
-
         }
         else
         {
             OnBadAnswer();
-
         }
     }
 
     private void OnGoodAnswer()
     {
-
         if (answerSequence != null) return;
+
         answerSequence = DOTween.Sequence();
         answerSequence.AppendCallback(() =>
         {
             goodAnswerParticles.Play();
-            quizPucturesGameController.audioSource.PlayOneShot(quizPucturesGameController.gameProperties.goodAnswerSound);
+            quizPucturesGameController.audioSource
+                .PlayOneShot(quizPucturesGameController.gameProperties.goodAnswerSound);
         });
-        answerSequence.AppendInterval(quizPucturesGameController.gameProperties.goodAnswerSound.length);
+        answerSequence.AppendInterval(
+            quizPucturesGameController.gameProperties.goodAnswerSound.length);
 
         if (SingleQuizPicture.additionalPictureSound != null)
         {
             answerSequence.AppendCallback(() =>
             {
-                quizPucturesGameController.audioSource.PlayOneShot(SingleQuizPicture.additionalPictureSound);
+                quizPucturesGameController.audioSource
+                    .PlayOneShot(SingleQuizPicture.additionalPictureSound);
             });
             answerSequence.AppendInterval(SingleQuizPicture.additionalPictureSound.length);
 
@@ -74,40 +84,40 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
                 answerSequence.Kill();
                 answerSequence = null;
             });
-
-
         }
         else
         {
             answerSequence.AppendCallback(() =>
             {
                 quizPucturesGameController.OnGoodAnswer();
-
                 answerSequence.Kill();
                 answerSequence = null;
             });
         }
-
-
     }
 
     private void OnBadAnswer()
     {
         if (answerSequence != null) return;
+
         answerSequence = DOTween.Sequence();
         transform.DOShakeRotation(0.25f, 30, 5);
+
         answerSequence.AppendCallback(() =>
         {
-
             badAnswerParticles.Play();
-            quizPucturesGameController.audioSource.PlayOneShot(quizPucturesGameController.gameProperties.badAnswerSound);
+            quizPucturesGameController.audioSource
+                .PlayOneShot(quizPucturesGameController.gameProperties.badAnswerSound);
         });
-        answerSequence.AppendInterval(quizPucturesGameController.gameProperties.badAnswerSound.length);
+        answerSequence.AppendInterval(
+            quizPucturesGameController.gameProperties.badAnswerSound.length);
+
         if (SingleQuizPicture.additionalPictureSound != null)
         {
             answerSequence.AppendCallback(() =>
             {
-                quizPucturesGameController.audioSource.PlayOneShot(SingleQuizPicture.additionalPictureSound);
+                quizPucturesGameController.audioSource
+                    .PlayOneShot(SingleQuizPicture.additionalPictureSound);
             });
             answerSequence.AppendInterval(SingleQuizPicture.additionalPictureSound.length);
 
@@ -117,15 +127,12 @@ public class QuizPicturesObjectController : MonoBehaviour, IPointerClickHandler
                 answerSequence.Kill();
                 answerSequence = null;
             });
-
-
         }
         else
         {
             answerSequence.AppendCallback(() =>
             {
                 quizPucturesGameController.OnBadAnswer();
-
                 answerSequence.Kill();
                 answerSequence = null;
             });

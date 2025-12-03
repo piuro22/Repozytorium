@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5bca399a6e4964daf659988451d07e, type: 3}
   m_Name: PhotoGalleryFruits2
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 4aeae96c4c499f0468f04191a18000a2, type: 3}
+  background: {fileID: 21300000, guid: 1055158247fedcd49b89ef4b8d3815ca, type: 3}
   shouldPlayAudioAutomatically: 1
   photoWithAudios:
   - photo: {fileID: 21300000, guid: 03534e54f217f704799c8345c5cd8f17, type: 3}
@@ -20,9 +20,9 @@ MonoBehaviour:
   - photo: {fileID: 21300000, guid: 42f4b38ddf9b5f94b9f8d38973c7e653, type: 3}
     audioClip: {fileID: 8300000, guid: c43406a98a1c76f4d8b63a4151cd1cf7, type: 3}
   - photo: {fileID: 21300000, guid: fd5e0fe84d67ebd4e9beb0ac608188e7, type: 3}
-    audioClip: {fileID: 8300000, guid: 6ebdd37279989cf4ab28142e51e06848, type: 3}
+    audioClip: {fileID: 8300000, guid: 6dbdf69db4bd52442a91c5b9df37edb2, type: 3}
   - photo: {fileID: 21300000, guid: 3c96f218b19c38644ba91545ffab325f, type: 3}
-    audioClip: {fileID: 8300000, guid: a99e95ceaf94a4642878180af1a6a416, type: 3}
+    audioClip: {fileID: 8300000, guid: cb479a44b8ccba1468971acee5df0596, type: 3}
   - photo: {fileID: 21300000, guid: a19955e5f39652245832bc85374d5017, type: 3}
     audioClip: {fileID: 8300000, guid: f21d67f2938d8e94687733c37717a433, type: 3}
   - photo: {fileID: 21300000, guid: eaf2a2fc44d0af24bb2ac6e7e29365fc, type: 3}
@@ -36,4 +36,4 @@ MonoBehaviour:
   useAudio: 0
   useScreenClick: 1
   gameMusic: {fileID: 0}
-  gameCommandAudioClip: {fileID: 0}
+  gameCommandAudioClip: {fileID: 8300000, guid: 0bbe27dcbf5984649a54de32e297a14e, type: 3}

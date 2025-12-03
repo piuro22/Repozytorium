@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class QuizPicturesProperties : ScriptableObject
 {
+    [LabelText("Dźwięk polecenia do gry")]
+    public AudioClip gameCommandAudioClip;
+
     [LabelText("Muzyka")]
     public AudioClip musicClip;
     [LabelText("Dźwięk zła odpowiedź")]

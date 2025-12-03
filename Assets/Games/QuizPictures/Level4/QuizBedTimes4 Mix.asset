@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizBedTimes4 Mix
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: a135eab0a8bbdcf488cc881ddd131654, type: 3}
   frameSprite: {fileID: 0}
+  enableShuffle: 1
   questions:
   - singleQuizPictures:
     - isCorrect: 1
@@ -77,7 +79,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 82bf1b05d04c45249bcb375fd16a97c1, type: 3}
+    questionClip: {fileID: 8300000, guid: a6d583f688095d245b1849aefa64ba0e, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 03e8ec29e4e6bba4bb0866a71f022cd3, type: 3}

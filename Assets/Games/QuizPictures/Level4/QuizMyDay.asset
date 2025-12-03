@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fea75d2184afbf4e98d2f1960e4eef3, type: 3}
   m_Name: QuizMyDay
   m_EditorClassIdentifier: 
+  gameCommandAudioClip: {fileID: 8300000, guid: a659ae2baa125254b9d1b4c123d19d13, type: 3}
   musicClip: {fileID: 0}
   badAnswerSound: {fileID: 8300000, guid: a014b71af2b1c0347a45839a174dc6bf, type: 3}
   goodAnswerSound: {fileID: 8300000, guid: 72f9c96471822e54ba845e56d485e4e1, type: 3}
   background: {fileID: 21300000, guid: e98dafb11a30e034f926c5a9a2e8a624, type: 3}
   frameSprite: {fileID: 0}
+  enableShuffle: 1
   questions:
   - singleQuizPictures:
     - isCorrect: 1
@@ -28,7 +30,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: a66ab149694cb7c4089cdf4304d15c95, type: 3}
+    questionClip: {fileID: 8300000, guid: 14bf13d58245716498268f46d30986ed, type: 3}
   - singleQuizPictures:
     - isCorrect: 0
       picture: {fileID: 21300000, guid: 4a9b5b3da5c249e4382112de4efe30e9, type: 3}
@@ -72,7 +74,7 @@ MonoBehaviour:
       additionalPictureSound: {fileID: 0}
       pictureSize: {x: 0, y: 0}
     questionText: 
-    questionClip: {fileID: 8300000, guid: 4a0275cc1ab87b3438e89a8e1dd96c85, type: 3}
+    questionClip: {fileID: 8300000, guid: 7196c0eb065157a4bb038bac33da364f, type: 3}
   - singleQuizPictures:
     - isCorrect: 1
       picture: {fileID: 21300000, guid: 2be8d73ec859bf84eab4ebc3a8f6a610, type: 3}
